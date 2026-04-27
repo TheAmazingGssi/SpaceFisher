@@ -12,6 +12,8 @@ public class HookController : MonoBehaviour
     [SerializeField] float upSpeed;
     Vector3 currentTouch;
     MinigamePhase currentPhase = MinigamePhase.Down;
+
+    [SerializeField] LineRenderer fishingLine;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +31,7 @@ public class HookController : MonoBehaviour
     {
         transform.Translate(new Vector2(0, MoveUpDown()));
         playerObject.Translate(new Vector2(MoveLeftRight(), 0));
+        fishingLine.SetPosition(1, playerObject.position);
     }
     
 
