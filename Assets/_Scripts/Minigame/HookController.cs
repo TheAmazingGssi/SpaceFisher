@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 
-enum MinigamePhase { PreGame, Down, Up }
 public class HookController : MonoBehaviour
 {
     Camera cam;
@@ -11,11 +10,12 @@ public class HookController : MonoBehaviour
     [SerializeField] float downSpeed;
     [SerializeField] float upSpeed;
     Vector3 currentTouch;
-    MinigamePhase currentPhase = MinigamePhase.Down;
+    //MinigamePhase currentPhase = MinigamePhase.Down;
 
     [SerializeField] LineRenderer fishingLine;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    #region Monobehaviour
     private void OnValidate()
     {
         cam = Camera.main;
@@ -40,7 +40,7 @@ public class HookController : MonoBehaviour
         playerObject.Translate(new Vector2(MoveLeftRight(), 0));
         fishingLine.SetPosition(1, playerObject.position);
     }
-    
+    #endregion
 
     float MoveLeftRight()
     {
@@ -54,7 +54,7 @@ public class HookController : MonoBehaviour
     }
     float MoveUpDown()
     {
-        switch(currentPhase)
+        switch(MinigameManager.Instance.Phase)
         {
             case MinigamePhase.Down:
                 return -downSpeed * Time.deltaTime;
@@ -73,7 +73,7 @@ public class HookController : MonoBehaviour
 
     void OnFishCaught(FishAI fish)
     {
-        if (currentPhase == MinigamePhase.Down) 
-            currentPhase = MinigamePhase.Up;
+        if (MinigameManager.Instance.Phase == MinigamePhase.Down)
+            MinigameManager.Instance.Phase = MinigamePhase.Up;
     }
 }
