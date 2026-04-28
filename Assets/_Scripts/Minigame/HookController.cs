@@ -5,7 +5,7 @@ using UnityEngine.InputSystem.Controls;
 enum MinigamePhase { PreGame, Down, Up }
 public class HookController : MonoBehaviour
 {
-    [SerializeField] Camera cam;
+    Camera cam;
     [SerializeField] Transform playerObject;
     [SerializeField] float horizontalSpeed;
     [SerializeField] float downSpeed;
@@ -15,15 +15,22 @@ public class HookController : MonoBehaviour
 
     [SerializeField] LineRenderer fishingLine;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private void OnValidate()
+    {
+        cam = Camera.main;
+    }
     void Start()
     {
-        if (!cam)
-        {
-            cam = Camera.main;
-            Debug.LogWarning("Assign scene camera in inspector");
-        }
-        currentTouch = transform.position;
+        currentTouch = playerObject.position;
+    }
+    private void OnEnable()
+    {
         FishAI.FishCaught.AddListener(OnFishCaught);
+    }
+    private void OnDisable()
+    {
+        FishAI.FishCaught.RemoveListener(OnFishCaught);
     }
 
     // Update is called once per frame
