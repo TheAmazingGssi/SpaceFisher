@@ -5,6 +5,7 @@ public class FishSpawner : MonoBehaviour
     Camera cam;
     [SerializeField] GameObject FishObject; //TODO: add depth scriptable object to decide random spawn based on depth
     [SerializeField] MinigameRules minigameRules;
+    [SerializeField] Transform hook;
 
     private float spawnCounter;
 
@@ -25,11 +26,12 @@ public class FishSpawner : MonoBehaviour
     {
         spawnCounter -= Time.deltaTime;
         if (spawnCounter <= 0)
-            SpawnFish();
+            RandomSpawn();
     }
 
     void SpawnFish()
     {
+        RandomSpawn();
         float xPos;
         Quaternion rotation;
         if(Random.Range(0, 2) == 0)
@@ -67,5 +69,47 @@ public class FishSpawner : MonoBehaviour
         }
 
         return Random.Range(minWorld, maxWorld);
+    }
+
+    void RandomSpawn()
+    {
+        bool goingRight = Random.Range(0, 2) == 0;
+        bool spawnFromSide = Random.Range(0, 2) == 0;
+        bool spawnDown = MinigameManager.Instance.Phase == MinigamePhase.Down;
+        FishAI fishAI = FishObject.GetComponent<FishAI>();
+
+        Vector2 spawnPoint = Vector2.zero;
+        Quaternion rotation;
+
+        if (spawnFromSide)
+        {
+            float yMin = cam.ViewportToWorldPoint(Vector3.zero).y;
+            float yMax = cam.ViewportToWorldPoint(Vector3.one * 0.5f).y;
+            spawnPoint.y = Random.Range(yMin, yMax);
+            spawnPoint.x = -camXBorder;
+        }
+        else
+        {
+            spawnPoint.y = cam.ViewportToWorldPoint(Vector3.zero).y - (fishAI.Stats.Height * 0.5f);
+            float xMin = cam.ViewportToWorldPoint(Vector3.zero).x;
+            float xMax = cam.ViewportToWorldPoint(Vector3.one).x;
+            spawnPoint.x = Random.Range(xMin, xMax);
+        }
+
+        if(!goingRight)
+        {
+            spawnPoint.x = (2*hook.position.x) - spawnPoint.x;
+            rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+            rotation = Quaternion.identity;
+
+        if (!spawnDown)
+        {
+            spawnPoint.y = (2 * hook.position.y) - spawnPoint.y;
+        }
+
+        Instantiate(FishObject, spawnPoint, rotation); //TODO: POOLING
+        spawnCounter += minigameRules.RandomSpawnTime;
     }
 }

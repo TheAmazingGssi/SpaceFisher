@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: TestFish
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
   <Speed>k__BackingField: 1
+  <Height>k__BackingField: 1

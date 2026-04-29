@@ -5,12 +5,12 @@ public class FishAI : MonoBehaviour
 {
     const string playerTag = "Player";
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] FishStats stats;
+    [field:SerializeField] public FishStats Stats { get; private set; }
     static public UnityEvent<FishAI> FishCaught = new UnityEvent<FishAI>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb.linearVelocity = transform.right * stats.Speed;
+        rb.linearVelocity = transform.right * Stats.Speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
