@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f5bea3b934f6344be43c4ec7e85d6f, type: 3}
   m_Name: AquariumTest
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
-  <MGSpeed>k__BackingField: 0
-  <Height>k__BackingField: 0
-  <SwimTime>k__BackingField: {x: 3, y: 10}
-  <PauseTime>k__BackingField: 0.5
-  <AquariumSpeed>k__BackingField: 0.2
+  mgSpeed: 0
+  height: 0
+  swimTime: {x: 3, y: 8}
+  pauseTime: 0.3
+  aquariumSpeed: 0.5

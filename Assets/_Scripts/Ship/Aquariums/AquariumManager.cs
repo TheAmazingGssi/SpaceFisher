@@ -5,18 +5,27 @@ public class AquariumManager : MonoBehaviour
 {
     private List<Aquarium> aquariums = new List<Aquarium>();
 
+    private Aquarium currentAquarium;
+
     private void Start()
     {
-        Bus<TestEvent>.OnEvent += TestEvent;
+        Bus<AquariumPressed>.OnEvent += SetCurrentAquarium;
+        Bus<PlaceFish>.OnEvent += AddFish;
     }
 
-    private void TestEvent(TestEvent e)
+    private void SetCurrentAquarium(AquariumPressed e)
     {
-        Debug.Log("Event Raised!");
+        currentAquarium = e.Aquarium;
+    }
+
+    private void AddFish(PlaceFish e)
+    {
+        currentAquarium.AddFish(e.Fish);
     }
 
     private void OnDestroy()
     {
-        Bus<TestEvent>.OnEvent -= TestEvent;
+        Bus<AquariumPressed>.OnEvent -= SetCurrentAquarium;
+        Bus<PlaceFish>.OnEvent -= AddFish;
     }
 }
