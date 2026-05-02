@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 public class FishMovement : MonoBehaviour
 {
-    [SerializeField] private FishStats stats;
+    [SerializeField] private FishManager manager;
     [SerializeField] private Rigidbody2D rb;
     private Vector2 currentDirection;
     private Coroutine movementCoroutine;
@@ -22,15 +22,15 @@ public class FishMovement : MonoBehaviour
             float angle = Random.Range(0, 360) * Mathf.Deg2Rad;
             currentDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
             SetFrontAngle(currentDirection);
-            float swimTime = Random.Range(stats.SwimTime.x, stats.SwimTime.y);
+            float swimTime = Random.Range(manager.Stats.SwimTime.x, manager.Stats.SwimTime.y);
             float elapsed = 0;
             while (elapsed < swimTime)
             {
-                rb.linearVelocity = currentDirection * stats.AquariumSpeed;
+                rb.linearVelocity = currentDirection * manager.Stats.AquariumSpeed;
                 elapsed += Time.deltaTime;
                 yield return null;
             }
-            yield return new WaitForSeconds(stats.PauseTime);
+            yield return new WaitForSeconds(manager.Stats.PauseTime);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,7 +41,7 @@ public class FishMovement : MonoBehaviour
             Vector2 reflected = Vector2.Reflect(currentDirection, normal);
             float offset = Random.Range(-45, 45) * Mathf.Deg2Rad;
             currentDirection = new Vector2(reflected.x * Mathf.Cos(offset) - reflected.y * Mathf.Sin(offset), reflected.x * Mathf.Sin(offset) + reflected.y * Mathf.Cos(offset)).normalized;
-            rb.linearVelocity = currentDirection * stats.AquariumSpeed;
+            rb.linearVelocity = currentDirection * manager.Stats.AquariumSpeed;
             SetFrontAngle(currentDirection);
         }
     }

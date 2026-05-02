@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2055706844198067442}
   - component: {fileID: 6540306869189630648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 5406557465759568160}
   - component: {fileID: 6629189339963866843}
   - component: {fileID: 1852031874956108778}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OwnedFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   <SpriteRenderer>k__BackingField: {fileID: 6540306869189630648}
+  <Stats>k__BackingField: {fileID: 11400000, guid: fb35be89b7cb2a1438ff165cb4147021, type: 2}
   fishCollider: {fileID: 6629189339963866843}
 --- !u!114 &5406557465759568160
 MonoBehaviour:
@@ -153,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df67e43b2d5bf3f47995c0ad8bdccc97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fish
-  stats: {fileID: 11400000, guid: fb35be89b7cb2a1438ff165cb4147021, type: 2}
+  manager: {fileID: 3173794925262988454}
   rb: {fileID: 1852031874956108778}
 --- !u!70 &6629189339963866843
 CapsuleCollider2D:
@@ -171,7 +172,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

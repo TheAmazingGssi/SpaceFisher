@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEngine;
 
 public class AquariumFishPool : ObjectPool<FishManager>
 {
@@ -23,5 +22,10 @@ public class AquariumFishPool : ObjectPool<FishManager>
 
         fishPool.Add(newFish);
         return newFish;
+    }
+
+    public override void Release(FishManager obj)
+    {
+        obj.gameObject.SetActive(false);
     }
 }

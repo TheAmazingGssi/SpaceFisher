@@ -15,6 +15,8 @@ public abstract class ObjectPool<T> : MonoBehaviour where T : MonoBehaviour
 
     protected virtual void FillPool(int count)
     {
+        if(!prefab) return; 
+
         for (int i = 0; i < count; i++)
         {
             T obj = Instantiate(prefab, transform);
