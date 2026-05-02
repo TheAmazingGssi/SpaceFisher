@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.EnhancedTouch;
-
 public class Aquarium : ClickableObject
 {
     public List<FishManager> Fish { get; private set; }

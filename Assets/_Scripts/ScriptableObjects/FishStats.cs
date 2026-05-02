@@ -3,6 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FishStats", menuName = "Scriptable Objects/FishStats")]
 public class FishStats : ScriptableObject
 {
+    [SerializeField] private Sprite fishSprite;
+
     [Header("Minigame")]
     [SerializeField] private float mgSpeed;
     [SerializeField] private float height;
@@ -19,5 +21,6 @@ public class FishStats : ScriptableObject
     public Vector2 SwimTime => swimTime;
     public float PauseTime => pauseTime;
     public float AquariumSpeed => aquariumSpeed;
+    public Sprite FishSprite => fishSprite;
 
 }
