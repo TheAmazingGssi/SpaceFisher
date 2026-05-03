@@ -25,7 +25,6 @@ public class FishSpawner : MonoBehaviour
     void Update()
     {
         spawnCounter -= hook.DeltaY;
-        Debug.Log(spawnCounter);
         if (spawnCounter <= 0)
             SpawnFish();
     }
