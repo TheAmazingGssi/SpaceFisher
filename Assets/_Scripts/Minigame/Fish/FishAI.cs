@@ -3,14 +3,14 @@ using UnityEngine.Events;
 
 public class FishAI : MonoBehaviour
 {
-    const string playerTag = "Player";
+    const string playerTag = "Player"; //change to tag from constants class plz
     [SerializeField] Rigidbody2D rb;
     [field:SerializeField] public FishStats Stats { get; private set; }
     static public UnityEvent<FishAI> FishCaught = new UnityEvent<FishAI>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb.linearVelocity = transform.right * Stats.Speed;
+        rb.linearVelocity = transform.right * Stats.MGSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
