@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e63034139df5f5d49910c8c0517c502f, type: 3}
-  m_Name: MinigameRules
+  m_Name: TestLevel
   m_EditorClassIdentifier: Assembly-CSharp::MinigameRules
   <SpawnDistanceMin>k__BackingField: 2
-  <SpawnDistanceMax>k__BackingField: 3
+  <SpawnDistanceMax>k__BackingField: 6

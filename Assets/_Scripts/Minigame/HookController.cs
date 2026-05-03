@@ -28,11 +28,11 @@ public class HookController : MonoBehaviour
     }
     private void OnEnable()
     {
-        FishAI.FishCaught.AddListener(OnFishCaught);
+        Bus<FishCaught>.OnEvent += OnFishCaught;
     }
     private void OnDisable()
     {
-        FishAI.FishCaught.RemoveListener(OnFishCaught);
+        Bus<FishCaught>.OnEvent -= OnFishCaught;
     }
 
     // Update is called once per frame
@@ -76,7 +76,7 @@ public class HookController : MonoBehaviour
         currentTouch.z = transform.position.z;
     }
 
-    void OnFishCaught(FishAI fish)
+    void OnFishCaught(FishCaught e)
     {
         if (MinigameManager.Instance.Phase == MinigamePhase.Down)
             MinigameManager.Instance.Phase = MinigamePhase.Up;

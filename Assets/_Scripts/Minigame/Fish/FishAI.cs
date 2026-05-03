@@ -7,7 +7,9 @@ public class FishAI : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] SpriteRenderer spriteRenderer;
     [field:SerializeField] public FishStats Stats { get; private set; }
-    static public UnityEvent<FishAI> FishCaught = new UnityEvent<FishAI>();
+    
+
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,7 +26,7 @@ public class FishAI : MonoBehaviour
             transform.localPosition = Vector3.zero;
             transform.rotation = Quaternion.Euler(0, 0, 45);
             rb.linearVelocity = Vector2.zero;
-            FishCaught.Invoke(this);
+            Bus<FishCaught>.Raise(new FishCaught { Fish = this });
         }
     }
 }
