@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f5bea3b934f6344be43c4ec7e85d6f, type: 3}
   m_Name: TestFish
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
-  <Speed>k__BackingField: 1
+  <Speed>k__BackingField: 2
   <Height>k__BackingField: 1
