@@ -23,4 +23,9 @@ public class FishStats : ScriptableObject
     public float AquariumSpeed => aquariumSpeed;
     public Sprite FishSprite => fishSprite;
 
+    private void Reset()
+    {
+        Debug.Log("RESETTT");
+    }
+
 }
