@@ -13,6 +13,8 @@ public class HookController : MonoBehaviour
     //MinigamePhase currentPhase = MinigamePhase.Down;
 
     [SerializeField] LineRenderer fishingLine;
+
+    public float DeltaY { get; private set; }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     #region Monobehaviour
@@ -57,11 +59,14 @@ public class HookController : MonoBehaviour
         switch(MinigameManager.Instance.Phase)
         {
             case MinigamePhase.Down:
-                return -downSpeed * Time.deltaTime;
+                DeltaY = downSpeed * Time.deltaTime;
+                return - DeltaY;
             case MinigamePhase.Up:
-                return upSpeed * Time.deltaTime;
+                DeltaY = upSpeed * Time.deltaTime;
+                return DeltaY;
             default:
-                return 0;
+                DeltaY = 0;
+                return DeltaY;
         }
     }
     void OnTouch(InputValue value)
