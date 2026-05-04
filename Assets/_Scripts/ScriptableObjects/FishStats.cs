@@ -6,8 +6,8 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "FishStats", menuName = "Scriptable Objects/FishStats")]
 public class FishStats : ScriptableObject
 {    
-    [SerializeField] private Sprite fishSprite;
     [SerializeField] private string id;
+    [SerializeField] private Sprite fishSprite;
 
     [Header("Minigame")]
     [SerializeField] private float mgSpeed;
