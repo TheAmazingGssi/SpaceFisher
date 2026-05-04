@@ -50,7 +50,7 @@ public class FishSpawner : MonoBehaviour
         else
         {
             //Get random x for edge of screen's bottom
-            spawnPoint.y = cam.ViewportToWorldPoint(Vector3.zero).y - (fishAI.Stats.Height * 0.5f);
+            spawnPoint.y = cam.ViewportToWorldPoint(Vector3.zero).y - (fishAI.Stats.FishSprite.rect.height / fishAI.Stats.FishSprite.pixelsPerUnit * 0.5f);
             float xMin = cam.ViewportToWorldPoint(Vector3.zero).x;
             float xMax = cam.ViewportToWorldPoint(Vector3.one).x;
             spawnPoint.x = Random.Range(xMin, xMax);

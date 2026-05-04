@@ -8,7 +8,7 @@ public class FishStats : ScriptableObject
 
     [Header("Minigame")]
     [SerializeField] private float mgSpeed;
-    [SerializeField] private float height;
+    //[SerializeField] private float height;
 
     [Header("Aquarium")]
     [Tooltip("X: Min Y: Max")]
@@ -28,7 +28,7 @@ public class FishStats : ScriptableObject
     }
 
     public float MGSpeed => mgSpeed;
-    public float Height => height;
+    //public float Height => height;
     public Vector2 SwimTime => swimTime;
     public float PauseTime => pauseTime;
     public float AquariumSpeed => aquariumSpeed;
