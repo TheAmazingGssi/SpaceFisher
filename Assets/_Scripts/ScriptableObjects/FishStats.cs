@@ -7,6 +7,7 @@ using UnityEditor;
 public class FishStats : ScriptableObject
 {    
     [SerializeField] private Sprite fishSprite;
+    [SerializeField] private string id;
 
     [Header("Minigame")]
     [SerializeField] private float mgSpeed;
@@ -24,11 +25,10 @@ public class FishStats : ScriptableObject
     public float AquariumSpeed => aquariumSpeed;
     public float VerticalSwimming => verticalSwimming;
     public Sprite FishSprite => fishSprite;
-
-    [SerializeField]
-    private string id;
-
     public string ID => id;
+
+    
+
 
 #if UNITY_EDITOR
     private void OnValidate()
