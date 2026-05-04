@@ -48,7 +48,7 @@ public class HookController : MonoBehaviour
         }
     }
     #endregion
-
+    #region Movement
     float MoveLeftRight()
     {
         float delta = currentTouch.x - playerObject.position.x;
@@ -74,6 +74,8 @@ public class HookController : MonoBehaviour
                 return DeltaY;
         }
     }
+    #endregion
+    #region InputEvents
     void OnTouch(InputValue value)
     {
         Vector2 screenSpacePos = value.Get<Vector2>();
@@ -85,7 +87,7 @@ public class HookController : MonoBehaviour
         if (MinigameManager.Instance.Phase == MinigamePhase.PreGame)
             Bus<MinigameStart>.Raise(new MinigameStart());
     }
-
+    #endregion
     void OnFishCaught(FishCaught e)
     {
         if (MinigameManager.Instance.Phase == MinigamePhase.Down)
