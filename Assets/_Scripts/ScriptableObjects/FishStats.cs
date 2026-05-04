@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FishStats", menuName = "Scriptable Objects/FishStats")]
 public class FishStats : ScriptableObject
 {
+    [field: SerializeField] public string Id { get; private set; }
     [SerializeField] private Sprite fishSprite;
 
     [Header("Minigame")]
@@ -15,6 +16,14 @@ public class FishStats : ScriptableObject
     [SerializeField] private float pauseTime;
     [SerializeField] private float aquariumSpeed;
 
+
+    private void OnValidate()
+    {
+        if (string.IsNullOrEmpty(Id))
+        {
+            Id = System.Guid.NewGuid().ToString();
+        }
+    }
 
     public float MGSpeed => mgSpeed;
     public float Height => height;
