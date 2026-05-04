@@ -1,5 +1,5 @@
+using NativeSerializableDictionary;
 using System.Collections.Generic;
-using System.Text.Json;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
     const string INVENTORY_PATH = "/fishInventory.json";
     public static Inventory Instance;
 
-    public Dictionary<string, int> dict = new Dictionary<string, int>();
+    public SerializableDictionary<string, int> dict = new SerializableDictionary<string, int>();
 
     private void Awake()
     {
@@ -48,12 +48,7 @@ public class Inventory : MonoBehaviour
 
     private void SaveState()
     {
-        string jsonFile = "{\n";
-        foreach (KeyValuePair<string, int> kvp in dict)
-        {
-            jsonFile += $"\"{kvp.Key}\": {kvp.Value}\n";
-        }
-        jsonFile += "}";
+        string jsonFile = JsonUtility.ToJson(dict);
         string path = Application.persistentDataPath + INVENTORY_PATH;
         System.IO.File.WriteAllText(path, jsonFile);
         Debug.Log(jsonFile);
@@ -61,7 +56,7 @@ public class Inventory : MonoBehaviour
     private void LoadState()
     {
         string jsonFile = System.IO.File.ReadAllText(Application.persistentDataPath + INVENTORY_PATH);
-        dict = JsonUtility.FromJson<Dictionary<string, int>>(jsonFile);
+        dict = JsonUtility.FromJson<SerializableDictionary<string, int>>(jsonFile);
         Debug.Log(jsonFile);
     }
 }
