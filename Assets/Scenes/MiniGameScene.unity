@@ -863,8 +863,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
   FishObject: {fileID: 4661970418263872821, guid: 9106cd1bbd2cf1042abdd43c6e858dc8, type: 3}
-  minigameRules: {fileID: 11400000, guid: 5b6ffa951e8ebb44cbda1f28e56d0232, type: 2}
-  hook: {fileID: 1381342930}
+  minigameRules: {fileID: 11400000, guid: 8e04b801ecc78c441a8b8c7889fe3729, type: 2}
+  hook: {fileID: 1381342932}
 --- !u!4 &877514657
 Transform:
   m_ObjectHideFlags: 0

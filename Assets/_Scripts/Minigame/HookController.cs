@@ -13,6 +13,8 @@ public class HookController : MonoBehaviour
     //MinigamePhase currentPhase = MinigamePhase.Down;
 
     [SerializeField] LineRenderer fishingLine;
+
+    public float DeltaY { get; private set; }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     #region Monobehaviour
@@ -26,11 +28,11 @@ public class HookController : MonoBehaviour
     }
     private void OnEnable()
     {
-        FishAI.FishCaught.AddListener(OnFishCaught);
+        Bus<FishCaught>.OnEvent += OnFishCaught;
     }
     private void OnDisable()
     {
-        FishAI.FishCaught.RemoveListener(OnFishCaught);
+        Bus<FishCaught>.OnEvent -= OnFishCaught;
     }
 
     // Update is called once per frame
@@ -57,11 +59,14 @@ public class HookController : MonoBehaviour
         switch(MinigameManager.Instance.Phase)
         {
             case MinigamePhase.Down:
-                return -downSpeed * Time.deltaTime;
+                DeltaY = downSpeed * Time.deltaTime;
+                return - DeltaY;
             case MinigamePhase.Up:
-                return upSpeed * Time.deltaTime;
+                DeltaY = upSpeed * Time.deltaTime;
+                return DeltaY;
             default:
-                return 0;
+                DeltaY = 0;
+                return DeltaY;
         }
     }
     void OnTouch(InputValue value)
@@ -71,7 +76,7 @@ public class HookController : MonoBehaviour
         currentTouch.z = transform.position.z;
     }
 
-    void OnFishCaught(FishAI fish)
+    void OnFishCaught(FishCaught e)
     {
         if (MinigameManager.Instance.Phase == MinigamePhase.Down)
             MinigameManager.Instance.Phase = MinigamePhase.Up;

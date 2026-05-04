@@ -12,9 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63034139df5f5d49910c8c0517c502f, type: 3}
   m_Name: TestLevel
   m_EditorClassIdentifier: Assembly-CSharp::MinigameRules
-  <SpawnTimeMin>k__BackingField: 1
-  <SpawnTimeMax>k__BackingField: 1
-  SpawnRangeMinDown: -1
-  SpawnRangeMaxDown: 0.5
-  SpawnRangeMinUp: 1
-  SpawnRangeMaxUp: 4
+  <SpawnDistanceMin>k__BackingField: 2
+  <SpawnDistanceMax>k__BackingField: 6
