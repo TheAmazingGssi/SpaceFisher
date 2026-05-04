@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39d5e7c63f717248811403bb98905c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameManager
-  Phase: 1
+  Phase: 0
 --- !u!4 &1480408725
 Transform:
   m_ObjectHideFlags: 0

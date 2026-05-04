@@ -8,15 +8,31 @@ public class MinigameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(Instance != null)
+        if (Instance != null)
+        {
             Destroy(gameObject);
-        else
-            Instance = this;
+            return;
+        }
+
+        Instance = this;
+    }
+    private void OnEnable()
+    {
+        Bus<MinigameStart>.OnEvent += OnMinigameStart;
+        Bus<MinigameEnd>.OnEvent += OnMinigameEnd;
+    }
+    private void OnDisable()
+    {
+        Bus<MinigameStart>.OnEvent -= OnMinigameStart;
+        Bus<MinigameEnd>.OnEvent -= OnMinigameEnd;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnMinigameStart(MinigameStart e)
     {
-        
+        Phase = MinigamePhase.Down;
+    }
+    void OnMinigameEnd(MinigameEnd e)
+    {
+        Phase = MinigamePhase.PreGame;
     }
 }

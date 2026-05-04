@@ -71,6 +71,9 @@ public class FishSpawner : MonoBehaviour
             spawnPoint.y = (2 * hook.transform.position.y) - spawnPoint.y;
         }
 
+        if (spawnPoint.y >= 0)
+            return;
+
         Instantiate(FishObject, spawnPoint, rotation); //TODO: POOLING
         spawnCounter += minigameRules.RandomSpawnDistance;
     }

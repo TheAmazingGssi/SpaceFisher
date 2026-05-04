@@ -41,6 +41,11 @@ public class HookController : MonoBehaviour
         transform.Translate(new Vector2(0, MoveUpDown()));
         playerObject.Translate(new Vector2(MoveLeftRight(), 0));
         fishingLine.SetPosition(1, playerObject.position);
+        if(transform.position.y > 0 && MinigameManager.Instance.Phase == MinigamePhase.Up)
+        {
+            transform.position = new Vector2(transform.position.x, 0);
+            Bus<MinigameEnd>.Raise(new MinigameEnd());
+        }
     }
     #endregion
 
@@ -74,6 +79,11 @@ public class HookController : MonoBehaviour
         Vector2 screenSpacePos = value.Get<Vector2>();
         currentTouch = cam.ScreenToWorldPoint(screenSpacePos);
         currentTouch.z = transform.position.z;
+    }
+    void OnTap(InputValue value)
+    {
+        if (MinigameManager.Instance.Phase == MinigamePhase.PreGame)
+            Bus<MinigameStart>.Raise(new MinigameStart());
     }
 
     void OnFishCaught(FishCaught e)
