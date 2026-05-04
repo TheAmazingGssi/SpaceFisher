@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
         SaveState();
     }
     public void AddFish(FishStats fishStats) => AddFish(fishStats, 1);
-    public void RemoveFish(FishStats fishStats, int amount)
+    private void RemoveFish(FishStats fishStats, int amount)
     {
         if (dict.ContainsKey(fishStats.ID) && dict[fishStats.ID] >= amount)
             dict[fishStats.ID] -= amount;
@@ -38,25 +38,33 @@ public class Inventory : MonoBehaviour
             Debug.LogError("Tried removing a fish the player did not have");
         SaveState();
     }
-    public void RemoveFish(FishStats fishStats) => RemoveFish(fishStats, 1);
+    private void RemoveFish(FishStats fishStats) => RemoveFish(fishStats, 1);
     public void ClearInventory()
     {
         dict.Clear();
         SaveState();
     }
-
+    public bool TryRemoveFish(FishStats fishStats, int amount)
+    {
+        if (dict.ContainsKey(fishStats.ID) && dict[fishStats.ID] >= amount)
+        {
+            RemoveFish(fishStats, amount);
+            return true;
+        }
+        
+        return false;
+    }
+    public bool TryRemoveFish(FishStats fishStats) => TryRemoveFish(fishStats, 1);
 
     private void SaveState()
     {
         string jsonFile = JsonUtility.ToJson(dict);
         string path = Application.persistentDataPath + INVENTORY_PATH;
         System.IO.File.WriteAllText(path, jsonFile);
-        Debug.Log(jsonFile);
     }
     private void LoadState()
     {
         string jsonFile = System.IO.File.ReadAllText(Application.persistentDataPath + INVENTORY_PATH);
         dict = JsonUtility.FromJson<SerializableDictionary<string, int>>(jsonFile);
-        Debug.Log(jsonFile);
     }
 }
