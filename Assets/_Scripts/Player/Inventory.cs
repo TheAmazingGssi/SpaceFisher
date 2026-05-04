@@ -5,13 +5,16 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory Instance;
 
-    public List<FishStats> Fish = new List<FishStats>();
+    public List<FishStats> Fish { get; private set; } = new List<FishStats>();
 
     private void Awake()
     {
-        if(Instance == null)
-            Instance = this;
-
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 

@@ -10,7 +10,6 @@ public class FishMovement : MonoBehaviour
     {
         StartMoving();
     }
-
     private void StartMoving()
     {
         movementCoroutine = StartCoroutine(Movement());
@@ -19,8 +18,7 @@ public class FishMovement : MonoBehaviour
     {
         while (true)
         {
-            float angle = Random.Range(0, 360) * Mathf.Deg2Rad;
-            currentDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+            currentDirection = GetRandomDirection();
             SetFrontAngle(currentDirection);
             float swimTime = Random.Range(manager.Stats.SwimTime.x, manager.Stats.SwimTime.y);
             float elapsed = 0;
@@ -33,14 +31,25 @@ public class FishMovement : MonoBehaviour
             yield return new WaitForSeconds(manager.Stats.PauseTime);
         }
     }
+    private Vector2 GetRandomDirection()
+    {
+        float horizontalAngle = Random.value < 0.5f ? 0f : 180f;
+        float verticalAngle = Random.Range(-manager.Stats.VerticalSwimming, manager.Stats.VerticalSwimming);
+        float totalAngle = (horizontalAngle + verticalAngle) * Mathf.Deg2Rad;
+        return new Vector2(Mathf.Cos(totalAngle), Mathf.Sin(totalAngle)).normalized;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(Constants.Tags.AquariumWall))
         {
             Vector2 normal = collision.contacts[0].normal;
             Vector2 reflected = Vector2.Reflect(currentDirection, normal);
-            float offset = Random.Range(-45, 45) * Mathf.Deg2Rad;
-            currentDirection = new Vector2(reflected.x * Mathf.Cos(offset) - reflected.y * Mathf.Sin(offset), reflected.x * Mathf.Sin(offset) + reflected.y * Mathf.Cos(offset)).normalized;
+            float reflectedAngle = Mathf.Atan2(reflected.y, reflected.x) * Mathf.Rad2Deg;
+            float clampedAngle = Mathf.Clamp(reflectedAngle, -manager.Stats.VerticalSwimming, manager.Stats.VerticalSwimming);
+            if (reflected.x < 0) clampedAngle = 180f - clampedAngle;
+            float offset = Random.Range(-15f, 15f);
+            float finalAngle = (clampedAngle + offset) * Mathf.Deg2Rad;
+            currentDirection = new Vector2(Mathf.Cos(finalAngle), Mathf.Sin(finalAngle)).normalized;
             rb.linearVelocity = currentDirection * manager.Stats.AquariumSpeed;
             SetFrontAngle(currentDirection);
         }
@@ -49,7 +58,7 @@ public class FishMovement : MonoBehaviour
     {
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
-        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * (direction.x < 0 ? -1 : 1),transform.localScale.y,transform.localScale.z);
+        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * (direction.x < 0 ? -1 : 1), transform.localScale.y, transform.localScale.z);
     }
     private void OnDisable()
     {
