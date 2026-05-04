@@ -7,7 +7,15 @@ public class Inventory : MonoBehaviour
     const string INVENTORY_PATH = "/fishInventory.json";
     public static Inventory Instance;
 
-    public SerializableDictionary<string, int> dict = new SerializableDictionary<string, int>();
+    private SerializableDictionary<string, int> dict = new SerializableDictionary<string, int>();
+    public Dictionary<string, int> Fish {  
+        get 
+        { 
+            Dictionary<string, int> copy = new Dictionary<string, int>();
+            foreach (KeyValuePair<string, int> kvp in dict)
+                copy.Add(kvp.Key, kvp.Value);
+            return copy;
+        } }
 
     private void Awake()
     {
