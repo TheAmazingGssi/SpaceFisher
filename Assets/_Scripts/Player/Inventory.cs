@@ -32,10 +32,7 @@ public class Inventory : MonoBehaviour
     public void AddFish(FishStats fishStats) => AddFish(fishStats, 1);
     private void RemoveFish(FishStats fishStats, int amount)
     {
-        if (dict.ContainsKey(fishStats.ID) && dict[fishStats.ID] >= amount)
-            dict[fishStats.ID] -= amount;
-        else
-            Debug.LogError("Tried removing a fish the player did not have");
+        dict[fishStats.ID] -= amount;
         SaveState();
     }
     private void RemoveFish(FishStats fishStats) => RemoveFish(fishStats, 1);
