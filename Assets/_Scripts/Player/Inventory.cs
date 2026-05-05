@@ -13,7 +13,10 @@ public class Inventory : MonoBehaviour
         { 
             Dictionary<FishStats, int> copy = new Dictionary<FishStats, int>();
             foreach (KeyValuePair<string, int> kvp in dict)
-                copy.Add(FishTypeList.Instance.list[kvp.Key], kvp.Value);
+            {
+            copy.Add(FishTypeList.Instance.list[kvp.Key], kvp.Value);
+            Debug.Log("Count in fish dict: " + kvp.Value);
+            }
             return copy;
         } }
     private void Awake()
@@ -40,6 +43,8 @@ public class Inventory : MonoBehaviour
     private void RemoveFish(FishStats fishStats, int amount)
     {
         dict[fishStats.ID] -= amount;
+        if(dict[fishStats.ID] <= 0)
+            dict.Remove(fishStats.ID);
         SaveState();
     }
     private void RemoveFish(FishStats fishStats) => RemoveFish(fishStats, 1);

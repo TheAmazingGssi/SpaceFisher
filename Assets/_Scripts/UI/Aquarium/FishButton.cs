@@ -1,30 +1,35 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.EventSystems.EventTrigger;
 
-public class FishInventoryButton : MonoBehaviour
+public class FishButton : MonoBehaviour
 {
     [SerializeField] private Image fishImage;
     [SerializeField] private TextMeshProUGUI countText;
     [SerializeField] private Button button;
+    [SerializeField] private FishManager fish;
 
     private FishStats fishStats;
 
     public void Setup(FishStats stats, int count)
     {
+        Debug.Log("Count in refresh button: " + count);
         fishStats = stats;
         fishImage.sprite = stats.FishSprite;
         countText.text = count.ToString();
         gameObject.SetActive(true);
     }
-
-    public void UpdateCount(int count)
+    public void OnButtonClick()
     {
-        countText.text = count.ToString();
+        fish.Initialize(fishStats);
+        Inventory.Instance.TryRemoveFish(fishStats);
+        Bus<PlaceFish>.Raise(new PlaceFish { Fish = fish });
     }
 
     public void Hide()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false);    
     }
 }
+
