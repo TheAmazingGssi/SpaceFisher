@@ -1,6 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.UIElements;
 
 public class HookController : MonoBehaviour
 {
@@ -84,10 +87,23 @@ public class HookController : MonoBehaviour
     }
     void OnTap(InputValue value)
     {
-        if (MinigameManager.Instance.Phase == MinigamePhase.PreGame)
+        Vector2 tapPosition = Touchscreen.current.primaryTouch.position.ReadValue();
+
+        if (MinigameManager.Instance.Phase == MinigamePhase.PreGame && !IsOverUI(tapPosition))
             Bus<MinigameStart>.Raise(new MinigameStart());
     }
     #endregion
+    bool IsOverUI(Vector2 screenPos)
+    {
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+
+        pointerData.position = screenPos;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        return results.Count > 0;
+    }
     void OnFishCaught(FishCaught e)
     {
         if (MinigameManager.Instance.Phase == MinigamePhase.Down)

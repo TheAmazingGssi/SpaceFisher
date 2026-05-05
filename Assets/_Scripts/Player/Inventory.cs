@@ -28,12 +28,24 @@ public class Inventory : MonoBehaviour
         LoadState();
     }
 
-    public void AddFish(FishStats fishStats, int amount)
+    public void AddManyFish(Dictionary<FishStats, int> allFish)
     {
-        if(dict.ContainsKey(fishStats.ID))
+        foreach(KeyValuePair<FishStats, int> kvp in allFish)
+        {
+            AddFishNoSave(kvp.Key, kvp.Value);
+        }
+        SaveState();
+    }
+    private void AddFishNoSave(FishStats fishStats, int amount)
+    {
+        if (dict.ContainsKey(fishStats.ID))
             dict[fishStats.ID] += amount;
         else
             dict.Add(fishStats.ID, amount);
+    }
+    public void AddFish(FishStats fishStats, int amount)
+    {
+        AddFishNoSave(fishStats, amount);
         SaveState();
     }
     public void AddFish(FishStats fishStats) => AddFish(fishStats, 1);
