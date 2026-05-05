@@ -8,15 +8,14 @@ public class Inventory : MonoBehaviour
     public static Inventory Instance;
 
     private SerializableDictionary<string, int> dict = new SerializableDictionary<string, int>();
-    public Dictionary<string, int> Fish {  
+    public Dictionary<FishStats, int> Fish {  
         get 
         { 
-            Dictionary<string, int> copy = new Dictionary<string, int>();
+            Dictionary<FishStats, int> copy = new Dictionary<FishStats, int>();
             foreach (KeyValuePair<string, int> kvp in dict)
-                copy.Add(kvp.Key, kvp.Value);
+                copy.Add(FishTypeList.Instance.list[kvp.Key], kvp.Value);
             return copy;
         } }
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
