@@ -12,8 +12,8 @@ public class Inventory : MonoBehaviour
         get 
         { 
             Dictionary<FishStats, int> copy = new Dictionary<FishStats, int>();
-            foreach (KeyValuePair<string, int> kvp in dict)
-                copy.Add(FishTypeList.Instance.list[kvp.Key], kvp.Value);
+            foreach (string id in dict.Keys)
+                copy.Add(FishTypeList.Instance.list[id], dict[id]);
             return copy;
         } }
     private void Awake()
