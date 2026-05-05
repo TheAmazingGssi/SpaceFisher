@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEditor.VersionControl;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -44,6 +46,11 @@ public class FishStats : ScriptableObject
                 id = guid;
                 EditorUtility.SetDirty(this);
             }
+        }
+        if (!FishTypeList.Instance.list.ContainsKey(id))
+        {
+            FishTypeList.Instance.list.Add(id, this);
+            EditorUtility.SetDirty(FishTypeList.Instance);
         }
     }
 #endif
