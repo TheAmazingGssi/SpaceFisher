@@ -14,7 +14,6 @@ public class FishButton : MonoBehaviour
 
     public void Setup(FishStats stats, int count)
     {
-        Debug.Log("Count in refresh button: " + count);
         fishStats = stats;
         fishImage.sprite = stats.FishSprite;
         countText.text = count.ToString();

@@ -28,6 +28,5 @@ public class Aquarium : ClickableObject
         newFish.transform.parent = fishSpawn;
         newFish.transform.position = fishSpawn.position;
         Fish.Add(newFish);
-        Debug.Log("Fish Added");
     }
 }

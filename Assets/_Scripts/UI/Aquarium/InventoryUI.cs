@@ -20,7 +20,6 @@ public class InventoryUI : MonoBehaviour
         {
             GetButton(index).Setup(entry.Key, entry.Value);
             index++;
-            Debug.Log("Count in refresh inventory: " + entry.Value);
         }
 
         for (int i = index; i < buttonPool.Count; i++)
