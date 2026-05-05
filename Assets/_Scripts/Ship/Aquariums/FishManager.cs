@@ -7,4 +7,10 @@ public class FishManager : MonoBehaviour
 
     [SerializeField] private CapsuleCollider2D fishCollider;
 
+    public void Initialize(FishStats stats)
+    {
+        Stats = stats;
+        SpriteRenderer.sprite = Stats.FishSprite;
+    }
+
 }

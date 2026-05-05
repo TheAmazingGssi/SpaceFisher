@@ -19,7 +19,6 @@ public class Aquarium : ClickableObject
 
     protected override void OnFingerUp()
     {
-        Debug.Log("Aquarium pressed");
         Bus<AquariumPressed>.Raise(new AquariumPressed { Aquarium = this });
     }
 

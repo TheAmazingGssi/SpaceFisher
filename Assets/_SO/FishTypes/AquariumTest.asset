@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f5bea3b934f6344be43c4ec7e85d6f, type: 3}
   m_Name: AquariumTest
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
+  id: fb35be89b7cb2a1438ff165cb4147021
+  fishSprite: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
   mgSpeed: 0
-  height: 0
   swimTime: {x: 3, y: 8}
   pauseTime: 0.3
   aquariumSpeed: 0.5
+  verticalSwimming: 30
