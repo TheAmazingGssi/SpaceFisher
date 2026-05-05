@@ -1168,6 +1168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1381342930}
   - component: {fileID: 1381342932}
+  - component: {fileID: 1381342933}
   - component: {fileID: 1381342931}
   m_Layer: 0
   m_Name: Hook
@@ -1241,6 +1242,18 @@ MonoBehaviour:
   downSpeed: 3
   upSpeed: 10
   fishingLine: {fileID: 1250811444}
+--- !u!114 &1381342933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381342929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f79e293e8edce47a91a3a1a41d9c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HookInventory
 --- !u!1 &1480408723
 GameObject:
   m_ObjectHideFlags: 0

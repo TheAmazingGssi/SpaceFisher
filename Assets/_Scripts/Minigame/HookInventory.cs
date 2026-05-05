@@ -33,12 +33,4 @@ public class HookInventory : MonoBehaviour
         Inventory.Instance.AddManyFish(currentlyHookedFish);
         currentlyHookedFish.Clear();
     }
-
-    private void PrintDict()
-    {
-        string debug = "";
-        foreach (KeyValuePair<FishStats, int> kvp in currentlyHookedFish)
-            debug += kvp.Key.name + ": " + kvp.Value + "\n";
-        Debug.Log(debug);
-    }
 }
