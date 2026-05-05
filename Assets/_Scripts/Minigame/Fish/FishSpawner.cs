@@ -71,7 +71,7 @@ public class FishSpawner : MonoBehaviour
             spawnPoint.y = (2 * hook.transform.position.y) - spawnPoint.y;
         }
 
-        if (spawnPoint.y >= 0)
+        if (spawnPoint.y >= -2* (fishAI.Stats.FishSprite.rect.height / fishAI.Stats.FishSprite.pixelsPerUnit))
             return;
 
         Instantiate(FishObject, spawnPoint, rotation); //TODO: POOLING

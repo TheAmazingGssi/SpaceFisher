@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AquariumTest
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
   id: fb35be89b7cb2a1438ff165cb4147021
-  fishSprite: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
+  fishSprite: {fileID: 0}
   mgSpeed: 0
   swimTime: {x: 3, y: 8}
   pauseTime: 0.3

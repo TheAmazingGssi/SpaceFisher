@@ -12,11 +12,8 @@ public class Inventory : MonoBehaviour
         get 
         { 
             Dictionary<FishStats, int> copy = new Dictionary<FishStats, int>();
-            foreach (KeyValuePair<string, int> kvp in dict)
-            {
-            copy.Add(FishTypeList.Instance.list[kvp.Key], kvp.Value);
-            Debug.Log("Count in fish dict: " + kvp.Value);
-            }
+            foreach (string id in dict.Keys)
+                copy.Add(FishTypeList.Instance.list[id], dict[id]);
             return copy;
         } }
     private void Awake()
@@ -31,20 +28,30 @@ public class Inventory : MonoBehaviour
         LoadState();
     }
 
-    public void AddFish(FishStats fishStats, int amount)
+    public void AddManyFish(Dictionary<FishStats, int> allFish)
     {
-        if(dict.ContainsKey(fishStats.ID))
+        foreach(KeyValuePair<FishStats, int> kvp in allFish)
+        {
+            AddFishNoSave(kvp.Key, kvp.Value);
+        }
+        SaveState();
+    }
+    private void AddFishNoSave(FishStats fishStats, int amount)
+    {
+        if (dict.ContainsKey(fishStats.ID))
             dict[fishStats.ID] += amount;
         else
             dict.Add(fishStats.ID, amount);
+    }
+    public void AddFish(FishStats fishStats, int amount)
+    {
+        AddFishNoSave(fishStats, amount);
         SaveState();
     }
     public void AddFish(FishStats fishStats) => AddFish(fishStats, 1);
     private void RemoveFish(FishStats fishStats, int amount)
     {
         dict[fishStats.ID] -= amount;
-        if(dict[fishStats.ID] <= 0)
-            dict.Remove(fishStats.ID);
         SaveState();
     }
     private void RemoveFish(FishStats fishStats) => RemoveFish(fishStats, 1);

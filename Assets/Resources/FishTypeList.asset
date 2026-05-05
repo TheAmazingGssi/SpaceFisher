@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishTypeList
   list:
     _keys:
+    - _key: c7b2452d59d00e241ae0f6abae5c88ff
+      _value: {fileID: 11400000, guid: c7b2452d59d00e241ae0f6abae5c88ff, type: 2}
     - _key: fb35be89b7cb2a1438ff165cb4147021
       _value: {fileID: 11400000, guid: fb35be89b7cb2a1438ff165cb4147021, type: 2}
