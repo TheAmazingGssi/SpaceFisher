@@ -13,8 +13,8 @@ public class FishStats : ScriptableObject
 
     [Header("Minigame")]
     [SerializeField] private float mgSpeed;
-    [SerializeField][Range(0,360)] private float wiggleAngleMax;
-    [SerializeField][Range(0,360)] private float wiggleAngleMin;
+    [SerializeField][Range(-90,180)] private float wiggleAngleMax = 90;
+    [SerializeField][Range(-90,180)] private float wiggleAngleMin = 0;
     [SerializeField] private float wiggleSpeed;
 
     [Header("Aquarium")]
