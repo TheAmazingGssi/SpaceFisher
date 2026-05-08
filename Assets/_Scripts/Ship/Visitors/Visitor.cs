@@ -1,20 +1,26 @@
 using UnityEngine;
 
-public enum Area
+public enum Zone
 {
     Line,
     Aquarium,
     Food,
-    Facilities,
+    TicketBooth,
     Inbetween
 }
 public class Visitor : MonoBehaviour
 {
-    public Area CurrentArea {  get; private set; }
-    public void ChangeArea(Area area)
+    [SerializeField] private SpriteRenderer renderer;
+    public Zone CurrentZone {  get; private set; }
+
+    public void Initialize(VisitorData data)
     {
-        CurrentArea = area;
+        renderer.sprite = data.Sprite;
     }
 
-
+    private void ChangeZone(Zone area)
+    {
+        CurrentZone = area;
+        Bus<ChangeLocation>.Raise(new ChangeLocation {  Visitor = this });
+    }
 }

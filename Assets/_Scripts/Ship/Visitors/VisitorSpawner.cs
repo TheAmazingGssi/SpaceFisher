@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class VisitorSpawner : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] Transform spawnPoint;
+    [SerializeField] private VisitorPool pool;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private VisitorData[] data;
+
+    [ContextMenu("Spawn Visitor")]
+    private void SpawnVisitor()
     {
-        
+        Visitor visitor = pool.Get();
+        visitor.Initialize(data[Random.Range(0, data.Length)]);
+        visitor.transform.position = spawnPoint.position;
+        Bus<VisitorSpawned>.Raise(new VisitorSpawned { Visitor = visitor });
     }
 }

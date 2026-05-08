@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f5bea3b934f6344be43c4ec7e85d6f, type: 3}
   m_Name: AquariumTest
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
-  <id>k__BackingField: fb35be89b7cb2a1438ff165cb4147021
-  <fishSprite>k__BackingField: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
-  <mgSpeed>k__BackingField: 0
-  <wiggleAngleMax>k__BackingField: 90
-  <wiggleAngleMin>k__BackingField: 0
-  <wiggleSpeed>k__BackingField: 0
-  <swimTime>k__BackingField: {x: 0, y: 0}
-  <pauseTime>k__BackingField: 0
-  <aquariumSpeed>k__BackingField: 0
-  <verticalSwimming>k__BackingField: 30
+  <ID>k__BackingField: fb35be89b7cb2a1438ff165cb4147021
+  <FishSprite>k__BackingField: {fileID: 0}
+  <MGSpeed>k__BackingField: 0
+  <WiggleAngleMax>k__BackingField: 90
+  <WiggleAngleMin>k__BackingField: 0
+  <WiggleSpeed>k__BackingField: 0
+  <SwimTime>k__BackingField: {x: 0, y: 0}
+  <PauseTime>k__BackingField: 0.3
+  <AquariumSpeed>k__BackingField: 1
+  <VerticalSwimming>k__BackingField: 30
