@@ -8,6 +8,10 @@ public struct PlaceFish : IEvent { public FishManager Fish; }
 public struct AquariumPressed : IEvent { public Aquarium Aquarium; }
 #endregion
 
+#region Zones
+public struct RatingChanged : IEvent { public ZoneBase Zone; }
+#endregion
+
 #region Visitors
 public struct VisitorSpawned : IEvent { public Visitor Visitor; }
 public struct ChangeLocation : IEvent { public Visitor Visitor; }

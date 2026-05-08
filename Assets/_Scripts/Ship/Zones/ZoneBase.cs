@@ -7,6 +7,8 @@ public abstract class ZoneBase : MonoBehaviour
 
     public abstract Zone Zone { get; }
 
+    public float Rating { get; protected set; } = 100;
+
     private void Start()
     {
         Bus<ChangeLocation>.OnEvent += AddVisitor;
@@ -17,7 +19,10 @@ public abstract class ZoneBase : MonoBehaviour
         if (Visitors.Contains(e.Visitor)) Visitors.Remove(e.Visitor);
         if (e.Visitor.CurrentZone != Zone) return;
         Visitors.Add(e.Visitor);
+        NewVisitor(e.Visitor);
     }
+
+    protected abstract void NewVisitor(Visitor visitor);
 
     private void OnDestroy()
     {
