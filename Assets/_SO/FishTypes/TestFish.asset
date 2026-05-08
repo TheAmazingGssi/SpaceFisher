@@ -15,6 +15,9 @@ MonoBehaviour:
   id: c7b2452d59d00e241ae0f6abae5c88ff
   fishSprite: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
   mgSpeed: 3
+  wiggleAngleMax: 120
+  wiggleAngleMin: 12
+  wiggleSpeed: 360
   swimTime: {x: 3, y: 8}
   pauseTime: 0.3
   aquariumSpeed: 0.5

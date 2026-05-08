@@ -13,6 +13,9 @@ public class FishStats : ScriptableObject
 
     [Header("Minigame")]
     [SerializeField] private float mgSpeed;
+    [SerializeField][Range(-90,180)] private float wiggleAngleMax = 90;
+    [SerializeField][Range(-90,180)] private float wiggleAngleMin = 0;
+    [SerializeField] private float wiggleSpeed;
 
     [Header("Aquarium")]
     [Tooltip("X: Min Y: Max")]
@@ -28,8 +31,11 @@ public class FishStats : ScriptableObject
     public float VerticalSwimming => verticalSwimming;
     public Sprite FishSprite => fishSprite;
     public string ID => id;
+    public float WiggleAngleMax => wiggleAngleMax;
+    public float WiggleAngleMin => wiggleAngleMin;
+    public float WiggleSpeed => wiggleSpeed;
 
-    
+
 
 
 #if UNITY_EDITOR
