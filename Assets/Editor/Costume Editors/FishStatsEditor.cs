@@ -17,6 +17,7 @@ public class FishStatsEditor : Editor
     private SerializedProperty verticalSwimming;
     private SerializedProperty customSpeed;
     private SerializedProperty speed;
+    private SerializedProperty planet;
     private void OnEnable()
     {
         id = serializedObject.FindProperty("id");
@@ -32,6 +33,7 @@ public class FishStatsEditor : Editor
         verticalSwimming = serializedObject.FindProperty("verticalSwimming");
         customSpeed = serializedObject.FindProperty("customSpeed");
         speed = serializedObject.FindProperty("speed");
+        planet = serializedObject.FindProperty("planet");
 
     }
     public override void OnInspectorGUI()
@@ -41,6 +43,7 @@ public class FishStatsEditor : Editor
         //==========Generic Stats==========
         EditorGUILayout.LabelField("ID: " + id.stringValue);
         EditorGUILayout.PropertyField(fishSprite);
+        EditorGUILayout.PropertyField(planet);
         Texture2D image = AssetPreview.GetAssetPreview((target as FishStats).FishSprite);
         GUILayout.Box(image);
 

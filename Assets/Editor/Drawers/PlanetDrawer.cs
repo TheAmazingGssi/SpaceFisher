@@ -20,7 +20,7 @@ public class PlanetDrawer : PropertyDrawer
        switch(planet)
         {
             case Planet.Lava:
-                return Color.orangeRed;
+                return Color.orange;
             case Planet.Mist:
                 return Color.paleGreen;
             case Planet.Other:

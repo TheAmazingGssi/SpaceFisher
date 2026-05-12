@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
   id: c7b2452d59d00e241ae0f6abae5c88ff
   fishSprite: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
+  planet: 0
   customSpeed: 0
-  speed: 5
+  speed: 0
   mgSpeed: 5
-  wiggleAngleMax: 125.053894
-  wiggleAngleMin: 30.108227
+  wiggleAngleMax: 79.63201
+  wiggleAngleMin: -10.3679905
   wiggleSpeed: 360
-  defaultWiggleSpeed: 1
-  swimTime: {x: 1, y: 2}
-  pauseTime: 1000
-  aquariumSpeed: 10
+  defaultWiggleSpeed: 0
+  swimTime: {x: 0, y: 0}
+  pauseTime: 0
+  aquariumSpeed: 0
   verticalSwimming: 30
