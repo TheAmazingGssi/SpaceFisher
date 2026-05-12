@@ -4,7 +4,12 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-
+public enum Planet
+{
+    Lava,
+    Mist,
+    Other
+}
 
 [CreateAssetMenu(fileName = "FishStats", menuName = "Scriptable Objects/FishStats")]
 public class FishStats : ScriptableObject
@@ -13,6 +18,9 @@ public class FishStats : ScriptableObject
     [SerializeField] private string id;
     public Sprite FishSprite { get => fishSprite; }
     [SerializeField] private Sprite fishSprite;
+
+    public Planet Planet {  get => planet; }
+    [SerializeField] private Planet planet;
 
     [SerializeField] private bool customSpeed;
     [SerializeField] private float speed;

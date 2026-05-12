@@ -17,6 +17,7 @@ public class FishStatsEditor : Editor
     private SerializedProperty verticalSwimming;
     private SerializedProperty customSpeed;
     private SerializedProperty speed;
+    private SerializedProperty planet;
 
     private void OnEnable()
     {
@@ -33,6 +34,7 @@ public class FishStatsEditor : Editor
         verticalSwimming = serializedObject.FindProperty("verticalSwimming");
         customSpeed = serializedObject.FindProperty("customSpeed");
         speed = serializedObject.FindProperty("speed");
+        planet = serializedObject.FindProperty("planet");
     }
     public override void OnInspectorGUI()
     {
