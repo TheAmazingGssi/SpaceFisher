@@ -7,22 +7,33 @@ using UnityEditor;
 
 [CreateAssetMenu(fileName = "FishStats", menuName = "Scriptable Objects/FishStats")]
 public class FishStats : ScriptableObject
-{    
-    [field: SerializeField] public string ID {  get; private set; }
-    [field: SerializeField] public Sprite FishSprite { get; private set; }
+{
+    public string ID { get => id; }
+    [SerializeField] private string id;
+    public Sprite FishSprite { get => fishSprite; }
+    [SerializeField] private Sprite fishSprite;
 
-    [field: Header("Minigame")]
-    [field: SerializeField] public float MGSpeed { get; private set; }
-    [field: SerializeField][Range(-90,180)] public float WiggleAngleMax { get; private set; } = 90;
-    [field: SerializeField][Range(-90,180)] public float WiggleAngleMin { get; private set; } = 0;
-    [field: SerializeField] public float WiggleSpeed { get; private set; }
+    [Header("Minigame")]
+    public float MGSpeed { get => mgSpeed; }
+    [SerializeField] private float mgSpeed;
+    public float WiggleAngleMax { get => wiggleAngleMax; }
+    [SerializeField][Range(-90,180)] private float wiggleAngleMax = 90;
+    public float WiggleAngleMin { get => wiggleAngleMin; }
+    [SerializeField][Range(-90,180)] private float wiggleAngleMin = 0;
+    public float WiggleSpeed { get => defaultWiggleSpeed? mgSpeed * 100 : wiggleSpeed; }
+    [SerializeField] private float wiggleSpeed;
+    [SerializeField] bool defaultWiggleSpeed;
 
-    [field: Header("Aquarium")]
-    [field: Tooltip("X: Min Y: Max")]
-    [field: SerializeField] public Vector2 SwimTime { get; private set; }
-    [field: SerializeField] public float PauseTime { get; private set; }
-    [field: SerializeField] public float AquariumSpeed { get; private set; }
-    [field: SerializeField][Range(0, 90)] public float VerticalSwimming { get; private set; } = 30;
+    [Header("Aquarium")]
+    public Vector2 SwimTime { get => swimTime; }
+    [Tooltip("X: Min Y: Max")]
+    [SerializeField] private Vector2 swimTime;
+    public float PauseTime { get => pauseTime; }
+    [SerializeField] private float pauseTime;
+    public float AquariumSpeed { get => aquariumSpeed; }
+    [SerializeField] private float aquariumSpeed;
+    public float VerticalSwimming { get => verticalSwimming; }
+    [SerializeField][Range(0, 90)] private float verticalSwimming = 30;
 
 
 #if UNITY_EDITOR
@@ -34,15 +45,15 @@ public class FishStats : ScriptableObject
         {
             string guid = AssetDatabase.AssetPathToGUID(path);
 
-            if (ID != guid)
+            if (id != guid)
             {
-                ID = guid;
+                id = guid;
                 EditorUtility.SetDirty(this);
             }
         }
-        if (!FishTypeList.Instance.list.ContainsKey(ID))
+        if (!FishTypeList.Instance.list.ContainsKey(id))
         {
-            FishTypeList.Instance.list.Add(ID, this);
+            FishTypeList.Instance.list.Add(id, this);
             EditorUtility.SetDirty(FishTypeList.Instance);
         }
     }
