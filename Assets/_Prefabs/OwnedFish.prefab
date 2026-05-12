@@ -86,7 +86,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1.6666667, y: 1.6666667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   <SpriteRenderer>k__BackingField: {fileID: 6540306869189630648}
-  <Stats>k__BackingField: {fileID: 11400000, guid: fb35be89b7cb2a1438ff165cb4147021, type: 2}
+  <Stats>k__BackingField: {fileID: 11400000, guid: c7b2452d59d00e241ae0f6abae5c88ff, type: 2}
   fishCollider: {fileID: 6629189339963866843}
 --- !u!114 &5406557465759568160
 MonoBehaviour:
