@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 6629189339963866843}
   - component: {fileID: 1852031874956108778}
   m_Layer: 6
-  m_Name: OwnedFish
+  m_Name: AquariumFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

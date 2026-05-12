@@ -1,9 +1,10 @@
 using UnityEngine;
-using UnityEditor.VersionControl;
 
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
+
+
 
 [CreateAssetMenu(fileName = "FishStats", menuName = "Scriptable Objects/FishStats")]
 public class FishStats : ScriptableObject
