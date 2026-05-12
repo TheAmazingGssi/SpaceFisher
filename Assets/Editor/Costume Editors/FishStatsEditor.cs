@@ -15,6 +15,8 @@ public class FishStatsEditor : Editor
     private SerializedProperty pauseTime;
     private SerializedProperty aquariumSpeed;
     private SerializedProperty verticalSwimming;
+    private SerializedProperty customSpeed;
+    private SerializedProperty speed;
 
     private void OnEnable()
     {
@@ -29,26 +31,44 @@ public class FishStatsEditor : Editor
         pauseTime = serializedObject.FindProperty("pauseTime");
         aquariumSpeed = serializedObject.FindProperty("aquariumSpeed");
         verticalSwimming = serializedObject.FindProperty("verticalSwimming");
+        customSpeed = serializedObject.FindProperty("customSpeed");
+        speed = serializedObject.FindProperty("speed");
     }
     public override void OnInspectorGUI()
     {
+        serializedObject.Update();
+
         EditorGUILayout.LabelField("ID: " + id.stringValue);
         EditorGUILayout.PropertyField(fishSprite);
         EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Speed", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(customSpeed, new GUIContent("Manual Speed Control"));
+
+        if (!customSpeed.boolValue)
+            EditorGUILayout.PropertyField(speed, new GUIContent("Speed"));
+
+        EditorGUILayout.Space();
         EditorGUILayout.LabelField("Minigame", EditorStyles.boldLabel);
-        EditorGUILayout.PropertyField(minigameSpeed);
+
+        if (customSpeed.boolValue)
+            EditorGUILayout.PropertyField(minigameSpeed, new GUIContent("MG Speed"));
+
         EditorGUILayout.PropertyField(wiggleAngleMax);
         EditorGUILayout.PropertyField(wiggleAngleMin);
         EditorGUILayout.PropertyField(defaultWiggleSpeed);
-        if(!defaultWiggleSpeed.boolValue)
+
+        if (!defaultWiggleSpeed.boolValue)
             EditorGUILayout.PropertyField(wiggleSpeed);
+
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Aquarium", EditorStyles.boldLabel);
         EditorGUILayout.PropertyField(swimTime);
         EditorGUILayout.PropertyField(pauseTime);
-        EditorGUILayout.PropertyField(aquariumSpeed);
-        EditorGUILayout.PropertyField(verticalSwimming);
 
+        if (customSpeed.boolValue)
+            EditorGUILayout.PropertyField(aquariumSpeed, new GUIContent("Aquarium Speed"));
+
+        EditorGUILayout.PropertyField(verticalSwimming);
         serializedObject.ApplyModifiedProperties();
     }
 }

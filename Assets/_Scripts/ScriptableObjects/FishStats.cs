@@ -13,8 +13,11 @@ public class FishStats : ScriptableObject
     public Sprite FishSprite { get => fishSprite; }
     [SerializeField] private Sprite fishSprite;
 
+    [SerializeField] private bool customSpeed;
+    [SerializeField] private float speed;
+
     [Header("Minigame")]
-    public float MGSpeed { get => mgSpeed; }
+    public float MGSpeed { get => customSpeed ? mgSpeed : speed; }
     [SerializeField] private float mgSpeed;
     public float WiggleAngleMax { get => wiggleAngleMax; }
     [SerializeField][Range(-90,180)] private float wiggleAngleMax = 90;
@@ -30,7 +33,7 @@ public class FishStats : ScriptableObject
     [SerializeField] private Vector2 swimTime;
     public float PauseTime { get => pauseTime; }
     [SerializeField] private float pauseTime;
-    public float AquariumSpeed { get => aquariumSpeed; }
+    public float AquariumSpeed { get => customSpeed ? aquariumSpeed : speed / 2; }
     [SerializeField] private float aquariumSpeed;
     public float VerticalSwimming { get => verticalSwimming; }
     [SerializeField][Range(0, 90)] private float verticalSwimming = 30;

@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
   id: fb35be89b7cb2a1438ff165cb4147021
   fishSprite: {fileID: 0}
+  customSpeed: 0
+  speed: 5
   mgSpeed: 0
   wiggleAngleMax: 90
   wiggleAngleMin: 0
-  defaultWiggleSpeed: 0
   wiggleSpeed: 0
+  defaultWiggleSpeed: 1
   swimTime: {x: 0, y: 0}
   pauseTime: 0
   aquariumSpeed: 0
