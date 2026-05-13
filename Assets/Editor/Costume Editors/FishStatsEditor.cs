@@ -76,6 +76,7 @@ public class FishStatsEditor : Editor
             EditorGUILayout.PropertyField(aquariumSpeed, new GUIContent("Aquarium Speed"));
 
         EditorGUILayout.PropertyField(verticalSwimming);
+        DrawAnglePreview(-verticalSwimming.floatValue, verticalSwimming.floatValue, false);
         serializedObject.ApplyModifiedProperties();
     }
 
@@ -96,6 +97,9 @@ public class FishStatsEditor : Editor
         EditorGUILayout.MinMaxSlider(ref min, ref max, -90, 180);
         wiggleAngleMin.floatValue = min;
         wiggleAngleMax.floatValue = max;
+
+        DrawAnglePreview(min, max, true);
+
     }
     private void MinMaxAquariumSpeed()
     {
@@ -113,4 +117,36 @@ public class FishStatsEditor : Editor
         swimTime.vector2Value = vect;
 
     }
+
+    void DrawAnglePreview(float minAngle, float maxAngle, bool flip)
+    {
+        Rect rect = GUILayoutUtility.GetRect(200, 200);
+
+        Vector2 center = rect.center;
+        float radius = 50f;
+
+        Handles.BeginGUI();
+
+        // Draw background circle
+        Handles.color = Color.gray;
+        Handles.DrawWireDisc(center, Vector3.forward, radius);
+
+        // Convert angles to directions
+        Vector3 startDir = AngleToUnitVect(minAngle) * (flip? -1 : 1);
+        Vector3 endDir = AngleToUnitVect(maxAngle) * (flip ? -1 : 1);
+
+        // Draw border lines
+        Handles.color = Color.white;
+        Handles.DrawLine(center, center + (Vector2)(startDir * radius));
+        Handles.DrawLine(center, center + (Vector2)(endDir * radius));
+
+        Handles.EndGUI();
+    }
+
+    Vector3 AngleToUnitVect(float angle)
+    {
+        float rad = angle * Mathf.Deg2Rad;
+        return new Vector3(Mathf.Cos(rad), -Mathf.Sin(rad), 0);
+    }
 }
+
