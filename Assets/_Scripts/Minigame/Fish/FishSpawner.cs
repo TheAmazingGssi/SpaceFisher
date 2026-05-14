@@ -32,30 +32,22 @@ public class FishSpawner : MonoBehaviour
     void SpawnFish()
     {
         bool goingRight = Random.Range(0, 2) == 0;
-        bool spawnFromSide = Random.Range(0, 2) == 0;
         bool spawnDown = MinigameManager.Instance.Phase == MinigamePhase.Down;
         FishAI fishAI = FishObject.GetComponent<FishAI>();
 
-        Vector2 spawnPoint = Vector2.zero;
         Quaternion rotation;
+        
+        //Pick a random position on the hook line
+        float randX = Random.Range(-camXBorder, camXBorder);
+        //calculate the distance needed to travel to there
+        float deltaX = randX + camXBorder; //we assume we start at -camXBorder so  - - camXBorder is +
+        float swimTime = deltaX / fishAI.Stats.MGSpeed;
+        float height = hook.transform.position.y - (hook.Speed * swimTime);
 
-        if (spawnFromSide)
-        {
-            //Get random Y on edge of screen's lower half
-            float yMin = cam.ViewportToWorldPoint(Vector3.zero).y;
-            float yMax = cam.ViewportToWorldPoint(Vector3.one * 0.5f).y;
-            spawnPoint.y = Random.Range(yMin, yMax);
-            spawnPoint.x = -camXBorder;
-        }
-        else
-        {
-            //Get random x for edge of screen's bottom
-            spawnPoint.y = cam.ViewportToWorldPoint(Vector3.zero).y - (fishAI.Stats.FishSprite.rect.height / fishAI.Stats.FishSprite.pixelsPerUnit * 0.5f);
-            float xMin = cam.ViewportToWorldPoint(Vector3.zero).x;
-            float xMax = cam.ViewportToWorldPoint(Vector3.one).x;
-            spawnPoint.x = Random.Range(xMin, xMax);
-        }
+        Vector2 spawnPoint = new Vector2(-camXBorder, height);
+        
 
+        //flip left right
         if (!goingRight)
         {
             //rotate the fish and mirror the spawn vertically
@@ -65,12 +57,14 @@ public class FishSpawner : MonoBehaviour
         else
             rotation = Quaternion.identity;
 
+        //spawn above or under the hook
         if (!spawnDown)
         {
             //mirror the spawn horizontally
             spawnPoint.y = (2 * hook.transform.position.y) - spawnPoint.y;
         }
 
+        //Dont spawn if too close to ship (assumes the ship is at y=0)
         if (spawnPoint.y >= -2* (fishAI.Stats.FishSprite.rect.height / fishAI.Stats.FishSprite.pixelsPerUnit))
             return;
 

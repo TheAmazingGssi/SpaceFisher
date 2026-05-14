@@ -1239,8 +1239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HookController
   playerObject: {fileID: 484982415}
   horizontalSpeed: 10
-  downSpeed: 3
-  upSpeed: 10
+  downSpeed: 5
+  upSpeed: 15
   fishingLine: {fileID: 1250811444}
 --- !u!114 &1381342933
 MonoBehaviour:
@@ -1307,6 +1307,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2886176777648643935, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
+      propertyPath: m_fontSize
+      value: 69.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5109900773191882049, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
       propertyPath: m_Name
       value: MinigameUI
