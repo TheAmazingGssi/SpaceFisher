@@ -18,6 +18,19 @@ public class HookController : MonoBehaviour
     [SerializeField] LineRenderer fishingLine;
 
     public float DeltaY { get; private set; }
+    public float Speed { get
+        {
+            switch(MinigameManager.Instance.Phase)
+            {
+                case MinigamePhase.Down:
+                    return downSpeed;
+                case MinigamePhase.Up:
+                    return upSpeed;
+                default:
+                    return 0;
+            }
+        }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     #region Monobehaviour
