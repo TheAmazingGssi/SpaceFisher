@@ -44,8 +44,13 @@ public class FishStatsEditor : Editor
         EditorGUILayout.LabelField("ID: " + id.stringValue);
         EditorGUILayout.PropertyField(fishSprite);
         EditorGUILayout.PropertyField(planet);
-        Texture2D image = AssetPreview.GetAssetPreview((target as FishStats).FishSprite);
-        GUILayout.Box(image);
+        if (!fishSprite.objectReferenceValue)
+            EditorGUILayout.HelpBox("Please insert a texture", MessageType.Warning);
+        else
+        {
+            Texture2D image = AssetPreview.GetAssetPreview((target as FishStats).FishSprite);
+            GUILayout.Box(image);
+        }
 
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Speed", EditorStyles.boldLabel);
