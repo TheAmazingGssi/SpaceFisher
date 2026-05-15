@@ -6,6 +6,8 @@ public class AquariumManager : MonoBehaviour
     [SerializeField] private AquariumFishPool pool;
     [SerializeField] private List<Aquarium> aquariums = new List<Aquarium>();
 
+    private List<FishStats> fishInAquariums = new List<FishStats>();
+
     private Aquarium currentAquarium;
 
     private void Start()

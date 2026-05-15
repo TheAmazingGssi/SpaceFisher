@@ -22,6 +22,9 @@ public class FishStats : ScriptableObject
     public Planet Planet {  get => planet; }
     [SerializeField] private Planet planet;
 
+    public float Value { get => value; }
+    [SerializeField] private float value;
+
     [SerializeField] private bool customSpeed;
     [SerializeField] private float speed;
 
