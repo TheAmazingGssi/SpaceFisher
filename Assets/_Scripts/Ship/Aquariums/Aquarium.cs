@@ -7,6 +7,8 @@ public class Aquarium : ClickableObject
 
     private AquariumFishPool pool;
 
+    bool moving = false;
+
     private void Start()
     {
         Fish = new List<FishManager>(); 
@@ -19,7 +21,15 @@ public class Aquarium : ClickableObject
 
     protected override void OnFingerUp()
     {
-        Bus<AquariumPressed>.Raise(new AquariumPressed { Aquarium = this });
+        if (!moving)
+            Bus<AquariumPressed>.Raise(new AquariumPressed { Aquarium = this });
+        moving = false;
+    }
+    protected override void OnFingerHold()
+    {
+        base.OnFingerHold();
+        PlacementManager.Instance.CurrentlyMovingObject = gameObject;
+        moving = true;
     }
 
     public void AddFish(FishManager fish)

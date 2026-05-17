@@ -3,11 +3,23 @@ using UnityEngine.InputSystem;
 
 public class PlacementManager : MonoBehaviour
 {
+    static public PlacementManager Instance;
     [SerializeField] GridManager gridManager;
     public GameObject CurrentlyMovingObject;
 
     Vector2 currentTouch;
     Camera cam;
+
+    private void Start()
+    {
+        if (Instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
 
     private void Update()
     {
