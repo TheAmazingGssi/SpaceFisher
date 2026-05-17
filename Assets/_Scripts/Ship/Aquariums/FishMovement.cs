@@ -19,7 +19,7 @@ public class FishMovement : MonoBehaviour
         while (true)
         {
             currentDirection = GetRandomDirection();
-            SetFrontAngle(currentDirection);
+            SetAngle(currentDirection);
             float swimTime = Random.Range(manager.Stats.SwimTime.x, manager.Stats.SwimTime.y);
             float elapsed = 0;
             while (elapsed < swimTime)
@@ -51,14 +51,16 @@ public class FishMovement : MonoBehaviour
             float finalAngle = (clampedAngle + offset) * Mathf.Deg2Rad;
             currentDirection = new Vector2(Mathf.Cos(finalAngle), Mathf.Sin(finalAngle)).normalized;
             rb.linearVelocity = currentDirection * manager.Stats.AquariumSpeed;
-            SetFrontAngle(currentDirection);
+            SetAngle(currentDirection);
         }
     }
-    private void SetFrontAngle(Vector2 direction)
+    private void SetAngle(Vector2 direction)
     {
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * (direction.x < 0 ? -1 : 1), transform.localScale.y, transform.localScale.z);
+        Vector2 localDirection = new Vector2(Mathf.Abs(direction.x), direction.x < 0 ? -direction.y : direction.y);
+        float tilt = Mathf.Atan2(localDirection.y, localDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, tilt);
+        float xScale = Mathf.Abs(transform.localScale.x) * (direction.x < 0 ? -1 : 1);
+        transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
     }
     private void OnDisable()
     {
