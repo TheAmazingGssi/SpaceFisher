@@ -17,12 +17,18 @@ public class CoinsManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void AddCoins(int amount)
+    {
+        Coins += amount;
+        Bus<CoinChange>.Raise( new CoinChange { NewCoins = Coins });
+    }
 
     public bool TryBuying(int cost)
     {
         if(cost <= Coins)
         {
             Coins -= cost;
+            Bus<CoinChange>.Raise(new CoinChange { NewCoins = Coins });
             return true;
         }
         return false;

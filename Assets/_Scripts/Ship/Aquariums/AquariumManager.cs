@@ -29,6 +29,16 @@ public class AquariumManager : MonoBehaviour
     private void AddFish(PlaceFish e)
     {
         currentAquarium.AddFish(e.Fish);
+        fishInAquariums.Add(e.Fish.Stats);
+        Bus<AquariumValueChange>.Raise(new AquariumValueChange{ Value = CalculateValue() });
+    }
+
+    public float CalculateValue()
+    {
+        float value = 0;
+        foreach (FishStats fish in fishInAquariums)
+            value += fish.Value;
+        return value;
     }
 
     private void OnDestroy()

@@ -15,6 +15,7 @@ MonoBehaviour:
   id: fb35be89b7cb2a1438ff165cb4147021
   fishSprite: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
   planet: 0
+  value: 0
   customSpeed: 0
   speed: 1
   mgSpeed: 0
@@ -22,7 +23,7 @@ MonoBehaviour:
   wiggleAngleMin: 6.9119935
   wiggleSpeed: 0
   defaultWiggleSpeed: 1
-  swimTime: {x: 1, y: 10}
-  pauseTime: 0
+  swimTime: {x: 1, y: 2}
+  pauseTime: 0.2
   aquariumSpeed: 0
-  verticalSwimming: 30
+  verticalSwimming: 52.7

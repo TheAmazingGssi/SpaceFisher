@@ -6,6 +6,7 @@ public interface IEvent { }
 #region Aquariums
 public struct PlaceFish : IEvent { public FishManager Fish; }
 public struct AquariumPressed : IEvent { public Aquarium Aquarium; }
+public struct AquariumValueChange : IEvent { public float Value; }
 #endregion
 
 #region Zones
@@ -13,7 +14,7 @@ public struct RatingChanged : IEvent { public ZoneBase Zone; }
 #endregion
 
 #region Visitors
-public struct VisitorSpawned : IEvent { public Visitor Visitor; }
+public struct VisitorSpawned : IEvent { public Visitor Visitor; public int TicketPrice; }
 public struct ChangeLocation : IEvent { public Visitor Visitor; }
 #endregion
 
@@ -22,3 +23,11 @@ public struct FishCaught : IEvent { public FishAI Fish; }
 public struct MinigameStart : IEvent { };
 public struct MinigameEnd : IEvent { };
 #endregion
+
+#region Coins
+public struct CoinChange : IEvent { public int NewCoins; }
+#endregion 
+
+#region System
+public struct OfflineTimeCalculated : IEvent { public float SecondsOffline; }
+#endregion 
