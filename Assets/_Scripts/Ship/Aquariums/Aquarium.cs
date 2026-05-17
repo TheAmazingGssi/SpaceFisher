@@ -19,7 +19,6 @@ public class Aquarium : MoveableObject
 
     protected override void OnFingerUp()
     {
-        Debug.Log("Is Moving = " + IsMoving);
         if (!IsMoving)
             Bus<AquariumPressed>.Raise(new AquariumPressed { Aquarium = this });
         base.OnFingerUp();
