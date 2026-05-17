@@ -41,10 +41,6 @@ public class MoveableObject : ClickableObject
             canPlace = true;
             SetColor();
         }
-        else
-        {
-            Debug.Log("Situation not changed");
-        }
     }
     private void InitCanPlace()
     {
