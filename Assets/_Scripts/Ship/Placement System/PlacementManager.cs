@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlacementManager : MonoBehaviour
 {
     static public PlacementManager Instance;
     [SerializeField] GridManager gridManager;
-    public GameObject CurrentlyMovingObject;
+    public MoveableObject CurrentlyMovingObject;
 
     Vector2 currentTouch;
     Camera cam;
+
+    public bool CanTakeObject { get => !(bool)CurrentlyMovingObject; }
 
     private void Start()
     {
@@ -24,7 +27,13 @@ public class PlacementManager : MonoBehaviour
     private void Update()
     {
         if (CurrentlyMovingObject)
-            CurrentlyMovingObject.transform.position = gridManager.AlignToGrid(currentTouch);
+        {
+            Vector3 ogPos = CurrentlyMovingObject.transform.position;
+            CurrentlyMovingObject.MainParent.transform.position = gridManager.AlignToGrid(currentTouch);
+
+            if(CurrentlyMovingObject.transform.position != ogPos )
+                CurrentlyMovingObject.OnPositionUpdated();
+        }
     }
 
     private void OnValidate()
@@ -37,10 +46,5 @@ public class PlacementManager : MonoBehaviour
         Vector2 screenSpacePos = context.ReadValue<Vector2>();
         currentTouch = cam.ScreenToWorldPoint(screenSpacePos);
     }
-    
-    public void OnTap(InputAction.CallbackContext context)
-    {
-        if(context.ReadValue<float>() == 0)
-            CurrentlyMovingObject = null;
-    }
+
 }

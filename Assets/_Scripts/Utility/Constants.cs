@@ -6,6 +6,7 @@ public static class Constants
     {
         public const string Player = "Player";
         public const string AquariumWall = "AquariumWall";
+        public const string Building = "Building";
     }
     public static class Scenes
     {

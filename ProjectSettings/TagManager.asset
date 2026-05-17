@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - AquariumWall
+  - Building
   layers:
   - Default
   - TransparentFX
@@ -47,6 +48,12 @@ TagManager:
     locked: 0
   - name: Fishing Line
     uniqueID: 104427513
+    locked: 0
+  - name: Buildings
+    uniqueID: 4170303137
+    locked: 0
+  - name: Moving Building
+    uniqueID: 2702352653
     locked: 0
   m_RenderingLayers:
   - Default

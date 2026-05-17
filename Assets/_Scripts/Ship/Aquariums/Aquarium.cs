@@ -4,10 +4,9 @@ public class Aquarium : ClickableObject
 {
     [SerializeField] private Transform fishSpawn;
     public List<FishManager> Fish { get; private set; }
+    [SerializeField] MoveableObject MoveableObjectComponent;
 
     private AquariumFishPool pool;
-
-    bool moving = false;
 
     private void Start()
     {
@@ -21,15 +20,18 @@ public class Aquarium : ClickableObject
 
     protected override void OnFingerUp()
     {
-        if (!moving)
+        if (!MoveableObjectComponent.IsMoving)
             Bus<AquariumPressed>.Raise(new AquariumPressed { Aquarium = this });
-        moving = false;
+        else
+            MoveableObjectComponent.TryStopMoving();
     }
     protected override void OnFingerHold()
     {
         base.OnFingerHold();
-        PlacementManager.Instance.CurrentlyMovingObject = gameObject;
-        moving = true;
+        if (PlacementManager.Instance.CanTakeObject)
+        {
+            MoveableObjectComponent.StartMoving();
+        }
     }
 
     public void AddFish(FishManager fish)
