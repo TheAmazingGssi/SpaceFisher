@@ -31,6 +31,7 @@ public class MoveableObject : ClickableObject
 
     public void OnPositionUpdated()
     {
+        Physics2D.SyncTransforms();
         if (canPlace && IsOverlappingAnotherBuilding())
         {
             canPlace = false;
@@ -75,9 +76,7 @@ public class MoveableObject : ClickableObject
         if (overlaps.Count > 0)
             foreach (Collider2D otherCol in overlaps)
                 if (otherCol.CompareTag(Constants.Tags.Building))
-                {
                     return true;
-                }
 
         return false;
     }

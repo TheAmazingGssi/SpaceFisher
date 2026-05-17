@@ -10,6 +10,7 @@ public class PlacementManager : MonoBehaviour
 
     Vector2 currentTouch;
     Camera cam;
+    bool posUpdateFlag;
 
     public bool CanTakeObject { get => !(bool)CurrentlyMovingObject; }
 
