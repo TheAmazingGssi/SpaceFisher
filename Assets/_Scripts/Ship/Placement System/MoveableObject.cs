@@ -1,11 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class MoveableObject : MonoBehaviour
+public class MoveableObject : ClickableObject
 {
     [field: SerializeField] public GameObject MainParent {  get; private set; }
-
-    [SerializeField] BoxCollider2D mainCollider;
     [SerializeField] GameObject greenTint;
     [SerializeField] GameObject redTint;
     public bool IsMoving { get => PlacementManager.Instance.CurrentlyMovingObject == this; }
@@ -51,7 +49,7 @@ public class MoveableObject : MonoBehaviour
     private void InitCanPlace()
     {
         List<Collider2D> overlaps = new List<Collider2D>();
-        mainCollider.Overlap(overlaps);
+        _collider.Overlap(overlaps);
         if (overlaps.Count > 0)
             if(IsOverlappingAnotherBuilding())
             {
@@ -77,7 +75,7 @@ public class MoveableObject : MonoBehaviour
     private bool IsOverlappingAnotherBuilding()
     {
         List<Collider2D> overlaps = new List<Collider2D>();
-        mainCollider.Overlap(overlaps);
+        _collider.Overlap(overlaps);
         if (overlaps.Count > 0)
             foreach (Collider2D otherCol in overlaps)
                 if (otherCol.CompareTag(Constants.Tags.Building))
@@ -86,5 +84,18 @@ public class MoveableObject : MonoBehaviour
                 }
 
         return false;
+    }
+
+    protected override void OnFingerHold()
+    {
+        base.OnFingerHold();
+        if (PlacementManager.Instance.CanTakeObject)
+        {
+            StartMoving();
+        }
+    }
+    protected override void OnFingerUp()
+    {
+        TryStopMoving();
     }
 }
