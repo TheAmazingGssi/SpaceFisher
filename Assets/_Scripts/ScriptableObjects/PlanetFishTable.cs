@@ -13,7 +13,9 @@ public struct FishSpawnData
 [CreateAssetMenu(fileName = "PlanetFishTable", menuName = "Scriptable Objects/PlanetFishTable")]
 public class PlanetFishTable : ScriptableObject
 {
+    public Planet Planet { get => planet;  }
     [SerializeField] private Planet planet;
+    public float MaxDepth { get => maxDepth; }
     [SerializeField] private float maxDepth;
     [SerializeField] private FishSpawnData[] fishSpawnData;
 }

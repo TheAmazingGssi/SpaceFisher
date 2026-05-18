@@ -19,9 +19,4 @@ public class PlanetFishTableEditor : Editor
     {
         base.OnInspectorGUI();
     }
-
-    private void DisplayFishSpawnData(int index)
-    {
-
-    }
 }
