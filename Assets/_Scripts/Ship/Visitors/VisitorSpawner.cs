@@ -6,18 +6,28 @@ public class VisitorSpawner : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private VisitorPool pool;
     [SerializeField] private VisitorData[] data;
-    [SerializeField] public int TicketPrice = 10;
+    [SerializeField] private float maxInterval = 60;
+    [SerializeField] private float minInterval = 5;
+    [SerializeField] private float growthScale = 1000;
 
-    private float currentInterval = 60;
-
-    public void SetInterval(float interval)
-    {
-        currentInterval = interval;
-    }
+    private int ticketPrice;
+    private float currentInterval;
 
     private void Start()
     {
+        Bus<AquariumValueChange>.OnEvent += OnAquariumValueChanged;
+    }
+
+    public void Init(int ticketPrice)
+    {
+        this.ticketPrice = ticketPrice;
         StartCoroutine(SpawnLoop());
+    }
+
+    private void OnAquariumValueChanged(AquariumValueChange e)
+    {
+        float t = e.Value / (e.Value + growthScale);
+        currentInterval = Mathf.Lerp(maxInterval, minInterval, t);
     }
 
     private IEnumerator SpawnLoop()
@@ -34,6 +44,11 @@ public class VisitorSpawner : MonoBehaviour
         Visitor visitor = pool.Get();
         visitor.Initialize(data[Random.Range(0, data.Length)]);
         visitor.transform.position = spawnPoint.position;
-        Bus<VisitorSpawned>.Raise(new VisitorSpawned { Visitor = visitor, TicketPrice = TicketPrice });
+        Bus<VisitorSpawned>.Raise(new VisitorSpawned { Visitor = visitor, TicketPrice = ticketPrice });
+    }
+
+    private void OnDestroy()
+    {
+        Bus<AquariumValueChange>.OnEvent -= OnAquariumValueChanged;
     }
 }

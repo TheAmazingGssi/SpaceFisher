@@ -17,7 +17,7 @@ public class FishButton : ItemButton<KeyValuePair<FishStats, int>>
 
     public override void OnButtonClick()
     {
-        fish.Initialize(fishStats);
+        fish.Init(fishStats);
         Inventory.Instance.TryRemoveFish(fishStats);
         Bus<PlaceFish>.Raise(new PlaceFish { Fish = fish });
     }

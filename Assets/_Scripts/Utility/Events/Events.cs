@@ -16,7 +16,7 @@ public struct StoreBought : IEvent { public StoreData Data; }
 #region Visitors
 public struct VisitorSpawned : IEvent { public Visitor Visitor; public int TicketPrice; }
 public struct ChangeLocation : IEvent { public Visitor Visitor; }
-public struct VisitorReleased : IEvent { public Visitor Visitor; public StoreBase Store; }
+public struct VisitorReleased : IEvent { public Visitor Visitor; public Store Store; }
 #endregion
 
 #region Minigame

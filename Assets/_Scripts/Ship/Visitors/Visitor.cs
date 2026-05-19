@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum Store
+public enum StoreType
 {
     Aquarium,
     Restaurant,
@@ -11,7 +11,7 @@ public enum Store
 public class Visitor : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer renderer;
-    public Store CurrentStore {  get; private set; }
+    public StoreType CurrentStore {  get; private set; }
 
     public void Initialize(VisitorData data)
     {
@@ -21,7 +21,7 @@ public class Visitor : MonoBehaviour
     [ContextMenu("Add to restaurant")]
     private void ChangeZone()
     {
-        CurrentStore = Store.Restaurant;
+        CurrentStore = StoreType.Restaurant;
         Bus<ChangeLocation>.Raise(new ChangeLocation {  Visitor = this });
     }
 }
