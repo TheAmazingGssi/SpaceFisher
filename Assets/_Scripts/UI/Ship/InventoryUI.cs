@@ -1,0 +1,19 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class InventoryUI : PanelUI<FishButton, KeyValuePair<FishStats, int>>
+{
+    private void Start()
+    {
+        Bus<AquariumPressed>.OnEvent += OnAquariumPressed;
+    }
+
+    private void OnAquariumPressed(AquariumPressed e)
+    {
+        RefreshPanel(Inventory.Instance.Fish);
+    }
+    private void OnDestroy()
+    {
+        Bus<AquariumPressed>.OnEvent -= OnAquariumPressed;
+    }
+}

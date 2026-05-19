@@ -10,12 +10,13 @@ public struct AquariumValueChange : IEvent { public float Value; }
 #endregion
 
 #region Zones
-public struct RatingChanged : IEvent { public ZoneBase Zone; }
+public struct RatingChanged : IEvent { public StoreBase Zone; }
 #endregion
 
 #region Visitors
 public struct VisitorSpawned : IEvent { public Visitor Visitor; public int TicketPrice; }
 public struct ChangeLocation : IEvent { public Visitor Visitor; }
+public struct VisitorReleased : IEvent { public Visitor Visitor; public StoreBase Store; }
 #endregion
 
 #region Minigame

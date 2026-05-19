@@ -8,11 +8,11 @@ public class VisitorSpawner : MonoBehaviour
     [SerializeField] private VisitorData[] data;
     [SerializeField] public int TicketPrice = 10;
 
-    private float _currentInterval = 60f;
+    private float currentInterval = 60;
 
     public void SetInterval(float interval)
     {
-        _currentInterval = interval;
+        currentInterval = interval;
     }
 
     private void Start()
@@ -24,7 +24,7 @@ public class VisitorSpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(_currentInterval);
+            yield return new WaitForSeconds(currentInterval);
             SpawnVisitor();
         }
     }
@@ -35,6 +35,5 @@ public class VisitorSpawner : MonoBehaviour
         visitor.Initialize(data[Random.Range(0, data.Length)]);
         visitor.transform.position = spawnPoint.position;
         Bus<VisitorSpawned>.Raise(new VisitorSpawned { Visitor = visitor, TicketPrice = TicketPrice });
-        Debug.Log("Visitor spawned");
     }
 }

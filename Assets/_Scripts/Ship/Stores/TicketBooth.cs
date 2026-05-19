@@ -1,8 +1,8 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TicketBooth : ZoneBase
+public class TicketBooth : StoreBase
 {
     [Header("Ticket Booth")]
     [SerializeField] private float expectedWaitingTime = 3;
@@ -57,4 +57,4 @@ public class TicketBooth : ZoneBase
     {
         Debug.Log($"[TicketBooth] Rating changed: {newRating:F1}");
     }
-}
+}*/

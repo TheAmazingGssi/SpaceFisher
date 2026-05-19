@@ -5,7 +5,7 @@ public class VisitorsManager : MonoBehaviour
 {
     [SerializeField] private VisitorSpawner spawner;
     [SerializeField] private AquariumManager aquariumManager;
-    [SerializeField] private ZoneBase[] zones;
+    [SerializeField] private StoreBase[] zones;
 
     [Header("Spawn Timing")]
     [SerializeField] private float maxInterval = 60f;

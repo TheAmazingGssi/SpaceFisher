@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8474985751491201222}
   - component: {fileID: 7333697747347659086}
   - component: {fileID: 8982825077179312123}
-  - component: {fileID: 6706139283636206560}
+  - component: {fileID: 2124992377286913143}
   m_Layer: 5
-  m_Name: FishButton
+  m_Name: StoreButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6706139283636206560}
-        m_TargetAssemblyTypeName: FishButton, Assembly-CSharp
+      - m_Target: {fileID: 2124992377286913143}
+        m_TargetAssemblyTypeName: StoreButton, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6706139283636206560
+--- !u!114 &2124992377286913143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,13 +143,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 227277299627548545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79c8b70bc78a10c42970dcf7b0629ea2, type: 3}
+  m_Script: {fileID: 11500000, guid: f1025f68e6040db4db6acea037a117cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FishButton
+  m_EditorClassIdentifier: Assembly-CSharp::StoreButton
   image: {fileID: 7333697747347659086}
   text: {fileID: 8237676696864503579}
   button: {fileID: 8982825077179312123}
-  fish: {fileID: 3173794925262988454, guid: 6b246692a48113045b7d3035dc547826, type: 3}
 --- !u!1 &6939432648417993591
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -242,7 +241,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

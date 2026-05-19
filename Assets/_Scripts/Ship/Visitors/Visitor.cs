@@ -1,26 +1,27 @@
 using UnityEngine;
 
-public enum Zone
+public enum Store
 {
-    Line,
     Aquarium,
-    Food,
-    TicketBooth,
+    Restaurant,
+    Theater,
+    GiftShop,
     Inbetween
 }
 public class Visitor : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer renderer;
-    public Zone CurrentZone {  get; private set; }
+    public Store CurrentStore {  get; private set; }
 
     public void Initialize(VisitorData data)
     {
         renderer.sprite = data.Sprite;
     }
 
-    private void ChangeZone(Zone area)
+    [ContextMenu("Add to restaurant")]
+    private void ChangeZone()
     {
-        CurrentZone = area;
+        CurrentStore = Store.Restaurant;
         Bus<ChangeLocation>.Raise(new ChangeLocation {  Visitor = this });
     }
 }
