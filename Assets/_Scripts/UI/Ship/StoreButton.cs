@@ -1,11 +1,20 @@
 using UnityEngine;
 
-public class StoreButton : ItemButton<StoreBase>
+public class StoreButton : ItemButton<StoreData>
 {
-    private StoreBase store;
-    public override void Setup(StoreBase data)
+    private StoreData store;
+    public override void Setup(StoreData data)
     {
         store = data;
-        Debug.Log(store.gameObject.name);
+        image.sprite = store.Sprite;
+    }
+
+    public override void OnButtonClick()
+    {
+        if (CoinsManager.Instance.TryBuying(store.Price))
+            Bus<StoreBought>.Raise(new StoreBought { Data = store });
+        else
+            Debug.Log("Not enough coins");
+
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoreShopUI : PanelUI<StoreButton, StoreBase>
+public class StoreShopUI : PanelUI<StoreButton, StoreData>
 {
-
 }

@@ -4,6 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class ShipUIManager : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private InventoryUI inventoryUI;
+    [SerializeField] private StoreShopUI storeShopUI;
+
+    [Header("UI Elements")]
     [SerializeField] private GameObject fishPanel;
     [SerializeField] private TextMeshProUGUI CurrentCoinsText;
 
@@ -13,11 +18,24 @@ public class ShipUIManager : MonoBehaviour
         Bus<AquariumPressed>.OnEvent += OpenFishPanel;
         Bus<PlaceFish>.OnEvent += CloseFishPanel;
         Bus<CoinChange>.OnEvent += OnCoinChange;
+        Bus<StoreBought>.OnEvent += CloseStorePanel;
     }
 
     public void GoToMiniGame()
     {
         SceneManager.LoadScene(Constants.Scenes.Minigame);
+    }
+
+    [ContextMenu("Open Shop Window")]
+    public void OpenStorePanel()
+    {
+        storeShopUI.gameObject.SetActive(true);
+        storeShopUI.RefreshPanel(StoresManager.Stores);
+    }
+
+    private void CloseStorePanel(StoreBought e)
+    {
+        storeShopUI.gameObject.SetActive(false);
     }
 
     private void OpenFishPanel(AquariumPressed e)
@@ -40,5 +58,6 @@ public class ShipUIManager : MonoBehaviour
         Bus<AquariumPressed>.OnEvent -= OpenFishPanel;
         Bus<PlaceFish>.OnEvent -= CloseFishPanel;
         Bus<CoinChange>.OnEvent -= OnCoinChange;
+        Bus<StoreBought>.OnEvent -= CloseStorePanel;
     }
 }

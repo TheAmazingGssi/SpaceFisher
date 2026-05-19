@@ -9,8 +9,8 @@ public struct AquariumPressed : IEvent { public Aquarium Aquarium; }
 public struct AquariumValueChange : IEvent { public float Value; }
 #endregion
 
-#region Zones
-public struct RatingChanged : IEvent { public StoreBase Zone; }
+#region Stores
+public struct StoreBought : IEvent { public StoreData Data; }
 #endregion
 
 #region Visitors
