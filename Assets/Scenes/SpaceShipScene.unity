@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a48cef675bd5b04ea3b7e7cd6404a45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AquariumFishPool
-  prefab: {fileID: 0}
+  prefab: {fileID: 3173794925262988454, guid: 6b246692a48113045b7d3035dc547826, type: 3}
   initialSize: 10
 --- !u!1 &999057996
 GameObject:

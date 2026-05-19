@@ -15,6 +15,10 @@ public class Store : MonoBehaviour
     private void Start()
     {
         Bus<ChangeLocation>.OnEvent += AddVisitor;
+    }
+
+    private void OnEnable()
+    {
         releaseRoutine = StartCoroutine(ReleaseRoutine());
     }
 
@@ -48,6 +52,12 @@ public class Store : MonoBehaviour
     private void NewVisitor(Visitor visitor)
     {
 
+    }
+
+    private void OnDisable()
+    {
+       StopCoroutine(releaseRoutine);
+       releaseRoutine = null;
     }
 
     private void OnDestroy()
