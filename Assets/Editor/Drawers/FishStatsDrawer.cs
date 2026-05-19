@@ -30,4 +30,8 @@ public class FishStatsDrawer : PropertyDrawer
     {
         return EditorGUIUtility.singleLineHeight + PreviewSize + 2;
     }
+    static public float GetPropertyHeight()
+    {
+        return EditorGUIUtility.singleLineHeight + PreviewSize + 2;
+    }
 }

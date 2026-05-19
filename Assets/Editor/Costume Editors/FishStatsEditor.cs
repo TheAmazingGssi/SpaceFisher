@@ -87,6 +87,8 @@ public class FishStatsEditor : Editor
 
         EditorGUILayout.PropertyField(verticalSwimming);
         DrawAnglePreview(-verticalSwimming.floatValue, verticalSwimming.floatValue, false);
+        
+        
         serializedObject.ApplyModifiedProperties();
     }
 
