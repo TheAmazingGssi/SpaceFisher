@@ -8,7 +8,6 @@ public class MoveableObject : ClickableObject
     [SerializeField] GameObject redTint;
     public bool IsMoving { get => PlacementManager.Instance.CurrentlyMovingObject == this; }
 
-
     bool canPlace;
 
     public bool TryStartMoving()
