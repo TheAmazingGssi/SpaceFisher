@@ -13,6 +13,19 @@ public class DataNavigator : EditorWindow
     enum Tab { Fish, Buildings, Planets}
 
     Tab currentTab;
+    string searchQuary;
+    bool useFishFilter;
+    [SerializeField]
+    private Planet fishFilter;
+
+    private SerializedObject so;
+    private SerializedProperty fishFilterProp;
+
+    private void OnEnable()
+    {
+        so = new SerializedObject(this);
+        fishFilterProp = so.FindProperty("fishFilter");
+    }
 
     private void OnGUI()
     {
@@ -24,8 +37,9 @@ public class DataNavigator : EditorWindow
         //if(GUILayout.Button("Planets"))
         //    currentTab = Tab.Planets;
         GUILayout.EndHorizontal();
-
         EditorGUILayout.Space();
+        searchQuary = EditorGUILayout.TextField("Filter: ", searchQuary);
+
         switch(currentTab)
         {
             case Tab.Fish:
@@ -41,37 +55,50 @@ public class DataNavigator : EditorWindow
                 break;
         }
     }
-
+    
     private void FishGUI()
     {
+        useFishFilter = EditorGUILayout.Toggle("Use Planet as Filter", useFishFilter);
+        if (useFishFilter)
+        {
+            so.Update();
+            EditorGUILayout.PropertyField(fishFilterProp);
+            so.ApplyModifiedProperties();
+        }
+
+
+        EditorGUILayout.Space();
         FishStats[] fishArr = ScriptablesDatabase.Instance.fishList.Values.ToArray();
         foreach(FishStats fish in fishArr)
-        {
-            GUILayout.BeginHorizontal();
-            GUILayout.Label(fish.FishSprite.texture, GUILayout.Width(60), GUILayout.Height(60));
-            GUILayout.Label(fish.name);
-            if (GUILayout.Button("Edit", GUILayout.Width(60)))
+            if(fish.name.ToLower().Contains(searchQuary.ToLower()) && (!useFishFilter || fish.Planet == fishFilter))
             {
-                Selection.activeObject = fish;
-                EditorGUIUtility.PingObject(fish);
+                GUILayout.BeginHorizontal();
+                GUILayout.Label(fish.FishSprite.texture, GUILayout.Width(60), GUILayout.Height(60));
+                GUILayout.Label(fish.name);
+                if (GUILayout.Button("Edit", GUILayout.Width(60)))
+                {
+                    Selection.activeObject = fish;
+                    EditorGUIUtility.PingObject(fish);
+                }
+                GUILayout.EndHorizontal();
             }
-            GUILayout.EndHorizontal();
-        }
     }
     private void BuildingsGUI()
     {
+        EditorGUILayout.Space();
         StoreData[] storeArr = ScriptablesDatabase.Instance.storeList.Values.ToArray();
         foreach (StoreData store in storeArr)
-        {
-            GUILayout.BeginHorizontal();
-            GUILayout.Label(store.Sprite.texture, GUILayout.Width(60), GUILayout.Height(60));
-            GUILayout.Label(store.name);
-            if (GUILayout.Button("Edit", GUILayout.Width(60)))
+            if (store.name.ToLower().Contains(searchQuary.ToLower()))
             {
-                Selection.activeObject = store;
-                EditorGUIUtility.PingObject(store);
+                GUILayout.BeginHorizontal();
+                GUILayout.Label(store.Sprite.texture, GUILayout.Width(60), GUILayout.Height(60));
+                GUILayout.Label(store.name);
+                if (GUILayout.Button("Edit", GUILayout.Width(60)))
+                {
+                    Selection.activeObject = store;
+                    EditorGUIUtility.PingObject(store);
+                }
+                GUILayout.EndHorizontal();
             }
-            GUILayout.EndHorizontal();
-        }
     }
 }
