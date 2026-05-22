@@ -11,7 +11,17 @@ public class MoveableObject : ClickableObject
 
     bool canPlace;
 
-    public void StartMoving()
+    public bool TryStartMoving()
+    {
+        if (PlacementManager.Instance.CanTakeObject)
+        {
+            //Debug.Log("Try moving succeeded");
+            StartMoving();
+            return true;
+        }
+        return false;
+    }
+    private void StartMoving()
     {
         InitCanPlace();
         PlacementManager.Instance.CurrentlyMovingObject = this;
@@ -84,13 +94,11 @@ public class MoveableObject : ClickableObject
     protected override void OnFingerHold()
     {
         base.OnFingerHold();
-        if (PlacementManager.Instance.CanTakeObject)
-        {
-            StartMoving();
-        }
+        TryStartMoving();
     }
     protected override void OnFingerUp()
     {
+        base.OnFingerUp();
         TryStopMoving();
     }
 }

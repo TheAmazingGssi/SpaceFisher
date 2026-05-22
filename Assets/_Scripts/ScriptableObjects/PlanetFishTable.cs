@@ -4,10 +4,10 @@ using UnityEngine;
 [Serializable]
 public struct FishSpawnData
 {
-    [SerializeField] FishStats fishType;
-    [SerializeField] float minHeight;
-    [SerializeField] float populationPeak;
-    [SerializeField] float maxHeight;
+    [SerializeField] public FishStats fishType;
+    [SerializeField] public float minHeight;
+    [SerializeField] public float populationPeak;
+    [SerializeField] public float maxHeight;
 }
 
 [CreateAssetMenu(fileName = "PlanetFishTable", menuName = "Scriptable Objects/PlanetFishTable")]
