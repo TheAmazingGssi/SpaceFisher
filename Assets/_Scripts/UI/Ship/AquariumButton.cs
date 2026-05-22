@@ -1,19 +1,15 @@
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class StoreShopUI : PanelUI<StoreButton, StoreData>
+public class AquariumButton : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI priceText;
-    [SerializeField] private Button aquariumButton;
 
     private int price;
 
     private void Start()
     {
         Bus<AquariumPriceChange>.OnEvent += UpdatePrice;
-        aquariumButton.onClick.AddListener(OnAquariumClicked);
     }
 
     private void UpdatePrice(AquariumPriceChange e)
@@ -22,7 +18,7 @@ public class StoreShopUI : PanelUI<StoreButton, StoreData>
         priceText.text = price.ToString();
     }
 
-    public void OnAquariumClicked()
+    public void OnButtonClicked()
     {
         Debug.Log("Aquarium pressed");
         if (CoinsManager.Instance.TryBuying(price))
@@ -31,8 +27,6 @@ public class StoreShopUI : PanelUI<StoreButton, StoreData>
 
     private void OnDestroy()
     {
-        Bus<AquariumPriceChange>.OnEvent -= UpdatePrice; 
-        aquariumButton.onClick.RemoveAllListeners();
-
+        Bus<AquariumPriceChange>.OnEvent -= UpdatePrice;
     }
 }

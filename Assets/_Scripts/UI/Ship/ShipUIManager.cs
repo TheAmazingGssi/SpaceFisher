@@ -10,7 +10,10 @@ public class ShipUIManager : MonoBehaviour
 
     [Header("UI Elements")]
     [SerializeField] private GameObject fishPanel;
+    [SerializeField] private GameObject shopPanel;
     [SerializeField] private TextMeshProUGUI CurrentCoinsText;
+
+    private bool shopToggle = false;
 
 
     private void Start()
@@ -19,6 +22,10 @@ public class ShipUIManager : MonoBehaviour
         Bus<PlaceFish>.OnEvent += CloseFishPanel;
         Bus<CoinChange>.OnEvent += OnCoinChange;
         Bus<StoreBought>.OnEvent += CloseStorePanel;
+        Bus<AquariumBought>.OnEvent += _ => ToggleShop();
+
+       // shopPanel.SetActive(false);
+        fishPanel.SetActive(false);
     }
 
     public void GoToMiniGame()
@@ -27,15 +34,17 @@ public class ShipUIManager : MonoBehaviour
     }
 
     [ContextMenu("Open Shop Window")]
-    public void OpenStorePanel()
+    public void ToggleShop()
     {
-        storeShopUI.gameObject.SetActive(true);
-        storeShopUI.RefreshPanel(StoresManager.Stores);
+        shopToggle = !shopToggle;
+        shopPanel.SetActive(shopToggle);
+        if (shopToggle)
+            storeShopUI.RefreshPanel(StoresManager.Stores);
     }
 
     private void CloseStorePanel(StoreBought e)
     {
-        storeShopUI.gameObject.SetActive(false);
+        shopPanel.SetActive(false);
     }
 
     private void OpenFishPanel(AquariumPressed e)
@@ -59,5 +68,6 @@ public class ShipUIManager : MonoBehaviour
         Bus<PlaceFish>.OnEvent -= CloseFishPanel;
         Bus<CoinChange>.OnEvent -= OnCoinChange;
         Bus<StoreBought>.OnEvent -= CloseStorePanel;
+        Bus<AquariumBought>.OnEvent -= _ => ToggleShop();
     }
 }

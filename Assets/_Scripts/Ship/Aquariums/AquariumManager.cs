@@ -4,6 +4,7 @@ using UnityEngine;
 public class AquariumManager : MonoBehaviour
 {
     [SerializeField] private AquariumFishPool pool;
+    [SerializeField] private int price = 300;
 
     public static List<Aquarium> Aquariums = new List<Aquarium>();
     private List<FishStats> fishInAquariums = new List<FishStats>();
@@ -19,6 +20,8 @@ public class AquariumManager : MonoBehaviour
         {
             aquarium.Initialize(pool);
         }
+
+        Bus<AquariumPriceChange>.Raise(new AquariumPriceChange { Price = price });
     }
 
     private void SetCurrentAquarium(AquariumPressed e)

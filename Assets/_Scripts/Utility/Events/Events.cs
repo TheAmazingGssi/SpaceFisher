@@ -7,6 +7,8 @@ public interface IEvent { }
 public struct PlaceFish : IEvent { public FishManager Fish; }
 public struct AquariumPressed : IEvent { public Aquarium Aquarium; }
 public struct AquariumValueChange : IEvent { public float Value; }
+public struct AquariumPriceChange : IEvent { public int Price; }
+public struct AquariumBought : IEvent { }
 #endregion
 
 #region Stores
