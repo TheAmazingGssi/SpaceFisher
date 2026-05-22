@@ -15,11 +15,12 @@ MonoBehaviour:
   id: c7b2452d59d00e241ae0f6abae5c88ff
   fishSprite: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
   planet: 0
+  value: 0
   customSpeed: 0
   speed: 5
   mgSpeed: 5
-  wiggleAngleMax: 79.63201
-  wiggleAngleMin: -10.3679905
+  wiggleAngleMax: 92.696526
+  wiggleAngleMin: 2.6965256
   wiggleSpeed: 360
   defaultWiggleSpeed: 0
   swimTime: {x: 0, y: 0}

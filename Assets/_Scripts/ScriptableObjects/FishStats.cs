@@ -66,10 +66,10 @@ public class FishStats : ScriptableObject
                 EditorUtility.SetDirty(this);
             }
         }
-        if (!FishTypeList.Instance.list.ContainsKey(id))
+        if (!ScriptablesDatabase.Instance.fishList.ContainsKey(id))
         {
-            FishTypeList.Instance.list.Add(id, this);
-            EditorUtility.SetDirty(FishTypeList.Instance);
+            ScriptablesDatabase.Instance.fishList.Add(id, this);
+            EditorUtility.SetDirty(ScriptablesDatabase.Instance);
         }
     }
 #endif

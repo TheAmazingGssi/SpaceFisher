@@ -19,8 +19,8 @@ MonoBehaviour:
   customSpeed: 0
   speed: 1
   mgSpeed: 0
-  wiggleAngleMax: 96.911995
-  wiggleAngleMin: 6.9119935
+  wiggleAngleMax: 48.62902
+  wiggleAngleMin: -41.37098
   wiggleSpeed: 0
   defaultWiggleSpeed: 1
   swimTime: {x: 1, y: 10}
