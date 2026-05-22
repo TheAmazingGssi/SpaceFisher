@@ -12,6 +12,11 @@ public class Aquarium : MoveableObject
         Fish = new List<FishManager>(); 
     }
 
+    private void OnEnable()
+    {
+        AquariumManager.Aquariums.Add(this);
+    }
+
     public void Initialize(AquariumFishPool pool)
     {
         this.pool = pool;
@@ -24,12 +29,16 @@ public class Aquarium : MoveableObject
         base.OnFingerUp();
     }
 
-
     public void AddFish(FishManager fish)
     {   
         FishManager newFish = pool.Get(fish);
         newFish.transform.parent = fishSpawn;
         newFish.transform.position = fishSpawn.position;
         Fish.Add(newFish);
+    }
+
+    private void OnDisable()
+    {
+        AquariumManager.Aquariums.Remove(this);
     }
 }

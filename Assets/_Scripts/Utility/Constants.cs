@@ -10,7 +10,7 @@ public static class Constants
     }
     public static class Scenes
     {
-        public static string Aquarium = "SpaceShipScene";
+        public static string Ship = "SpaceShipScene";
         public static string Minigame = "MiniGameScene";
     }
 }

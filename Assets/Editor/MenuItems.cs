@@ -32,7 +32,7 @@ public class MenuItems : MonoBehaviour
     private static void SwitchScene()
     {
         string currentScene = EditorSceneManager.GetActiveScene().name ==
-            Constants.Scenes.Aquarium ? Constants.Scenes.Minigame : Constants.Scenes.Aquarium;
+            Constants.Scenes.Ship ? Constants.Scenes.Minigame : Constants.Scenes.Ship;
         EditorSceneManager.OpenScene("Assets/Scenes/" + currentScene + ".unity");
     }
 }

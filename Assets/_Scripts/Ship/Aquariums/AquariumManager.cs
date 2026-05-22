@@ -4,8 +4,8 @@ using UnityEngine;
 public class AquariumManager : MonoBehaviour
 {
     [SerializeField] private AquariumFishPool pool;
-    [SerializeField] private List<Aquarium> aquariums = new List<Aquarium>();
 
+    public static List<Aquarium> Aquariums = new List<Aquarium>();
     private List<FishStats> fishInAquariums = new List<FishStats>();
 
     private Aquarium currentAquarium;
@@ -15,7 +15,7 @@ public class AquariumManager : MonoBehaviour
         Bus<AquariumPressed>.OnEvent += SetCurrentAquarium;
         Bus<PlaceFish>.OnEvent += AddFish;
 
-        foreach(Aquarium aquarium in aquariums)
+        foreach(Aquarium aquarium in Aquariums)
         {
             aquarium.Initialize(pool);
         }

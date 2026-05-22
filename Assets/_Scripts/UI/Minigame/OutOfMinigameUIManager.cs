@@ -28,7 +28,7 @@ public class OutOfMinigameUIManager : MonoBehaviour
 
     public void GoToAquariumScene()
     {
-        SceneManager.LoadScene(Constants.Scenes.Aquarium);
+        SceneManager.LoadScene(Constants.Scenes.Ship);
     }
     IEnumerator SetMenuActiveNextFrame(bool value)
     {
