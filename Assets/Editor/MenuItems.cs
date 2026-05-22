@@ -24,7 +24,8 @@ public class MenuItems : MonoBehaviour
     [MenuItem("Tools/Clear Inventory %&q")]
     private static void ClearInventory()
     {
-        Object.FindFirstObjectByType<Inventory>().ClearInventory();
+        if (EditorUtility.DisplayDialog("Wait!", "This action will delete all inventory data, are you sure?", "Delete it all", "Wait actually no"))
+            Object.FindFirstObjectByType<Inventory>().ClearInventory();
     }
 
     [MenuItem("Tools/Switch Scene %q")]
