@@ -1654,7 +1654,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1785,7 +1785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &827864102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1856,8 +1856,8 @@ GameObject:
   - component: {fileID: 846512394}
   - component: {fileID: 846512397}
   - component: {fileID: 846512396}
-  - component: {fileID: 846512395}
   - component: {fileID: 846512399}
+  - component: {fileID: 846512400}
   m_Layer: 5
   m_Name: AquariumButton
   m_TagString: Untagged
@@ -1889,50 +1889,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 350, y: 180}
   m_Pivot: {x: 0.5, y: 1}
---- !u!114 &846512395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846512393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 846512396}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &846512396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1994,6 +1950,62 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_TargetDisplay: 0
+--- !u!114 &846512400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846512393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 846512396}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2046136188}
+        m_TargetAssemblyTypeName: StoreShopUI, Assembly-CSharp
+        m_MethodName: OnAquariumClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &890978271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,7 +2414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VisitorsManager
   aquariumManager: {fileID: 1244206032}
   spawner: {fileID: 1202612069}
-  ticketPrice: 10
+  ticketPrice: 5
 --- !u!114 &1202612069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2419,9 +2431,10 @@ MonoBehaviour:
   pool: {fileID: 586800460}
   data:
   - {fileID: 11400000, guid: 99a01c4b83a17c0468272ad804ff17cd, type: 2}
-  maxInterval: 60
-  minInterval: 5
-  growthScale: 1.5
+  maxInterval: 1
+  minInterval: 1
+  growthScale: 1000
+  randomRange: 5
 --- !u!4 &1202612070
 Transform:
   m_ObjectHideFlags: 0
@@ -2512,8 +2525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16db23ebecc713541a4c074643f35eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AquariumManager
-  pool: {fileID: 994177841}
-  price: 300
+  fishPool: {fileID: 994177841}
+  aquariumPool: {fileID: 36208423}
+  price: 1
 --- !u!4 &1244206033
 Transform:
   m_ObjectHideFlags: 0
@@ -3277,7 +3291,7 @@ MonoBehaviour:
   itemSection: {fileID: 233115328}
   buttonPrefab: {fileID: 2124992377286913143, guid: dc86ac8055cb5184bbd6d1d96aa0db8e, type: 3}
   priceText: {fileID: 598077656}
-  aquariumButton: {fileID: 846512395}
+  aquariumButton: {fileID: 846512400}
 --- !u!1 &2139362207
 GameObject:
   m_ObjectHideFlags: 0

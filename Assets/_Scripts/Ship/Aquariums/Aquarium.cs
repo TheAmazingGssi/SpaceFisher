@@ -22,6 +22,11 @@ public class Aquarium : MoveableObject
         this.pool = pool;
     }
 
+    public void NewAquarium()
+    {
+        TryStartMoving();
+    }
+
     protected override void OnFingerUp()
     {
         if (!IsMoving)

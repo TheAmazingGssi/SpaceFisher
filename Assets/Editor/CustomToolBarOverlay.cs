@@ -79,7 +79,7 @@ public class CustomToolBarOverlay : Overlay
     {
         SceneView sceneView = SceneView.lastActiveSceneView;
         if (sceneView == null) return;
-        Vector3 spawnPos = sceneView.camera.transform.position + sceneView.camera.transform.forward * 5;
+        Vector2 spawnPos = sceneView.camera.transform.position + sceneView.camera.transform.forward;
         obj.transform.SetPositionAndRotation(spawnPos, Quaternion.identity);
     }
 }

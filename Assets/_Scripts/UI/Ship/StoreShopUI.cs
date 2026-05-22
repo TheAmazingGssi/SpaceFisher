@@ -22,6 +22,7 @@ public class StoreShopUI : PanelUI<StoreButton, StoreData>
         priceText.text = price.ToString();
     }
 
+    [ContextMenu("Buy Aquarium")]
     public void OnAquariumClicked()
     {
         Debug.Log("Aquarium pressed");

@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class StoresManager : MonoBehaviour
@@ -18,6 +19,7 @@ public class StoresManager : MonoBehaviour
     private void OnStoreBought(StoreBought e)
     {
         Store newStore = pool.Get();
+        pool.SetPosition(newStore.gameObject);
         newStore.Init(e.Data);
     }
 

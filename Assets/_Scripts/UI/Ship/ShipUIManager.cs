@@ -24,7 +24,7 @@ public class ShipUIManager : MonoBehaviour
         Bus<StoreBought>.OnEvent += CloseStorePanel;
         Bus<AquariumBought>.OnEvent += _ => ToggleShop();
 
-       // shopPanel.SetActive(false);
+        shopPanel.SetActive(false);
         fishPanel.SetActive(false);
     }
 

@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class AquariumManager : MonoBehaviour
 {
-    [SerializeField] private AquariumFishPool pool;
+    [SerializeField] private AquariumFishPool fishPool;
+    [SerializeField] private AquariumPool aquariumPool;
     [SerializeField] private int price = 300;
 
     public static List<Aquarium> Aquariums = new List<Aquarium>();
@@ -15,13 +16,22 @@ public class AquariumManager : MonoBehaviour
     {
         Bus<AquariumPressed>.OnEvent += SetCurrentAquarium;
         Bus<PlaceFish>.OnEvent += AddFish;
+        Bus<AquariumBought>.OnEvent += AddAquarium;
 
         foreach(Aquarium aquarium in Aquariums)
         {
-            aquarium.Initialize(pool);
+            aquarium.Initialize(fishPool);
         }
 
         Bus<AquariumPriceChange>.Raise(new AquariumPriceChange { Price = price });
+    }
+
+    private void AddAquarium(AquariumBought e)
+    {
+        Aquarium aquarium = aquariumPool.Get();
+        aquariumPool.SetPosition(aquarium.gameObject);
+        aquarium.Initialize(fishPool);
+        aquarium.NewAquarium();
     }
 
     private void SetCurrentAquarium(AquariumPressed e)
@@ -48,5 +58,7 @@ public class AquariumManager : MonoBehaviour
     {
         Bus<AquariumPressed>.OnEvent -= SetCurrentAquarium;
         Bus<PlaceFish>.OnEvent -= AddFish;
+        Bus<AquariumBought>.OnEvent -= AddAquarium;
+
     }
 }

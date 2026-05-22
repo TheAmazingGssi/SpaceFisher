@@ -23,7 +23,6 @@ public class Store : MoveableObject
         this.data = data;
         spriteRenderer.sprite = data.Sprite;
         StoreType = data.StoreType;
-        SetPosition();
         releaseRoutine = StartCoroutine(ReleaseRoutine());
     }
 
@@ -50,14 +49,6 @@ public class Store : MoveableObject
     private void NewVisitor(Visitor visitor)
     {
 
-    }
-
-    private void SetPosition()
-    {
-        SceneView sceneView = SceneView.lastActiveSceneView;
-        if (sceneView == null) return;
-        Vector3 spawnPos = sceneView.camera.transform.position + sceneView.camera.transform.forward * 5;
-        transform.SetPositionAndRotation(spawnPos, Quaternion.identity);
     }
 
     private void OnDisable()

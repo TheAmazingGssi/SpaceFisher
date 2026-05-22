@@ -9,6 +9,7 @@ public class VisitorSpawner : MonoBehaviour
     [SerializeField] private float maxInterval = 60;
     [SerializeField] private float minInterval = 5;
     [SerializeField] private float growthScale = 1000;
+    [SerializeField] private float randomRange = 5;
 
     private int ticketPrice;
     private float currentInterval;
@@ -21,6 +22,7 @@ public class VisitorSpawner : MonoBehaviour
     public void Init(int ticketPrice)
     {
         this.ticketPrice = ticketPrice;
+        currentInterval = maxInterval;
         StartCoroutine(SpawnLoop());
     }
 
@@ -34,13 +36,16 @@ public class VisitorSpawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(currentInterval);
+            float interval = currentInterval + Random.Range(-randomRange, randomRange);
+            interval = Mathf.Max(0.1f, interval);
+            yield return new WaitForSeconds(interval);
             SpawnVisitor();
         }
     }
 
     private void SpawnVisitor()
     {
+        Debug.Log("Visitor Spawned");
         Visitor visitor = pool.Get();
         visitor.Initialize(data[Random.Range(0, data.Length)]);
         visitor.transform.position = spawnPoint.position;
