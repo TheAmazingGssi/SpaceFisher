@@ -23,7 +23,7 @@ MonoBehaviour:
   wiggleAngleMin: 6.9119935
   wiggleSpeed: 0
   defaultWiggleSpeed: 1
-  swimTime: {x: 1, y: 10}
-  pauseTime: 0
+  swimTime: {x: 1, y: 2}
+  pauseTime: 0.2
   aquariumSpeed: 0
-  verticalSwimming: 30
+  verticalSwimming: 52.7
