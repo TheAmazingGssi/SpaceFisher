@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Store : MonoBehaviour
+public class Store : MoveableObject
 {
     public Queue<Visitor> Visitors = new Queue<Visitor>();
     public StoreType StoreType { get; private set; }
@@ -17,16 +17,12 @@ public class Store : MonoBehaviour
         Bus<ChangeLocation>.OnEvent += AddVisitor;
     }
 
-    private void OnEnable()
-    {
-        releaseRoutine = StartCoroutine(ReleaseRoutine());
-    }
-
     public void Init(StoreData data)
     {
         this.data = data;
         spriteRenderer.sprite = data.Sprite;
         StoreType = data.StoreType;
+        releaseRoutine = StartCoroutine(ReleaseRoutine());
     }
 
     private void AddVisitor(ChangeLocation e)
@@ -56,8 +52,12 @@ public class Store : MonoBehaviour
 
     private void OnDisable()
     {
-       StopCoroutine(releaseRoutine);
-       releaseRoutine = null;
+        if (releaseRoutine != null)
+        {
+            StopCoroutine(releaseRoutine);
+            releaseRoutine = null;
+        }
+        Visitors.Clear();
     }
 
     private void OnDestroy()

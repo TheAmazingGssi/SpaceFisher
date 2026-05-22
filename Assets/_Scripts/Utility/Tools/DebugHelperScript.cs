@@ -5,6 +5,8 @@ public class DebugHelperScript : MonoBehaviour
     [SerializeField] private FishStats randomFishy;
     [SerializeField] private int amount;
 
+    [SerializeField] private StorePool pool;
+    [SerializeField] private StoreData data;
 
     [ContextMenu("Add fishy to inventory")]
     public void AddFishyToInventory()
@@ -14,4 +16,15 @@ public class DebugHelperScript : MonoBehaviour
         else
             Inventory.Instance.AddFish(randomFishy, amount);
     }
+
+    [ContextMenu("Add store")]
+    public void AddStore()
+    {
+        Store store = pool.Get();
+        store.Init(data);
+        store.transform.position = transform.position;
+    }
+
+
+
 }
