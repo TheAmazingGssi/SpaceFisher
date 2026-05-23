@@ -5,7 +5,10 @@ using UnityEngine;
 public abstract class Building : MoveableObject
 {
     public Queue<Visitor> Visitors = new Queue<Visitor>();
-    public Location StoreType { get; protected set; }
+  
+    [SerializeField] protected BuildingData data;
+
+    public Location BuildingType { get; protected set; }
 
     protected Coroutine releaseRoutine;
     protected float minInterval;
@@ -15,16 +18,16 @@ public abstract class Building : MoveableObject
     {
         Bus<ChangeLocation>.OnEvent += AddVisitor;
     }
-
+    public abstract Vector2 GetEntryPoint(Collider2D col, Vector2 visitorPos);
     protected void StartReleaseRoutine()
     {
-        if (releaseRoutine != null) StopCoroutine(releaseRoutine);
+        if (releaseRoutine != null) return;
         releaseRoutine = StartCoroutine(ReleaseRoutine());
     }
 
     private void AddVisitor(ChangeLocation e)
     {
-        if (e.Visitor.CurrentLocation != StoreType) return;
+        if (e.Building != this) return;
         Visitors.Enqueue(e.Visitor);
         StartReleaseRoutine();
         OnVisitorAdded(e.Visitor);
@@ -32,14 +35,18 @@ public abstract class Building : MoveableObject
 
     private IEnumerator ReleaseRoutine()
     {
-        while (true)
+        while (Visitors.Count > 0)
         {
             yield return new WaitForSeconds(Random.Range(minInterval, maxInterval));
             if (Visitors.Count > 0)
                 ReleaseVisitor(Visitors.Dequeue());
         }
+        releaseRoutine = null;
     }
-    protected abstract void ReleaseVisitor(Visitor visitor);
+    protected virtual void ReleaseVisitor(Visitor visitor)
+    {
+        Bus<VisitorReleased>.Raise(new VisitorReleased { Visitor = visitor, Building = this });
+    }
     protected virtual void OnVisitorAdded(Visitor visitor) { }
 
     override protected void OnDisable()

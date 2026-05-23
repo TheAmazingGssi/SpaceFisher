@@ -16,4 +16,4 @@ MonoBehaviour:
   sprite: {fileID: 0}
   price: 10
   minInterval: 5
-  maxInterval: 15
+  maxInterval: 10

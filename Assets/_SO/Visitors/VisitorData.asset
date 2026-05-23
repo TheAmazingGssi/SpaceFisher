@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af688e8df595f342b5fe699e978d81f, type: 3}
   m_Name: VisitorData
   m_EditorClassIdentifier: Assembly-CSharp::VisitorData
-  Sprite: {fileID: -8820715720815460284, guid: 61bf7a6c0123ad04ea6753ed3b386859, type: 3}
+  Sprite: {fileID: 21300000, guid: 0ae8df8585db33447a75825a4c433385, type: 3}
+  MoveSpeed: 2
+  EnterBuildingChance: 1

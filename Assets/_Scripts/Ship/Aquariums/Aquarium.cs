@@ -4,8 +4,6 @@ using UnityEngine;
 public class Aquarium : Building
 {
     [SerializeField] private Transform fishSpawn;
-    [SerializeField] private BuildingData data;
-
     public List<FishManager> Fish { get; private set; }
     private AquariumFishPool pool;
 
@@ -13,7 +11,7 @@ public class Aquarium : Building
     {
         base.Start();
         Fish = new List<FishManager>();
-        StoreType = Location.Aquarium;
+        BuildingType = Location.Aquarium;
         minInterval = data.MinInterval;
         maxInterval = data.MaxInterval;
     }
@@ -30,10 +28,14 @@ public class Aquarium : Building
         AquariumManager.Aquariums.Remove(this);
     }
 
-    public void Initialize(AquariumFishPool pool)
+    public override Vector2 GetEntryPoint(Collider2D col, Vector2 visitorPos)
+    {
+        return new Vector2(Random.Range(col.bounds.min.x, col.bounds.max.x), visitorPos.y);
+    }
+
+    public void Init(AquariumFishPool pool)
     {
         this.pool = pool;
-        StartReleaseRoutine();
     }
 
     public void NewAquarium()
@@ -46,12 +48,6 @@ public class Aquarium : Building
         if (!IsMoving)
             Bus<AquariumPressed>.Raise(new AquariumPressed { Aquarium = this });
         base.OnFingerUp();
-    }
-
-    protected override void ReleaseVisitor(Visitor visitor)
-    {
-        visitor.gameObject.SetActive(true);
-        Bus<VisitorReleased>.Raise(new VisitorReleased { Visitor = visitor });
     }
 
     public void AddFish(FishManager fish)

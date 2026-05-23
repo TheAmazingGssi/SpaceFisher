@@ -20,7 +20,7 @@ public class AquariumManager : MonoBehaviour
 
         foreach(Aquarium aquarium in Aquariums)
         {
-            aquarium.Initialize(fishPool);
+            aquarium.Init(fishPool);
         }
 
         Bus<AquariumPriceChange>.Raise(new AquariumPriceChange { Price = price });
@@ -30,7 +30,7 @@ public class AquariumManager : MonoBehaviour
     {
         Aquarium aquarium = aquariumPool.Get();
         aquariumPool.SetPosition(aquarium.gameObject);
-        aquarium.Initialize(fishPool);
+        aquarium.Init(fishPool);
         aquarium.NewAquarium();
     }
 

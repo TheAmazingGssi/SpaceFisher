@@ -9,6 +9,7 @@ TagManager:
   - Sidewalk
   - Elevator
   - Exist
+  - Visitor
   layers:
   - Default
   - TransparentFX

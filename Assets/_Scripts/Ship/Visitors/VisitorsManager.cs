@@ -12,6 +12,7 @@ public class VisitorsManager : MonoBehaviour
     private void Start()
     {
         Bus<VisitorSpawned>.OnEvent += OnVisitorSpawned;
+        Bus<VisitorReleased>.OnEvent += OnVisitorReleased;
         spawner.Init(ticketPrice);
     }
 
@@ -21,8 +22,22 @@ public class VisitorsManager : MonoBehaviour
         CoinsManager.Instance.AddCoins(e.TicketPrice);
     }
 
+    private void OnVisitorReleased(VisitorReleased e)
+    {
+        if (e.Building.BuildingType == Location.Aquarium)
+        {
+            e.Visitor.ResumeMovement();
+        }
+        else
+        {
+            e.Visitor.gameObject.SetActive(true);
+            e.Visitor.ResumeMovement();
+        }
+    }
+
     private void OnDestroy()
     {
         Bus<VisitorSpawned>.OnEvent -= OnVisitorSpawned;
+        Bus<VisitorReleased>.OnEvent -= OnVisitorReleased;
     }
 }

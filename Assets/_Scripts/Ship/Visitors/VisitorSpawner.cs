@@ -45,10 +45,11 @@ public class VisitorSpawner : MonoBehaviour
 
     private void SpawnVisitor()
     {
-        Debug.Log("Visitor Spawned");
         Visitor visitor = pool.Get();
-        //visitor.Initialize(data[Random.Range(0, data.Length)]);
         visitor.transform.position = spawnPoint.position;
+        VisitorData selectedData = data[Random.Range(0, data.Length)];
+        Vector2 direction = spawnPoint.right;
+        visitor.Initialize(selectedData, direction);
         Bus<VisitorSpawned>.Raise(new VisitorSpawned { Visitor = visitor, TicketPrice = ticketPrice });
     }
 

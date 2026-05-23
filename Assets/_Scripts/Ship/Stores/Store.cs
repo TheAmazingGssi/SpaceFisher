@@ -6,25 +6,30 @@ using UnityEngine;
 public class Store : Building
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
-    private BuildingData data;
+
+    protected override void Start()
+    {
+        base.Start();
+        if(data)
+            Init(data);
+    }
 
     public void Init(BuildingData data)
     {
         this.data = data;
         spriteRenderer.sprite = data.Sprite;
-        StoreType = data.StoreType;
+        BuildingType = data.StoreType;
         minInterval = data.MinInterval;
         maxInterval = data.MaxInterval;
-        StartReleaseRoutine();
+    }
+
+    public override Vector2 GetEntryPoint(Collider2D col, Vector2 visitorPos)
+    {
+        return new Vector2(col.bounds.center.x, visitorPos.y);
     }
 
     protected override void OnVisitorAdded(Visitor visitor)
     {
         CoinsManager.Instance.AddCoins(data.Price);
-    }
-
-    protected override void ReleaseVisitor(Visitor visitor)
-    {
-        Bus<VisitorReleased>.Raise(new VisitorReleased { Visitor = visitor, Store = this });
     }
 }
