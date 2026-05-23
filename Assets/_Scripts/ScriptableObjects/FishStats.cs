@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEditor.Rendering;
+
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -66,11 +68,15 @@ public class FishStats : ScriptableObject
                 EditorUtility.SetDirty(this);
             }
         }
-        if (!ScriptablesDatabase.Instance.fishList.ContainsKey(id))
-        {
-            ScriptablesDatabase.Instance.fishList.Add(id, this);
-            EditorUtility.SetDirty(ScriptablesDatabase.Instance);
-        }
+    //    if (ScriptablesDatabase.Instance.fishList == null)
+    //    {
+    //        ScriptablesDatabase.Instance.fishList = new System.Collections.Generic.Dictionary<string, FishStats>();
+    //    }
+    //    if (!ScriptablesDatabase.Instance.fishList.ContainsKey(id))
+    //    {
+    //        ScriptablesDatabase.Instance.fishList.Add(id, this);
+    //        EditorUtility.SetDirty(ScriptablesDatabase.Instance);
+    //    }
     }
 #endif
 }

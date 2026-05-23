@@ -36,8 +36,5 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
                 StoreData fishStat = AssetDatabase.LoadAssetByGUID<StoreData>(guid);
                 storeList.Add(guid.ToString(), fishStat);
             }
-
-
-        Debug.Log(storeList.Count);
     }
 }
