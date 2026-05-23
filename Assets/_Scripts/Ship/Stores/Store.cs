@@ -3,66 +3,28 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class Store : MoveableObject
+public class Store : Building
 {
-    public Queue<Visitor> Visitors = new Queue<Visitor>();
-    public Location StoreType { get; private set; }
-
     [SerializeField] private SpriteRenderer spriteRenderer;
+    private BuildingData data;
 
-    private StoreData data;
-    private Coroutine releaseRoutine;
-
-    private void Start()
-    {
-        Bus<ChangeLocation>.OnEvent += AddVisitor;
-    }
-
-    public void Init(StoreData data)
+    public void Init(BuildingData data)
     {
         this.data = data;
         spriteRenderer.sprite = data.Sprite;
         StoreType = data.StoreType;
-        releaseRoutine = StartCoroutine(ReleaseRoutine());
+        minInterval = data.MinInterval;
+        maxInterval = data.MaxInterval;
+        StartReleaseRoutine();
     }
 
-    private void AddVisitor(ChangeLocation e)
+    protected override void OnVisitorAdded(Visitor visitor)
     {
-        if (e.Visitor.CurrentLocation != StoreType) return;
-        Visitors.Enqueue(e.Visitor);
-        StopCoroutine(releaseRoutine);
-        releaseRoutine = StartCoroutine(ReleaseRoutine());
-        NewVisitor(e.Visitor);
         CoinsManager.Instance.AddCoins(data.Price);
     }
 
-    private IEnumerator ReleaseRoutine()
+    protected override void ReleaseVisitor(Visitor visitor)
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(Random.Range(data.MinInterval, data.MaxInterval));
-            if (Visitors.Count > 0)
-                Bus<VisitorReleased>.Raise(new VisitorReleased { Visitor = Visitors.Dequeue() });
-        }
-    }
-
-    private void NewVisitor(Visitor visitor)
-    {
-
-    }
-
-    private void OnDisable()
-    {
-        if (releaseRoutine != null)
-        {
-            StopCoroutine(releaseRoutine);
-            releaseRoutine = null;
-        }
-        Visitors.Clear();
-    }
-
-    private void OnDestroy()
-    {
-        Bus<ChangeLocation>.OnEvent -= AddVisitor;
+        Bus<VisitorReleased>.Raise(new VisitorReleased { Visitor = visitor, Store = this });
     }
 }

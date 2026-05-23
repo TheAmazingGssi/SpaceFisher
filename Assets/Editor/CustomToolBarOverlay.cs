@@ -55,7 +55,7 @@ public class CustomToolBarOverlay : Overlay
     {
         if (!Enum.TryParse(selectedName, out Location selectedType)) return;
 
-        StoreData matchingData = AssetDatabase.FindAssets("t:StoreData").Select(guid => AssetDatabase.LoadAssetAtPath<StoreData>(AssetDatabase.GUIDToAssetPath(guid))).FirstOrDefault(data => data.StoreType == selectedType);
+        BuildingData matchingData = AssetDatabase.FindAssets("t:StoreData").Select(guid => AssetDatabase.LoadAssetAtPath<BuildingData>(AssetDatabase.GUIDToAssetPath(guid))).FirstOrDefault(data => data.StoreType == selectedType);
         StorePool pool = UnityEngine.Object.FindFirstObjectByType<StorePool>();
 
         Store store = pool.Get();

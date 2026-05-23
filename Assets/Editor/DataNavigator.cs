@@ -86,8 +86,8 @@ public class DataNavigator : EditorWindow
     private void BuildingsGUI()
     {
         EditorGUILayout.Space();
-        StoreData[] storeArr = ScriptablesDatabase.Instance.storeList.Values.ToArray();
-        foreach (StoreData store in storeArr)
+        BuildingData[] storeArr = ScriptablesDatabase.Instance.storeList.Values.ToArray();
+        foreach (BuildingData store in storeArr)
             if (store.name.ToLower().Contains(searchQuary.ToLower()))
             {
                 GUILayout.BeginHorizontal();

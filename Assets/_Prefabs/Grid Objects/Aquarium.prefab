@@ -663,6 +663,7 @@ MonoBehaviour:
   greenTint: {fileID: 1663929124389943253}
   redTint: {fileID: 5623904339623465724}
   fishSpawn: {fileID: 7413664035687136129}
+  data: {fileID: 11400000, guid: ee3e824f21342c843963b3153909a22a, type: 2}
 --- !u!61 &1955955760693401981
 BoxCollider2D:
   m_ObjectHideFlags: 0

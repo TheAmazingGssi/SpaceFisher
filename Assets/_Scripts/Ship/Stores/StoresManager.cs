@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class StoresManager : MonoBehaviour
 {
-    public static List<StoreData> Stores { get; private set; } = new List<StoreData>();
+    public static List<BuildingData> Stores { get; private set; } = new List<BuildingData>();
 
-    [SerializeField] private List<StoreData> startingStores = new List<StoreData>();
+    [SerializeField] private List<BuildingData> startingStores = new List<BuildingData>();
     [SerializeField] private StorePool pool;
 
     private void Start()

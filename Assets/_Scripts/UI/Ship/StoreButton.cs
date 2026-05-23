@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class StoreButton : ItemButton<StoreData>
+public class StoreButton : ItemButton<BuildingData>
 {
-    private StoreData store;
-    public override void Setup(StoreData data)
+    private BuildingData store;
+    public override void Setup(BuildingData data)
     {
         store = data;
         image.sprite = store.Sprite;

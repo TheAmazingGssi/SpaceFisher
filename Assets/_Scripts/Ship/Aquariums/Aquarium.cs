@@ -1,33 +1,39 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-public class Aquarium : MoveableObject
+public class Aquarium : Building
 {
     [SerializeField] private Transform fishSpawn;
-    public List<FishManager> Fish { get; private set; }
+    [SerializeField] private BuildingData data;
 
+    public List<FishManager> Fish { get; private set; }
     private AquariumFishPool pool;
 
-    private void Start()
+    protected override void Start()
     {
-        Fish = new List<FishManager>(); 
+        base.Start();
+        Fish = new List<FishManager>();
+        StoreType = Location.Aquarium;
+        minInterval = data.MinInterval;
+        maxInterval = data.MaxInterval;
     }
 
-    override protected void OnEnable()
+    protected override void OnEnable()
     {
         base.OnEnable();
         AquariumManager.Aquariums.Add(this);
     }
-    override protected void OnDisable()
+
+    protected override void OnDisable()
     {
         base.OnDisable();
         AquariumManager.Aquariums.Remove(this);
     }
 
-
     public void Initialize(AquariumFishPool pool)
     {
         this.pool = pool;
+        StartReleaseRoutine();
     }
 
     public void NewAquarium()
@@ -42,13 +48,17 @@ public class Aquarium : MoveableObject
         base.OnFingerUp();
     }
 
+    protected override void ReleaseVisitor(Visitor visitor)
+    {
+        visitor.gameObject.SetActive(true);
+        Bus<VisitorReleased>.Raise(new VisitorReleased { Visitor = visitor });
+    }
+
     public void AddFish(FishManager fish)
-    {   
+    {
         FishManager newFish = pool.Get(fish);
         newFish.transform.parent = fishSpawn;
         newFish.transform.position = fishSpawn.position;
         Fish.Add(newFish);
     }
-
-
 }

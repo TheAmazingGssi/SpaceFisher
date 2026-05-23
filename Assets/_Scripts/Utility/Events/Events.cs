@@ -12,7 +12,7 @@ public struct AquariumBought : IEvent { }
 #endregion
 
 #region Stores
-public struct StoreBought : IEvent { public StoreData Data; }
+public struct StoreBought : IEvent { public BuildingData Data; }
 #endregion
 
 #region Visitors

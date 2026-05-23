@@ -6,7 +6,7 @@ public class DebugHelperScript : MonoBehaviour
     [SerializeField] private int amount;
 
     [SerializeField] private StorePool pool;
-    [SerializeField] private StoreData data;
+    [SerializeField] private BuildingData data;
 
     [ContextMenu("Add fishy to inventory")]
     public void AddFishyToInventory()

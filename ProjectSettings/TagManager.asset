@@ -6,6 +6,9 @@ TagManager:
   tags:
   - AquariumWall
   - Building
+  - Sidewalk
+  - Elevator
+  - Exist
   layers:
   - Default
   - TransparentFX

@@ -1,11 +1,11 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "StoreData", menuName = "Scriptable Objects/StoreData")]
-public class StoreData : ScriptableObject
+[CreateAssetMenu(fileName = "BuildingData", menuName = "Scriptable Objects/BuildingData")]
+public class BuildingData : ScriptableObject
 {
     public Location StoreType => storeType;
     [SerializeField] private Location storeType;
-    public Sprite Sprite => sprite;
+    public Sprite Sprite => sprite; //TODO: hide if aquarium
     [SerializeField] private Sprite sprite;
     public int Price => price;
     [SerializeField] private int price = 10;

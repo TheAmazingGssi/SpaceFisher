@@ -8,7 +8,7 @@ using static UnityEngine.GraphicsBuffer;
 public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase>
 {
     public Dictionary<string, FishStats> fishList;
-    public Dictionary<string, StoreData> storeList;
+    public Dictionary<string, BuildingData> storeList;
     private void OnValidate()
     {
         if(fishList == null)
@@ -26,14 +26,14 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
         
         if(storeList == null)
         {
-            storeList = new Dictionary<string, StoreData>();
+            storeList = new Dictionary<string, BuildingData>();
         }
         storeList.Clear();
         guids = AssetDatabase.FindAssetGUIDs("t:StoreData");
         foreach (GUID guid in guids)
             if (!storeList.ContainsKey(guid.ToString()))
             {
-                StoreData fishStat = AssetDatabase.LoadAssetByGUID<StoreData>(guid);
+                BuildingData fishStat = AssetDatabase.LoadAssetByGUID<BuildingData>(guid);
                 storeList.Add(guid.ToString(), fishStat);
             }
     }

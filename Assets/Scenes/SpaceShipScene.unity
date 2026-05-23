@@ -4490,6 +4490,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 68
       objectReference: {fileID: 0}
+    - target: {fileID: 2012002175183995845, guid: 371a7dc643ed177429121eab8fc3d0fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2728178054475249972, guid: 371a7dc643ed177429121eab8fc3d0fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4558,9 +4562,9 @@ SceneRoots:
   - {fileID: 1828061261}
   - {fileID: 379090374}
   - {fileID: 779489236}
+  - {fileID: 1123765778}
   - {fileID: 1825111925}
   - {fileID: 1244206033}
   - {fileID: 977749310}
   - {fileID: 1202612070}
   - {fileID: 71989486}
-  - {fileID: 1123765778}

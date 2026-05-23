@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StoreShopUI : PanelUI<StoreButton, StoreData>
+public class StoreShopUI : PanelUI<StoreButton, BuildingData>
 {
     [SerializeField] private TextMeshProUGUI priceText;
     [SerializeField] private Button aquariumButton;
