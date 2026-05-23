@@ -7,6 +7,9 @@ public static class Constants
         public const string Player = "Player";
         public const string AquariumWall = "AquariumWall";
         public const string Building = "Building";
+        public const string Sidewalk = "Sidewalk";
+        public const string Elevator = "Elevator";
+        public const string Exit = "Exit";
     }
     public static class Scenes
     {

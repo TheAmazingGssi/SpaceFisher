@@ -48,12 +48,12 @@ public class CustomToolBarOverlay : Overlay
 
     private List<string> GetStoreOptions()
     {
-        return Enum.GetNames(typeof(StoreType)).Where(name => name != nameof(StoreType.Aquarium) && name != nameof(StoreType.Inbetween)).ToList();
+        return Enum.GetNames(typeof(Location)).Where(name => name != nameof(Location.Aquarium) && name != nameof(Location.Inbetween)).ToList();
     }
 
     private void OnSpawnStoreClicked(string selectedName)
     {
-        if (!Enum.TryParse(selectedName, out StoreType selectedType)) return;
+        if (!Enum.TryParse(selectedName, out Location selectedType)) return;
 
         StoreData matchingData = AssetDatabase.FindAssets("t:StoreData").Select(guid => AssetDatabase.LoadAssetAtPath<StoreData>(AssetDatabase.GUIDToAssetPath(guid))).FirstOrDefault(data => data.StoreType == selectedType);
         StorePool pool = UnityEngine.Object.FindFirstObjectByType<StorePool>();

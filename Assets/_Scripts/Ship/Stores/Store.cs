@@ -6,7 +6,7 @@ using UnityEngine;
 public class Store : MoveableObject
 {
     public Queue<Visitor> Visitors = new Queue<Visitor>();
-    public StoreType StoreType { get; private set; }
+    public Location StoreType { get; private set; }
 
     [SerializeField] private SpriteRenderer spriteRenderer;
 
@@ -28,7 +28,7 @@ public class Store : MoveableObject
 
     private void AddVisitor(ChangeLocation e)
     {
-        if (e.Visitor.CurrentStore != StoreType) return;
+        if (e.Visitor.CurrentLocation != StoreType) return;
         Visitors.Enqueue(e.Visitor);
         StopCoroutine(releaseRoutine);
         releaseRoutine = StartCoroutine(ReleaseRoutine());
