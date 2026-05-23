@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
@@ -42,6 +44,8 @@ public abstract class ClickableObject : MonoBehaviour
 
     private void HandleFingerUp(Finger finger)
     {
+        if (IsOverUI(finger.screenPosition)) return;
+
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(finger.screenPosition);
 
         CancelHold();
@@ -67,6 +71,17 @@ public abstract class ClickableObject : MonoBehaviour
             StopCoroutine(holdCoroutine);
             holdCoroutine = null;
         }
+    }
+    private bool IsOverUI(Vector2 screenPos)
+    {
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+
+        pointerData.position = screenPos;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        return results.Count > 0;
     }
 
     protected virtual void OnFingerDown() { }
