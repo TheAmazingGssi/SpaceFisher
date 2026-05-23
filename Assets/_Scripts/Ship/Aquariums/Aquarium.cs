@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 public class Aquarium : MoveableObject
 {
@@ -12,10 +13,17 @@ public class Aquarium : MoveableObject
         Fish = new List<FishManager>(); 
     }
 
-    private void OnEnable()
+    override protected void OnEnable()
     {
+        base.OnEnable();
         AquariumManager.Aquariums.Add(this);
     }
+    override protected void OnDisable()
+    {
+        base.OnDisable();
+        AquariumManager.Aquariums.Remove(this);
+    }
+
 
     public void Initialize(AquariumFishPool pool)
     {
@@ -42,8 +50,5 @@ public class Aquarium : MoveableObject
         Fish.Add(newFish);
     }
 
-    private void OnDisable()
-    {
-        AquariumManager.Aquariums.Remove(this);
-    }
+
 }

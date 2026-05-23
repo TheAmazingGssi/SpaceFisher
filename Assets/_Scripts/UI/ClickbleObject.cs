@@ -11,18 +11,18 @@ public abstract class ClickableObject : MonoBehaviour
     private Coroutine holdCoroutine;
     private bool fingerDownOnObject;
 
-    private void Awake()
+    virtual protected void Awake()
     {
         EnhancedTouchSupport.Enable();
     }
 
-    private void OnEnable()
+    virtual protected void OnEnable()
     {
         Touch.onFingerDown += HandleFingerDown;
         Touch.onFingerUp += HandleFingerUp;
     }
 
-    private void OnDisable()
+    virtual protected void OnDisable()
     {
         Touch.onFingerDown -= HandleFingerDown;
         Touch.onFingerUp -= HandleFingerUp;
