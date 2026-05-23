@@ -1458,8 +1458,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c818d9da2fcf9e4d9377d86200d4f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HookController
-  hookObject: {fileID: 0}
-  shipObject: {fileID: 0}
+  hookObject: {fileID: 484982415}
+  shipObject: {fileID: 1906451533}
   horizontalSpeed: 10
   downSpeed: 5
   upSpeed: 15
