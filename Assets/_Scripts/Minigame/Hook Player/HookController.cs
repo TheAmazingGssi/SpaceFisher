@@ -8,7 +8,8 @@ using UnityEngine.UIElements;
 public class HookController : MonoBehaviour
 {
     Camera cam;
-    [SerializeField] Transform playerObject;
+    [SerializeField] Transform hookObject;
+    [SerializeField] Transform shipObject;
     [SerializeField] float horizontalSpeed;
     [SerializeField] float downSpeed;
     [SerializeField] float upSpeed;
@@ -40,7 +41,7 @@ public class HookController : MonoBehaviour
     }
     void Start()
     {
-        currentTouch = playerObject.position;
+        currentTouch = hookObject.position;
     }
     private void OnEnable()
     {
@@ -55,8 +56,9 @@ public class HookController : MonoBehaviour
     void Update()
     {
         transform.Translate(new Vector2(0, MoveUpDown()));
-        playerObject.Translate(new Vector2(MoveLeftRight(), 0));
-        fishingLine.SetPosition(1, playerObject.position);
+        hookObject.Translate(new Vector2(MoveLeftRight(), 0));
+        fishingLine.SetPosition(0, shipObject.position);
+        fishingLine.SetPosition(1, hookObject.position);
         if(transform.position.y > 0 && MinigameManager.Instance.Phase == MinigamePhase.Up)
         {
             transform.position = new Vector2(transform.position.x, 0);
@@ -67,7 +69,7 @@ public class HookController : MonoBehaviour
     #region Movement
     float MoveLeftRight()
     {
-        float delta = currentTouch.x - playerObject.position.x;
+        float delta = currentTouch.x - hookObject.position.x;
         float fullSpeed = horizontalSpeed * Mathf.Sign(delta) * Time.deltaTime;
 
         if (Mathf.Abs(delta) < Mathf.Abs(fullSpeed))
