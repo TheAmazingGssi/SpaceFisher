@@ -38,6 +38,6 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
             }
 
 
-        Debug.Log(storeList.Count);
+        //Debug.Log(storeList.Count);
     }
 }
