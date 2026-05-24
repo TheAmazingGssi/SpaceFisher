@@ -8,6 +8,8 @@ public class DebugHelperScript : MonoBehaviour
     [SerializeField] private StorePool pool;
     [SerializeField] private BuildingData data;
 
+    [SerializeField] private Aquarium aquarium;
+ 
     [ContextMenu("Add fishy to inventory")]
     public void AddFishyToInventory()
     {
@@ -23,6 +25,12 @@ public class DebugHelperScript : MonoBehaviour
         Store store = pool.Get();
         store.Init(data);
         store.transform.position = transform.position;
+    }
+
+    [ContextMenu("Open inventory")]
+    public void OpenInventory()
+    {
+        Bus<AquariumPressed>.Raise(new AquariumPressed { Aquarium = aquarium });
     }
 
 

@@ -52,6 +52,8 @@ public class Inventory : MonoBehaviour
     private void RemoveFish(FishStats fishStats, int amount)
     {
         dict[fishStats.ID] -= amount;
+        if(dict[fishStats.ID] <= 0)
+            dict.Remove(fishStats.ID);
         SaveState();
     }
     private void RemoveFish(FishStats fishStats) => RemoveFish(fishStats, 1);
