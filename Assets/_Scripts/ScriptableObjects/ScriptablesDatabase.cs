@@ -9,6 +9,7 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
 {
     public Dictionary<string, FishStats> fishList;
     public Dictionary<string, BuildingData> storeList;
+    public Dictionary<string, PlanetFishTable> planetList;
     private void OnValidate()
     {
         if(fishList == null)
@@ -16,7 +17,7 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
             fishList = new Dictionary<string, FishStats>();
         }
         fishList.Clear();
-        GUID[] guids = AssetDatabase.FindAssetGUIDs("t:FishStats");
+        GUID[] guids = AssetDatabase.FindAssetGUIDs("t:" + nameof(FishStats));
         foreach (GUID guid in guids)
             if (!fishList.ContainsKey(guid.ToString()))
             {
@@ -29,12 +30,24 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
             storeList = new Dictionary<string, BuildingData>();
         }
         storeList.Clear();
-        guids = AssetDatabase.FindAssetGUIDs("t:StoreData");
+        guids = AssetDatabase.FindAssetGUIDs("t:" + nameof(BuildingData));
         foreach (GUID guid in guids)
             if (!storeList.ContainsKey(guid.ToString()))
             {
                 BuildingData fishStat = AssetDatabase.LoadAssetByGUID<BuildingData>(guid);
                 storeList.Add(guid.ToString(), fishStat);
+            }
+        if (planetList == null)
+        {
+            planetList = new Dictionary<string, PlanetFishTable>();
+        }
+        planetList.Clear();
+        guids = AssetDatabase.FindAssetGUIDs("t:" + nameof(PlanetFishTable));
+        foreach (GUID guid in guids)
+            if (!planetList.ContainsKey(guid.ToString()))
+            {
+                PlanetFishTable fishStat = AssetDatabase.LoadAssetByGUID<PlanetFishTable>(guid);
+                planetList.Add(guid.ToString(), fishStat);
             }
     }
 }
