@@ -25,6 +25,6 @@ public class Store : Building
 
     protected override void OnVisitorAdded(Visitor visitor)
     {
-        CoinsManager.Instance.AddCoins(data.Price);
+        CoinsManager.Instance.AddCoins(data.Value);
     }
 }

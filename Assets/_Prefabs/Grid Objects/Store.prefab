@@ -235,7 +235,8 @@ MonoBehaviour:
   greenTint: {fileID: 6303607784504691818}
   redTint: {fileID: 2872610468444747981}
   data: {fileID: 11400000, guid: 6dddcb6dcbcd9ff4194fd411d97fc70c, type: 2}
-  spriteRenderer: {fileID: 0}
+  feedbackSpawn: {fileID: 0}
+  spriteRenderer: {fileID: 3537645273168922136}
 --- !u!61 &1437031210059514805
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1,18 +1,24 @@
+using TMPro;
 using UnityEngine;
 
 public class StoreButton : ItemButton<BuildingData>
 {
-    private BuildingData store;
+    [SerializeField] private TextMeshProUGUI valueText;
+    [SerializeField] private TextMeshProUGUI priceText;
+
+    private BuildingData data;
     public override void Setup(BuildingData data)
     {
-        store = data;
-        image.sprite = store.Sprite;
+        this.data = data;
+        valueText.text = data.Value.ToString();
+        priceText.text = data.Price.ToString();
+        image.sprite = data.Sprite;
     }
 
     public override void OnButtonClick()
     {
-        if (CoinsManager.Instance.TryBuying(store.Price))
-            Bus<StoreBought>.Raise(new StoreBought { Data = store });
+        if (CoinsManager.Instance.TryBuying(data.Price))
+            Bus<StoreBought>.Raise(new StoreBought { Data = data });
         else
             Debug.Log("Not enough coins");
 

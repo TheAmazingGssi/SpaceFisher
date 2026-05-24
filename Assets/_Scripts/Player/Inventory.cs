@@ -84,10 +84,11 @@ public class Inventory : MonoBehaviour
     {
         string jsonFile = System.IO.File.ReadAllText(Application.persistentDataPath + INVENTORY_PATH);
         dict = JsonUtility.FromJson<SerializableDictionary<string, int>>(jsonFile);
-        foreach (KeyValuePair<string, int> kvp in dict)
+/*        foreach (KeyValuePair<string, int> kvp in dict)
         {
             if(kvp.Value <= 0)
                 dict.Remove(kvp.Key);
-        }
+        }*/
+//TODO: check why error
     }
 }

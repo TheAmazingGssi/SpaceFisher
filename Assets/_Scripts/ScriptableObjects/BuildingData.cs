@@ -9,6 +9,8 @@ public class BuildingData : ScriptableObject
     [SerializeField] private Sprite sprite;
     public int Price => price;
     [SerializeField] private int price = 10;
+    public int Value => value;
+    [SerializeField] private int value = 10;
     public float MinInterval => minInterval;
     [SerializeField] private float minInterval = 5;
     public float MaxInterval => maxInterval;
