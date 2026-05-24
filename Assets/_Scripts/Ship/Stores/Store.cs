@@ -6,6 +6,8 @@ using UnityEngine;
 public class Store : Building
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRendererGreen;
+    [SerializeField] private SpriteRenderer spriteRendererRed;
 
     protected override void Start()
     {
@@ -18,6 +20,8 @@ public class Store : Building
     {
         this.data = data;
         spriteRenderer.sprite = data.Sprite;
+        spriteRendererGreen.sprite = data.Sprite;
+        spriteRendererRed.sprite = data.Sprite;
         BuildingType = data.StoreType;
         minInterval = data.MinInterval;
         maxInterval = data.MaxInterval;
