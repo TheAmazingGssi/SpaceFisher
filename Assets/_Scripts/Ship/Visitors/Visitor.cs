@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,15 +14,19 @@ public enum Location
 public class Visitor : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Vector2 speedRange;
 
     public Location CurrentLocation { get; private set; } = Location.Inbetween;
     public VisitorData Data { get; private set; }
 
-    private Vector2 moveDirection;
-    private bool isMoving;
+    private float moveSpeed;
 
-    private bool isEntering;
     private Vector2 enterTarget;
+    private Vector2 moveDirection;
+
+    private bool isMoving;
+    private bool isEntering;
+
     private Building currentBuilding;
 
     public void Initialize(VisitorData data, Vector2 direction)
@@ -33,6 +36,7 @@ public class Visitor : MonoBehaviour
         moveDirection = direction.normalized;
         isMoving = true;
         isEntering = false;
+        moveSpeed = Random.Range(speedRange.x, speedRange.y);
     }
 
     public void ResumeMovement()
@@ -49,12 +53,12 @@ public class Visitor : MonoBehaviour
             return;
         }
         if (isMoving)
-            transform.Translate(moveDirection * Data.MoveSpeed * Time.deltaTime);
+            transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
     }
 
     private void WalkToCenter()
     {
-        transform.position = Vector2.MoveTowards(transform.position, enterTarget, Data.MoveSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, enterTarget, moveSpeed * Time.deltaTime);
         if (Vector2.Distance(transform.position, enterTarget) < 0.01f)
             FinishEntering();
     }
