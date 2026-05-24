@@ -44,9 +44,9 @@ public abstract class ClickableObject : MonoBehaviour
 
     private void HandleFingerUp(Finger finger)
     {
-        Debug.Log("Before over UI");
+        //Debug.Log("Before over UI");
         if (IsOverUI(finger.screenPosition)) return;
-        Debug.Log("After over UI");
+        //Debug.Log("After over UI");
 
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(finger.screenPosition);
 
@@ -83,7 +83,11 @@ public abstract class ClickableObject : MonoBehaviour
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(pointerData, results);
 
-        return results.Count > 0;
+        bool hitUI = false;
+        foreach (RaycastResult result in results)
+            hitUI = hitUI || result.gameObject.layer == Constants.Layers.UI;
+
+        return hitUI;
     }
 
     protected virtual void OnFingerDown() { }
