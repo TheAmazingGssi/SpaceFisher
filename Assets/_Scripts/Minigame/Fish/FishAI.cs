@@ -7,23 +7,28 @@ public class FishAI : MonoBehaviour
     const string playerTag = "Player"; //change to tag from constants class plz
     [SerializeField] Rigidbody2D rb;
     [SerializeField] SpriteRenderer spriteRenderer;
-    [field:SerializeField] public FishStats Stats { get; private set; }
+    [field: SerializeField] public FishStats Stats { get; private set; }
 
     float wiggleDirection = 0;
-    
 
-    
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnEnable()
     {
-        rb.linearVelocity = transform.right * Stats.MGSpeed;
-        spriteRenderer.sprite = Stats.FishSprite;
-        spriteRenderer.transform.localPosition = new Vector3(-spriteRenderer.bounds.size.x/2, 0, 0);
-        wiggleDirection = 0;
+
     }
     private void Update()
     {
         HookedMovement();
+    }
+    public void Setup(FishStats stats)
+    {
+        Stats = stats;
+        rb.linearVelocity = transform.right * Stats.MGSpeed;
+        spriteRenderer.sprite = Stats.FishSprite;
+        spriteRenderer.transform.localPosition = new Vector3(-spriteRenderer.bounds.size.x / 2, 0, 0);
+        wiggleDirection = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,7 +53,7 @@ public class FishAI : MonoBehaviour
         {
             wiggleDirection *= -1;
         }
-        
+
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, newZ);
     }
 }
