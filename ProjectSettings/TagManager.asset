@@ -8,8 +8,8 @@ TagManager:
   - Building
   - Sidewalk
   - Elevator
-  - Exist
   - Visitor
+  - Exit
   layers:
   - Default
   - TransparentFX

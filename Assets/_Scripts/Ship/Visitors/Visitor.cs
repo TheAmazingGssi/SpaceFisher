@@ -28,6 +28,7 @@ public class Visitor : MonoBehaviour
     private bool isEntering;
 
     private Building currentBuilding;
+    private Elevator lastElevator;
 
     public void Initialize(VisitorData data, Vector2 direction)
     {
@@ -37,6 +38,14 @@ public class Visitor : MonoBehaviour
         isMoving = true;
         isEntering = false;
         moveSpeed = Random.Range(speedRange.x, speedRange.y);
+    }
+
+    public void SetDirectionAndResume(Vector2 direction)
+    {
+        moveDirection = direction.normalized;
+        CurrentLocation = Location.Inbetween;
+        isMoving = true;
+        isEntering = false;
     }
 
     public void ResumeMovement()
@@ -76,11 +85,19 @@ public class Visitor : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isEntering) return;
+
         if (other.CompareTag(Constants.Tags.Building))
             HandleBuildingCollision(other);
         else if (other.CompareTag(Constants.Tags.Exit))
             Bus<VisitorLeaving>.Raise(new VisitorLeaving { Visitor = this });
+        else if (other.TryGetComponent<Elevator>(out Elevator elevator))
+            HandleElevatorCollision(elevator);
+    }
 
+    private void HandleElevatorCollision(Elevator elevator)
+    {
+        if (elevator == lastElevator) return;
+        elevator.AddVisitor(this);
     }
 
     private void HandleBuildingCollision(Collider2D buildingCollider)
