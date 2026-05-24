@@ -44,11 +44,12 @@ public abstract class ClickableObject : MonoBehaviour
 
     private void HandleFingerUp(Finger finger)
     {
+        CancelHold();
+
         if (IsOverUI(finger.screenPosition)) return;
 
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(finger.screenPosition);
 
-        CancelHold();
 
         if (fingerDownOnObject)
         {
@@ -81,7 +82,11 @@ public abstract class ClickableObject : MonoBehaviour
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(pointerData, results);
 
-        return results.Count > 0;
+        bool hitUI = false;
+        foreach (RaycastResult result in results)
+            hitUI = hitUI || result.gameObject.layer == Constants.Layers.UI;
+
+        return hitUI;
     }
 
     protected virtual void OnFingerDown() { }

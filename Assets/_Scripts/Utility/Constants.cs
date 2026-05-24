@@ -11,6 +11,10 @@ public static class Constants
         public const string Elevator = "Elevator";
         public const string Exit = "Exit";
     }
+    public static class Layers
+    {
+        public const int UI = 5;
+    }
     public static class Scenes
     {
         public static string Ship = "SpaceShipScene";

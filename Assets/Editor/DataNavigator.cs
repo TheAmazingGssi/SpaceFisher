@@ -34,8 +34,8 @@ public class DataNavigator : EditorWindow
             currentTab = Tab.Fish;
         if(GUILayout.Button("Buildings"))
             currentTab = Tab.Buildings;
-        //if(GUILayout.Button("Planets"))
-        //    currentTab = Tab.Planets;
+        if(GUILayout.Button("Planets"))
+            currentTab = Tab.Planets;
         GUILayout.EndHorizontal();
         EditorGUILayout.Space();
         searchQuary = EditorGUILayout.TextField("Filter: ", searchQuary);
@@ -49,7 +49,7 @@ public class DataNavigator : EditorWindow
                 BuildingsGUI();
                 break;
             case Tab.Planets:
-                GUILayout.Label("Planets");
+                PlanetsGUI();
                 break;
             default:
                 break;
@@ -73,7 +73,7 @@ public class DataNavigator : EditorWindow
             if(fish.name.ToLower().Contains(searchQuary.ToLower()) && (!useFishFilter || fish.Planet == fishFilter))
             {
                 GUILayout.BeginHorizontal();
-                GUILayout.Label(fish.FishSprite.texture, GUILayout.Width(60), GUILayout.Height(60));
+                if (fish.FishSprite) GUILayout.Label(fish.FishSprite.texture, GUILayout.Width(60), GUILayout.Height(60));
                 GUILayout.Label(fish.name);
                 if (GUILayout.Button("Edit", GUILayout.Width(60)))
                 {
@@ -91,12 +91,29 @@ public class DataNavigator : EditorWindow
             if (store.name.ToLower().Contains(searchQuary.ToLower()))
             {
                 GUILayout.BeginHorizontal();
-                GUILayout.Label(store.Sprite.texture, GUILayout.Width(60), GUILayout.Height(60));
+                if(store.Sprite) GUILayout.Label(store.Sprite.texture, GUILayout.Width(60), GUILayout.Height(60));
                 GUILayout.Label(store.name);
                 if (GUILayout.Button("Edit", GUILayout.Width(60)))
                 {
                     Selection.activeObject = store;
                     EditorGUIUtility.PingObject(store);
+                }
+                GUILayout.EndHorizontal();
+            }
+    }
+    private void PlanetsGUI()
+    {
+        EditorGUILayout.Space();
+        PlanetFishTable[] planetArr = ScriptablesDatabase.Instance.planetList.Values.ToArray();
+        foreach (PlanetFishTable planet in planetArr)
+            if (planet.name.ToLower().Contains(searchQuary.ToLower()))
+            {
+                GUILayout.BeginHorizontal();
+                GUILayout.Label(planet.name);
+                if (GUILayout.Button("Edit", GUILayout.Width(60)))
+                {
+                    Selection.activeObject = planet;
+                    EditorGUIUtility.PingObject(planet);
                 }
                 GUILayout.EndHorizontal();
             }
