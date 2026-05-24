@@ -11,6 +11,7 @@ public class FishStatsEditor : Editor
     private SerializedProperty wiggleAngleMin;
     private SerializedProperty wiggleSpeed;
     private SerializedProperty defaultWiggleSpeed;
+    private SerializedProperty maxSpawnRate;
     private SerializedProperty swimTime;
     private SerializedProperty pauseTime;
     private SerializedProperty aquariumSpeed;
@@ -28,6 +29,7 @@ public class FishStatsEditor : Editor
         wiggleAngleMin = serializedObject.FindProperty("wiggleAngleMin");
         wiggleSpeed = serializedObject.FindProperty("wiggleSpeed");
         defaultWiggleSpeed = serializedObject.FindProperty("defaultWiggleSpeed");
+        maxSpawnRate = serializedObject.FindProperty("maxSpawnRate");
         swimTime = serializedObject.FindProperty("swimTime");
         pauseTime = serializedObject.FindProperty("pauseTime");
         aquariumSpeed = serializedObject.FindProperty("aquariumSpeed");
@@ -75,6 +77,8 @@ public class FishStatsEditor : Editor
 
         if (!defaultWiggleSpeed.boolValue)
             EditorGUILayout.PropertyField(wiggleSpeed);
+        
+        EditorGUILayout.PropertyField(maxSpawnRate);
 
         //===============Aquarium spesific==================
         EditorGUILayout.Space();

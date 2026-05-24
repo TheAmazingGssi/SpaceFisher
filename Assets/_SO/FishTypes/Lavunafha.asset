@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f5bea3b934f6344be43c4ec7e85d6f, type: 3}
-  m_Name: AquariumTest
+  m_Name: Lavunafha
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
-  id: fb35be89b7cb2a1438ff165cb4147021
-  fishSprite: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
-  planet: 2
-  value: 0
+  id: b6561006b96c42b45854c8b966f138af
+  fishSprite: {fileID: 21300000, guid: c66339dddbf5dd74780f4eed9bcc0b7e, type: 3}
+  planet: 0
+  value: 10
   customSpeed: 0
-  speed: 1
+  speed: 4
   mgSpeed: 0
-  wiggleAngleMax: 78.38709
-  wiggleAngleMin: -11.612907
+  wiggleAngleMax: 96.89516
+  wiggleAngleMin: 25.040321
   wiggleSpeed: 0
   defaultWiggleSpeed: 1
-  maxSpawnRate: 0
-  swimTime: {x: 1, y: 2}
-  pauseTime: 0.2
+  maxSpawnRate: 0.61
+  swimTime: {x: 2, y: 3}
+  pauseTime: 0.5
   aquariumSpeed: 0
-  verticalSwimming: 52.7
+  verticalSwimming: 50

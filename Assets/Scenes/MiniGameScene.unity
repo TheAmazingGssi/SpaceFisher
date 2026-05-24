@@ -1077,6 +1077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 877514657}
   - component: {fileID: 877514656}
+  - component: {fileID: 877514658}
   m_Layer: 0
   m_Name: FishSpawner
   m_TagString: Untagged
@@ -1099,6 +1100,8 @@ MonoBehaviour:
   FishObject: {fileID: 4661970418263872821, guid: 9106cd1bbd2cf1042abdd43c6e858dc8, type: 3}
   minigameRules: {fileID: 11400000, guid: 8e04b801ecc78c441a8b8c7889fe3729, type: 2}
   hook: {fileID: 1381342932}
+  pool: {fileID: 877514658}
+  planetFishTable: {fileID: 11400000, guid: 0d0c65da7a5f3544185fb9792daefd8c, type: 2}
 --- !u!4 &877514657
 Transform:
   m_ObjectHideFlags: 0
@@ -1114,6 +1117,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &877514658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877514655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c50e6f4a22aac547b274b5f821dd834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishPool
+  fishPrefab: {fileID: 4661970418263872821, guid: 9106cd1bbd2cf1042abdd43c6e858dc8, type: 3}
 --- !u!1 &1187253118
 GameObject:
   m_ObjectHideFlags: 0
