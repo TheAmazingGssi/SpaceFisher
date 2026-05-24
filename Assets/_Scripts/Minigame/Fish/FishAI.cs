@@ -27,7 +27,7 @@ public class FishAI : MonoBehaviour
         Stats = stats;
         rb.linearVelocity = transform.right * Stats.MGSpeed;
         spriteRenderer.sprite = Stats.FishSprite;
-        spriteRenderer.transform.localPosition = new Vector3(-spriteRenderer.bounds.size.x / 2, 0, 0);
+        //spriteRenderer.transform.localPosition = new Vector3(-spriteRenderer.bounds.size.x / 2, 0, 0);
         wiggleDirection = 0;
     }
 

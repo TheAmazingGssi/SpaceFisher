@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Shrimp
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
   id: 71d7fa0a9f5ddd947b4f115832921b87
-  fishSprite: {fileID: 21300000, guid: 063da487dc8a175408755631ac2054a2, type: 3}
+  fishSprite: {fileID: -5555467373337034770, guid: 063da487dc8a175408755631ac2054a2, type: 3}
   planet: 0
   value: 5
   customSpeed: 0
-  speed: 7
+  speed: 3
   mgSpeed: 0
   wiggleAngleMax: 100.88711
   wiggleAngleMin: -51.16938
-  wiggleSpeed: 0
-  defaultWiggleSpeed: 1
-  maxSpawnRate: 0.5
+  wiggleSpeed: 360
+  defaultWiggleSpeed: 0
+  maxSpawnRate: 0.3
   swimTime: {x: 1, y: 2}
   pauseTime: 1
   aquariumSpeed: 0
