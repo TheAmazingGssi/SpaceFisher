@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Lavunafha
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
   id: b6561006b96c42b45854c8b966f138af
-  fishSprite: {fileID: 21300000, guid: c66339dddbf5dd74780f4eed9bcc0b7e, type: 3}
+  fishSprite: {fileID: 8209764733655462103, guid: c66339dddbf5dd74780f4eed9bcc0b7e, type: 3}
   planet: 0
   value: 10
   customSpeed: 0
-  speed: 4
+  speed: 2
   mgSpeed: 0
   wiggleAngleMax: 96.89516
   wiggleAngleMin: 25.040321
-  wiggleSpeed: 0
-  defaultWiggleSpeed: 1
-  maxSpawnRate: 0.61
+  wiggleSpeed: 300
+  defaultWiggleSpeed: 0
+  maxSpawnRate: 0.35
   swimTime: {x: 2, y: 3}
   pauseTime: 0.5
   aquariumSpeed: 0

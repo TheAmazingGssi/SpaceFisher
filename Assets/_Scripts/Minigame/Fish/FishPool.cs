@@ -23,7 +23,13 @@ public class FishPool : MonoBehaviour
             fishObj.transform.rotation = rotation;
             fishObj.SetActive(true);
         }
-        fishObj.GetComponent<FishAI>().Setup(fishType);
+        fishObj.GetComponent<FishAI>().Setup(fishType, this);
         return fishObj;
+    }
+
+    public void Push(GameObject returningObject)
+    {
+        returningObject.SetActive(false);
+        list.Add(returningObject);
     }
 }

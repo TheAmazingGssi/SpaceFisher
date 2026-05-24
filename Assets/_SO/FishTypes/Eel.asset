@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Eel
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
   id: b2ed0c3ac310d464589272e630908e35
-  fishSprite: {fileID: 21300000, guid: 0a376cc660da1ae4bb0cbba89ea525f0, type: 3}
+  fishSprite: {fileID: -6525344490752623909, guid: 0a376cc660da1ae4bb0cbba89ea525f0, type: 3}
   planet: 0
   value: 50
   customSpeed: 0
-  speed: 5
+  speed: 1
   mgSpeed: 0
   wiggleAngleMax: 94.717735
   wiggleAngleMin: 77.66127
-  wiggleSpeed: 0
-  defaultWiggleSpeed: 1
-  maxSpawnRate: 0.41
+  wiggleSpeed: 400
+  defaultWiggleSpeed: 0
+  maxSpawnRate: 0.2
   swimTime: {x: 3, y: 5}
   pauseTime: 0.1
   aquariumSpeed: 0

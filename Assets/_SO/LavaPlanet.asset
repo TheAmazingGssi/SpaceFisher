@@ -15,7 +15,15 @@ MonoBehaviour:
   planet: 0
   maxDepth: 300
   fishSpawnData:
-  - fishType: {fileID: 11400000, guid: c7b2452d59d00e241ae0f6abae5c88ff, type: 2}
+  - fishType: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
     minHeight: 0
-    populationPeak: 30.960854
+    populationPeak: 45
+    maxHeight: 300
+  - fishType: {fileID: 11400000, guid: b6561006b96c42b45854c8b966f138af, type: 2}
+    minHeight: 100
+    populationPeak: 180
+    maxHeight: 200
+  - fishType: {fileID: 11400000, guid: b2ed0c3ac310d464589272e630908e35, type: 2}
+    minHeight: 200
+    populationPeak: 300
     maxHeight: 300
