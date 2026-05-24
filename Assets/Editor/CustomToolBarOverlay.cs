@@ -63,6 +63,7 @@ public class CustomToolBarOverlay : Overlay
         SetPosition(store.gameObject);
         Undo.RegisterCreatedObjectUndo(store.gameObject, "Spawn Store");
         Selection.activeGameObject = store.gameObject;
+        PrefabUtility.SaveAsPrefabAsset(store.gameObject, "Assets/_Prefabs/Grid Objects/Store.prefab");
     }
 
     private void OnSpawnAquariumClicked()

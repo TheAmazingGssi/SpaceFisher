@@ -29,6 +29,8 @@ public struct MinigameEnd : IEvent { };
 
 #region Coins
 public struct CoinChange : IEvent { public int NewCoins; }
+public struct ShowCoin : IEvent { public Transform Transform; }
+
 #endregion 
 
 #region System

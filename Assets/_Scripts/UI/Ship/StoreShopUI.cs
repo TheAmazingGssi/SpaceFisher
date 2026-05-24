@@ -31,7 +31,6 @@ public class StoreShopUI : PanelUI<StoreButton, BuildingData>
     [ContextMenu("Buy Aquarium")]
     public void OnAquariumClicked()
     {
-        Debug.Log("Aquarium pressed");
         if (CoinsManager.Instance.TryBuying(price))
             Bus<AquariumBought>.Raise(new AquariumBought());
     }

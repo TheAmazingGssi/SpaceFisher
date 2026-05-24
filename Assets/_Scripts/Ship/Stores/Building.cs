@@ -18,7 +18,10 @@ public abstract class Building : MoveableObject
     {
         Bus<ChangeLocation>.OnEvent += AddVisitor;
     }
-    public abstract Vector2 GetEntryPoint(Collider2D col, Vector2 visitorPos);
+    public virtual Vector2 GetEntryPoint(Collider2D col, Vector2 visitorPos)
+    {
+        return new Vector2(Random.Range(col.bounds.min.x, col.bounds.max.x), visitorPos.y);
+    }
     protected void StartReleaseRoutine()
     {
         if (releaseRoutine != null) return;

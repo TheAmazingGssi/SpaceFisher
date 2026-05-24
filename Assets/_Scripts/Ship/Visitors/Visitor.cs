@@ -64,7 +64,7 @@ public class Visitor : MonoBehaviour
         isEntering = false;
         CurrentLocation = currentBuilding.BuildingType;
         Bus<ChangeLocation>.Raise(new ChangeLocation { Visitor = this, Building = currentBuilding });
-        if (CurrentLocation != Location.Aquarium)
+        if (currentBuilding is VisitorEater)
             gameObject.SetActive(false);
 
     }
