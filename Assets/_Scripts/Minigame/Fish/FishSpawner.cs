@@ -51,8 +51,7 @@ public class FishSpawner : MonoBehaviour
                 else
                     spawnChance = UnLerp(fish.minHeight, fish.populationPeak, currentHeight);
 
-                spawnChance *= deltaHeight;
-
+                spawnChance *= deltaHeight * fish.fishType.MaxSpawnRate;
                 if (Random.value <= spawnChance)
                     spawnList.Add(fish.fishType);
             }

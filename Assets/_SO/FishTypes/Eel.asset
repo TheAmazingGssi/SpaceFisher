@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f5bea3b934f6344be43c4ec7e85d6f, type: 3}
-  m_Name: AquariumTest
+  m_Name: Eel
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
-  id: fb35be89b7cb2a1438ff165cb4147021
-  fishSprite: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
-  planet: 2
-  value: 0
+  id: b2ed0c3ac310d464589272e630908e35
+  fishSprite: {fileID: 21300000, guid: 0a376cc660da1ae4bb0cbba89ea525f0, type: 3}
+  planet: 0
+  value: 50
   customSpeed: 0
-  speed: 1
+  speed: 5
   mgSpeed: 0
-  wiggleAngleMax: 78.38709
-  wiggleAngleMin: -11.612907
+  wiggleAngleMax: 94.717735
+  wiggleAngleMin: 77.66127
   wiggleSpeed: 0
   defaultWiggleSpeed: 1
-  maxSpawnRate: 0
-  swimTime: {x: 1, y: 2}
-  pauseTime: 0.2
+  maxSpawnRate: 0.41
+  swimTime: {x: 3, y: 5}
+  pauseTime: 0.1
   aquariumSpeed: 0
-  verticalSwimming: 52.7
+  verticalSwimming: 10

@@ -40,6 +40,8 @@ public class FishStats : ScriptableObject
     public float WiggleSpeed { get => defaultWiggleSpeed? mgSpeed * 100 : wiggleSpeed; }
     [SerializeField] private float wiggleSpeed;
     [SerializeField] bool defaultWiggleSpeed;
+    public float MaxSpawnRate { get => maxSpawnRate; }
+    [SerializeField][Range(0, 1)] float maxSpawnRate;
 
     [Header("Aquarium")]
     public Vector2 SwimTime { get => swimTime; }
