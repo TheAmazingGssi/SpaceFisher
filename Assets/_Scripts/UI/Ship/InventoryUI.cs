@@ -12,6 +12,7 @@ public class InventoryUI : PanelUI<FishButton, KeyValuePair<FishStats, int>> //T
     {
         RefreshPanel(Inventory.Instance.Fish);
     }
+
     private void OnDestroy()
     {
         Bus<AquariumPressed>.OnEvent -= OnAquariumPressed;

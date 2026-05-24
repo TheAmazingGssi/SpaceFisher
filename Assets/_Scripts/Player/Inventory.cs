@@ -38,6 +38,8 @@ public class Inventory : MonoBehaviour
     }
     private void AddFishNoSave(FishStats fishStats, int amount)
     {
+        if (amount <= 0) return;
+
         if (dict.ContainsKey(fishStats.ID))
             dict[fishStats.ID] += amount;
         else
@@ -82,13 +84,18 @@ public class Inventory : MonoBehaviour
     }
     private void LoadState()
     {
-        string jsonFile = System.IO.File.ReadAllText(Application.persistentDataPath + INVENTORY_PATH);
+        string path = Application.persistentDataPath + INVENTORY_PATH;
+        if (!System.IO.File.Exists(path)) return;
+
+        string jsonFile = System.IO.File.ReadAllText(path);
         dict = JsonUtility.FromJson<SerializableDictionary<string, int>>(jsonFile);
-/*        foreach (KeyValuePair<string, int> kvp in dict)
-        {
-            if(kvp.Value <= 0)
-                dict.Remove(kvp.Key);
-        }*/
-//TODO: check why error
+
+        List<string> toRemove = new List<string>();
+        foreach (KeyValuePair<string, int> kvp in dict)
+            if (kvp.Value <= 0)
+                toRemove.Add(kvp.Key);
+
+        foreach (string key in toRemove)
+            dict.Remove(key);
     }
 }
