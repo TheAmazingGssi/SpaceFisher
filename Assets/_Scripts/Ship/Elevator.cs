@@ -7,7 +7,7 @@ public class Elevator : MonoBehaviour
 {
     [SerializeField] private ElevatorType elevatorType;
     [SerializeField] private Vector2 wallDirection;
-    [SerializeField] private float spawnOffset = 1f;
+    [SerializeField] private float spawnOffset = 1;
     [SerializeField] private Transform[] floors;
 
     private List<Visitor> visitors = new List<Visitor>();
@@ -31,8 +31,7 @@ public class Elevator : MonoBehaviour
             return;
         }
 
-        bool isFinalFloor = nextFloorIndex == floors.Length - 1;
-        Vector2 direction = GetExitDirection(isFinalFloor);
+        Vector2 direction = GetExitDirection(nextFloorIndex == floors.Length - 1);
         Vector2 spawnPos = new Vector2(transform.position.x + direction.x * spawnOffset, floors[nextFloorIndex].position.y);
         ReleaseVisitor(visitor, spawnPos, direction);
     }
@@ -48,14 +47,14 @@ public class Elevator : MonoBehaviour
     private int GetCurrentFloorIndex(Visitor visitor)
     {
         int closest = 0;
-        float minDist = Mathf.Abs(visitor.transform.position.y - floors[0].position.y);
+        float minDistance = Mathf.Abs(visitor.transform.position.y - floors[0].position.y);
 
         for (int i = 1; i < floors.Length; i++)
         {
-            float dist = Mathf.Abs(visitor.transform.position.y - floors[i].position.y);
-            if (dist < minDist)
+            float distance = Mathf.Abs(visitor.transform.position.y - floors[i].position.y);
+            if (distance < minDistance)
             {
-                minDist = dist;
+                minDistance = distance;
                 closest = i;
             }
         }

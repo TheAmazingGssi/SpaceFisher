@@ -37,6 +37,8 @@ public class Visitor : MonoBehaviour
         moveDirection = direction.normalized;
         isMoving = true;
         isEntering = false;
+        currentBuilding = null;
+        lastElevator = null;
         moveSpeed = Random.Range(speedRange.x, speedRange.y);
     }
 
@@ -97,6 +99,7 @@ public class Visitor : MonoBehaviour
     private void HandleElevatorCollision(Elevator elevator)
     {
         if (elevator == lastElevator) return;
+        lastElevator = elevator;
         elevator.AddVisitor(this);
     }
 
