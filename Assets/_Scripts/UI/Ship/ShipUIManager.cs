@@ -47,12 +47,22 @@ public class ShipUIManager : MonoBehaviour
         shopPanel.SetActive(false);
     }
 
+    public void CloseStorePanel()
+    {
+        shopPanel.SetActive(false);
+    }
+
     private void OpenFishPanel(AquariumPressed e)
     {
         fishPanel.SetActive(true);
+        inventoryUI.RefreshPanel(Inventory.Instance.Fish);
     }
 
     private void CloseFishPanel(PlaceFish e)
+    {
+        fishPanel.SetActive(false);
+    }
+    public void CloseFishPanel()
     {
         fishPanel.SetActive(false);
     }
