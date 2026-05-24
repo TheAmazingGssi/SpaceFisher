@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static Unity.VisualScripting.Antlr3.Runtime.Tree.TreeWizard;
 
 public class VisitorSpawner : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class VisitorSpawner : MonoBehaviour
     private void Start()
     {
         Bus<AquariumValueChange>.OnEvent += OnAquariumValueChanged;
+        Bus<VisitorLeaving>.OnEvent += OnVisitorLeaving;
     }
 
     public void Init(int ticketPrice)
@@ -53,8 +55,14 @@ public class VisitorSpawner : MonoBehaviour
         Bus<VisitorSpawned>.Raise(new VisitorSpawned { Visitor = visitor, TicketPrice = ticketPrice });
     }
 
+    private void OnVisitorLeaving(VisitorLeaving e)
+    {
+        pool.Release(e.Visitor);
+    }
+
     private void OnDestroy()
     {
         Bus<AquariumValueChange>.OnEvent -= OnAquariumValueChanged;
+        Bus<VisitorLeaving>.OnEvent -= OnVisitorLeaving;
     }
 }

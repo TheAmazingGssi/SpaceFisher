@@ -74,6 +74,9 @@ public class Visitor : MonoBehaviour
         if (isEntering) return;
         if (other.CompareTag(Constants.Tags.Building))
             HandleBuildingCollision(other);
+        else if (other.CompareTag(Constants.Tags.Exit))
+            Bus<VisitorLeaving>.Raise(new VisitorLeaving { Visitor = this });
+
     }
 
     private void HandleBuildingCollision(Collider2D buildingCollider)

@@ -13,6 +13,7 @@ public class VisitorsManager : MonoBehaviour
     {
         Bus<VisitorSpawned>.OnEvent += OnVisitorSpawned;
         Bus<VisitorReleased>.OnEvent += OnVisitorReleased;
+        Bus<VisitorLeaving>.OnEvent += OnVisitorLeaving;
         spawner.Init(ticketPrice);
     }
 
@@ -35,9 +36,15 @@ public class VisitorsManager : MonoBehaviour
         }
     }
 
+    private void OnVisitorLeaving(VisitorLeaving e)
+    {
+        Visitors.Remove(e.Visitor);
+    }
+
     private void OnDestroy()
     {
         Bus<VisitorSpawned>.OnEvent -= OnVisitorSpawned;
         Bus<VisitorReleased>.OnEvent -= OnVisitorReleased;
+        Bus<VisitorLeaving>.OnEvent -= OnVisitorLeaving;
     }
 }
