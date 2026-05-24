@@ -8,7 +8,7 @@ public abstract class PanelUI<TButton, TData> : MonoBehaviour where TButton : It
 
     private readonly List<TButton> buttonPool = new();
 
-    public void RefreshPanel(IEnumerable<TData> items)
+    public virtual void RefreshPanel(IEnumerable<TData> items)
     {
         int index = 0;
         foreach (TData item in items)

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryUI : PanelUI<FishButton, KeyValuePair<FishStats, int>>
+public class InventoryUI : PanelUI<FishButton, KeyValuePair<FishStats, int>> //TODO: fish button stay when invetory empty
 {
     private void Start()
     {

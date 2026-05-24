@@ -10,10 +10,16 @@ public class StoreShopUI : PanelUI<StoreButton, BuildingData>
 
     private int price;
 
-    private void Start()
+    private void Awake()
     {
         Bus<AquariumPriceChange>.OnEvent += UpdatePrice;
         aquariumButton.onClick.AddListener(OnAquariumClicked);
+    }
+
+    public override void RefreshPanel(IEnumerable<BuildingData> items)
+    {
+        base.RefreshPanel(items);
+        priceText.text = price.ToString();
     }
 
     private void UpdatePrice(AquariumPriceChange e)

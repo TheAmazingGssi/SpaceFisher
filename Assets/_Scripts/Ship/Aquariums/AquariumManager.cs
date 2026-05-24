@@ -22,7 +22,6 @@ public class AquariumManager : MonoBehaviour
         {
             aquarium.Init(fishPool);
         }
-
         Bus<AquariumPriceChange>.Raise(new AquariumPriceChange { Price = price });
     }
 
