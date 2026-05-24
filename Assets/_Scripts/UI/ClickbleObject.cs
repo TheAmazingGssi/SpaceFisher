@@ -44,13 +44,12 @@ public abstract class ClickableObject : MonoBehaviour
 
     private void HandleFingerUp(Finger finger)
     {
-        //Debug.Log("Before over UI");
+        CancelHold();
+
         if (IsOverUI(finger.screenPosition)) return;
-        //Debug.Log("After over UI");
 
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(finger.screenPosition);
 
-        CancelHold();
 
         if (fingerDownOnObject)
         {
