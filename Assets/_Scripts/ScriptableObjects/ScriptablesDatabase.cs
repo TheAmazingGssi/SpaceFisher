@@ -10,6 +10,8 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
     public Dictionary<string, FishStats> fishList;
     public Dictionary<string, BuildingData> storeList;
     public Dictionary<string, PlanetFishTable> planetList;
+
+#if UNITY_EDITOR
     private void OnValidate()
     {
         if(fishList == null)
@@ -50,4 +52,6 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
                 planetList.Add(guid.ToString(), fishStat);
             }
     }
+#endif
+
 }
