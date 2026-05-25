@@ -45,7 +45,7 @@ public class MinigameUIManager : MonoBehaviour
     }
     private void OnMinigameEnd(MinigameEnd e)
     {
-        ActiveOOM();
+        StartCoroutine(SetMenuActiveNextFrame(true));
         insideMinigameParent.SetActive(false);
     }
 
@@ -56,19 +56,22 @@ public class MinigameUIManager : MonoBehaviour
     IEnumerator SetMenuActiveNextFrame(bool value)
     {
         yield return null;
-        outofMinigameParent.SetActive(value);
+        if(value)
+            ActiveOOM();
+        else
+            outofMinigameParent.SetActive(value);
     }
 
     private void ActiveOOM()
     {
         outofMinigameParent.SetActive(true);
-        foreach(KeyValuePair<FishStats, Image> kvp in siluetteImages)
+        foreach(FishStats kvp in siluetteImages.Keys)
         {
             Dictionary<FishStats, int> fishInInventory = Inventory.Instance.Fish;
-            if (fishInInventory.ContainsKey(kvp.Key) && fishInInventory[kvp.Key] > 0)
-                kvp.Value.color = Color.white;
+            if (fishInInventory.ContainsKey(kvp) && fishInInventory[kvp] > 0)
+                siluetteImages[kvp].color = Color.white;
             else
-                kvp.Value.color = Color.black;
+                siluetteImages[kvp].color = Color.black;
         }
     }
 }

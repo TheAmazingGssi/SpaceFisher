@@ -13,7 +13,9 @@ public class Inventory : MonoBehaviour
         { 
             Dictionary<FishStats, int> copy = new Dictionary<FishStats, int>();
             foreach (string id in dict.Keys)
+            {
                 copy.Add(ScriptablesDatabase.Instance.fishList[id], dict[id]);
+            }
             return copy;
         } }
     private void Awake()
