@@ -41,7 +41,7 @@ public class Visitor : MonoBehaviour
         currentBuilding = null;
         lastElevator = null;
         moveSpeed = Random.Range(speedRange.x, speedRange.y);
-        coinEffect.Play();
+        //coinEffect.Play();
     }
 
     public void SetDirectionAndResume(Vector2 direction)
