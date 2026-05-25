@@ -4,6 +4,7 @@ using UnityEngine;
 public class VisitorSpawner : MonoBehaviour
 {
     [SerializeField] private Transform spawnPoint;
+    [SerializeField] private Transform coinSpawnPoint;
     [SerializeField] private VisitorPool pool;
     [SerializeField] private VisitorData[] data;
     [SerializeField] private float maxInterval = 60;

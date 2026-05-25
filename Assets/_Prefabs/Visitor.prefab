@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Visitor
   spriteRenderer: {fileID: 1923223938532789248}
-  speedRange: {x: 10, y: 15}
+  coinEffect: {fileID: 6383833775104672916, guid: 62bf440b3db443046847071910e96766, type: 3}
+  speedRange: {x: 3, y: 7}
 --- !u!212 &1923223938532789248
 SpriteRenderer:
   serializedVersion: 2

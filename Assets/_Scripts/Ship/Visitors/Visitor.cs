@@ -14,6 +14,7 @@ public enum Location
 public class Visitor : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private ParticleSystem coinEffect;
     [SerializeField] private Vector2 speedRange;
 
     public Location CurrentLocation { get; private set; } = Location.Inbetween;
@@ -40,6 +41,7 @@ public class Visitor : MonoBehaviour
         currentBuilding = null;
         lastElevator = null;
         moveSpeed = Random.Range(speedRange.x, speedRange.y);
+        coinEffect.Play();
     }
 
     public void SetDirectionAndResume(Vector2 direction)
