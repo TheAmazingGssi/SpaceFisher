@@ -3029,6 +3029,10 @@ PrefabInstance:
       propertyPath: elevatorType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2625545557163534939, guid: b24406f3f0644924fa845357d8ed08a0, type: 3}
+      propertyPath: floors.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4479,6 +4483,14 @@ PrefabInstance:
     - target: {fileID: 2625545557163534939, guid: b24406f3f0644924fa845357d8ed08a0, type: 3}
       propertyPath: wallDirection.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625545557163534939, guid: b24406f3f0644924fa845357d8ed08a0, type: 3}
+      propertyPath: floors.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625545557163534939, guid: b24406f3f0644924fa845357d8ed08a0, type: 3}
+      propertyPath: 'floors.Array.data[6]'
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
