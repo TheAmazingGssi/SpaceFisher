@@ -9,6 +9,7 @@ public abstract class ClickableObject : MonoBehaviour
 {
     [SerializeField] protected Collider2D _collider;
 
+    private int trackedFingerId = -1;
     private float holdTime = 0.5f;
     private Coroutine holdCoroutine;
     private bool fingerDownOnObject;
@@ -23,8 +24,11 @@ public abstract class ClickableObject : MonoBehaviour
     virtual protected void OnEnable()
     {
         fingerDownOnObject = false;
+        trackedFingerId = -1;
+        if (cam == null) cam = Camera.main;
         Touch.onFingerDown += HandleFingerDown;
         Touch.onFingerUp += HandleFingerUp;
+        Debug.Log($"{gameObject.name} subscribed to touch events");
     }
 
     virtual protected void OnDisable()
@@ -41,6 +45,7 @@ public abstract class ClickableObject : MonoBehaviour
         if (_collider.OverlapPoint(worldPos))
         {
             fingerDownOnObject = true;
+            trackedFingerId = finger.index;
             OnFingerDown();
             holdCoroutine = StartCoroutine(HoldRoutine());
         }
@@ -48,15 +53,14 @@ public abstract class ClickableObject : MonoBehaviour
 
     private void HandleFingerUp(Finger finger)
     {
+        if (finger.index != trackedFingerId) return;
         CancelHold();
         if (IsOverUI(finger.screenPosition)) return;
-        if (cam == null) cam = Camera.main;
-        Vector2 worldPos = cam.ScreenToWorldPoint(finger.screenPosition);
         if (fingerDownOnObject)
         {
             fingerDownOnObject = false;
-            if (_collider.OverlapPoint(worldPos))
-                OnFingerUp();
+            trackedFingerId = -1;
+            OnFingerUp();
         }
     }
 
