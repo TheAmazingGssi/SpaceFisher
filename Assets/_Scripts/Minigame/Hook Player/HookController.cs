@@ -35,6 +35,10 @@ public class HookController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     #region Monobehaviour
+    private void Awake()
+    {
+        cam = Camera.main;
+    }
     private void OnValidate()
     {
         cam = Camera.main;

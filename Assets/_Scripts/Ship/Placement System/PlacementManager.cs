@@ -14,15 +14,15 @@ public class PlacementManager : MonoBehaviour
 
     public bool CanTakeObject { get => !(bool)CurrentlyMovingObject; }
 
-    private void Start()
+    private void Awake()
     {
-        if (Instance)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
-
         Instance = this;
+        cam = Camera.main;
     }
 
     private void Update()
