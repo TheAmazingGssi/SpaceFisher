@@ -5,12 +5,16 @@ public class MinigameManager : MonoBehaviour
 {
     static public MinigameManager Instance;
     public MinigamePhase Phase;
+    public HookController Hook;
+    public PlanetFishTable PlanetData;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if (Instance != null)
         {
             Destroy(gameObject);
+            Debug.LogError("How did you do that");
             return;
         }
 
@@ -25,6 +29,11 @@ public class MinigameManager : MonoBehaviour
     {
         Bus<MinigameStart>.OnEvent -= OnMinigameStart;
         Bus<MinigameEnd>.OnEvent -= OnMinigameEnd;
+    }
+    private void Update()
+    {
+        if (Hook.transform.position.y <= -PlanetData.MaxDepth)
+            Phase = MinigamePhase.Up;
     }
 
     void OnMinigameStart(MinigameStart e)

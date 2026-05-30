@@ -1173,10 +1173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishSpawner
   FishObject: {fileID: 4661970418263872821, guid: 9106cd1bbd2cf1042abdd43c6e858dc8, type: 3}
-  minigameRules: {fileID: 11400000, guid: 8e04b801ecc78c441a8b8c7889fe3729, type: 2}
-  hook: {fileID: 1381342932}
   pool: {fileID: 877514658}
-  planetFishTable: {fileID: 11400000, guid: 0d0c65da7a5f3544185fb9792daefd8c, type: 2}
 --- !u!4 &877514657
 Transform:
   m_ObjectHideFlags: 0
@@ -1624,6 +1621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c818d9da2fcf9e4d9377d86200d4f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HookController
+  cam: {fileID: 519420031}
   hookObject: {fileID: 484982415}
   shipObject: {fileID: 1906451533}
   horizontalSpeed: 10
@@ -1672,6 +1670,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameManager
   Phase: 0
+  Hook: {fileID: 1381342932}
+  PlanetData: {fileID: 11400000, guid: 0d0c65da7a5f3544185fb9792daefd8c, type: 2}
 --- !u!4 &1480408725
 Transform:
   m_ObjectHideFlags: 0

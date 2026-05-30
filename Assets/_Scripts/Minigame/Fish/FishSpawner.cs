@@ -5,10 +5,9 @@ public class FishSpawner : MonoBehaviour
 {
     Camera cam;
     [SerializeField] GameObject FishObject; //TODO: add depth scriptable object to decide random spawn based on depth
-    [SerializeField] MinigameRules minigameRules;
-    [SerializeField] HookController hook;
     [SerializeField] FishPool pool;
-    [SerializeField] PlanetFishTable planetFishTable;
+    HookController hook { get => MinigameManager.Instance.Hook; }
+    PlanetFishTable planetFishTable { get => MinigameManager.Instance.PlanetData; }
 
     private float spawnCounter;
 
@@ -20,7 +19,6 @@ public class FishSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        spawnCounter = minigameRules.RandomSpawnDistance;
         FindCamBorders();
     }
 
@@ -47,9 +45,10 @@ public class FishSpawner : MonoBehaviour
             {
                 float spawnChance;
                 if (currentHeight > fish.populationPeak)
-                    spawnChance = UnLerp(fish.populationPeak, fish.maxHeight, currentHeight);
+                    spawnChance = UnLerp(fish.maxHeight, fish.populationPeak, currentHeight);
                 else
                     spawnChance = UnLerp(fish.minHeight, fish.populationPeak, currentHeight);
+                //Debug.Log(spawnChance);
 
                 spawnChance *= deltaHeight * fish.fishType.MaxSpawnRate;
                 if (Random.value <= spawnChance)
@@ -104,7 +103,6 @@ public class FishSpawner : MonoBehaviour
             return;
 
         pool.Pull(fishStat, spawnPoint, rotation); //TODO: POOLING
-        spawnCounter += minigameRules.RandomSpawnDistance;
     }
     void FindCamBorders()
     {
