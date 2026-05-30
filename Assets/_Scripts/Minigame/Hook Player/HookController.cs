@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class HookController : MonoBehaviour
 {
-    Camera cam;
+    [SerializeField] Camera cam;
     [SerializeField] Transform hookObject;
     [SerializeField] Transform shipObject;
     [SerializeField] float horizontalSpeed;
@@ -35,10 +35,10 @@ public class HookController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     #region Monobehaviour
-    private void Awake()
-    {
-        cam = Camera.main;
-    }
+    //private void Awake()
+    //{
+    //    cam = Camera.main;
+    //}
     private void OnValidate()
     {
         cam = Camera.main;

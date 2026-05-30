@@ -9,7 +9,7 @@ public class PlacementManager : MonoBehaviour
     public MoveableObject CurrentlyMovingObject;
 
     Vector2 currentTouch;
-    Camera cam;
+    [SerializeField] Camera cam;
     bool posUpdateFlag;
 
     public bool CanTakeObject { get => !(bool)CurrentlyMovingObject; }
@@ -22,7 +22,7 @@ public class PlacementManager : MonoBehaviour
             return;
         }
         Instance = this;
-        cam = Camera.main;
+        //cam = Camera.main;
     }
 
     private void Update()
