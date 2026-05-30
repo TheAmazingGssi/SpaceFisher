@@ -7,16 +7,16 @@ using static UnityEngine.GraphicsBuffer;
 [CreateAssetMenu(fileName = "ScriptablesDatabase", menuName = "Scriptable Objects/ScriptablesDatabase")]
 public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase>
 {
-    public Dictionary<string, FishStats> fishList;
-    public Dictionary<string, BuildingData> storeList;
-    public Dictionary<string, PlanetFishTable> planetList;
+    [SerializeField] public SerializableDictionary<string, FishStats> fishList;
+    [SerializeField] public SerializableDictionary<string, BuildingData> storeList;
+    [SerializeField] public SerializableDictionary<string, PlanetFishTable> planetList;
 
 #if UNITY_EDITOR
     private void OnValidate()
     {
         if(fishList == null)
         {
-            fishList = new Dictionary<string, FishStats>();
+            fishList = new SerializableDictionary<string, FishStats>();
         }
         fishList.Clear();
         GUID[] guids = AssetDatabase.FindAssetGUIDs("t:" + nameof(FishStats));
@@ -29,7 +29,7 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
         
         if(storeList == null)
         {
-            storeList = new Dictionary<string, BuildingData>();
+            storeList = new SerializableDictionary<string, BuildingData>();
         }
         storeList.Clear();
         guids = AssetDatabase.FindAssetGUIDs("t:" + nameof(BuildingData));
@@ -41,7 +41,7 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
             }
         if (planetList == null)
         {
-            planetList = new Dictionary<string, PlanetFishTable>();
+            planetList = new SerializableDictionary<string, PlanetFishTable>();
         }
         planetList.Clear();
         guids = AssetDatabase.FindAssetGUIDs("t:" + nameof(PlanetFishTable));
@@ -53,5 +53,4 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
             }
     }
 #endif
-
 }
