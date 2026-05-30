@@ -7,13 +7,17 @@ public class Aquarium : Building
     public List<FishManager> Fish { get; private set; }
     private AquariumFishPool pool;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        Fish = new List<FishManager>();
+    }
     protected override void Start()
     {
         base.Start();
-        Fish = new List<FishManager>();
         BuildingType = Location.Aquarium;
-        minInterval = data.MinInterval;
-        maxInterval = data.MaxInterval;
+        minInterval = Data.MinInterval;
+        maxInterval = Data.MaxInterval;
     }
 
     protected override void OnEnable()
@@ -50,7 +54,7 @@ public class Aquarium : Building
         base.OnFingerUp();
     }
 
-    public void AddFish(FishManager fish)
+    public void AddFish(FishStats fish)
     {
         FishManager newFish = pool.Get(fish);
         newFish.transform.parent = fishSpawn;

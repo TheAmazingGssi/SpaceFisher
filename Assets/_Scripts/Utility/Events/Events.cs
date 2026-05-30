@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public interface IEvent { }
 
 
 #region Aquariums
-public struct PlaceFish : IEvent { public FishManager Fish; }
+public struct PlaceFish : IEvent { public FishStats Fish; }
 public struct AquariumPressed : IEvent { public Aquarium Aquarium; }
 public struct AquariumValueChange : IEvent { public float Value; }
 public struct AquariumPriceChange : IEvent { public int Price; }
@@ -36,4 +37,7 @@ public struct ShowCoin : IEvent { public Transform Transform; }
 
 #region System
 public struct OfflineTimeCalculated : IEvent { public float SecondsOffline; }
+public struct SaveData : IEvent { }
+public struct LoadData : IEvent { public GameSaveData Data; }
+public struct RestoreScene : IEvent { public List<StoreSaveData> Stores; public List<AquariumSaveData> Aquariums; }
 #endregion 

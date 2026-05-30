@@ -6,7 +6,7 @@ public abstract class Building : MoveableObject
 {
     public Queue<Visitor> Visitors = new Queue<Visitor>();
   
-    [SerializeField] protected BuildingData data;
+    [field: SerializeField] public BuildingData Data {  get; protected set; }
     [SerializeField] protected Transform feedbackSpawn;
 
     public Location BuildingType { get; protected set; }
@@ -19,6 +19,7 @@ public abstract class Building : MoveableObject
     {
         Bus<ChangeLocation>.OnEvent += AddVisitor;
     }
+
     public virtual Vector2 GetEntryPoint(Collider2D col, Vector2 visitorPos)
     {
         return new Vector2(Random.Range(col.bounds.min.x, col.bounds.max.x), visitorPos.y);

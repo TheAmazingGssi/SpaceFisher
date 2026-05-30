@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320e92bcd2126ef4298f0cb64222c738, type: 3}
   m_Name: Restaurant
   m_EditorClassIdentifier: Assembly-CSharp::StoreData
+  id: 6dddcb6dcbcd9ff4194fd411d97fc70c
   storeType: 1
   sprite: {fileID: 21300000, guid: 91ce8d65db5bae04389131a4a2303516, type: 3}
   price: 15
+  value: 10
   minInterval: 5
   maxInterval: 10

@@ -30,6 +30,7 @@ public class ShipUIManager : MonoBehaviour
 
     public void GoToMiniGame()
     {
+        RunManager.Instance.CacheCurrentScene();
         SceneManager.LoadScene(Constants.Scenes.Minigame);
     }
 
@@ -39,7 +40,7 @@ public class ShipUIManager : MonoBehaviour
         shopToggle = !shopToggle;
         shopPanel.SetActive(shopToggle);
         if (shopToggle)
-            storeShopUI.RefreshPanel(StoresManager.Stores);
+            storeShopUI.RefreshPanel(StoresManager.AvailableStores);
     }
 
     private void CloseStorePanel(StoreBought e)

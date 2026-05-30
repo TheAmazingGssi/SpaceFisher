@@ -6,10 +6,8 @@ public class AquariumManager : MonoBehaviour
     [SerializeField] private AquariumFishPool fishPool;
     [SerializeField] private AquariumPool aquariumPool;
     [SerializeField] private int price = 300;
-
     public static List<Aquarium> Aquariums = new List<Aquarium>();
     private List<FishStats> fishInAquariums = new List<FishStats>();
-
     private Aquarium currentAquarium;
 
     private void Start()
@@ -17,12 +15,17 @@ public class AquariumManager : MonoBehaviour
         Bus<AquariumPressed>.OnEvent += SetCurrentAquarium;
         Bus<PlaceFish>.OnEvent += AddFish;
         Bus<AquariumBought>.OnEvent += AddAquarium;
-
-        foreach(Aquarium aquarium in Aquariums)
-        {
+        foreach (Aquarium aquarium in Aquariums)
             aquarium.Init(fishPool);
-        }
         Bus<AquariumPriceChange>.Raise(new AquariumPriceChange { Price = price });
+        RestoreAquariums();
+    }
+
+    private void OnDestroy()
+    {
+        Bus<AquariumPressed>.OnEvent -= SetCurrentAquarium;
+        Bus<PlaceFish>.OnEvent -= AddFish;
+        Bus<AquariumBought>.OnEvent -= AddAquarium;
     }
 
     private void AddAquarium(AquariumBought e)
@@ -33,16 +36,30 @@ public class AquariumManager : MonoBehaviour
         aquarium.NewAquarium();
     }
 
-    private void SetCurrentAquarium(AquariumPressed e)
-    {
-        currentAquarium = e.Aquarium;
-    }
+    private void SetCurrentAquarium(AquariumPressed e) => currentAquarium = e.Aquarium;
 
     private void AddFish(PlaceFish e)
     {
         currentAquarium.AddFish(e.Fish);
-        fishInAquariums.Add(e.Fish.Stats);
-        Bus<AquariumValueChange>.Raise(new AquariumValueChange{ Value = CalculateValue() });
+        fishInAquariums.Add(e.Fish);
+        Bus<AquariumValueChange>.Raise(new AquariumValueChange { Value = CalculateValue() });
+    }
+
+    private void RestoreAquariums()
+    {
+        foreach (AquariumSaveData ad in RunManager.Instance.GetAquariumStates())
+        {
+            Aquarium aq = aquariumPool.Get();
+            aq.transform.position = ad.Position;
+            aq.Init(fishPool);
+            foreach (string fishId in ad.FishIds)
+            {
+                FishStats stats = ScriptablesDatabase.Instance.fishList[fishId];
+                aq.AddFish(stats);
+                fishInAquariums.Add(stats);
+            }
+        }
+        Bus<AquariumValueChange>.Raise(new AquariumValueChange { Value = CalculateValue() });
     }
 
     public float CalculateValue()
@@ -51,13 +68,5 @@ public class AquariumManager : MonoBehaviour
         foreach (FishStats fish in fishInAquariums)
             value += fish.Value;
         return value;
-    }
-
-    private void OnDestroy()
-    {
-        Bus<AquariumPressed>.OnEvent -= SetCurrentAquarium;
-        Bus<PlaceFish>.OnEvent -= AddFish;
-        Bus<AquariumBought>.OnEvent -= AddAquarium;
-
     }
 }
