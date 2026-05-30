@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 320e92bcd2126ef4298f0cb64222c738, type: 3}
   m_Name: Aquarium
   m_EditorClassIdentifier: Assembly-CSharp::BuildingData
+  id: ee3e824f21342c843963b3153909a22a
   storeType: 0
   sprite: {fileID: 0}
   price: 10
+  value: 10
   minInterval: 5
   maxInterval: 10

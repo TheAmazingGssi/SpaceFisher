@@ -8,17 +8,16 @@ public class Store : Building
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private SpriteRenderer spriteRendererGreen;
     [SerializeField] private SpriteRenderer spriteRendererRed;
-
     protected override void Start()
     {
         base.Start();
-        if(data)
-            Init(data);
+        if(Data)
+            Init(Data);
     }
 
     public void Init(BuildingData data)
     {
-        this.data = data;
+        Data = data;
         spriteRenderer.sprite = data.Sprite;
         spriteRendererGreen.sprite = data.Sprite;
         spriteRendererRed.sprite = data.Sprite;
@@ -29,6 +28,6 @@ public class Store : Building
 
     protected override void OnVisitorAdded(Visitor visitor)
     {
-        CoinsManager.Instance.AddCoins(data.Value);
+        CoinsManager.Instance.AddCoins(Data.Value);
     }
 }

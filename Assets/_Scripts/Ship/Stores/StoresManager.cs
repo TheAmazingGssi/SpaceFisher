@@ -1,11 +1,11 @@
-using NUnit.Framework;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StoresManager : MonoBehaviour
 {
-    public static List<BuildingData> Stores { get; private set; } = new List<BuildingData>();
+    public static List<BuildingData> AvailableStores { get; private set; } = new List<BuildingData>();
+    public static Dictionary<Building, BuildingData> Stores { get; private set; } = new Dictionary<Building, BuildingData>();
 
     [SerializeField] private List<BuildingData> startingStores = new List<BuildingData>();
     [SerializeField] private StorePool pool;
@@ -13,7 +13,21 @@ public class StoresManager : MonoBehaviour
     private void Start()
     {
         Bus<StoreBought>.OnEvent += OnStoreBought;
-        Stores = startingStores;
+        AvailableStores = startingStores;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+        RestoreStores();
+    }
+
+    private void OnDestroy()
+    {
+        Bus<StoreBought>.OnEvent -= OnStoreBought;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+    }
+
+    private void OnSceneUnloaded(Scene scene)
+    {
+        if (scene.name != Constants.Scenes.Ship) return;
+        Stores.Clear();
     }
 
     private void OnStoreBought(StoreBought e)
@@ -21,10 +35,18 @@ public class StoresManager : MonoBehaviour
         Store newStore = pool.Get();
         pool.SetPosition(newStore.gameObject);
         newStore.Init(e.Data);
+        Stores[newStore] = e.Data;
     }
 
-    private void OnDestroy()
+    private void RestoreStores()
     {
-        Bus<StoreBought>.OnEvent -= OnStoreBought;
+        foreach (StoreSaveData sd in RunManager.Instance.GetStoreStates())
+        {
+            BuildingData data = ScriptablesDatabase.Instance.storeList[sd.BuildingDataId];
+            Store store = pool.Get();
+            store.transform.position = sd.Position;
+            store.Init(data);
+            Stores[store] = data;
+        }
     }
 }

@@ -4,20 +4,20 @@ public class AquariumFishPool : ObjectPool<FishManager>
 {
     private List<FishManager> fishPool = new List<FishManager>();
 
-    public FishManager Get(FishManager fish)
+    public FishManager Get(FishStats fish)
     {
         for (int i = 0; i < fishPool.Count; i++)
         {
             FishManager f = fishPool[i];
 
-            if (!f.gameObject.activeSelf && f == fish)
+            if (!f.gameObject.activeSelf && f.Stats == fish)
             {
                 f.gameObject.SetActive(true);
                 return f;
             }
         }
 
-        FishManager newFish = Instantiate(fish, transform);
+        FishManager newFish = Instantiate(prefab, transform);
         newFish.gameObject.SetActive(true);
 
         fishPool.Add(newFish);

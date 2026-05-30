@@ -4,6 +4,8 @@ using UnityEngine;
 public class FishButton : ItemButton<KeyValuePair<FishStats, int>>
 {
     [SerializeField] private FishManager fish;
+    private FishStats fishStats;
+
 
     public override void Setup(KeyValuePair<FishStats, int> data)
     {
@@ -12,13 +14,10 @@ public class FishButton : ItemButton<KeyValuePair<FishStats, int>>
         text.text = data.Value.ToString();
         gameObject.SetActive(true);
     }
-
-    private FishStats fishStats;
-
     public override void OnButtonClick()
     {
         fish.Init(fishStats);
         Inventory.Instance.TryRemoveFish(fishStats);
-        Bus<PlaceFish>.Raise(new PlaceFish { Fish = fish });
+        Bus<PlaceFish>.Raise(new PlaceFish { Fish = fishStats });
     }
 }

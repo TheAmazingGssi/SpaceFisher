@@ -28,7 +28,6 @@ public abstract class ClickableObject : MonoBehaviour
         if (cam == null) cam = Camera.main;
         Touch.onFingerDown += HandleFingerDown;
         Touch.onFingerUp += HandleFingerUp;
-        Debug.Log($"{gameObject.name} subscribed to touch events");
     }
 
     virtual protected void OnDisable()
