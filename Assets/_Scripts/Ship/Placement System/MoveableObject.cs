@@ -84,7 +84,7 @@ public class MoveableObject : ClickableObject
         _collider.Overlap(overlaps);
         if (overlaps.Count > 0)
             foreach (Collider2D otherCol in overlaps)
-                if (otherCol.CompareTag(Constants.Tags.Building))
+                if (otherCol.CompareTag(Constants.Tags.Building) || otherCol.CompareTag(Constants.Tags.Sidewalk))
                     return true;
 
         return false;
