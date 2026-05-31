@@ -20,4 +20,6 @@ public static class Constants
         public static string Ship = "SpaceShipScene";
         public static string Minigame = "MiniGameScene";
     }
+
+    public static string FirstOpen = "FirstOpen";
 }

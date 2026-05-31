@@ -15,7 +15,19 @@ public class StoresManager : MonoBehaviour
         Bus<StoreBought>.OnEvent += OnStoreBought;
         AvailableStores = startingStores;
         SceneManager.sceneUnloaded += OnSceneUnloaded;
-        RestoreStores();
+#if UNITY_EDITOR
+        if (!PlayerPrefs.HasKey(Constants.FirstOpen))
+        {
+            PlayerPrefs.SetInt(Constants.FirstOpen, 1);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            RestoreStores();
+        }
+#else
+        RestoreAquariums();
+#endif
     }
 
     private void OnDestroy()
