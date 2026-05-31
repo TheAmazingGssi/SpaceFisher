@@ -15,9 +15,9 @@ public class Crosswalk : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
 #if UNITY_EDITOR
+    void OnValidate()
+    {
         sprite.size = new Vector2(crosswalkWidth * gridSizeX, gridSizeY);
         col.size = sprite.size;
         if(crosswalkWidth%2  != 0 )
@@ -26,6 +26,6 @@ public class Crosswalk : MonoBehaviour
         }
         else
             sprite.transform.localPosition = new Vector3(0, gridSizeY/2, 0);
-#endif
     }
+#endif
 }

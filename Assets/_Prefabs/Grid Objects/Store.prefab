@@ -234,7 +234,7 @@ MonoBehaviour:
   <MainParent>k__BackingField: {fileID: 7033529012953575057}
   greenTint: {fileID: 5343046340940268084}
   redTint: {fileID: 1956497789771203008}
-  data: {fileID: 11400000, guid: 6dddcb6dcbcd9ff4194fd411d97fc70c, type: 2}
+  <Data>k__BackingField: {fileID: 0}
   feedbackSpawn: {fileID: 0}
   spriteRenderer: {fileID: 3537645273168922136}
   spriteRendererGreen: {fileID: 6833112484497690069}
@@ -283,7 +283,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 8, y: 6}
+  m_Size: {x: 7.8, y: 5.8}
   m_EdgeRadius: 0
 --- !u!1 &8600980461799594919
 GameObject:
