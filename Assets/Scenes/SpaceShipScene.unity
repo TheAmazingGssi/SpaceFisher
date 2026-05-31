@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
   m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -1263,10 +1263,10 @@ MonoBehaviour:
     m_ActionId: 3102aa93-06c1-455b-a560-54557d0b1a29
     m_ActionName: 'Touch/Tap[/Touchscreen/press,/Device Simulator Touchscreen/press]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultControlScheme: Touch
+  m_DefaultActionMap: df70fa95-8a34-4494-b137-73ab6b9c7d37
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 5010631}
 --- !u!114 &379090372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,6 +1294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlacementManager
   gridManager: {fileID: 379090372}
   CurrentlyMovingObject: {fileID: 0}
+  cam: {fileID: 5010631}
 --- !u!4 &379090374
 Transform:
   m_ObjectHideFlags: 0
@@ -3954,11 +3955,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 779489236}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1662864662 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-  m_PrefabInstance: {fileID: 7534539030909780859}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1722048252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,7 +3984,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1662864662}
   - {fileID: 379090374}
   - {fileID: 1123765778}
   - {fileID: 256179547}
@@ -4669,63 +4664,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b24406f3f0644924fa845357d8ed08a0, type: 3}
---- !u!1001 &7534539030909780859
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1722048253}
-    m_Modifications:
-    - target: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.6751795
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 22.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721731756008963332, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2729661947963753679, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
-      propertyPath: m_Name
-      value: Aquarium
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
 --- !u!1001 &7938767565251683814
 PrefabInstance:
   m_ObjectHideFlags: 0

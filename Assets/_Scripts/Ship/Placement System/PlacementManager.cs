@@ -42,9 +42,9 @@ public class PlacementManager : MonoBehaviour
         cam = Camera.main;
     }
 
-    public void OnTouch(InputAction.CallbackContext context)
+    void OnTouch(InputValue value)
     {
-        Vector2 screenSpacePos = context.ReadValue<Vector2>();
+        Vector2 screenSpacePos = value.Get<Vector2>();
         currentTouch = cam.ScreenToWorldPoint(screenSpacePos);
     }
 
