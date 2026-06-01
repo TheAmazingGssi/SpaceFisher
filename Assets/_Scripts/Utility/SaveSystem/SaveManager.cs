@@ -19,7 +19,9 @@ public class SaveManager : MonoBehaviour
     private void OnEnable()
     {
         Bus<SaveData>.OnEvent += OnSaveRequested;
+#if !UNITY_EDITOR
         Load();
+#endif
     }
 
     private void OnDestroy()
@@ -30,6 +32,9 @@ public class SaveManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         Save();
+#if UNITY_EDITOR
+        PlayerPrefs.DeleteKey(Constants.FirstOpen);
+#endif
     }
     private void OnApplicationPause(bool paused)
     {

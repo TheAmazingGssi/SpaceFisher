@@ -10,6 +10,7 @@ public class AquariumManager : MonoBehaviour
     private List<FishStats> fishInAquariums = new List<FishStats>();
     private Aquarium currentAquarium;
 
+
     private void Start()
     {
         Bus<AquariumPressed>.OnEvent += SetCurrentAquarium;
@@ -18,7 +19,19 @@ public class AquariumManager : MonoBehaviour
         foreach (Aquarium aquarium in Aquariums)
             aquarium.Init(fishPool);
         Bus<AquariumPriceChange>.Raise(new AquariumPriceChange { Price = price });
+#if UNITY_EDITOR
+        if (!PlayerPrefs.HasKey(Constants.FirstOpen))
+        {
+            PlayerPrefs.SetInt(Constants.FirstOpen, 1);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            RestoreAquariums();
+        }
+#else
         RestoreAquariums();
+#endif
     }
 
     private void OnDestroy()
