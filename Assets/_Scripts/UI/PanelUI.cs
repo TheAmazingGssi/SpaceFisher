@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PanelUI<TButton, TData> : MonoBehaviour where TButton : ItemButton<TData>
+public class PanelUI<TButton, TData> : MonoBehaviour where TButton : ItemButton<TData>
 {
     [SerializeField] protected Transform itemSection;
     [SerializeField] protected TButton buttonPrefab;
@@ -11,13 +11,23 @@ public abstract class PanelUI<TButton, TData> : MonoBehaviour where TButton : It
     public virtual void RefreshPanel(IEnumerable<TData> items)
     {
         int index = 0;
+
         foreach (TData item in items)
         {
-            GetButton(index).Setup(item);
+            TButton button = GetButton(index);
+            button.Setup(item);
+
+            OnButtonSetup(button);
+
             index++;
         }
+
         for (int i = index; i < buttonPool.Count; i++)
             buttonPool[i].Hide();
+    }
+
+    protected virtual void OnButtonSetup(TButton button)
+    {
     }
 
     private TButton GetButton(int index)

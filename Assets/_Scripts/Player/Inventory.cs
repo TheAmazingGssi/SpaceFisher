@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    const string INVENTORY_PATH = "/fishInventory.json";
     public static Inventory Instance;
 
     private SerializableDictionary<string, int> dict = new SerializableDictionary<string, int>();
@@ -81,12 +80,12 @@ public class Inventory : MonoBehaviour
     private void SaveState()
     {
         string jsonFile = JsonUtility.ToJson(dict);
-        string path = Application.persistentDataPath + INVENTORY_PATH;
+        string path = Application.persistentDataPath + Constants.Paths.InventoryPath;
         System.IO.File.WriteAllText(path, jsonFile);
     }
     private void LoadState()
     {
-        string path = Application.persistentDataPath + INVENTORY_PATH;
+        string path = Application.persistentDataPath + Constants.Paths.InventoryPath;
         if (!System.IO.File.Exists(path)) return;
 
         string jsonFile = System.IO.File.ReadAllText(path);

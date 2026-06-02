@@ -1,9 +1,9 @@
+using System.IO;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance { get; private set; }
-    const string SAVE_PATH = "/gameState.json";
 
     private void Awake()
     {
@@ -47,15 +47,21 @@ public class SaveManager : MonoBehaviour
         if (!RunManager.Instance) return;
         GameSaveData data = RunManager.Instance.Snapshot();
         string json = JsonUtility.ToJson(data, true);
-        System.IO.File.WriteAllText(Application.persistentDataPath + SAVE_PATH, json);
+        File.WriteAllText(Application.persistentDataPath + Constants.Paths.SaveDataPath, json);
     }
 
     public void Load()
     {
-        string path = Application.persistentDataPath + SAVE_PATH;
-        if (!System.IO.File.Exists(path)) return;
-        GameSaveData data = JsonUtility.FromJson<GameSaveData>(System.IO.File.ReadAllText(path));
+        string path = Application.persistentDataPath + Constants.Paths.SaveDataPath;
+        if (!File.Exists(path)) return;
+        GameSaveData data = JsonUtility.FromJson<GameSaveData>(File.ReadAllText(path));
         RunManager.Instance.RestoreFrom(data);
         Bus<LoadData>.Raise(new LoadData { Data = data });
+    }
+
+    public void Delete() //TODO: check why not deleting
+    {
+        File.Exists(Constants.Paths.SaveDataPath);
+        File.Delete(Constants.Paths.SaveDataPath);
     }
 }

@@ -26,6 +26,9 @@ public class FishStats : ScriptableObject
     public float Value { get => value; }
     [SerializeField] private float value;
 
+    public int Price { get => price; }
+    [SerializeField] private int price;
+
     [SerializeField] private bool customSpeed;
     [SerializeField] private float speed;
 

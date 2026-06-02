@@ -10,7 +10,7 @@ public class CustomButton : MonoBehaviour
 
     public virtual void OnButtonClick() { }
 
-    public void Hide()
+    public virtual void Hide()
     {
         gameObject.SetActive(false);
     }

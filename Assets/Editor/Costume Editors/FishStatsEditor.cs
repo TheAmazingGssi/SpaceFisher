@@ -20,6 +20,7 @@ public class FishStatsEditor : Editor
     private SerializedProperty speed;
     private SerializedProperty planet;
     private SerializedProperty value;
+    private SerializedProperty price;
     private void OnEnable()
     {
         id = serializedObject.FindProperty("id");
@@ -38,6 +39,7 @@ public class FishStatsEditor : Editor
         speed = serializedObject.FindProperty("speed");
         planet = serializedObject.FindProperty("planet");
         value = serializedObject.FindProperty("value");
+        price = serializedObject.FindProperty("price");
 
     }
     public override void OnInspectorGUI()
@@ -58,6 +60,7 @@ public class FishStatsEditor : Editor
 
         EditorGUILayout.Space();
         EditorGUILayout.PropertyField(value, new GUIContent("Value"));
+        EditorGUILayout.PropertyField(price, new GUIContent("Price"));
 
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Speed", EditorStyles.boldLabel);
