@@ -29,6 +29,11 @@ public class Inventory : MonoBehaviour
         LoadState();
     }
 
+    public int GetAmount(FishStats fishStats)
+    {
+        return dict[fishStats.ID];
+    }
+
     public void AddManyFish(Dictionary<FishStats, int> allFish)
     {
         foreach(KeyValuePair<FishStats, int> kvp in allFish)
@@ -56,7 +61,10 @@ public class Inventory : MonoBehaviour
     {
         dict[fishStats.ID] -= amount;
         if(dict[fishStats.ID] <= 0)
+        {
             dict.Remove(fishStats.ID);
+            Bus<FishInventoryChange>.Raise(new FishInventoryChange { Fish = fishStats});
+        }
         SaveState();
     }
     private void RemoveFish(FishStats fishStats) => RemoveFish(fishStats, 1);

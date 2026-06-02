@@ -36,6 +36,10 @@ public struct ShowCoin : IEvent { public Transform Transform; }
 
 #endregion 
 
+#region Fish
+public struct FishInventoryChange : IEvent { public FishStats Fish; }
+#endregion 
+
 #region System
 public struct OfflineTimeCalculated : IEvent { public float SecondsOffline; }
 public struct SaveData : IEvent { }

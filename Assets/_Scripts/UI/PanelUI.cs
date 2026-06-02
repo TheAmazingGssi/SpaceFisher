@@ -14,11 +14,7 @@ public class PanelUI<TButton, TData> : MonoBehaviour where TButton : ItemButton<
 
         foreach (TData item in items)
         {
-            TButton button = GetButton(index);
-            button.Setup(item);
-
-            OnButtonSetup(button);
-
+            GetButton(index).Setup(item);
             index++;
         }
 
