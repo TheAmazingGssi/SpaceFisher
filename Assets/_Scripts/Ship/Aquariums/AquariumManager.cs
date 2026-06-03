@@ -65,6 +65,7 @@ public class AquariumManager : MonoBehaviour
             Aquarium aq = aquariumPool.Get();
             aq.transform.position = ad.Position;
             aq.Init(fishPool);
+            SetCurrentAquarium(new AquariumPressed { Aquarium = aq});
             foreach (string fishId in ad.FishIds)
             {
                 FishStats stats = ScriptablesDatabase.Instance.fishList[fishId];

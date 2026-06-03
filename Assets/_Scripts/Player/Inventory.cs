@@ -58,6 +58,8 @@ public class Inventory : MonoBehaviour
         return false;
     }
     public bool TryRemoveFish(FishStats fishStats) => TryRemoveFish(fishStats, 1);
+
+    public bool IsInInventory(FishStats fishStats) => dict.ContainsKey(fishStats.ID);
     public void ClearInventory()
     {
         dict.Clear();
@@ -74,7 +76,7 @@ public class Inventory : MonoBehaviour
         else
             dict.Add(fishStats.ID, amount);
 
-        DebugPrintDictionary();
+        //DebugPrintDictionary();
     }
     private void RemoveFish(FishStats fishStats, int amount)
     {
@@ -85,7 +87,7 @@ public class Inventory : MonoBehaviour
             Bus<FishInventoryChange>.Raise(new FishInventoryChange { Fish = fishStats});
         }
         SaveState();
-        DebugPrintDictionary();
+        //DebugPrintDictionary();
     }
     private void DebugPrintDictionary()
     {

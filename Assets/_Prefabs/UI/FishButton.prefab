@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9168229897936112868}
+  - component: {fileID: 6706139283636206560}
   - component: {fileID: 8474985751491201222}
   - component: {fileID: 7333697747347659086}
   - component: {fileID: 8982825077179312123}
-  - component: {fileID: 6706139283636206560}
   m_Layer: 5
   m_Name: FishButton
   m_TagString: Untagged
@@ -41,6 +41,23 @@ RectTransform:
   m_AnchoredPosition: {x: 46.45056, y: -781.9197}
   m_SizeDelta: {x: 150.42857, y: 106.57143}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6706139283636206560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227277299627548545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c8b70bc78a10c42970dcf7b0629ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishButton
+  image: {fileID: 7333697747347659086}
+  text: {fileID: 9220951384846992455}
+  button: {fileID: 8982825077179312123}
+  priceText: {fileID: 8237676696864503579}
+  fish: {fileID: 3173794925262988454, guid: 6b246692a48113045b7d3035dc547826, type: 3}
 --- !u!222 &8474985751491201222
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -135,23 +152,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6706139283636206560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227277299627548545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79c8b70bc78a10c42970dcf7b0629ea2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FishButton
-  image: {fileID: 7333697747347659086}
-  text: {fileID: 9220951384846992455}
-  button: {fileID: 8982825077179312123}
-  priceText: {fileID: 8237676696864503579}
-  fish: {fileID: 3173794925262988454, guid: 6b246692a48113045b7d3035dc547826, type: 3}
 --- !u!1 &3837425575615992654
 GameObject:
   m_ObjectHideFlags: 0

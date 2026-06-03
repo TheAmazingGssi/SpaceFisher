@@ -24,4 +24,10 @@ public class FishStorePanel : PanelUI<FishButton, KeyValuePair<FishStats, int>>
     {
         RefreshPanel(Inventory.Instance.Fish);
     }
+
+    [ContextMenu("Refresh Panel")]
+    public void RefreshPanel()
+    {
+        RefreshPanel(Inventory.Instance.Fish);
+    }
 }

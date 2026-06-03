@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DebugHelperScript : MonoBehaviour
@@ -9,7 +10,7 @@ public class DebugHelperScript : MonoBehaviour
     [SerializeField] private BuildingData data;
 
     [SerializeField] private Aquarium aquarium;
- 
+
     [ContextMenu("Add fishy to inventory")]
     public void AddFishyToInventory()
     {
@@ -31,6 +32,22 @@ public class DebugHelperScript : MonoBehaviour
     public void OpenInventory()
     {
         Bus<AquariumPressed>.Raise(new AquariumPressed { Aquarium = aquarium });
+    }
+
+    [ContextMenu("Is in inventory?")]
+    public void IsInInventory()
+    {
+        if(Inventory.Instance.IsInInventory(randomFishy))
+        {
+            foreach (KeyValuePair<FishStats, int> kvp in Inventory.Instance.Fish)
+                if (kvp.Key == randomFishy)
+                    Debug.Log("Yes! amount: " + kvp.Value);
+
+        }
+        else
+        {
+            Debug.Log("Not In Inventory");
+        }
     }
 
 
