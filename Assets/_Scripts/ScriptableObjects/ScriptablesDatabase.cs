@@ -1,8 +1,6 @@
 using NativeSerializableDictionary;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 [CreateAssetMenu(fileName = "ScriptablesDatabase", menuName = "Scriptable Objects/ScriptablesDatabase")]
 public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase>

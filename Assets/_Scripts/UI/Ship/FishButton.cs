@@ -20,6 +20,7 @@ public class FishButton : ItemButton<KeyValuePair<FishStats, int>>
     public override void Setup(KeyValuePair<FishStats, int> data)
     {
         sell = false;
+        priceText.text = "";
         fishStats = data.Key;
         image.sprite = data.Key.FishSprite;
         amount = data.Value;
