@@ -73,6 +73,8 @@ public class Inventory : MonoBehaviour
             dict[fishStats.ID] += amount;
         else
             dict.Add(fishStats.ID, amount);
+
+        DebugPrintDictionary();
     }
     private void RemoveFish(FishStats fishStats, int amount)
     {
@@ -83,6 +85,16 @@ public class Inventory : MonoBehaviour
             Bus<FishInventoryChange>.Raise(new FishInventoryChange { Fish = fishStats});
         }
         SaveState();
+        DebugPrintDictionary();
+    }
+    private void DebugPrintDictionary()
+    {
+        string print = "";
+        foreach (string id in dict.Keys)
+        {
+            print += id + ": " + dict[id] + "\n";
+        }
+        Debug.Log(print);
     }
 #endregion
     #region Save Load Jason
