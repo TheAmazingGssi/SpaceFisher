@@ -39,8 +39,6 @@ public class ShipUIManager : MonoBehaviour
     {
         shopToggle = !shopToggle;
         shopPanel.SetActive(shopToggle);
-        if (shopToggle)
-            storeShopUI.RefreshPanel(StoresManager.AvailableStores);
     }
 
     private void CloseStorePanel(StoreBought e)

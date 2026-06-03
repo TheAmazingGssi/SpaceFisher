@@ -21,11 +21,11 @@ public class MenuItems : MonoBehaviour
         AssetDatabase.OpenAsset(prefabAsset);
     }
 
-    [MenuItem("Tools/Clear Inventory %&q")]
-    private static void ClearInventory()
+    [MenuItem("Tools/Clear Save Data %&q")]
+    private static void ClearSaveData()
     {
-        if (EditorUtility.DisplayDialog("Wait!", "This action will delete all inventory data, are you sure?", "Delete it all", "Wait actually no"))
-            Object.FindFirstObjectByType<Inventory>().ClearInventory();
+        Object.FindFirstObjectByType<Inventory>().ClearInventory();
+        Object.FindFirstObjectByType<SaveManager>().Delete();
     }
 
     [MenuItem("Tools/Switch Scene %q")]

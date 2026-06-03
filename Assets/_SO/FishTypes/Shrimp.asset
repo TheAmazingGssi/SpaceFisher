@@ -16,6 +16,7 @@ MonoBehaviour:
   fishSprite: {fileID: -5555467373337034770, guid: 063da487dc8a175408755631ac2054a2, type: 3}
   planet: 0
   value: 5
+  price: 5
   customSpeed: 0
   speed: 3
   mgSpeed: 0

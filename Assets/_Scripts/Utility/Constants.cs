@@ -21,5 +21,11 @@ public static class Constants
         public static string Minigame = "MiniGameScene";
     }
 
+    public static class Paths
+    {
+        public static string InventoryPath = "/fishInventory.json";
+        public static string SaveDataPath = "/gameState.json";
+    }
+
     public static string FirstOpen = "FirstOpen";
 }

@@ -12,8 +12,9 @@ public struct AquariumPriceChange : IEvent { public int Price; }
 public struct AquariumBought : IEvent { }
 #endregion
 
-#region Stores
+#region Shop
 public struct StoreBought : IEvent { public BuildingData Data; }
+public struct ShopButtonPressed : IEvent { public ShopButton ShopButton; }
 #endregion
 
 #region Visitors
@@ -33,6 +34,10 @@ public struct MinigameEnd : IEvent { };
 public struct CoinChange : IEvent { public int NewCoins; }
 public struct ShowCoin : IEvent { public Transform Transform; }
 
+#endregion 
+
+#region Fish
+public struct FishInventoryChange : IEvent { public FishStats Fish; }
 #endregion 
 
 #region System

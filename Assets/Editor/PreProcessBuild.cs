@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
@@ -24,12 +25,20 @@ public class PreProcessBuild : IPreprocessBuildWithReport
         PlayerSettings.Android.bundleVersionCode++;
         Debug.Log($"Build: {PlayerSettings.bundleVersion}");
 
-        //===RemoveDebug===
+        //===Remove Debug===
         foreach (var scene in EditorBuildSettings.scenes)
         {
             var scenePath = scene.path;
             Scene currentScene = EditorSceneManager.OpenScene(scenePath, OpenSceneMode.Single);
             GameObject debugObj = GameObject.Find("Debug");
         }
+
+        //===Delete Save Data===
+        if(File.Exists(Constants.Paths.SaveDataPath))
+            File.Delete(Constants.Paths.SaveDataPath);
+
+        if (File.Exists(Constants.Paths.InventoryPath))
+            File.Delete(Constants.Paths.InventoryPath);
+
     }
 }

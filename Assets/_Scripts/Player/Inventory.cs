@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    const string INVENTORY_PATH = "/fishInventory.json";
     public static Inventory Instance;
 
     private SerializableDictionary<string, int> dict = new SerializableDictionary<string, int>();
@@ -28,6 +27,11 @@ public class Inventory : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         LoadState();
+    }
+
+    public int GetAmount(FishStats fishStats)
+    {
+        return dict[fishStats.ID];
     }
 
     public void AddManyFish(Dictionary<FishStats, int> allFish)
@@ -57,7 +61,10 @@ public class Inventory : MonoBehaviour
     {
         dict[fishStats.ID] -= amount;
         if(dict[fishStats.ID] <= 0)
+        {
             dict.Remove(fishStats.ID);
+            Bus<FishInventoryChange>.Raise(new FishInventoryChange { Fish = fishStats});
+        }
         SaveState();
     }
     private void RemoveFish(FishStats fishStats) => RemoveFish(fishStats, 1);
@@ -81,12 +88,12 @@ public class Inventory : MonoBehaviour
     private void SaveState()
     {
         string jsonFile = JsonUtility.ToJson(dict);
-        string path = Application.persistentDataPath + INVENTORY_PATH;
+        string path = Application.persistentDataPath + Constants.Paths.InventoryPath;
         System.IO.File.WriteAllText(path, jsonFile);
     }
     private void LoadState()
     {
-        string path = Application.persistentDataPath + INVENTORY_PATH;
+        string path = Application.persistentDataPath + Constants.Paths.InventoryPath;
         if (!System.IO.File.Exists(path)) return;
 
         string jsonFile = System.IO.File.ReadAllText(path);

@@ -16,6 +16,11 @@ public class StoreShopUI : PanelUI<StoreButton, BuildingData>
         aquariumButton.onClick.AddListener(OnAquariumClicked);
     }
 
+    private void OnEnable()
+    {
+        RefreshPanel(StoresManager.AvailableStores);
+    }
+
     public override void RefreshPanel(IEnumerable<BuildingData> items)
     {
         base.RefreshPanel(items);
