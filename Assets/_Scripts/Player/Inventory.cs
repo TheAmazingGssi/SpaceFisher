@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
             }
             return copy;
         } }
+    #region Monobehaviour
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -28,12 +29,15 @@ public class Inventory : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         LoadState();
     }
-
-    public int GetAmount(FishStats fishStats)
+    #endregion
+    #region Public Functions
+    //Add Fish
+    public void AddFish(FishStats fishStats, int amount)
     {
-        return dict[fishStats.ID];
+        AddFishNoSave(fishStats, amount);
+        SaveState();
     }
-
+    public void AddFish(FishStats fishStats) => AddFish(fishStats, 1);
     public void AddManyFish(Dictionary<FishStats, int> allFish)
     {
         foreach(KeyValuePair<FishStats, int> kvp in allFish)
@@ -42,37 +46,7 @@ public class Inventory : MonoBehaviour
         }
         SaveState();
     }
-    private void AddFishNoSave(FishStats fishStats, int amount)
-    {
-        if (amount <= 0) return;
-
-        if (dict.ContainsKey(fishStats.ID))
-            dict[fishStats.ID] += amount;
-        else
-            dict.Add(fishStats.ID, amount);
-    }
-    public void AddFish(FishStats fishStats, int amount)
-    {
-        AddFishNoSave(fishStats, amount);
-        SaveState();
-    }
-    public void AddFish(FishStats fishStats) => AddFish(fishStats, 1);
-    private void RemoveFish(FishStats fishStats, int amount)
-    {
-        dict[fishStats.ID] -= amount;
-        if(dict[fishStats.ID] <= 0)
-        {
-            dict.Remove(fishStats.ID);
-            Bus<FishInventoryChange>.Raise(new FishInventoryChange { Fish = fishStats});
-        }
-        SaveState();
-    }
-    private void RemoveFish(FishStats fishStats) => RemoveFish(fishStats, 1);
-    public void ClearInventory()
-    {
-        dict.Clear();
-        SaveState();
-    }
+    //Remove Fish
     public bool TryRemoveFish(FishStats fishStats, int amount)
     {
         if (dict.ContainsKey(fishStats.ID) && dict[fishStats.ID] >= amount)
@@ -84,7 +58,34 @@ public class Inventory : MonoBehaviour
         return false;
     }
     public bool TryRemoveFish(FishStats fishStats) => TryRemoveFish(fishStats, 1);
+    public void ClearInventory()
+    {
+        dict.Clear();
+        SaveState();
+    }
+    #endregion
+    #region Private Add Remove Logic
+    private void AddFishNoSave(FishStats fishStats, int amount)
+    {
+        if (amount <= 0) return;
 
+        if (dict.ContainsKey(fishStats.ID))
+            dict[fishStats.ID] += amount;
+        else
+            dict.Add(fishStats.ID, amount);
+    }
+    private void RemoveFish(FishStats fishStats, int amount)
+    {
+        dict[fishStats.ID] -= amount;
+        if(dict[fishStats.ID] <= 0)
+        {
+            dict.Remove(fishStats.ID);
+            Bus<FishInventoryChange>.Raise(new FishInventoryChange { Fish = fishStats});
+        }
+        SaveState();
+    }
+#endregion
+    #region Save Load Jason
     private void SaveState()
     {
         string jsonFile = JsonUtility.ToJson(dict);
@@ -107,4 +108,5 @@ public class Inventory : MonoBehaviour
         foreach (string key in toRemove)
             dict.Remove(key);
     }
+    #endregion
 }

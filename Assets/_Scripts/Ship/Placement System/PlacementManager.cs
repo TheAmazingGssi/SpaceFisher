@@ -6,7 +6,7 @@ public class PlacementManager : MonoBehaviour
 {
     static public PlacementManager Instance;
     [SerializeField] GridManager gridManager;
-    public MoveableObject CurrentlyMovingObject;
+    [HideInInspector] public MoveableObject CurrentlyMovingObject;
 
     Vector2 currentTouch;
     [SerializeField] Camera cam;
