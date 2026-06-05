@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class FishSpawner : MonoBehaviour
 {
-    Camera cam;
-    [SerializeField] GameObject FishObject; //TODO: add depth scriptable object to decide random spawn based on depth
+    [SerializeField] Camera cam;
     [SerializeField] FishPool pool;
     HookController hook { get => MinigameManager.Instance.Hook; }
     PlanetFishTable planetFishTable { get => MinigameManager.Instance.PlanetData; }

@@ -26,7 +26,7 @@ public class StoresManager : MonoBehaviour
             RestoreStores();
         }
 #else
-        RestoreAquariums();
+        RestoreStores();
 #endif
     }
 

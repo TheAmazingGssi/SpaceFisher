@@ -10,19 +10,19 @@ public class FishPool : MonoBehaviour
     public GameObject Pull(FishStats fishType, Vector3 position, Quaternion rotation)
     {
         GameObject fishObj;
-        if (list.Count == 0)
-        {
-            fishObj = Instantiate(fishPrefab, position, rotation);
-            //fishObj.SetActive(false);
-        }
-        else
-        {
-            fishObj = list[0];
-            list.RemoveAt(0);
-            fishObj.transform.position = position;
-            fishObj.transform.rotation = rotation;
-            fishObj.SetActive(true);
-        }
+        //if (list.Count == 0)
+        //{
+              fishObj = Instantiate(fishPrefab, position, rotation);
+        //    //fishObj.SetActive(false);
+        //}
+        //else
+        //{
+        //    fishObj = list[0];
+        //    list.RemoveAt(0);
+        //    fishObj.transform.position = position;
+        //    fishObj.transform.rotation = rotation;
+        //    fishObj.SetActive(true);
+        //}
         fishObj.GetComponent<FishAI>().Setup(fishType, this);
         return fishObj;
     }

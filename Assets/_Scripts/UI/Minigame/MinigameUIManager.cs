@@ -53,6 +53,10 @@ public class MinigameUIManager : MonoBehaviour
     {
         SceneManager.LoadScene(Constants.Scenes.Ship);
     }
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(Constants.Scenes.Minigame);
+    }
     IEnumerator SetMenuActiveNextFrame(bool value)
     {
         yield return null;
