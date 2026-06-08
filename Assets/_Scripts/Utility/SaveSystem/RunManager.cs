@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 public class RunManager : MonoBehaviour
 {
     public static RunManager Instance { get; private set; }
-
     public int Coins { get; private set; }
-
     private List<AquariumSaveData> aquariumStates = new List<AquariumSaveData>();
     private List<StoreSaveData> storeStates = new List<StoreSaveData>();
+
+    private float timeAway = -1;
+    private float spawnInterval = 60;
+    private float storeIncome = 0f;
 
     private void Awake()
     {
@@ -34,6 +36,32 @@ public class RunManager : MonoBehaviour
 
     private void OnCoinChange(CoinChange e) => Coins = e.NewCoins;
 
+    public void SaveSpawnInterval(float interval)
+    {
+        spawnInterval = interval;
+    }
+
+    public void OnShipSceneUnloading(float enterBuildingChance)
+    {
+        timeAway = Time.time;
+
+        storeIncome = 0;
+        foreach (var kvp in StoresManager.Stores)
+            storeIncome += kvp.Value.Value * enterBuildingChance;
+    }
+
+    public int CalculateOfflineEarnings(int ticketPrice)
+    {
+        if (timeAway < 0) return 0;
+
+        float elapsed = Time.time - timeAway;
+        timeAway = -1;
+
+        int visitorsSpawned = Mathf.FloorToInt(elapsed / spawnInterval);
+        int earnings = visitorsSpawned * (ticketPrice + Mathf.RoundToInt(storeIncome));
+        return earnings;
+    }
+
     public void CacheCurrentScene()
     {
         GameSaveData snapshot = Snapshot();
@@ -44,7 +72,6 @@ public class RunManager : MonoBehaviour
     public GameSaveData Snapshot()
     {
         GameSaveData data = new GameSaveData { Coins = Coins };
-
         foreach (Aquarium aq in AquariumManager.Aquariums)
         {
             AquariumSaveData aqData = new AquariumSaveData
@@ -56,7 +83,6 @@ public class RunManager : MonoBehaviour
                 aqData.FishIds.Add(fm.Stats.ID);
             data.Aquariums.Add(aqData);
         }
-
         foreach (KeyValuePair<Building, BuildingData> kvp in StoresManager.Stores)
         {
             if (kvp.Key == null) continue;
@@ -67,7 +93,6 @@ public class RunManager : MonoBehaviour
                 YPos = kvp.Key.transform.position.y
             });
         }
-
         return data;
     }
 

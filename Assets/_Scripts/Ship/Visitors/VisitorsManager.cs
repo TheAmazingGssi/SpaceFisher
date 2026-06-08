@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VisitorsManager : MonoBehaviour
 {
     [SerializeField] private AquariumManager aquariumManager;
     [SerializeField] private VisitorSpawner spawner;
     [SerializeField] private int ticketPrice = 10;
+    [SerializeField] private VisitorData[] visitorData;
 
     public static List<Visitor> Visitors = new List<Visitor>();
 
@@ -15,6 +17,10 @@ public class VisitorsManager : MonoBehaviour
         Bus<VisitorReleased>.OnEvent += OnVisitorReleased;
         Bus<VisitorLeaving>.OnEvent += OnVisitorLeaving;
         spawner.Init(ticketPrice);
+
+        int earnings = RunManager.Instance.CalculateOfflineEarnings(ticketPrice);
+        if (earnings > 0)
+            CoinsManager.Instance.AddCoins(earnings);
     }
 
     private void OnVisitorSpawned(VisitorSpawned e)
@@ -41,10 +47,21 @@ public class VisitorsManager : MonoBehaviour
         Visitors.Remove(e.Visitor);
     }
 
+    private float GetAverageEnterChance()
+    {
+        if (visitorData == null || visitorData.Length == 0) return 0f;
+        float total = 0f;
+        foreach (var d in visitorData) total += d.EnterBuildingChance;
+        return total / visitorData.Length;
+    }
+
+
     private void OnDestroy()
     {
         Bus<VisitorSpawned>.OnEvent -= OnVisitorSpawned;
         Bus<VisitorReleased>.OnEvent -= OnVisitorReleased;
         Bus<VisitorLeaving>.OnEvent -= OnVisitorLeaving;
+
+        RunManager.Instance.OnShipSceneUnloading(GetAverageEnterChance());
     }
 }

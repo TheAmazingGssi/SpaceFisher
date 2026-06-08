@@ -3397,6 +3397,8 @@ MonoBehaviour:
   aquariumManager: {fileID: 1244206032}
   spawner: {fileID: 547512776}
   ticketPrice: 100
+  visitorData:
+  - {fileID: 11400000, guid: 99a01c4b83a17c0468272ad804ff17cd, type: 2}
 --- !u!4 &1202612070
 Transform:
   m_ObjectHideFlags: 0
@@ -5339,12 +5341,13 @@ SceneRoots:
   - {fileID: 890978273}
   - {fileID: 386460671}
   - {fileID: 663758851}
+  - {fileID: 1722048253}
   - {fileID: 1825111925}
   - {fileID: 1244206033}
   - {fileID: 977749310}
+  - {fileID: 505783158}
   - {fileID: 1202612070}
   - {fileID: 71989486}
-  - {fileID: 505783158}
   - {fileID: 3159176630527235132}
   - {fileID: 543982874}
   - {fileID: 1917467108}
@@ -5353,4 +5356,3 @@ SceneRoots:
   - {fileID: 977363219}
   - {fileID: 547512777}
   - {fileID: 1828061261}
-  - {fileID: 1722048253}

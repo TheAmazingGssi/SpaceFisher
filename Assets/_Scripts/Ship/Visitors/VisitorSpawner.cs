@@ -32,6 +32,7 @@ public class VisitorSpawner : MonoBehaviour
     {
         float t = e.Value / (e.Value + growthScale);
         currentInterval = Mathf.Lerp(maxInterval, minInterval, t);
+        RunManager.Instance.SaveSpawnInterval(currentInterval);
     }
 
     private IEnumerator SpawnLoop()
