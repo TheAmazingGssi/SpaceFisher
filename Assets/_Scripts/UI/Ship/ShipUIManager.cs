@@ -26,6 +26,8 @@ public class ShipUIManager : MonoBehaviour
 
         shopPanel.SetActive(false);
         fishPanel.SetActive(false);
+
+        CurrentCoinsText.text = CoinsManager.Instance.Coins.ToString();
     }
 
     public void GoToMiniGame()
