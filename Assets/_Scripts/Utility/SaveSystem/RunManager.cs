@@ -47,7 +47,7 @@ public class RunManager : MonoBehaviour
 
         storeIncome = 0;
         foreach (var kvp in StoresManager.Stores)
-            storeIncome += kvp.Value.Value * enterBuildingChance;
+            storeIncome += kvp.Key.CurrentValue * enterBuildingChance;
     }
 
     public int CalculateOfflineEarnings(int ticketPrice)
@@ -83,12 +83,12 @@ public class RunManager : MonoBehaviour
                 aqData.FishIds.Add(fm.Stats.ID);
             data.Aquariums.Add(aqData);
         }
-        foreach (KeyValuePair<Building, BuildingData> kvp in StoresManager.Stores)
+        foreach (KeyValuePair<StoreBase, StoreData> kvp in StoresManager.Stores)
         {
             if (kvp.Key == null) continue;
             data.Stores.Add(new StoreSaveData
             {
-                BuildingDataId = kvp.Value.ID,
+                StoreDataId = kvp.Value.ID,
                 XPos = kvp.Key.transform.position.x,
                 YPos = kvp.Key.transform.position.y
             });

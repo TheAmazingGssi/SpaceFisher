@@ -6,7 +6,6 @@ public abstract class Building : MoveableObject
 {
     public Queue<Visitor> Visitors = new Queue<Visitor>();
   
-    [field: SerializeField] public BuildingData Data {  get; protected set; }
     [SerializeField] protected Transform feedbackSpawn;
 
     public Location BuildingType { get; protected set; }

@@ -7,7 +7,7 @@ public class DebugHelperScript : MonoBehaviour
     [SerializeField] private int amount;
 
     [SerializeField] private StorePool pool;
-    [SerializeField] private BuildingData data;
+    [SerializeField] private StoreData data;
 
     [SerializeField] private Aquarium aquarium;
 

@@ -8,7 +8,7 @@ using static UnityEngine.GraphicsBuffer;
 public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase>
 {
     [SerializeField] public SerializableDictionary<string, FishStats> fishList;
-    [SerializeField] public SerializableDictionary<string, BuildingData> storeList;
+    [SerializeField] public SerializableDictionary<string, StoreData> storeList;
     [SerializeField] public SerializableDictionary<string, PlanetFishTable> planetList;
 
 #if UNITY_EDITOR
@@ -29,15 +29,15 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
         
         if(storeList == null)
         {
-            storeList = new SerializableDictionary<string, BuildingData>();
+            storeList = new SerializableDictionary<string, StoreData>();
         }
         storeList.Clear();
         guids = AssetDatabase.FindAssetGUIDs("t:" + nameof(BuildingData));
         foreach (GUID guid in guids)
             if (!storeList.ContainsKey(guid.ToString()))
             {
-                BuildingData fishStat = AssetDatabase.LoadAssetByGUID<BuildingData>(guid);
-                storeList.Add(guid.ToString(), fishStat);
+                StoreData storeStat = AssetDatabase.LoadAssetByGUID<StoreData>(guid);
+                storeList.Add(guid.ToString(), storeStat);
             }
         if (planetList == null)
         {

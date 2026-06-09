@@ -234,11 +234,13 @@ MonoBehaviour:
   <MainParent>k__BackingField: {fileID: 7033529012953575057}
   greenTint: {fileID: 5343046340940268084}
   redTint: {fileID: 1956497789771203008}
-  <Data>k__BackingField: {fileID: 0}
   feedbackSpawn: {fileID: 0}
-  spriteRenderer: {fileID: 3537645273168922136}
-  spriteRendererGreen: {fileID: 6833112484497690069}
-  spriteRendererRed: {fileID: 4277822799008272321}
+  Data: {fileID: 0}
+  spriteRenderers:
+  - {fileID: 3537645273168922136}
+  - {fileID: 6833112484497690069}
+  - {fileID: 4277822799008272321}
+  SpriteRenderers: []
 --- !u!61 &1437031210059514805
 BoxCollider2D:
   m_ObjectHideFlags: 0

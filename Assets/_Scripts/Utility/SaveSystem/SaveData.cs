@@ -23,7 +23,7 @@ public class AquariumSaveData
 [Serializable]
 public class StoreSaveData
 {
-    public string BuildingDataId;
+    public string StoreDataId;
     public float XPos;
     public float YPos;
 

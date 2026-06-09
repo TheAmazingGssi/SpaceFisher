@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class StoresManager : MonoBehaviour
 {
-    public static List<BuildingData> AvailableStores { get; private set; } = new List<BuildingData>();
-    public static Dictionary<Building, BuildingData> Stores { get; private set; } = new Dictionary<Building, BuildingData>();
+    public static List<StoreData> AvailableStores { get; private set; } = new List<StoreData>();
+    public static Dictionary<StoreBase, StoreData> Stores { get; private set; } = new Dictionary<StoreBase, StoreData>();
 
-    [SerializeField] private List<BuildingData> startingStores = new List<BuildingData>();
+    [SerializeField] private List<StoreData> startingStores = new List<StoreData>();
     [SerializeField] private StorePool pool;
 
     private void Start()
@@ -47,14 +47,14 @@ public class StoresManager : MonoBehaviour
         Store newStore = pool.Get();
         pool.SetPosition(newStore.gameObject);
         newStore.Init(e.Data);
-        Stores[newStore] = e.Data;
+        Stores.Add(newStore, e.Data);
     }
 
     private void RestoreStores()
     {
         foreach (StoreSaveData sd in RunManager.Instance.GetStoreStates())
         {
-            BuildingData data = ScriptablesDatabase.Instance.storeList[sd.BuildingDataId];
+            StoreData data = ScriptablesDatabase.Instance.storeList[sd.StoreDataId];
             Store store = pool.Get();
             store.transform.position = sd.Position;
             store.Init(data);

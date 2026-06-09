@@ -4,19 +4,13 @@ using UnityEngine;
 public class BuildingData : ScriptableObject
 {
     public string ID { get => id; }
-    [SerializeField] private string id;
+    [SerializeField] protected string id;
     public Location StoreType => storeType;
-    [SerializeField] private Location storeType;
-    public Sprite Sprite => sprite; //TODO: hide if aquarium
-    [SerializeField] private Sprite sprite;
-    public int Price => price;
-    [SerializeField] private int price = 10;
-    public int Value => value;
-    [SerializeField] private int value = 10;
+    [SerializeField] protected Location storeType;
     public float MinInterval => minInterval;
-    [SerializeField] private float minInterval = 5;
+    [SerializeField] protected float minInterval = 5;
     public float MaxInterval => maxInterval;
-    [SerializeField] private float maxInterval = 15;
+    [SerializeField] protected float maxInterval = 15;
 
 #if UNITY_EDITOR
     private void OnValidate()

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class VisitorEater : Building 
+public class VisitorEater : StoreBase
 {
     public override Vector2 GetEntryPoint(Collider2D col, Vector2 visitorPos)
     {

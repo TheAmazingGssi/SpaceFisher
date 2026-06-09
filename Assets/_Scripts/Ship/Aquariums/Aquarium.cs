@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 public class Aquarium : Building
 {
+    [field: SerializeField] public AquariumData Data;
     [SerializeField] private Transform fishSpawn;
     public List<FishManager> Fish { get; private set; }
     private AquariumFishPool pool;

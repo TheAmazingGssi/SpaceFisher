@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StoreShopUI : PanelUI<StoreButton, BuildingData>
+public class StoreShopUI : PanelUI<StoreButton, StoreData>
 {
     [SerializeField] private TextMeshProUGUI priceText;
     [SerializeField] private Button aquariumButton;
@@ -21,7 +21,7 @@ public class StoreShopUI : PanelUI<StoreButton, BuildingData>
         RefreshPanel(StoresManager.AvailableStores);
     }
 
-    public override void RefreshPanel(IEnumerable<BuildingData> items)
+    public override void RefreshPanel(IEnumerable<StoreData> items)
     {
         base.RefreshPanel(items);
         priceText.text = price.ToString();

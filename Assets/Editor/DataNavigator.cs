@@ -86,12 +86,12 @@ public class DataNavigator : EditorWindow
     private void BuildingsGUI()
     {
         EditorGUILayout.Space();
-        BuildingData[] storeArr = ScriptablesDatabase.Instance.storeList.Values.ToArray();
-        foreach (BuildingData store in storeArr)
+        StoreData[] storeArr = ScriptablesDatabase.Instance.storeList.Values.ToArray();
+        foreach (StoreData store in storeArr)
             if (store.name.ToLower().Contains(searchQuary.ToLower()))
             {
                 GUILayout.BeginHorizontal();
-                if(store.Sprite) GUILayout.Label(store.Sprite.texture, GUILayout.Width(60), GUILayout.Height(60));
+                if (store.Sprites[0]) GUILayout.Label(store.Sprites[0].texture, GUILayout.Width(60), GUILayout.Height(60));
                 GUILayout.Label(store.name);
                 if (GUILayout.Button("Edit", GUILayout.Width(60)))
                 {
