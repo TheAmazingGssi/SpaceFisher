@@ -9,13 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 320e92bcd2126ef4298f0cb64222c738, type: 3}
+  m_Script: {fileID: 11500000, guid: efacc4f87335bde4cbafe099b7c2cd0d, type: 3}
   m_Name: Restaurant
   m_EditorClassIdentifier: Assembly-CSharp::StoreData
-  id: 6dddcb6dcbcd9ff4194fd411d97fc70c
-  storeType: 1
-  sprite: {fileID: 21300000, guid: 91ce8d65db5bae04389131a4a2303516, type: 3}
-  price: 15
-  value: 10
+  id: 324329948dc74684f823734727bc7e8a
+  storeType: 0
   minInterval: 5
-  maxInterval: 10
+  maxInterval: 15
+  sprites:
+  - {fileID: 21300000, guid: 91ce8d65db5bae04389131a4a2303516, type: 3}
+  - {fileID: -4996900395518796010, guid: f8041d859fd521a4b82676d21d1ba611, type: 3}
+  - {fileID: -8820715720815460284, guid: 61bf7a6c0123ad04ea6753ed3b386859, type: 3}
+  level: 0
+  price: 0f0000003200000064000000
+  value: 0a0000001900000032000000

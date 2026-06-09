@@ -93,7 +93,7 @@ public abstract class ClickableObject : MonoBehaviour
         return hitUI;
     }
 
-    protected virtual void OnFingerDown() { }
+    protected virtual void OnFingerDown() { Bus<StorePressed>.Raise(new StorePressed()); }
     protected virtual void OnFingerUp() { }
     protected virtual void OnFingerHold() { }
 }
