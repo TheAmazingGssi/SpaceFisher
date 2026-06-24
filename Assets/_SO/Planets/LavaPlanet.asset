@@ -14,6 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlanetFishTable
   planet: 0
   maxDepth: 300
+  BackgroundGradient:
+    serializedVersion: 2
+    key0: {r: 0.909804, g: 0.6509804, b: 0.23529413, a: 1}
+    key1: {r: 0.86666673, g: 0.63529414, b: 0.27058825, a: 1}
+    key2: {r: 0.8078432, g: 0.54509807, b: 0.25490198, a: 0}
+    key3: {r: 0.80784315, g: 0.514358, b: 0.25490192, a: 0}
+    key4: {r: 0.60784316, g: 0.30588236, b: 0.16078432, a: 0}
+    key5: {r: 0.60784316, g: 0.30588236, b: 0.16078432, a: 0}
+    key6: {r: 0.09019608, g: 0.043137256, b: 0.015686275, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 6554
+    ctime1: 18350
+    ctime2: 23516
+    ctime3: 39193
+    ctime4: 45618
+    ctime5: 59110
+    ctime6: 61809
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: 0
+    m_NumColorKeys: 7
+    m_NumAlphaKeys: 2
   fishSpawnData:
   - fishType: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
     minHeight: 0
