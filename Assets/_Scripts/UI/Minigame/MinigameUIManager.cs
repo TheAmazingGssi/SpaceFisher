@@ -1,6 +1,7 @@
 using NativeSerializableDictionary;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -53,8 +54,10 @@ public class MinigameUIManager : MonoBehaviour
     {
         SceneManager.LoadScene(Constants.Scenes.Ship);
     }
-    public void ReloadScene()
+    public void DeleteSave()
     {
+        Inventory.Instance.ClearInventory();
+        SaveManager.Instance.Delete();
         SceneManager.LoadScene(Constants.Scenes.Minigame);
     }
     IEnumerator SetMenuActiveNextFrame(bool value)

@@ -9,7 +9,7 @@ public class MinigameManager : MonoBehaviour
     public PlanetFishTable PlanetData;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         if (Instance != null)
         {
