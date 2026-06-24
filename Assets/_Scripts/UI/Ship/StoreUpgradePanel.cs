@@ -19,7 +19,7 @@ public class StoreUpgradePanel : MonoBehaviour
         Bus<StorePressed>.OnEvent += OnStorePressed;
     }
 
-    public void OnStorePressed(StorePressed e)
+    public void OnStorePressed(StorePressed e) //TODO: panel spawn outside camera
     {
         if(store == e.Store || e.Store == null)
         {

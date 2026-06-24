@@ -13,8 +13,8 @@ public class ShipUIManager : MonoBehaviour
     [SerializeField] private GameObject shopPanel;
     [SerializeField] private TextMeshProUGUI CurrentCoinsText;
 
+    private UIController swipePanelMechanic;
     private bool shopToggle = false;
-
 
     private void Start()
     {
@@ -24,9 +24,12 @@ public class ShipUIManager : MonoBehaviour
         Bus<StoreBought>.OnEvent += CloseStorePanel;
         Bus<AquariumBought>.OnEvent += _ => ToggleShop();
 
-        shopPanel.SetActive(false);
-        fishPanel.SetActive(false);
+        if (shopPanel != null)
+        {
+            swipePanelMechanic = shopPanel.GetComponent<UIController>();
+        }
 
+        fishPanel.SetActive(false);
         CurrentCoinsText.text = CoinsManager.Instance.Coins.ToString();
     }
 
@@ -40,17 +43,21 @@ public class ShipUIManager : MonoBehaviour
     public void ToggleShop()
     {
         shopToggle = !shopToggle;
-        shopPanel.SetActive(shopToggle);
+
+        if (swipePanelMechanic != null)
+            swipePanelMechanic.SetState(shopToggle);
     }
 
     private void CloseStorePanel(StoreBought e)
     {
-        shopPanel.SetActive(false);
+        CloseStorePanel();
     }
 
     public void CloseStorePanel()
     {
-        shopPanel.SetActive(false);
+        shopToggle = false;
+        if (swipePanelMechanic != null)
+            swipePanelMechanic.SetState(false);
     }
 
     private void OpenFishPanel(AquariumPressed e)
