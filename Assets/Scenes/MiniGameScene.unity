@@ -1761,7 +1761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinigameManager
   Phase: 0
   Hook: {fileID: 1381342932}
-  PlanetData: {fileID: 11400000, guid: 0d0c65da7a5f3544185fb9792daefd8c, type: 2}
+  <PlanetData>k__BackingField: {fileID: 11400000, guid: 0d0c65da7a5f3544185fb9792daefd8c, type: 2}
 --- !u!4 &1480408725
 Transform:
   m_ObjectHideFlags: 0
