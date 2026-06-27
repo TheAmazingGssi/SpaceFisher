@@ -4,7 +4,7 @@ using UnityEngine;
 public class FishPool : MonoBehaviour
 {
     [SerializeField] GameObject fishPrefab;
-    private List<GameObject> list = new List<GameObject>();
+    private Queue<GameObject> list = new Queue<GameObject>();
 
 
     public GameObject Pull(FishStats fishType, Vector3 position, Quaternion rotation)
@@ -17,8 +17,7 @@ public class FishPool : MonoBehaviour
         //}
         //else
         //{
-        //    fishObj = list[0];
-        //    list.RemoveAt(0);
+        //    fishObj = list.Dequeue();
         //    fishObj.transform.position = position;
         //    fishObj.transform.rotation = rotation;
         //    fishObj.SetActive(true);
@@ -29,7 +28,12 @@ public class FishPool : MonoBehaviour
 
     public void Push(GameObject returningObject)
     {
+        if(list.Contains(returningObject))
+        {
+            Debug.LogError("Tried to push a fish already in the pool");
+            return;
+        }
         returningObject.SetActive(false);
-        list.Add(returningObject);
+        list.Enqueue(returningObject);
     }
 }

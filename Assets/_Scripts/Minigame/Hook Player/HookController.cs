@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
-using UnityEngine.UIElements;
 
 public class HookController : MonoBehaviour
 {
@@ -68,6 +66,8 @@ public class HookController : MonoBehaviour
             transform.position = new Vector2(transform.position.x, 0);
             Bus<MinigameEnd>.Raise(new MinigameEnd());
         }
+        else if (transform.position.y <= -MinigameManager.Instance.PlanetData.MaxDepth)
+            MinigameManager.Instance.Phase = MinigamePhase.Up;
     }
     #endregion
     #region Movement

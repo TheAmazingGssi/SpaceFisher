@@ -6,10 +6,11 @@ public class MinigameManager : MonoBehaviour
     static public MinigameManager Instance;
     public MinigamePhase Phase;
     public HookController Hook;
-    public PlanetFishTable PlanetData;
+    [field:SerializeField] public PlanetFishTable PlanetData {  get; private set; }
+    [field:SerializeField] public UpgradeTable UpgradeData {  get; private set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         if (Instance != null)
         {
@@ -32,8 +33,6 @@ public class MinigameManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Hook.transform.position.y <= -PlanetData.MaxDepth)
-            Phase = MinigamePhase.Up;
     }
 
     void OnMinigameStart(MinigameStart e)
