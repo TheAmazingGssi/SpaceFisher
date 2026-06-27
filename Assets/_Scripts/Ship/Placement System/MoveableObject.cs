@@ -9,6 +9,7 @@ public class MoveableObject : ClickableObject
     public bool IsMoving { get => PlacementManager.Instance.CurrentlyMovingObject == this; }
 
     bool canPlace;
+    private bool pendingPlace = false;
 
     public bool TryStartMoving()
     {
@@ -90,14 +91,32 @@ public class MoveableObject : ClickableObject
         return false;
     }
 
+    protected override void OnFingerDown()
+    {
+        base.OnFingerDown();
+        if (pendingPlace)
+        {
+            pendingPlace = false;
+            PlacementManager.Instance.CurrentlyMovingObject = this;
+        }
+    }
+
+    protected override void OnFingerUp()
+    {
+        base.OnFingerUp();
+        TryStopMoving();
+    }
+
     protected override void OnFingerHold()
     {
         base.OnFingerHold();
         TryStartMoving();
     }
-    protected override void OnFingerUp()
+
+    public void WaitForPlacement()
     {
-        base.OnFingerUp();
-        TryStopMoving();
+        pendingPlace = true;
+        InitCanPlace();
+        SetColor();
     }
 }

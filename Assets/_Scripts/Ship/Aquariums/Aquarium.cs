@@ -8,9 +8,8 @@ public class Aquarium : Building
     public List<FishManager> Fish { get; private set; }
     private AquariumFishPool pool;
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
         Fish = new List<FishManager>();
     }
     protected override void Start()
@@ -45,7 +44,7 @@ public class Aquarium : Building
 
     public void NewAquarium()
     {
-        TryStartMoving();
+        WaitForPlacement();
     }
 
     protected override void OnFingerUp()

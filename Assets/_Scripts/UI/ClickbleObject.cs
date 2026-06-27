@@ -15,17 +15,11 @@ public abstract class ClickableObject : MonoBehaviour
     private bool fingerDownOnObject;
     private Camera cam;
 
-    virtual protected void Awake()
-    {
-        EnhancedTouchSupport.Enable();
-        cam = Camera.main;
-    }
-
     virtual protected void OnEnable()
     {
         fingerDownOnObject = false;
         trackedFingerId = -1;
-        if (cam == null) cam = Camera.main;
+        cam = Camera.main;
         Touch.onFingerDown += HandleFingerDown;
         Touch.onFingerUp += HandleFingerUp;
     }
@@ -37,6 +31,7 @@ public abstract class ClickableObject : MonoBehaviour
         CancelHold();
     }
 
+
     private void HandleFingerDown(Finger finger)
     {
         if (cam == null) cam = Camera.main;
@@ -45,6 +40,7 @@ public abstract class ClickableObject : MonoBehaviour
         {
             fingerDownOnObject = true;
             trackedFingerId = finger.index;
+            TouchState.Claim(trackedFingerId);
             OnFingerDown();
             holdCoroutine = StartCoroutine(HoldRoutine());
         }
@@ -54,6 +50,8 @@ public abstract class ClickableObject : MonoBehaviour
     {
         if (finger.index != trackedFingerId) return;
         CancelHold();
+        TouchState.Release(trackedFingerId);
+
         if (IsOverUI(finger.screenPosition)) return;
         if (fingerDownOnObject)
         {

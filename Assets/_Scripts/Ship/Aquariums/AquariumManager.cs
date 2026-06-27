@@ -45,6 +45,7 @@ public class AquariumManager : MonoBehaviour
     {
         Aquarium aquarium = aquariumPool.Get();
         aquariumPool.SetPosition(aquarium.gameObject);
+        Physics2D.SyncTransforms();
         aquarium.Init(fishPool);
         aquarium.NewAquarium();
     }
