@@ -58,6 +58,7 @@ public class MinigameUIManager : MonoBehaviour
     {
         Inventory.Instance.ClearInventory();
         SaveManager.Instance.Delete();
+        PlayerPrefs.DeleteKey(Constants.FirstOpen);
         SceneManager.LoadScene(Constants.Scenes.Minigame);
     }
     IEnumerator SetMenuActiveNextFrame(bool value)

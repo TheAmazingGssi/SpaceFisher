@@ -60,6 +60,7 @@ public class Inventory : MonoBehaviour
     public bool TryRemoveFish(FishStats fishStats) => TryRemoveFish(fishStats, 1);
 
     public bool IsInInventory(FishStats fishStats) => dict.ContainsKey(fishStats.ID);
+    [ContextMenu("Clear Inventory")]
     public void ClearInventory()
     {
         dict.Clear();

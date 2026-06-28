@@ -4374,7 +4374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VisitorsManager
   aquariumManager: {fileID: 1244206032}
   spawner: {fileID: 547512776}
-  ticketPrice: 100
+  ticketPrice: 1
   visitorData:
   - {fileID: 11400000, guid: 99a01c4b83a17c0468272ad804ff17cd, type: 2}
 --- !u!4 &1202612070
