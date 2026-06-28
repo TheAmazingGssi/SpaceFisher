@@ -16,9 +16,13 @@ public class CameraController : MonoBehaviour
     private Vector2 prevA;
     private Vector2 prevB;
 
+    private void Awake()
+    {
+        EnhancedTouchSupport.Enable();        
+    }
+
     private void OnEnable()
     {
-        EnhancedTouchSupport.Enable();
         if (cam == null) cam = Camera.main;
     }
 

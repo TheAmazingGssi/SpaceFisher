@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+
 public class Aquarium : Building
 {
     [field: SerializeField] public AquariumData Data;
@@ -59,6 +60,7 @@ public class Aquarium : Building
         FishManager newFish = pool.Get(fish);
         newFish.transform.parent = fishSpawn;
         newFish.transform.position = fishSpawn.position;
+        newFish.Init(fish);
         Fish.Add(newFish);
     }
 }

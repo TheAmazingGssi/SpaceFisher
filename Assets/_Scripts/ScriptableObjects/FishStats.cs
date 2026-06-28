@@ -28,6 +28,8 @@ public class FishStats : ScriptableObject
 
     public int Price { get => price; }
     [SerializeField] private int price;
+    public AnimatorOverrideController Animator => animator;
+    [SerializeField] private AnimatorOverrideController animator;
 
     [SerializeField] private bool customSpeed;
     [SerializeField] private float speed;

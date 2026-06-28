@@ -13,6 +13,8 @@ public class RunManager : MonoBehaviour
     private float spawnInterval = 60;
     private float storeIncome = 0f;
 
+    public bool gameStart = true; //TODO: :')
+
     private void Awake()
     {
         if (Instance != null && Instance != this)

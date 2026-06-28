@@ -13,6 +13,8 @@ public class ShipUIManager : MonoBehaviour
     [SerializeField] private GameObject shopPanel;
     [SerializeField] private TextMeshProUGUI CurrentCoinsText;
     [SerializeField] private UIController uiController;
+    [SerializeField] private GameObject firstAqButton;
+
 
     private void Start()
     {
@@ -24,6 +26,16 @@ public class ShipUIManager : MonoBehaviour
 
         fishPanel.SetActive(false);
         CurrentCoinsText.text = CoinsManager.Instance.Coins.ToString();
+
+        if(RunManager.Instance.gameStart)
+            firstAqButton.SetActive(true);
+    }
+
+    public void GetFirstAquarium()
+    {
+        RunManager.Instance.gameStart = false;
+        Bus<AquariumBought>.Raise(new AquariumBought());
+        firstAqButton.SetActive(false);
     }
 
     public void GoToMiniGame()
