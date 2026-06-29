@@ -92,7 +92,8 @@ public class RunManager : MonoBehaviour
             {
                 StoreDataId = kvp.Value.ID,
                 XPos = kvp.Key.transform.position.x,
-                YPos = kvp.Key.transform.position.y
+                YPos = kvp.Key.transform.position.y,
+                Level = kvp.Value.Level
             });
         }
         return data;

@@ -24,6 +24,11 @@ public class ShopPanelsManager : MonoBehaviour
         // panels[1] = fishPanel.gameObject;
     }
 
+    private void Start()
+    {
+        OnShopButtonClicked(new ShopButtonPressed { ShopButton = buttons[0] });
+    }
+
     private void OnShopButtonClicked(ShopButtonPressed e)
     {
         foreach (var b in shopButtons)
@@ -37,21 +42,6 @@ public class ShopPanelsManager : MonoBehaviour
             buttons[i].Panel.SetActive(false);
 
         e.ShopButton.Panel.SetActive(true);
-
-/*        for (int i = 0; i <= panels.Length; i++)
-            panels[i].gameObject.SetActive(false);
-
-        switch (e.ShopButton.Type)
-        {
-            case ShopButtons.FishShop:
-                fishPanel.gameObject.SetActive(true);
-                break;
-            case ShopButtons.BuildingShop:
-                shopPanel.gameObject.SetActive(true);
-                break;
-            case ShopButtons.UpgradeShop:
-                break;
-        }*/
     }
 
     private void OnDestroy()

@@ -26,6 +26,7 @@ public class StoreSaveData
     public string StoreDataId;
     public float XPos;
     public float YPos;
+    public int Level;
 
     public Vector2 Position => new Vector2(XPos, YPos);
 }

@@ -6,7 +6,7 @@ public class ShipUIManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private InventoryUI inventoryUI;
-    [SerializeField] private StoreShopUI storeShopUI;
+    [SerializeField] private FishStorePanel fishStoreUI;
 
     [Header("UI Elements")]
     [SerializeField] private GameObject fishPanel;
@@ -14,6 +14,8 @@ public class ShipUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI CurrentCoinsText;
     [SerializeField] private UIController uiController;
     [SerializeField] private GameObject firstAqButton;
+
+    private bool fishStoreOpen = false;
 
 
     private void Start()
@@ -62,9 +64,10 @@ public class ShipUIManager : MonoBehaviour
         uiController.SetState(false);
     }
 
-    public void CloseStorePanel()
+    public void ToggleFishStore()
     {
-        uiController.SetState(false);
+        fishStoreOpen = !fishStoreOpen;
+        fishStoreUI.gameObject.SetActive(fishStoreOpen);
     }
 
     private void OpenFishPanel(AquariumPressed e)
