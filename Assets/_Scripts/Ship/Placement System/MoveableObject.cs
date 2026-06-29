@@ -119,4 +119,17 @@ public class MoveableObject : ClickableObject
         InitCanPlace();
         SetColor();
     }
+    protected override void OnClickAbandoned()
+    {
+        base.OnClickAbandoned();
+        if (IsMoving)
+        {
+            if (!TryStopMoving())
+            {
+                greenTint.SetActive(false);
+                redTint.SetActive(false);
+                PlacementManager.Instance.CurrentlyMovingObject = null;
+            }
+        }
+    }
 }

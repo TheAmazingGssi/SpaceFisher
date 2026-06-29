@@ -1775,7 +1775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   cam: {fileID: 5010631}
   zoomSpeed: 0.05
-  minSize: 3
+  minSize: 20
   maxSize: 60
   panSpeed: 1
 --- !u!4 &386870578
