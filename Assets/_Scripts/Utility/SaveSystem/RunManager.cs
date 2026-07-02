@@ -13,6 +13,8 @@ public class RunManager : MonoBehaviour
     private float spawnInterval = 60;
     private float storeIncome = 0f;
 
+    public bool gameStart = true; //TODO: :')
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -90,7 +92,8 @@ public class RunManager : MonoBehaviour
             {
                 StoreDataId = kvp.Value.ID,
                 XPos = kvp.Key.transform.position.x,
-                YPos = kvp.Key.transform.position.y
+                YPos = kvp.Key.transform.position.y,
+                Level = kvp.Value.Level
             });
         }
         return data;

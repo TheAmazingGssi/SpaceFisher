@@ -10,12 +10,15 @@ public class AquariumManager : MonoBehaviour
     private List<FishStats> fishInAquariums = new List<FishStats>();
     private Aquarium currentAquarium;
 
-
-    private void Start()
+    private void Awake()
     {
         Bus<AquariumPressed>.OnEvent += SetCurrentAquarium;
         Bus<PlaceFish>.OnEvent += AddFish;
-        Bus<AquariumBought>.OnEvent += AddAquarium;
+        Bus<AquariumBought>.OnEvent += AddAquarium;        
+    }
+
+    private void Start()
+    {
         foreach (Aquarium aquarium in Aquariums)
             aquarium.Init(fishPool);
         Bus<AquariumPriceChange>.Raise(new AquariumPriceChange { Price = price });
@@ -45,6 +48,7 @@ public class AquariumManager : MonoBehaviour
     {
         Aquarium aquarium = aquariumPool.Get();
         aquariumPool.SetPosition(aquarium.gameObject);
+        Physics2D.SyncTransforms();
         aquarium.Init(fishPool);
         aquarium.NewAquarium();
     }

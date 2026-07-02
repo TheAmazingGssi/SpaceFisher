@@ -30,7 +30,7 @@ public class StoreBase : Building
 
 
         for (int i = 0; i < spriteRenderers.Length; i++)
-            spriteRenderers[i].sprite = data.Sprites[0];
+            spriteRenderers[i].sprite = data.Sprites[Level - 1];
 
     }
 

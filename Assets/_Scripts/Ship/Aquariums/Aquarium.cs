@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+
 public class Aquarium : Building
 {
     [field: SerializeField] public AquariumData Data;
@@ -8,9 +9,8 @@ public class Aquarium : Building
     public List<FishManager> Fish { get; private set; }
     private AquariumFishPool pool;
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
         Fish = new List<FishManager>();
     }
     protected override void Start()
@@ -45,7 +45,7 @@ public class Aquarium : Building
 
     public void NewAquarium()
     {
-        TryStartMoving();
+        WaitForPlacement();
     }
 
     protected override void OnFingerUp()
@@ -60,6 +60,7 @@ public class Aquarium : Building
         FishManager newFish = pool.Get(fish);
         newFish.transform.parent = fishSpawn;
         newFish.transform.position = fishSpawn.position;
+        newFish.Init(fish);
         Fish.Add(newFish);
     }
 }

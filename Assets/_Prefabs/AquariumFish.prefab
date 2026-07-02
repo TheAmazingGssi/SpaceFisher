@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2055706844198067442}
   - component: {fileID: 6540306869189630648}
+  - component: {fileID: 3571173871533151799}
   m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
@@ -91,6 +92,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &3571173871533151799
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2614783977929165464}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4824509989669914264
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishManager
   <SpriteRenderer>k__BackingField: {fileID: 6540306869189630648}
   <Stats>k__BackingField: {fileID: 11400000, guid: b6561006b96c42b45854c8b966f138af, type: 2}
+  <animator>k__BackingField: {fileID: 3571173871533151799}
   fishCollider: {fileID: 6629189339963866843}
 --- !u!114 &5406557465759568160
 MonoBehaviour:

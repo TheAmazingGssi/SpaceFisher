@@ -27,12 +27,15 @@ public class PlacementManager : MonoBehaviour
 
     private void Update()
     {
+        var activeTouches = UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches;
+        if (activeTouches.Count > 0)
+            currentTouch = cam.ScreenToWorldPoint(activeTouches[0].screenPosition);
+
         if (CurrentlyMovingObject)
         {
             Vector3 ogPos = CurrentlyMovingObject.transform.position;
             CurrentlyMovingObject.MainParent.transform.position = gridManager.AlignToGrid(currentTouch);
-
-            if(CurrentlyMovingObject.transform.position != ogPos )
+            if (CurrentlyMovingObject.transform.position != ogPos)
                 CurrentlyMovingObject.OnPositionUpdated();
         }
     }
@@ -41,11 +44,4 @@ public class PlacementManager : MonoBehaviour
     {
         cam = Camera.main;
     }
-
-    void OnTouch(InputValue value)
-    {
-        Vector2 screenSpacePos = value.Get<Vector2>();
-        currentTouch = cam.ScreenToWorldPoint(screenSpacePos);
-    }
-
 }

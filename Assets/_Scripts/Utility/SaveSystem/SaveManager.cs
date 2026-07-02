@@ -59,8 +59,11 @@ public class SaveManager : MonoBehaviour
         Bus<LoadData>.Raise(new LoadData { Data = data });
     }
 
+    [ContextMenu("DELETE")]
     public void Delete() //TODO: check why not deleting
     {
+        File.Exists(Constants.Paths.SaveDataPath);
+        File.Delete(Constants.Paths.SaveDataPath);
         File.Exists(Constants.Paths.SaveDataPath);
         File.Delete(Constants.Paths.SaveDataPath);
     }

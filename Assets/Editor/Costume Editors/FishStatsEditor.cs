@@ -21,10 +21,12 @@ public class FishStatsEditor : Editor
     private SerializedProperty planet;
     private SerializedProperty value;
     private SerializedProperty price;
+    private SerializedProperty animatorController;
     private void OnEnable()
     {
         id = serializedObject.FindProperty("id");
         fishSprite = serializedObject.FindProperty("fishSprite");
+        animatorController = serializedObject.FindProperty("animator");
         minigameSpeed = serializedObject.FindProperty("mgSpeed");
         wiggleAngleMax = serializedObject.FindProperty("wiggleAngleMax");
         wiggleAngleMin = serializedObject.FindProperty("wiggleAngleMin");
@@ -49,6 +51,7 @@ public class FishStatsEditor : Editor
         //==========Generic Stats==========
         EditorGUILayout.LabelField("ID: " + id.stringValue);
         EditorGUILayout.PropertyField(fishSprite);
+        EditorGUILayout.PropertyField(animatorController);
         EditorGUILayout.PropertyField(planet);
         if (!fishSprite.objectReferenceValue)
             EditorGUILayout.HelpBox("Please insert a texture", MessageType.Warning);

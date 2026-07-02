@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5638199820872875602}
   - component: {fileID: 8567089627819479943}
   m_Layer: 0
-  m_Name: SaveManager
+  m_Name: Save Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

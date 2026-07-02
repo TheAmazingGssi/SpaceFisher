@@ -6,31 +6,50 @@ public class ShipUIManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private InventoryUI inventoryUI;
-    [SerializeField] private StoreShopUI storeShopUI;
+    [SerializeField] private FishStorePanel fishStoreUI;
 
     [Header("UI Elements")]
     [SerializeField] private GameObject fishPanel;
     [SerializeField] private GameObject shopPanel;
     [SerializeField] private TextMeshProUGUI CurrentCoinsText;
+    [SerializeField] private UIController uiController;
+    [SerializeField] private GameObject firstAqButton;
 
-    private UIController swipePanelMechanic;
-    private bool shopToggle = false;
+    private bool fishStoreOpen = false;
+
 
     private void Start()
     {
         Bus<AquariumPressed>.OnEvent += OpenFishPanel;
         Bus<PlaceFish>.OnEvent += CloseFishPanel;
         Bus<CoinChange>.OnEvent += OnCoinChange;
-        Bus<StoreBought>.OnEvent += CloseStorePanel;
+        Bus<StoreBought>.OnEvent += _ => ToggleShop();
         Bus<AquariumBought>.OnEvent += _ => ToggleShop();
 
-        if (shopPanel != null)
+#if UNITY_EDITOR
+        if(RunManager.Instance.gameStart)
+            firstAqButton.SetActive(true);
+#else
+        if (!PlayerPrefs.HasKey(Constants.FirstOpen))
         {
-            swipePanelMechanic = shopPanel.GetComponent<UIController>();
+            Inventory.Instance.ClearInventory();
+            SaveManager.Instance.Delete();
+            firstAqButton.SetActive(true);
+            PlayerPrefs.SetInt(Constants.FirstOpen, 1);
+            PlayerPrefs.Save();
         }
-
+        else firstAqButton.SetActive(false);
+#endif
         fishPanel.SetActive(false);
         CurrentCoinsText.text = CoinsManager.Instance.Coins.ToString();
+
+    }
+
+    public void GetFirstAquarium()
+    {
+        RunManager.Instance.gameStart = false;
+        Bus<AquariumBought>.Raise(new AquariumBought());
+        firstAqButton.SetActive(false);
     }
 
     public void GoToMiniGame()
@@ -42,22 +61,13 @@ public class ShipUIManager : MonoBehaviour
     [ContextMenu("Open Shop Window")]
     public void ToggleShop()
     {
-        shopToggle = !shopToggle;
-
-        if (swipePanelMechanic != null)
-            swipePanelMechanic.SetState(shopToggle);
+        uiController.SetState(false);
     }
 
-    private void CloseStorePanel(StoreBought e)
+    public void ToggleFishStore()
     {
-        CloseStorePanel();
-    }
-
-    public void CloseStorePanel()
-    {
-        shopToggle = false;
-        if (swipePanelMechanic != null)
-            swipePanelMechanic.SetState(false);
+        fishStoreOpen = !fishStoreOpen;
+        fishStoreUI.gameObject.SetActive(fishStoreOpen);
     }
 
     private void OpenFishPanel(AquariumPressed e)
@@ -85,7 +95,7 @@ public class ShipUIManager : MonoBehaviour
         Bus<AquariumPressed>.OnEvent -= OpenFishPanel;
         Bus<PlaceFish>.OnEvent -= CloseFishPanel;
         Bus<CoinChange>.OnEvent -= OnCoinChange;
-        Bus<StoreBought>.OnEvent -= CloseStorePanel;
+        Bus<StoreBought>.OnEvent -= _ => ToggleShop();
         Bus<AquariumBought>.OnEvent -= _ => ToggleShop();
     }
 }
