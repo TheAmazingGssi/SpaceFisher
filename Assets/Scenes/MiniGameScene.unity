@@ -1762,6 +1762,7 @@ MonoBehaviour:
   Phase: 0
   Hook: {fileID: 1381342932}
   <PlanetData>k__BackingField: {fileID: 11400000, guid: 0d0c65da7a5f3544185fb9792daefd8c, type: 2}
+  <UpgradeData>k__BackingField: {fileID: 11400000, guid: 6194dd4a4f28bb745b0c332f32a8d29c, type: 2}
 --- !u!4 &1480408725
 Transform:
   m_ObjectHideFlags: 0

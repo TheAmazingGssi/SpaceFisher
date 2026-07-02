@@ -66,7 +66,7 @@ public class HookController : MonoBehaviour
             transform.position = new Vector2(transform.position.x, 0);
             Bus<MinigameEnd>.Raise(new MinigameEnd());
         }
-        else if (transform.position.y <= -MinigameManager.Instance.PlanetData.MaxDepth)
+        else if (ShouldGoUp())
             MinigameManager.Instance.Phase = MinigamePhase.Up;
     }
     #endregion
@@ -127,5 +127,12 @@ public class HookController : MonoBehaviour
     {
         if (MinigameManager.Instance.Phase == MinigamePhase.Down)
             MinigameManager.Instance.Phase = MinigamePhase.Up;
+    }
+    bool ShouldGoUp()
+    {
+        bool flagPlanet = transform.position.y <= -MinigameManager.Instance.PlanetData.MaxDepth;
+        int upgradeLevel = SaveManager.Instance.GetLengthLevel();
+        bool flagUpgrade = transform.position.y <= -MinigameManager.Instance.UpgradeData.MaxDepth[upgradeLevel];
+        return flagPlanet || flagUpgrade;
     }
 }
