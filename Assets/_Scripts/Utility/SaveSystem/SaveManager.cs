@@ -64,4 +64,17 @@ public class SaveManager : MonoBehaviour
         File.Exists(Constants.Paths.SaveDataPath);
         File.Delete(Constants.Paths.SaveDataPath);
     }
+
+    public int GetLengthLevel()
+    {
+        return 1;
+    }      
+    public int GetMagnetLevel()
+    {
+        return 0;
+    }      
+    public int GetShieldLevel()
+    {
+        return 0;
+    }
 }
