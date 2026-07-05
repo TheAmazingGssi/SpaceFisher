@@ -11,7 +11,7 @@ public class RunManager : MonoBehaviour
 
     private float timeAway = -1;
     private float spawnInterval = 60;
-    private float storeIncome = 0f;
+    private float storeIncome = 0;
 
     public bool gameStart = true; //TODO: :')
 
@@ -95,6 +95,21 @@ public class RunManager : MonoBehaviour
                 YPos = kvp.Key.transform.position.y,
                 Level = kvp.Value.Level
             });
+        }
+        foreach(KeyValuePair < Upgrade, int > kvp in UpgradeManager.Instance.CurrentUpgrades)
+        {
+            switch(kvp.Key)
+            {
+                case Upgrade.Magnet:
+                    data.Upgrades.Magnet = kvp.Value;
+                    break;
+                case Upgrade.Shield:
+                    data.Upgrades.Shield = kvp.Value;
+                    break;
+                case Upgrade.Length:
+                    data.Upgrades.Length = kvp.Value;
+                    break;
+            }
         }
         return data;
     }
