@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed3ee94fe809c6458c6327c431fbd25, type: 3}
   m_Name: UpgradeTable
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeTable
-  <MaxDepth>k__BackingField: 0a000000140000001e000000
+  <MaxDepth>k__BackingField: 3c00000078000000c8000000
   <MagnetRadius>k__BackingField:
   - 0
