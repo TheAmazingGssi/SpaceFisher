@@ -9,10 +9,9 @@ public class ShopPanelsManager : MonoBehaviour
     [SerializeField] private ShopButton[] shopButtons;
 
     [SerializeField] private StoreShopUI shopPanel;
-    [SerializeField] private FishStorePanel fishPanel;
-    //[SerializeField] private UpgradeShopUI upgradePanel;
+    [SerializeField] private UpgradeShopUI upgradePanel;
 
-    // private GameObject[] panels = new GameObject[1];
+     private GameObject[] panels = new GameObject[2];
 
     [SerializeField] private ShopButton[] buttons;
 
@@ -20,8 +19,8 @@ public class ShopPanelsManager : MonoBehaviour
     {
         Bus<ShopButtonPressed>.OnEvent += OnShopButtonClicked;
 
-        // panels[0] = shopPanel.gameObject;
-        // panels[1] = fishPanel.gameObject;
+         panels[0] = shopPanel.gameObject;
+         panels[1] = upgradePanel.gameObject;
     }
 
     private void Start()

@@ -1,16 +1,25 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeShopUI : MonoBehaviour
+public class UpgradeShopUI : PanelUI<UpgradeButton, KeyValuePair<Upgrade, int>>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        
+        Bus<UpgradeBought>.OnEvent += OnUpgradeBought;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        RefreshPanel(UpgradeManager.Instance.CurrentUpgrades);
+    }
+
+    private void OnUpgradeBought(UpgradeBought e)
+    {
+        RefreshPanel(UpgradeManager.Instance.CurrentUpgrades);
+    }
+
+    private void OnDestroy()
+    {
+        Bus<UpgradeBought>.OnEvent -= OnUpgradeBought;
     }
 }

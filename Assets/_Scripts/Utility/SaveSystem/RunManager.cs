@@ -96,19 +96,22 @@ public class RunManager : MonoBehaviour
                 Level = kvp.Value.Level
             });
         }
-        foreach(KeyValuePair < Upgrade, int > kvp in UpgradeManager.Instance.CurrentUpgrades)
+        if(UpgradeManager.Instance.CurrentUpgrades.Count > 0)
         {
-            switch(kvp.Key)
+            foreach (KeyValuePair<Upgrade, int> kvp in UpgradeManager.Instance.CurrentUpgrades)
             {
-                case Upgrade.Magnet:
-                    data.Upgrades.Magnet = kvp.Value;
-                    break;
-                case Upgrade.Shield:
-                    data.Upgrades.Shield = kvp.Value;
-                    break;
-                case Upgrade.Length:
-                    data.Upgrades.Length = kvp.Value;
-                    break;
+                switch (kvp.Key)
+                {
+                    case Upgrade.Magnet:
+                        data.Upgrades.Magnet = kvp.Value;
+                        break;
+                    case Upgrade.Shield:
+                        data.Upgrades.Shield = kvp.Value;
+                        break;
+                    case Upgrade.Length:
+                        data.Upgrades.Length = kvp.Value;
+                        break;
+                }
             }
         }
         return data;
