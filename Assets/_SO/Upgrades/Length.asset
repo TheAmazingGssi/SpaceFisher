@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455227d1370bfb94eb9f5886c9f69b35, type: 3}
   m_Name: Length
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeType
+  <Upgrade>k__BackingField: 2
   <Sprite>k__BackingField: {fileID: 21300000, guid: 2fc9ae6cfda3f8b4db455a1fe5d3fcce, type: 3}
   <MinigameValue>k__BackingField:
   - 5
   - 10
   - 15
-  <MoneyCost>k__BackingField:
-  - 1
-  - 2
-  - 3
+  <MoneyCost>k__BackingField: 010000000200000003000000

@@ -4066,6 +4066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ece4d4804e320540bb9624052a623b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinsManager
+  debugStarterCoins: 1000
 --- !u!4 &977749310
 Transform:
   m_ObjectHideFlags: 0
@@ -4701,12 +4702,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeManager
   table: {fileID: 11400000, guid: 6194dd4a4f28bb745b0c332f32a8d29c, type: 2}
   upgradeTypes:
-  - Upgrade: 0
-    Type: {fileID: 11400000, guid: 22d5ecbb31fe06a42810c8fb11cf2188, type: 2}
-  - Upgrade: 1
-    Type: {fileID: 11400000, guid: fd3390a94edc9304598202285aab1a94, type: 2}
-  - Upgrade: 2
-    Type: {fileID: 11400000, guid: aabf83946f3c153459ff365b1a7625c9, type: 2}
+  - {fileID: 11400000, guid: 22d5ecbb31fe06a42810c8fb11cf2188, type: 2}
+  - {fileID: 11400000, guid: fd3390a94edc9304598202285aab1a94, type: 2}
+  - {fileID: 11400000, guid: aabf83946f3c153459ff365b1a7625c9, type: 2}
 --- !u!4 &1284932369
 Transform:
   m_ObjectHideFlags: 0

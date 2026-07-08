@@ -13,17 +13,11 @@ public class UpgradeManager : MonoBehaviour
 {
     public static UpgradeManager Instance { get; private set; }
 
-    [Serializable]
-    private struct UpgradeEntry
-    {
-        public Upgrade Upgrade;
-        public UpgradeType Type;
-    }
-
     [SerializeField] private UpgradeTable table;
-    [SerializeField] private UpgradeEntry[] upgradeTypes;
+    [SerializeField] private UpgradeType[] upgradeTypes;
 
-    private readonly Dictionary<Upgrade, UpgradeType> typeLookup = new();
+    private readonly UpgradeType[] typeByUpgrade = new UpgradeType[Enum.GetValues(typeof(Upgrade)).Length];
+
     public Dictionary<Upgrade, int> CurrentUpgrades { get; private set; } = new Dictionary<Upgrade, int>();
 
     private void Awake()
@@ -36,8 +30,8 @@ public class UpgradeManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        foreach (var entry in upgradeTypes)
-            typeLookup[entry.Upgrade] = entry.Type;
+        foreach (var type in upgradeTypes)
+            typeByUpgrade[(int)type.Upgrade] = type;
 
         foreach (Upgrade upgrade in Enum.GetValues(typeof(Upgrade)))
             if (!CurrentUpgrades.ContainsKey(upgrade))
@@ -54,31 +48,7 @@ public class UpgradeManager : MonoBehaviour
     }
 
     public int GetUpgrade(Upgrade upgrade) => CurrentUpgrades[upgrade];
-
-    public UpgradeType GetUpgradeType(Upgrade upgrade) => typeLookup[upgrade];
-
-    public bool TryUpgrade(Upgrade upgrade)
-    {
-        UpgradeType type = typeLookup[upgrade];
-        int level = CurrentUpgrades[upgrade];
-
-        if (level >= type.MaxLevel)
-        {
-            Debug.Log("Already at max level");
-            return false;
-        }
-
-        int cost = Mathf.RoundToInt(type.MoneyCost[level + 1]);
-        if (!CoinsManager.Instance.TryBuying(cost))
-        {
-            Debug.Log("Not enough coins");
-            return false;
-        }
-
-        CurrentUpgrades[upgrade] = level + 1;
-        Bus<UpgradeBought>.Raise(new UpgradeBought { Upgrade = upgrade, NewLevel = level + 1 });
-        return true;
-    }
+    public UpgradeType GetUpgradeType(Upgrade upgrade) => typeByUpgrade[(int)upgrade];
 
     private void OnUpgradeBought(UpgradeBought e)
     {
@@ -102,5 +72,12 @@ public class UpgradeManager : MonoBehaviour
                     break;
             }
         }
+    }
+
+    [ContextMenu("Print upgrades")]
+    public void PrintUpgrades()
+    {
+        foreach (KeyValuePair<Upgrade, int> kvp in CurrentUpgrades)
+            print($"Type: {kvp.Key}  Level: {kvp.Value}");
     }
 }

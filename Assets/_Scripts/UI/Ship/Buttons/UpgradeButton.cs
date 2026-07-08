@@ -8,15 +8,17 @@ public class UpgradeButton : ItemButton<KeyValuePair<Upgrade, int>>
     [SerializeField] private TextMeshProUGUI priceText;
     private Upgrade upgrade;
     private int level;
+    private int price;
+    bool isMaxLevel;
 
     public override void Setup(KeyValuePair<Upgrade, int> data)
     {
         upgrade = data.Key;
         level = data.Value;
-
         UpgradeType type = UpgradeManager.Instance.GetUpgradeType(upgrade);
-        bool isMaxLevel = level >= type.MaxLevel;
+        isMaxLevel = level >= type.MaxLevel;
 
+        price = type.MoneyCost[level];
         levelText.text = $"Lv. {level}";
         priceText.text = isMaxLevel ? "MAX" : type.MoneyCost[level + 1].ToString();
         image.sprite = type.Sprite;
@@ -24,6 +26,11 @@ public class UpgradeButton : ItemButton<KeyValuePair<Upgrade, int>>
 
     public override void OnButtonClick()
     {
-        UpgradeManager.Instance.TryUpgrade(upgrade);
+        if (!isMaxLevel)
+            if(CoinsManager.Instance.TryBuying(price))
+                Bus<UpgradeBought>.Raise(new UpgradeBought { Upgrade = upgrade, NewLevel = level + 1 });
+
+
+
     }
 }
