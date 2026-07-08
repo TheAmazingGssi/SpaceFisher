@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UpgradeButton : ItemButton<KeyValuePair<Upgrade, int>>
 {
-    [SerializeField] private TextMeshProUGUI valueText;
+    [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private TextMeshProUGUI priceText;
     private Upgrade upgrade;
     private int level;
@@ -17,7 +17,7 @@ public class UpgradeButton : ItemButton<KeyValuePair<Upgrade, int>>
         UpgradeType type = UpgradeManager.Instance.GetUpgradeType(upgrade);
         bool isMaxLevel = level >= type.MaxLevel;
 
-        valueText.text = type.MinigameValue[level].ToString();
+        levelText.text = $"Lv. {level}";
         priceText.text = isMaxLevel ? "MAX" : type.MoneyCost[level + 1].ToString();
         image.sprite = type.Sprite;
     }
