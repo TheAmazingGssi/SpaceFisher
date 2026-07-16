@@ -4,10 +4,9 @@ using UnityEngine;
 
 public abstract class Building : MoveableObject
 {
-    public Queue<Visitor> Visitors = new Queue<Visitor>();
-  
-    [SerializeField] protected Transform feedbackSpawn;
+    [SerializeField] protected FeedbackManager feedback;
 
+    public Queue<Visitor> Visitors = new Queue<Visitor>();
     public Location BuildingType { get; protected set; }
 
     protected Coroutine releaseRoutine;

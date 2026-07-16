@@ -36,6 +36,7 @@ public class FeedbackManager : MonoBehaviour
         sequence?.Kill();
         tween?.Kill();
     }
+
     [ContextMenu("SquashStretch")]
     public void SquashStretch()
     {

@@ -49,6 +49,8 @@ public class StoreBase : Building
     protected override void OnVisitorAdded(Visitor visitor)
     {
         CoinsManager.Instance.AddCoins(CurrentValue);
+        feedback.PlayParticleEffect();
+        feedback.SquashStretch();
     }
 
     protected override void OnFingerUp()
