@@ -17,9 +17,9 @@ MonoBehaviour:
   minInterval: 5
   maxInterval: 15
   sprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: e90b602ce48661c4daff8944cb6d6e7c, type: 3}
+  - {fileID: 21300000, guid: 1c2c232e9a30f714a8c41a41de3a4dc5, type: 3}
+  - {fileID: 21300000, guid: 63d37518f6592734c88380ba3d987b83, type: 3}
   level: 0
   price: 64000000c80000002c010000
   value: 3200000064000000c8000000
