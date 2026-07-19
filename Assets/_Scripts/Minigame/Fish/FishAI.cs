@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 
 public class FishAI : MonoBehaviour
 {
-    const string playerTag = "Player"; //change to tag from constants class plz
     [SerializeField] Rigidbody2D rb;
     [SerializeField] SpriteRenderer spriteRenderer;
     [field: SerializeField] public FishStats Stats { get; private set; }
@@ -39,7 +38,7 @@ public class FishAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == playerTag)
+        if (collision.tag == Constants.Tags.Player)
         {
             transform.SetParent(collision.transform);
             transform.localPosition = Vector3.zero;

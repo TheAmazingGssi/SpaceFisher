@@ -27,9 +27,9 @@ public struct VisitorLeaving : IEvent { public Visitor Visitor; }
 
 #region Minigame
 public struct FishCaught : IEvent { public FishAI Fish; }
+public struct FishFell : IEvent { };
 public struct MinigameStart : IEvent { };
 public struct MinigameEnd : IEvent { };
-public struct UpgradeHook : IEvent { };
 #endregion
 
 #region Coins
