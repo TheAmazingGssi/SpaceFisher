@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efacc4f87335bde4cbafe099b7c2cd0d, type: 3}
-  m_Name: Restaurant
+  m_Name: GiftShop
   m_EditorClassIdentifier: Assembly-CSharp::StoreData
-  id: 324329948dc74684f823734727bc7e8a
-  storeType: 1
+  id: ff546e42c1ae75545ad48af6c7ed5c6a
+  storeType: 3
   minInterval: 5
   maxInterval: 15
   sprites:
-  - {fileID: 21300000, guid: 91ce8d65db5bae04389131a4a2303516, type: 3}
-  - {fileID: 21300000, guid: 170a97c6ef2f11a4c92a9304be31b0a1, type: 3}
-  - {fileID: 21300000, guid: 618226525269b254ea5760dbcf289094, type: 3}
+  - {fileID: 21300000, guid: ef19e387a320bea429709e2f49d6ed8a, type: 3}
+  - {fileID: 21300000, guid: 6a06304008777fa4ca05c252d76d3654, type: 3}
+  - {fileID: 21300000, guid: 141503ead36540246a831a09c9be49bc, type: 3}
   level: 0
-  price: 0f0000003200000064000000
-  value: 0a0000001900000032000000
+  price: 3200000064000000c8000000
+  value: 190000003200000096000000
