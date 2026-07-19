@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efacc4f87335bde4cbafe099b7c2cd0d, type: 3}
-  m_Name: Restaurant
+  m_Name: Theater
   m_EditorClassIdentifier: Assembly-CSharp::StoreData
-  id: 324329948dc74684f823734727bc7e8a
-  storeType: 1
+  id: 0bc6039b0935deb4fa923298a3b3544d
+  storeType: 2
   minInterval: 5
   maxInterval: 15
   sprites:
-  - {fileID: 21300000, guid: 91ce8d65db5bae04389131a4a2303516, type: 3}
-  - {fileID: 21300000, guid: 170a97c6ef2f11a4c92a9304be31b0a1, type: 3}
-  - {fileID: 21300000, guid: 618226525269b254ea5760dbcf289094, type: 3}
+  - {fileID: 21300000, guid: e90b602ce48661c4daff8944cb6d6e7c, type: 3}
+  - {fileID: 21300000, guid: 1c2c232e9a30f714a8c41a41de3a4dc5, type: 3}
+  - {fileID: 21300000, guid: 63d37518f6592734c88380ba3d987b83, type: 3}
   level: 0
-  price: 0f0000003200000064000000
-  value: 0a0000001900000032000000
+  price: 64000000c80000002c010000
+  value: 3200000064000000c8000000

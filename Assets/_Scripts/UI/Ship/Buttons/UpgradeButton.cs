@@ -22,6 +22,7 @@ public class UpgradeButton : ItemButton<KeyValuePair<Upgrade, int>>
         levelText.text = $"Lv. {level}";
         priceText.text = isMaxLevel ? "MAX" : type.MoneyCost[level + 1].ToString();
         image.sprite = type.Sprite;
+        text.text = type.name;
     }
 
     public override void OnButtonClick()

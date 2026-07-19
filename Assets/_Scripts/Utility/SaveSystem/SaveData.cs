@@ -6,11 +6,10 @@ using UnityEngine;
 public class GameSaveData
 {
     public int Coins;
-    public UpgradeSaveData Upgrades;
+    public UpgradeSaveData Upgrades = new UpgradeSaveData(); 
     public List<AquariumSaveData> Aquariums = new List<AquariumSaveData>();
     public List<StoreSaveData> Stores = new List<StoreSaveData>();
 }
-
 [Serializable]
 public class AquariumSaveData
 {

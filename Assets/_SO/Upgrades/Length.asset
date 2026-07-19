@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Length
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeType
   <Upgrade>k__BackingField: 2
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 2fc9ae6cfda3f8b4db455a1fe5d3fcce, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: cc82fb39751f33c4fa0cf4c643fb2c95, type: 3}
   <MinigameValue>k__BackingField:
   - 5
   - 10
