@@ -13,6 +13,7 @@ public class StoreButton : ItemButton<StoreData>
         valueText.text = data.Value[0].ToString();
         priceText.text = data.Price[0].ToString();
         image.sprite = data.Sprites[0];
+        text.text = data.name;
     }
 
     public override void OnButtonClick()

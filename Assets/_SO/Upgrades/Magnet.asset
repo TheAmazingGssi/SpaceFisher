@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455227d1370bfb94eb9f5886c9f69b35, type: 3}
   m_Name: Magnet
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeType
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 11089b528c2f596408344def4a7a2762, type: 3}
+  <Upgrade>k__BackingField: 0
+  <Sprite>k__BackingField: {fileID: 21300000, guid: a24ad73dde9a75b4ba020b2f3c08b0da, type: 3}
   <MinigameValue>k__BackingField:
   - 5
   - 10
   - 15
-  <MoneyCost>k__BackingField:
-  - 1
-  - 2
-  - 3
+  <MoneyCost>k__BackingField: 010000000200000003000000

@@ -12,5 +12,8 @@ public class StoreData : BuildingData
     public int[] Value => value;
     [SerializeField] private int[] value;
 
+    public string StoreName => storeName;
+    [SerializeField] private string storeName;
+
 
 }
