@@ -70,4 +70,12 @@ public class FishAI : MonoBehaviour
     {
         ReturnToPool();
     }
+    public void KnockOff()
+    {
+        transform.parent = null;
+        wiggleDirection = 0;
+        rb.angularVelocity = Stats.WiggleSpeed * 2;
+        Vector2 forward = new Vector2(Mathf.Cos(transform.eulerAngles.z * Mathf.Deg2Rad), Mathf.Sin(transform.eulerAngles.z * Mathf.Deg2Rad));
+        rb.linearVelocity = -forward * Stats.MGSpeed * 2;
+    }
 }

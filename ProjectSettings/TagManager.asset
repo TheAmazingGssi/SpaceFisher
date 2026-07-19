@@ -50,6 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Obstacles
+    uniqueID: 1804346985
+    locked: 0
   - name: Fish
     uniqueID: 3482935709
     locked: 0

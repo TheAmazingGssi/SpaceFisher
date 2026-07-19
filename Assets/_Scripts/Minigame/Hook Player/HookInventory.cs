@@ -4,6 +4,7 @@ using UnityEngine;
 public class HookInventory : MonoBehaviour
 {
     Dictionary<FishStats, int> currentlyHookedFish = new Dictionary<FishStats, int>();
+    Dictionary<FishStats, Stack<FishAI>> currentlyHookedObjects = new Dictionary<FishStats, Stack<FishAI>>();
     int fishAmount = 0;
 
     private void OnEnable()
@@ -21,19 +22,25 @@ public class HookInventory : MonoBehaviour
 
     void OnFishCaught(FishCaught e)
     {
-        AddFish(e.Fish.Stats);
+        AddFish(e.Fish);
+        
     }
     void OnMinigameEnd(MinigameEnd e)
     {
         SaveFish();
     }
-    private void AddFish(FishStats fishStats)
+    private void AddFish(FishAI fishAI)
     {
         fishAmount++;
-        if(currentlyHookedFish.ContainsKey(fishStats))
-            currentlyHookedFish[fishStats]++;
+        if(currentlyHookedFish.ContainsKey(fishAI.Stats))
+            currentlyHookedFish[fishAI.Stats]++;
         else
-            currentlyHookedFish.Add(fishStats, 1);
+            currentlyHookedFish.Add(fishAI.Stats, 1);
+
+        if (!currentlyHookedObjects.ContainsKey(fishAI.Stats))
+            currentlyHookedObjects.Add(fishAI.Stats, new Stack<FishAI>());
+        currentlyHookedObjects[fishAI.Stats].Push(fishAI);
+
     }
     private void RemoveRandomFish(FishFell e)
     {
@@ -47,6 +54,7 @@ public class HookInventory : MonoBehaviour
                 if(currentlyHookedFish[kvp.Key] == 0)
                     currentlyHookedFish.Remove(kvp.Key);
                 fishAmount--;
+                RemoveFishVisually(kvp.Key);
                 return;
             }
         }
@@ -55,9 +63,18 @@ public class HookInventory : MonoBehaviour
         //if you got an exception there the logic is flawed
         //ye dingus
     }
+    private void RemoveFishVisually(FishStats fishType)
+    {
+        FishAI fish = currentlyHookedObjects[fishType].Pop();
+        fish.KnockOff();
+        
+    }
     void SaveFish()
     {
         Inventory.Instance.AddManyFish(currentlyHookedFish);
         currentlyHookedFish.Clear();
+        foreach(Stack<FishAI> stack in currentlyHookedObjects.Values)
+            stack.Clear();
+        fishAmount = 0;
     }
 }
