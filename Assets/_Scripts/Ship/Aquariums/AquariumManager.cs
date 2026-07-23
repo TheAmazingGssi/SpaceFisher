@@ -57,7 +57,7 @@ public class AquariumManager : MonoBehaviour
 
     private void AddFish(PlaceFish e)
     {
-        currentAquarium.AddFish(e.Fish);
+        currentAquarium.AddFish(e.Fish, e.Amount);
         fishInAquariums.Add(e.Fish);
         Bus<AquariumValueChange>.Raise(new AquariumValueChange { Value = CalculateValue() });
     }
@@ -73,7 +73,7 @@ public class AquariumManager : MonoBehaviour
             foreach (string fishId in ad.FishIds)
             {
                 FishStats stats = ScriptablesDatabase.Instance.fishList[fishId];
-                aq.AddFish(stats);
+                aq.AddFish(stats, 1);
                 fishInAquariums.Add(stats);
             }
         }

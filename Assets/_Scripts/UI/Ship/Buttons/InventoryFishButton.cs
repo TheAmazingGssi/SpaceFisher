@@ -8,6 +8,6 @@ public class InventoryFishButton : FishButton
     public override void OnButtonClick()
     {
         base.OnButtonClick();
-        Bus<PlaceFish>.Raise(new PlaceFish { Fish = fishStats });
+        Bus<PlaceFish>.Raise(new PlaceFish { Fish = fishStats, Amount = amount });  
     }
 }

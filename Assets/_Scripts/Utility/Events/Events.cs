@@ -5,7 +5,7 @@ public interface IEvent { }
 
 
 #region Aquariums
-public struct PlaceFish : IEvent { public FishStats Fish; }
+public struct PlaceFish : IEvent { public FishStats Fish; public int Amount; }
 public struct AquariumPressed : IEvent { public Aquarium Aquarium; }
 public struct AquariumValueChange : IEvent { public float Value; }
 public struct AquariumPriceChange : IEvent { public int Price; }

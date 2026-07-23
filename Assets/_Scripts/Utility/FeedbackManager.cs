@@ -28,8 +28,8 @@ public class FeedbackManager : MonoBehaviour
     private Tween tween;
     private void Awake()
     {
-        originalScale = trans.localScale;
-        originalPosition = trans.localPosition;
+        originalScale = transform.localScale;
+        originalPosition = transform.localPosition;
     }
     private void OnDestroy()
     {
@@ -76,5 +76,11 @@ public class FeedbackManager : MonoBehaviour
     {
         if (particles != null)
             particles.Play();
+    }
+    public void PlayParticleEffect(Vector3 position)
+    {
+        if (particles == null) return;
+        particles.gameObject.transform.position = position;
+        particles.Play();
     }
 }

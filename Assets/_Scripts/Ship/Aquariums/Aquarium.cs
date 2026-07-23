@@ -48,6 +48,19 @@ public class Aquarium : Building
         WaitForPlacement();
     }
 
+    private Vector2 GetRandomPointInCollider()
+    {
+        for (int i = 0; i < 30; i++)
+        {
+            Vector2 point = new Vector2(Random.Range(_collider.bounds.min.x + 0.5f, _collider.bounds.max.x - 0.5f),
+                Random.Range(_collider.bounds.min.y + 0.5f, _collider.bounds.max.y - 0.5f));
+            if (_collider.OverlapPoint(point))
+                return point;
+        }
+
+        return _collider.bounds.center;
+    }
+
     protected override void OnFingerUp()
     {
         if (!IsMoving)
@@ -55,12 +68,17 @@ public class Aquarium : Building
         base.OnFingerUp();
     }
 
-    public void AddFish(FishStats fish)
+    public void AddFish(FishStats fish, int amount)
     {
-        FishManager newFish = pool.Get(fish);
-        newFish.transform.parent = fishSpawn;
-        newFish.transform.position = fishSpawn.position;
-        newFish.Init(fish);
-        Fish.Add(newFish);
+        for(int i  = 0; i < amount; i++)
+        {
+            FishManager newFish = pool.Get(fish);
+            newFish.transform.parent = fishSpawn;
+            Vector2 spawnPoint = GetRandomPointInCollider();
+            newFish.transform.position = spawnPoint;
+            newFish.Init(fish);
+            feedback.PlayParticleEffect(spawnPoint);
+            Fish.Add(newFish);
+        }
     }
 }
