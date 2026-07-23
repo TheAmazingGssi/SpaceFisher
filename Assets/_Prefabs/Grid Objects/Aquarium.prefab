@@ -6620,6 +6620,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 965037694499212892}
     m_Modifications:
     - target: {fileID: 419406480085702754, guid: 8c8d8385f96bd054a88a3df780d77bcc, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 419406480085702754, guid: 8c8d8385f96bd054a88a3df780d77bcc, type: 3}
       propertyPath: simulationSpeed
       value: 0.5
       objectReference: {fileID: 0}

@@ -53,7 +53,7 @@ public class Aquarium : Building
         for (int i = 0; i < 30; i++)
         {
             Vector2 point = new Vector2(Random.Range(_collider.bounds.min.x + 0.5f, _collider.bounds.max.x - 0.5f),
-                Random.Range(_collider.bounds.min.y + 0.5f, _collider.bounds.max.y - 0.5f));
+                Random.Range(_collider.bounds.min.y + 2, _collider.bounds.max.y - 0.5f));
             if (_collider.OverlapPoint(point))
                 return point;
         }
@@ -70,6 +70,7 @@ public class Aquarium : Building
 
     public void AddFish(FishStats fish, int amount)
     {
+        int index = 0;
         for(int i  = 0; i < amount; i++)
         {
             FishManager newFish = pool.Get(fish);
@@ -79,6 +80,8 @@ public class Aquarium : Building
             newFish.Init(fish);
             feedback.PlayParticleEffect(spawnPoint);
             Fish.Add(newFish);
+            index++;
         }
+        print(index);
     }
 }

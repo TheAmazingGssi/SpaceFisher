@@ -12,6 +12,7 @@ public class FishButton : ItemButton<KeyValuePair<FishStats, int>>
     [SerializeField] protected TextMeshProUGUI selectedAmountText;
 
     protected int amount;
+    protected int fishNum;
     protected FishStats fishStats;
 
     private void Start()
@@ -43,9 +44,10 @@ public class FishButton : ItemButton<KeyValuePair<FishStats, int>>
 
     public override void OnButtonClick()
     {
-        if (!Inventory.Instance.TryRemoveFish(fishStats, (int)slider.value)) return;
+        fishNum = (int)slider.value;
+        if (!Inventory.Instance.TryRemoveFish(fishStats, fishNum)) return;
 
-        amount -= (int)slider.value;
+        amount -= fishNum;
         slider.maxValue = amount;
         text.text = amount.ToString();
     }
