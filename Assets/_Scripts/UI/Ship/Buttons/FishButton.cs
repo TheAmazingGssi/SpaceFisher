@@ -1,47 +1,52 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FishButton : ItemButton<KeyValuePair<FishStats, int>>
 {
-    [SerializeField] private TextMeshProUGUI priceText;
-    [SerializeField] private FishManager fish;
+    [SerializeField] protected Image[] stars;
 
-    private int amount;
-    private bool sell = false;
-    private FishStats fishStats;
+    [Header("Slider")]
+    [SerializeField] protected Slider slider;
+    [SerializeField] protected TextMeshProUGUI selectedAmountText;
 
-    public void SetSell(bool value)
+    protected int amount;
+    protected FishStats fishStats;
+
+    private void Start()
     {
-        sell = value;
-        priceText.text = fishStats.Price.ToString();
+        slider.onValueChanged.AddListener(ChangeValue);
+    }
+
+    private void ChangeValue(float value)
+    {
+        selectedAmountText.text = value.ToString();
     }
 
     public override void Setup(KeyValuePair<FishStats, int> data)
     {
-        sell = false;
-        fishStats = data.Key;
-        image.sprite = data.Key.FishSprite;
-        amount = data.Value;
-        text.text = data.Value.ToString();
         gameObject.SetActive(true);
+        fishStats = data.Key;
+        amount = data.Value;
+        text.text = amount.ToString();
+        slider.maxValue = amount;
+        image.sprite = data.Key.FishSprite;
+        slider.value = slider.minValue;
+        selectedAmountText.text = slider.value.ToString();
+
+        for (int i = 0; i < stars.Length; i++)
+            stars[i].gameObject.SetActive(false);
+        for (int i = 0; i < fishStats.Value; i++)
+            stars[i].gameObject.SetActive(true);
     }
 
     public override void OnButtonClick()
     {
-        Inventory.Instance.TryRemoveFish(fishStats);
-        amount--;
+        if (!Inventory.Instance.TryRemoveFish(fishStats, (int)slider.value)) return;
 
-        if (!sell)
-            Bus<PlaceFish>.Raise(new PlaceFish { Fish = fishStats });
-        else
-            CoinsManager.Instance.AddCoins(fishStats.Price);
-
+        amount -= (int)slider.value;
+        slider.maxValue = amount;
         text.text = amount.ToString();
-    }
-
-    public override void Hide()
-    {
-        base.Hide();
     }
 }

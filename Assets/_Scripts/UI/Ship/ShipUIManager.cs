@@ -90,6 +90,11 @@ public class ShipUIManager : MonoBehaviour
         CurrentCoinsText.text = e.NewCoins.ToString();
     }
 
+    public void GetCoins()
+    {
+        CoinsManager.Instance.AddCoins(9999);
+    }
+
     private void OnDestroy()
     {
         Bus<AquariumPressed>.OnEvent -= OpenFishPanel;

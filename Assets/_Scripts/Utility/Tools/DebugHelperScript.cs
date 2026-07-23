@@ -4,6 +4,8 @@ using UnityEngine;
 public class DebugHelperScript : MonoBehaviour
 {
     [SerializeField] private FishStats randomFishy;
+    [SerializeField] private FishStats randomFishy2;
+    [SerializeField] private FishStats randomFishy3;
     [SerializeField] private int amount;
 
     [SerializeField] private StorePool pool;
@@ -18,6 +20,13 @@ public class DebugHelperScript : MonoBehaviour
             Inventory.Instance.AddFish(randomFishy);
         else
             Inventory.Instance.AddFish(randomFishy, amount);
+    }
+    [ContextMenu("fill inventory")]
+    public void FillInventory()
+    {
+       Inventory.Instance.AddFish(randomFishy, 25);
+       Inventory.Instance.AddFish(randomFishy2, 5);
+       Inventory.Instance.AddFish(randomFishy3, 1);
     }
 
     [ContextMenu("Add store")]

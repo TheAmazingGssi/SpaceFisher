@@ -62,27 +62,11 @@ public class FishStats : ScriptableObject
 #if UNITY_EDITOR
     private void OnValidate()
     {
-        string path = AssetDatabase.GetAssetPath(this);
-
-        if (!string.IsNullOrEmpty(path))
+        if (string.IsNullOrEmpty(id))
         {
-            string guid = AssetDatabase.AssetPathToGUID(path);
-
-            if (id != guid)
-            {
-                id = guid;
-                EditorUtility.SetDirty(this);
-            }
+            id = System.Guid.NewGuid().ToString();
+            EditorUtility.SetDirty(this);
         }
-    //    if (ScriptablesDatabase.Instance.fishList == null)
-    //    {
-    //        ScriptablesDatabase.Instance.fishList = new System.Collections.Generic.Dictionary<string, FishStats>();
-    //    }
-    //    if (!ScriptablesDatabase.Instance.fishList.ContainsKey(id))
-    //    {
-    //        ScriptablesDatabase.Instance.fishList.Add(id, this);
-    //        EditorUtility.SetDirty(ScriptablesDatabase.Instance);
-    //    }
     }
 #endif
 }

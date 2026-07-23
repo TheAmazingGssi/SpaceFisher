@@ -28,7 +28,6 @@ public class UpgradeManager : MonoBehaviour
             return;
         }
         Instance = this;
-        Debug.Log("UpgradeManager Awake ran, Instance set", this);
         DontDestroyOnLoad(gameObject);
 
         foreach (var type in upgradeTypes)
