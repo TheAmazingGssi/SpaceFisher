@@ -77,6 +77,11 @@ public class FeedbackManager : MonoBehaviour
         if (particles != null)
             particles.Play();
     }
+    public void PlayParticleEffect(ParticleSystem particle)
+    {
+        if (particle != null)
+            particle.Play();
+    }
     public void PlayParticleEffect(Vector3 position)
     {
         if (particles == null) return;

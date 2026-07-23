@@ -35,11 +35,14 @@ public class MoveableObject : ClickableObject
             greenTint.SetActive(false);
             redTint.SetActive(false);
             PlacementManager.Instance.CurrentlyMovingObject = null;
+            ObjectPlaced();
         }
         return canPlace;
     }
 
-    public void OnPositionUpdated()
+    protected virtual void ObjectPlaced() { }
+
+    public virtual void OnPositionUpdated()
     {
         Physics2D.SyncTransforms();
         if (canPlace && IsOverlappingAnotherBuilding())

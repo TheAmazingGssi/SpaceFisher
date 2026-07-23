@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Building : MoveableObject
 {
     [SerializeField] protected FeedbackManager feedback;
+    [SerializeField] protected ParticleSystem buildEffect;
 
     public Queue<Visitor> Visitors = new Queue<Visitor>();
     public Location BuildingType { get; protected set; }
@@ -16,6 +17,11 @@ public abstract class Building : MoveableObject
     protected virtual void Start()
     {
         Bus<ChangeLocation>.OnEvent += AddVisitor;
+    }
+
+    protected override void ObjectPlaced()
+    {
+        feedback.PlayParticleEffect(buildEffect);
     }
 
     public virtual Vector2 GetEntryPoint(Collider2D col, Vector2 visitorPos)

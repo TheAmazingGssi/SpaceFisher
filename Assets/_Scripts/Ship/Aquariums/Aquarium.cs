@@ -70,7 +70,6 @@ public class Aquarium : Building
 
     public void AddFish(FishStats fish, int amount)
     {
-        int index = 0;
         for(int i  = 0; i < amount; i++)
         {
             FishManager newFish = pool.Get(fish);
@@ -80,8 +79,6 @@ public class Aquarium : Building
             newFish.Init(fish);
             feedback.PlayParticleEffect(spawnPoint);
             Fish.Add(newFish);
-            index++;
         }
-        print(index);
     }
 }
