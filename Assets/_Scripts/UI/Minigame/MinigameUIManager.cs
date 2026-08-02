@@ -52,7 +52,10 @@ public class MinigameUIManager : MonoBehaviour
 
     public void GoToAquariumScene()
     {
-        SceneManager.LoadScene(Constants.Scenes.Ship);
+        if (RunManager.Instance.Present)
+            SceneManager.LoadScene(Constants.Scenes.PresentationShip);
+        else
+            SceneManager.LoadScene(Constants.Scenes.Ship);
     }
     public void DeleteSave()
     {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StoreBase : Building
 {
@@ -7,25 +8,27 @@ public class StoreBase : Building
 
     [SerializeField] protected SpriteRenderer[] spriteRenderers;
 
+    [SerializeField] protected int starterLevel = 0;
+
     
-    public int Level { get; protected set; } = 1;
+    public int Level { get; protected set; } = 0;
     public int CurrentValue { get; protected set; }
     public int CurrentPrice { get; protected set; }
     protected override void Start()
     {
         base.Start();
-        if (Data)
-            Init(Data);
+        if (SceneManager.GetActiveScene().name == Constants.Scenes.PresentationShip)
+            Init(Data, true);
     }
 
-    public virtual void Init(StoreData data)
+    public virtual void Init(StoreData data, bool present = false)
     {
+        Level = present ? starterLevel : data.Level; 
         Data = data;
         BuildingType = data.StoreType;
         minInterval = data.MinInterval;
         maxInterval = data.MaxInterval;
-        Level = data.Level;
-        CurrentPrice = data.Price[Level + 1];
+        CurrentPrice = data.Price[Level < 2 ? Level + 1 : Level];
         CurrentValue = data.Value[Level];
 
 
@@ -34,6 +37,8 @@ public class StoreBase : Building
             spriteRenderers[i].sprite = data.Sprites[Level];
         }
 
+        if (present && !StoresManager.Stores.ContainsKey(this))
+            StoresManager.Stores.Add(this, data);
     }
 
     [ContextMenu("UpgradeStore")]
@@ -59,8 +64,6 @@ public class StoreBase : Building
     {
         if (!IsMoving && Level + 1 < Data.Price.Length)
             Bus<StorePressed>.Raise( new StorePressed { Store = this } );
-        else
-            Debug.Log("Level: " +  Level + "Price length: " + Data.Price.Length);
         base.OnFingerUp();
     }
 

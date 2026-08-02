@@ -6,12 +6,12 @@ public class Aquarium : Building
 {
     [field: SerializeField] public AquariumData Data;
     [SerializeField] private Transform fishSpawn;
-    public List<FishManager> Fish { get; private set; }
+    public List<FishStats> Fish { get; private set; }
     private AquariumFishPool pool;
 
     private void Awake()
     {
-        Fish = new List<FishManager>();
+        Fish = new List<FishStats>();
     }
     protected override void Start()
     {
@@ -29,8 +29,8 @@ public class Aquarium : Building
 
     protected override void OnDisable()
     {
-        base.OnDisable();
         AquariumManager.Aquariums.Remove(this);
+        base.OnDisable();
     }
 
     public override Vector2 GetEntryPoint(Collider2D col, Vector2 visitorPos)
@@ -70,6 +70,11 @@ public class Aquarium : Building
 
     public void AddFish(FishStats fish, int amount)
     {
+        if(amount == -1)
+        {
+            Fish.Add(fish);
+            return;
+        }
         for(int i  = 0; i < amount; i++)
         {
             FishManager newFish = pool.Get(fish);
@@ -78,7 +83,7 @@ public class Aquarium : Building
             newFish.transform.position = spawnPoint;
             newFish.Init(fish);
             feedback.PlayParticleEffect(spawnPoint);
-            Fish.Add(newFish);
+            Fish.Add(newFish.Stats);
         }
     }
 }

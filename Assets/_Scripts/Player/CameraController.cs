@@ -16,9 +16,10 @@ public class CameraController : MonoBehaviour
     private Vector2 prevA;
     private Vector2 prevB;
 
-    private void Awake()
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void Init()
     {
-        EnhancedTouchSupport.Enable();        
+        EnhancedTouchSupport.Enable();
     }
 
     private void OnEnable()
@@ -30,7 +31,6 @@ public class CameraController : MonoBehaviour
     {
         DropFinger(ref fingerA);
         DropFinger(ref fingerB);
-        EnhancedTouchSupport.Disable();
     }
 
     private void Update()

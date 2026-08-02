@@ -12,8 +12,9 @@ public class RunManager : MonoBehaviour
     private float timeAway = -1;
     private float spawnInterval = 60;
     private float storeIncome = 0;
+    private int visitorsAway = 0;
 
-    public bool gameStart = true; //TODO: :')
+    public bool Present {  get; private set; } = false;
 
     private void Awake()
     {
@@ -24,6 +25,9 @@ public class RunManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        if(SceneManager.GetActiveScene().name == Constants.Scenes.PresentationShip)
+            Present = true;
     }
 
     private void OnEnable()
@@ -46,10 +50,15 @@ public class RunManager : MonoBehaviour
     public void OnShipSceneUnloading(float enterBuildingChance)
     {
         timeAway = Time.time;
-
         storeIncome = 0;
         foreach (var kvp in StoresManager.Stores)
             storeIncome += kvp.Key.CurrentValue * enterBuildingChance;
+    }
+    public int GetVisitorsAway()
+    {
+        int count = visitorsAway;
+        visitorsAway = 0;
+        return count;
     }
 
     public int CalculateOfflineEarnings(int ticketPrice)
@@ -81,8 +90,8 @@ public class RunManager : MonoBehaviour
                 XPos = aq.transform.position.x,
                 YPos = aq.transform.position.y
             };
-            foreach (FishManager fm in aq.Fish)
-                aqData.FishIds.Add(fm.Stats.ID);
+            foreach (FishStats stats in aq.Fish)
+                aqData.FishIds.Add(stats.ID);
             data.Aquariums.Add(aqData);
         }
         foreach (KeyValuePair<StoreBase, StoreData> kvp in StoresManager.Stores)

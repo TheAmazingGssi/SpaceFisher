@@ -18,6 +18,7 @@ public static class Constants
     public static class Scenes
     {
         public static string Ship = "SpaceShipScene";
+        public static string PresentationShip = "PresentationSpaceShipScene";
         public static string Minigame = "MiniGameScene";
     }
 

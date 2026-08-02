@@ -26,11 +26,8 @@ public class ShipUIManager : MonoBehaviour
         Bus<StoreBought>.OnEvent += _ => ToggleShop();
         Bus<AquariumBought>.OnEvent += _ => ToggleShop();
 
-#if UNITY_EDITOR
-        if(RunManager.Instance.gameStart)
-            firstAqButton.SetActive(true);
-#else
-        if (!PlayerPrefs.HasKey(Constants.FirstOpen))
+#if !UNITY_EDITOR
+        if (!PlayerPrefs.HasKey(Constants.FirstOpen) && SceneManager.GetActiveScene().name == Constants.Scenes.PresentationShip)
         {
             Inventory.Instance.ClearInventory();
             SaveManager.Instance.Delete();
@@ -47,7 +44,6 @@ public class ShipUIManager : MonoBehaviour
 
     public void GetFirstAquarium()
     {
-        RunManager.Instance.gameStart = false;
         Bus<AquariumBought>.Raise(new AquariumBought());
         firstAqButton.SetActive(false);
     }

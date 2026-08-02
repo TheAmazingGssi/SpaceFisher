@@ -57,6 +57,7 @@ public class AquariumManager : MonoBehaviour
 
     private void AddFish(PlaceFish e)
     {
+        if (e.Amount == -1) currentAquarium = e.Aquarium;
         currentAquarium.AddFish(e.Fish, e.Amount);
         fishInAquariums.Add(e.Fish);
         Bus<AquariumValueChange>.Raise(new AquariumValueChange { Value = CalculateValue() });

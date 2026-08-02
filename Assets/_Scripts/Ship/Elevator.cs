@@ -8,13 +8,13 @@ public class Elevator : MonoBehaviour
     [SerializeField] private ElevatorType elevatorType;
     [SerializeField] private Vector2 wallDirection;
     [SerializeField] private float spawnOffset = 1;
-    [SerializeField] private Transform[] floors;
+    [field: SerializeField] public Transform[] Floors {  get; private set; }
 
     private List<Visitor> visitors = new List<Visitor>();
 
     private void Awake()
     {
-        System.Array.Sort(floors, (a, b) => b.position.y.CompareTo(a.position.y));
+        System.Array.Sort(Floors, (a, b) => b.position.y.CompareTo(a.position.y));
     }
 
     public void AddVisitor(Visitor visitor)
@@ -25,14 +25,14 @@ public class Elevator : MonoBehaviour
         int currentFloorIndex = GetCurrentFloorIndex(visitor);
         int nextFloorIndex = currentFloorIndex + 1;
 
-        if (nextFloorIndex >= floors.Length)
+        if (nextFloorIndex >= Floors.Length)
         {
-            ReleaseVisitor(visitor, floors[currentFloorIndex].position, Vector2.left);
+            ReleaseVisitor(visitor, Floors[currentFloorIndex].position, Vector2.left);
             return;
         }
 
-        Vector2 direction = GetExitDirection(nextFloorIndex == floors.Length - 1);
-        Vector2 spawnPos = new Vector2(transform.position.x + direction.x * spawnOffset, floors[nextFloorIndex].position.y);
+        Vector2 direction = GetExitDirection(nextFloorIndex == Floors.Length - 1);
+        Vector2 spawnPos = new Vector2(transform.position.x + direction.x * spawnOffset, Floors[nextFloorIndex].position.y);
         ReleaseVisitor(visitor, spawnPos, direction);
     }
 
@@ -47,11 +47,11 @@ public class Elevator : MonoBehaviour
     private int GetCurrentFloorIndex(Visitor visitor)
     {
         int closest = 0;
-        float minDistance = Mathf.Abs(visitor.transform.position.y - floors[0].position.y);
+        float minDistance = Mathf.Abs(visitor.transform.position.y - Floors[0].position.y);
 
-        for (int i = 1; i < floors.Length; i++)
+        for (int i = 1; i < Floors.Length; i++)
         {
-            float distance = Mathf.Abs(visitor.transform.position.y - floors[i].position.y);
+            float distance = Mathf.Abs(visitor.transform.position.y - Floors[i].position.y);
             if (distance < minDistance)
             {
                 minDistance = distance;
