@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class StoresManager : MonoBehaviour
 {
     public static List<StoreData> AvailableStores { get; private set; } = new List<StoreData>();
-    public static Dictionary<StoreBase, StoreData> Stores { get; private set; } = new Dictionary<StoreBase, StoreData>();
+    public static Dictionary<StoreBase, StoreData> Stores { get; private set; } = new Dictionary<StoreBase, StoreData>(); //TO DO: change to storebase list
 
     [SerializeField] private List<StoreData> startingStores = new List<StoreData>();
     [SerializeField] private StorePool pool;
@@ -57,7 +57,7 @@ public class StoresManager : MonoBehaviour
             StoreData data = ScriptablesDatabase.Instance.storeList[sd.StoreDataId];
             Store store = pool.Get();
             store.transform.position = sd.Position;
-            store.Init(data);
+            store.Init(data, sd.Level);
             Stores[store] = data;
         }
     }

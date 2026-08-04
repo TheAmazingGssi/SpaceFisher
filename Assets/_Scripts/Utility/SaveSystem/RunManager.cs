@@ -44,7 +44,7 @@ public class RunManager : MonoBehaviour
 
     private void FirstSceneChange(Scene a, Scene b)
     {
-        if(FirstRun) FirstRun = false;
+        if(FirstRun && b.name == Constants.Scenes.Minigame) FirstRun = false;
     }
 
     private void OnCoinChange(CoinChange e) => Coins = e.NewCoins;
@@ -109,7 +109,7 @@ public class RunManager : MonoBehaviour
                 StoreDataId = kvp.Value.ID,
                 XPos = kvp.Key.transform.position.x,
                 YPos = kvp.Key.transform.position.y,
-                Level = kvp.Value.Level
+                Level = kvp.Key.Level
             });
         }
         if(UpgradeManager.Instance.CurrentUpgrades.Count > 0)

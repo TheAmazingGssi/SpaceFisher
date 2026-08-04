@@ -70,12 +70,13 @@ public class Aquarium : Building
 
     public void AddFish(FishStats fish, int amount)
     {
-        if(amount == -1)
+        if (amount == -1)
         {
             Fish.Add(fish);
             return;
         }
-        for(int i  = 0; i < amount; i++)
+
+        for (int i = 0; i < amount; i++)
         {
             FishManager newFish = pool.Get(fish);
             newFish.transform.parent = fishSpawn;

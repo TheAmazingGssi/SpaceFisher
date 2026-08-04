@@ -57,7 +57,7 @@ public class AquariumManager : MonoBehaviour
 
     private void AddFish(PlaceFish e)
     {
-        if (e.Amount == -1) currentAquarium = e.Aquarium;
+        if (e.Amount == -1) SetCurrentAquarium(new AquariumPressed { Aquarium = e.Aquarium });
         currentAquarium.AddFish(e.Fish, e.Amount);
         fishInAquariums.Add(e.Fish);
         Bus<AquariumValueChange>.Raise(new AquariumValueChange { Value = CalculateValue() });
@@ -69,6 +69,7 @@ public class AquariumManager : MonoBehaviour
         {
             Aquarium aq = aquariumPool.Get();
             aq.transform.position = ad.Position;
+            Physics2D.SyncTransforms();
             aq.Init(fishPool);
             SetCurrentAquarium(new AquariumPressed { Aquarium = aq});
             foreach (string fishId in ad.FishIds)

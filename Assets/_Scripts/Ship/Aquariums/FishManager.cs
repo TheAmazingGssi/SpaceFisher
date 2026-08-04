@@ -29,9 +29,9 @@ public class FishManager : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name == Constants.Scenes.PresentationShip && fishCollider.IsTouching(aquariumCollider))
+        if (SceneManager.GetActiveScene().name == Constants.Scenes.PresentationShip && RunManager.Instance.FirstRun)
         {
-            Bus<PlaceFish>.Raise(new PlaceFish { Fish = Stats, Amount = -1, Aquarium = aquarium }); 
+            Bus<PlaceFish>.Raise(new PlaceFish { Fish = Stats, Amount = -1, Aquarium = aquarium });
         }
     }
 }

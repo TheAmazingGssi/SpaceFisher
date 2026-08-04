@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,13 +18,13 @@ public class StoreBase : Building
     protected override void Start()
     {
         base.Start();
-        if (SceneManager.GetActiveScene().name == Constants.Scenes.PresentationShip)
-            Init(Data, true);
+        if (RunManager.Instance.FirstRun)
+            Init(Data, starterLevel, true);
     }
 
-    public virtual void Init(StoreData data, bool present = false)
+    public virtual void Init(StoreData data, int level = 0, bool present = false)
     {
-        Level = present ? starterLevel : data.Level; 
+        Level = level; 
         Data = data;
         BuildingType = data.StoreType;
         minInterval = data.MinInterval;
