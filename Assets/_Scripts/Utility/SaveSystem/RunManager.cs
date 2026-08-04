@@ -15,6 +15,7 @@ public class RunManager : MonoBehaviour
     private int visitorsAway = 0;
 
     public bool Present {  get; private set; } = false;
+    public bool FirstRun {  get; private set; } = true;
 
     private void Awake()
     {
@@ -33,11 +34,17 @@ public class RunManager : MonoBehaviour
     private void OnEnable()
     {
         Bus<CoinChange>.OnEvent += OnCoinChange;
+        SceneManager.activeSceneChanged += FirstSceneChange;
     }
 
     private void OnDisable()
     {
         Bus<CoinChange>.OnEvent -= OnCoinChange;
+    }
+
+    private void FirstSceneChange(Scene a, Scene b)
+    {
+        if(FirstRun) FirstRun = false;
     }
 
     private void OnCoinChange(CoinChange e) => Coins = e.NewCoins;
