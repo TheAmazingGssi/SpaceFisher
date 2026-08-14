@@ -2721,17 +2721,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 124649548702244840, guid: 4460847805659274e873a76012c5ab96, type: 3}
   m_PrefabInstance: {fileID: 5111797934391277474}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &827864106 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8464229879709578495, guid: 4460847805659274e873a76012c5ab96, type: 3}
-  m_PrefabInstance: {fileID: 5111797934391277474}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827864101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c329c6725000c5641ab7ca48b5fa094b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIController
 --- !u!4 &836416545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5135120984617397384, guid: b24406f3f0644924fa845357d8ed08a0, type: 3}
@@ -4568,7 +4557,7 @@ MonoBehaviour:
   fishPanel: {fileID: 631271478}
   shopPanel: {fileID: 827864101}
   CurrentCoinsText: {fileID: 673616224}
-  uiController: {fileID: 827864106}
+  uiController: {fileID: 0}
   firstAqButton: {fileID: 2067746426}
 --- !u!4 &1651689288
 Transform:
@@ -5518,6 +5507,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2458622595608443313, guid: 4460847805659274e873a76012c5ab96, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2733996457290638727, guid: 4460847805659274e873a76012c5ab96, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

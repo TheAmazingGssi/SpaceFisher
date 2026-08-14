@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: facacb8d816d8a64bb5a62aabbff25be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5851437242654757871
+    second: lavunafcha swim cycle sprite sheet_0
+  - first:
+      213: 7648762277141967270
+    second: lavunafcha swim cycle sprite sheet_1
+  - first:
+      213: 7814491690965555544
+    second: lavunafcha swim cycle sprite sheet_2
+  - first:
+      213: -4936949614098550004
+    second: lavunafcha swim cycle sprite sheet_3
+  - first:
+      213: -1224638128526066310
+    second: lavunafcha swim cycle sprite sheet_4
+  - first:
+      213: -8889893270435845657
+    second: lavunafcha swim cycle sprite sheet_5
+  - first:
+      213: 975632549679028427
+    second: lavunafcha swim cycle sprite sheet_6
+  - first:
+      213: -6767647898249450194
+    second: lavunafcha swim cycle sprite sheet_7
+  - first:
+      213: -3126498275821104368
+    second: lavunafcha swim cycle sprite sheet_8
+  - first:
+      213: 2407429741749859182
+    second: lavunafcha swim cycle sprite sheet_9
+  - first:
+      213: -7799754311806337635
+    second: lavunafcha swim cycle sprite sheet_10
+  - first:
+      213: -6620615057140566099
+    second: lavunafcha swim cycle sprite sheet_11
+  - first:
+      213: 8204686529589314248
+    second: lavunafcha swim cycle sprite sheet_12
+  - first:
+      213: -7402996352447789109
+    second: lavunafcha swim cycle sprite sheet_13
+  - first:
+      213: -6178797858592684689
+    second: lavunafcha swim cycle sprite sheet_14
+  - first:
+      213: -4490869426776208579
+    second: lavunafcha swim cycle sprite sheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 3497
+        width: 808
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c621e74d48bcea0800000000000000
+      internalID: -5851437242654757871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 3497
+        width: 808
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1747424ccd52a60800000000000000
+      internalID: 7648762277141967270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 3497
+        width: 794
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8595e3c3ac6a27c60800000000000000
+      internalID: 7814491690965555544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3382
+        y: 3497
+        width: 794
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0377a9ab7e6c7bb0800000000000000
+      internalID: -4936949614098550004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 4458
+        y: 3497
+        width: 783
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7dfdca4c16310fe0800000000000000
+      internalID: -1224638128526066310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 5528
+        y: 3497
+        width: 783
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e92984db21c0a480800000000000000
+      internalID: -8889893270435845657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 6592
+        y: 3497
+        width: 794
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc85de282a42a8d00800000000000000
+      internalID: 975632549679028427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 2748
+        width: 794
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d2ce3d71c7412a0800000000000000
+      internalID: -6767647898249450194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 2748
+        width: 808
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013dfce02627c94d0800000000000000
+      internalID: -3126498275821104368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 2748
+        width: 808
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e63f5b25898e86120800000000000000
+      internalID: 2407429741749859182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 2748
+        width: 841
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d367d37c4b1c390800000000000000
+      internalID: -7799754311806337635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 4429
+        y: 2748
+        width: 841
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7b88cdea9de14a0800000000000000
+      internalID: -6620615057140566099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 2748
+        width: 821
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c28a99ade6ecd170800000000000000
+      internalID: 8204686529589314248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 6579
+        y: 2748
+        width: 821
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc746da4a06434990800000000000000
+      internalID: -7402996352447789109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1999
+        width: 841
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6583a39510804aa0800000000000000
+      internalID: -6178797858592684689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha swim cycle sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 1999
+        width: 841
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b875ccc0a3da1c0800000000000000
+      internalID: -4490869426776208579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      lavunafcha swim cycle sprite sheet_0: -5851437242654757871
+      lavunafcha swim cycle sprite sheet_1: 7648762277141967270
+      lavunafcha swim cycle sprite sheet_10: -7799754311806337635
+      lavunafcha swim cycle sprite sheet_11: -6620615057140566099
+      lavunafcha swim cycle sprite sheet_12: 8204686529589314248
+      lavunafcha swim cycle sprite sheet_13: -7402996352447789109
+      lavunafcha swim cycle sprite sheet_14: -6178797858592684689
+      lavunafcha swim cycle sprite sheet_15: -4490869426776208579
+      lavunafcha swim cycle sprite sheet_2: 7814491690965555544
+      lavunafcha swim cycle sprite sheet_3: -4936949614098550004
+      lavunafcha swim cycle sprite sheet_4: -1224638128526066310
+      lavunafcha swim cycle sprite sheet_5: -8889893270435845657
+      lavunafcha swim cycle sprite sheet_6: 975632549679028427
+      lavunafcha swim cycle sprite sheet_7: -6767647898249450194
+      lavunafcha swim cycle sprite sheet_8: -3126498275821104368
+      lavunafcha swim cycle sprite sheet_9: 2407429741749859182
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

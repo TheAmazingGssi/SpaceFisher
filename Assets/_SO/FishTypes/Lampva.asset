@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: Lampva
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
   id: 29a61ac0-8aae-46fa-9604-b244d1db2eba
-  fishSprite: {fileID: 0}
+  fishSprite: {fileID: -7711835218200328001, guid: 9f8f6148990dd4e469e1c9d784a3663a, type: 3}
   planet: 0
-  value: 0
-  price: 0
+  value: 5
+  price: 12
   animator: {fileID: 0}
   customSpeed: 0
-  speed: 0
+  speed: 0.7
   mgSpeed: 0
-  wiggleAngleMax: 90
-  wiggleAngleMin: 0
+  wiggleAngleMax: 99.07259
+  wiggleAngleMin: 18.508064
   wiggleSpeed: 0
-  defaultWiggleSpeed: 0
-  maxSpawnRate: 0
-  swimTime: {x: 0, y: 0}
-  pauseTime: 0
+  defaultWiggleSpeed: 1
+  maxSpawnRate: 0.2
+  swimTime: {x: 3, y: 5}
+  pauseTime: 1
   aquariumSpeed: 0
-  verticalSwimming: 30
+  verticalSwimming: 40.2
