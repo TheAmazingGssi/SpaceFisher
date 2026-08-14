@@ -44,6 +44,8 @@ public class HookInventory : MonoBehaviour
     }
     private void RemoveRandomFish(FishFell e)
     {
+        if (fishAmount == 0)
+            return;
         int rand = Random.Range(0, fishAmount);
         foreach(KeyValuePair<FishStats, int> kvp in currentlyHookedFish)
         {
