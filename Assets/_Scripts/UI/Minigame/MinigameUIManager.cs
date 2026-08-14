@@ -1,4 +1,5 @@
 using NativeSerializableDictionary;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -7,13 +8,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[Serializable]
+struct SilhouetteData
+{
+    public FishStats FishType;
+    public Image Image;
+    public Sprite ColorSprite;
+    public Sprite BlackSprite;
+}
+
 public class MinigameUIManager : MonoBehaviour
 {
     [Header("Game Objects followed")]
     [SerializeField] Transform playerHook;
     [Header("Out Of Minigame")]
     [SerializeField] GameObject outofMinigameParent;
-    [SerializeField] SerializableDictionary<FishStats, Image> siluetteImages;
+    [SerializeField] SilhouetteData[] siluetteImages;
     [Header("Inside Minigame")]
     [SerializeField] GameObject insideMinigameParent;
     [SerializeField] TextMeshProUGUI depthText;
@@ -67,6 +77,8 @@ public class MinigameUIManager : MonoBehaviour
     IEnumerator SetMenuActiveNextFrame(bool value)
     {
         yield return null;
+        yield return null;
+        yield return null;
         if(value)
             ActiveOOM();
         else
@@ -76,13 +88,14 @@ public class MinigameUIManager : MonoBehaviour
     private void ActiveOOM()
     {
         outofMinigameParent.SetActive(true);
-        foreach(FishStats kvp in siluetteImages.Keys)
+        Dictionary<FishStats, int> fishInInventory = Inventory.Instance.Fish;
+        foreach (SilhouetteData silhouette in siluetteImages)
         {
-            Dictionary<FishStats, int> fishInInventory = Inventory.Instance.Fish;
-            if (fishInInventory.ContainsKey(kvp) && fishInInventory[kvp] > 0)
-                siluetteImages[kvp].color = Color.white;
+            
+            if (fishInInventory.ContainsKey(silhouette.FishType) && fishInInventory[silhouette.FishType] > 0)
+                silhouette.Image.sprite = silhouette.ColorSprite;
             else
-                siluetteImages[kvp].color = Color.black;
+                silhouette.Image.sprite = silhouette.BlackSprite;
         }
     }
 }
