@@ -12,7 +12,8 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
     [SerializeField] public SerializableDictionary<string, PlanetFishTable> planetList;
 
 #if UNITY_EDITOR
-    private void OnValidate()
+    
+    private void Reset()
     {
         if(fishList == null)
         {
@@ -24,7 +25,7 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
             if (!fishList.ContainsKey(guid.ToString()))
             {
                 FishStats fishStat = AssetDatabase.LoadAssetByGUID<FishStats>(guid);
-                fishList.Add(guid.ToString(), fishStat);
+                fishList.Add(fishStat.ID, fishStat);
             }
         
         if(storeList == null)

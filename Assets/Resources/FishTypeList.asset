@@ -26,30 +26,6 @@ MonoBehaviour:
       _value: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
     - _key: c7b2452d59d00e241ae0f6abae5c88ff
       _value: {fileID: 11400000, guid: c7b2452d59d00e241ae0f6abae5c88ff, type: 2}
-    - _key: fb35be89b7cb2a1438ff165cb4147021
-      _value: {fileID: 11400000, guid: fb35be89b7cb2a1438ff165cb4147021, type: 2}
-    - _key: b2ed0c3ac310d464589272e630908e35
-      _value: {fileID: 11400000, guid: b2ed0c3ac310d464589272e630908e35, type: 2}
-    - _key: 5b5f2661fda4b5f458666dc699a988b7
-      _value: {fileID: 11400000, guid: 5b5f2661fda4b5f458666dc699a988b7, type: 2}
-    - _key: b6561006b96c42b45854c8b966f138af
-      _value: {fileID: 11400000, guid: b6561006b96c42b45854c8b966f138af, type: 2}
-    - _key: 71d7fa0a9f5ddd947b4f115832921b87
-      _value: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
-    - _key: c7b2452d59d00e241ae0f6abae5c88ff
-      _value: {fileID: 11400000, guid: c7b2452d59d00e241ae0f6abae5c88ff, type: 2}
-    - _key: fb35be89b7cb2a1438ff165cb4147021
-      _value: {fileID: 11400000, guid: fb35be89b7cb2a1438ff165cb4147021, type: 2}
-    - _key: b2ed0c3ac310d464589272e630908e35
-      _value: {fileID: 11400000, guid: b2ed0c3ac310d464589272e630908e35, type: 2}
-    - _key: 5b5f2661fda4b5f458666dc699a988b7
-      _value: {fileID: 11400000, guid: 5b5f2661fda4b5f458666dc699a988b7, type: 2}
-    - _key: b6561006b96c42b45854c8b966f138af
-      _value: {fileID: 11400000, guid: b6561006b96c42b45854c8b966f138af, type: 2}
-    - _key: 71d7fa0a9f5ddd947b4f115832921b87
-      _value: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
-    - _key: c7b2452d59d00e241ae0f6abae5c88ff
-      _value: {fileID: 11400000, guid: c7b2452d59d00e241ae0f6abae5c88ff, type: 2}
   storeList:
     _keys:
     - _key: 0fb9d755475b64a4ca18338fb7ee0bd4
@@ -60,32 +36,8 @@ MonoBehaviour:
       _value: {fileID: 11400000, guid: 324329948dc74684f823734727bc7e8a, type: 2}
     - _key: 0bc6039b0935deb4fa923298a3b3544d
       _value: {fileID: 11400000, guid: 0bc6039b0935deb4fa923298a3b3544d, type: 2}
-    - _key: 0fb9d755475b64a4ca18338fb7ee0bd4
-      _value: {fileID: 0}
-    - _key: ff546e42c1ae75545ad48af6c7ed5c6a
-      _value: {fileID: 11400000, guid: ff546e42c1ae75545ad48af6c7ed5c6a, type: 2}
-    - _key: 324329948dc74684f823734727bc7e8a
-      _value: {fileID: 11400000, guid: 324329948dc74684f823734727bc7e8a, type: 2}
-    - _key: 0bc6039b0935deb4fa923298a3b3544d
-      _value: {fileID: 11400000, guid: 0bc6039b0935deb4fa923298a3b3544d, type: 2}
-    - _key: 0fb9d755475b64a4ca18338fb7ee0bd4
-      _value: {fileID: 0}
-    - _key: ff546e42c1ae75545ad48af6c7ed5c6a
-      _value: {fileID: 11400000, guid: ff546e42c1ae75545ad48af6c7ed5c6a, type: 2}
-    - _key: 324329948dc74684f823734727bc7e8a
-      _value: {fileID: 11400000, guid: 324329948dc74684f823734727bc7e8a, type: 2}
-    - _key: 0bc6039b0935deb4fa923298a3b3544d
-      _value: {fileID: 11400000, guid: 0bc6039b0935deb4fa923298a3b3544d, type: 2}
   planetList:
     _keys:
-    - _key: 0d0c65da7a5f3544185fb9792daefd8c
-      _value: {fileID: 11400000, guid: 0d0c65da7a5f3544185fb9792daefd8c, type: 2}
-    - _key: 2cd5e0be128871540a9b493ff7070765
-      _value: {fileID: 11400000, guid: 2cd5e0be128871540a9b493ff7070765, type: 2}
-    - _key: 0d0c65da7a5f3544185fb9792daefd8c
-      _value: {fileID: 11400000, guid: 0d0c65da7a5f3544185fb9792daefd8c, type: 2}
-    - _key: 2cd5e0be128871540a9b493ff7070765
-      _value: {fileID: 11400000, guid: 2cd5e0be128871540a9b493ff7070765, type: 2}
     - _key: 0d0c65da7a5f3544185fb9792daefd8c
       _value: {fileID: 11400000, guid: 0d0c65da7a5f3544185fb9792daefd8c, type: 2}
     - _key: 2cd5e0be128871540a9b493ff7070765

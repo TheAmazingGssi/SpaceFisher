@@ -64,7 +64,9 @@ public class FishStats : ScriptableObject
     {
         if (string.IsNullOrEmpty(id))
         {
-            id = System.Guid.NewGuid().ToString();
+            //id = System.Guid.NewGuid().ToString();
+            string path = AssetDatabase.GetAssetPath(this);
+            id = AssetDatabase.AssetPathToGUID(path);
             EditorUtility.SetDirty(this);
         }
     }

@@ -13,7 +13,10 @@ public class Inventory : MonoBehaviour
             Dictionary<FishStats, int> copy = new Dictionary<FishStats, int>();
             foreach (string id in dict.Keys)
             {
-                copy.Add(ScriptablesDatabase.Instance.fishList[id], dict[id]);
+                if (ScriptablesDatabase.Instance.fishList.ContainsKey(id))
+                    copy.Add(ScriptablesDatabase.Instance.fishList[id], dict[id]);
+                else
+                    Debug.Log("fish that doesnt exist has this UID: " + id);
             }
             return copy;
         } }
