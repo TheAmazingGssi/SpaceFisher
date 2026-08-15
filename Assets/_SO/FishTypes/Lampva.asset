@@ -23,8 +23,8 @@ MonoBehaviour:
   mgSpeed: 0
   wiggleAngleMax: 99.07259
   wiggleAngleMin: 18.508064
-  wiggleSpeed: 0
-  defaultWiggleSpeed: 1
+  wiggleSpeed: 300
+  defaultWiggleSpeed: 0
   maxSpawnRate: 0.2
   swimTime: {x: 3, y: 5}
   pauseTime: 1

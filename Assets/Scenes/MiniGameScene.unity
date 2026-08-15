@@ -1974,7 +1974,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   hookObject: {fileID: 484982415}
   shipObject: {fileID: 1906451533}
-  horizontalSpeed: 10
+  horizontalSpeed: 50
   downSpeed: 5
   upSpeed: 15
   fishingLine: {fileID: 1250811444}

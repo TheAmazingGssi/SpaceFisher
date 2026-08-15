@@ -1,0 +1,720 @@
+fileFormatVersion: 2
+guid: 4f1c2cdb4af409b4e890a69887de1534
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1780487658609173625
+    second: sea mine explosion vfx sprite sheet_0
+  - first:
+      213: 1458939102727607758
+    second: sea mine explosion vfx sprite sheet_1
+  - first:
+      213: 2248516758931789999
+    second: sea mine explosion vfx sprite sheet_2
+  - first:
+      213: 5286543562902571913
+    second: sea mine explosion vfx sprite sheet_3
+  - first:
+      213: -8558931798674206217
+    second: sea mine explosion vfx sprite sheet_4
+  - first:
+      213: -2865940061003528615
+    second: sea mine explosion vfx sprite sheet_5
+  - first:
+      213: -2461613837125377839
+    second: sea mine explosion vfx sprite sheet_6
+  - first:
+      213: -8766718280870419249
+    second: sea mine explosion vfx sprite sheet_7
+  - first:
+      213: -3331860901946020258
+    second: sea mine explosion vfx sprite sheet_8
+  - first:
+      213: 828999376949746502
+    second: sea mine explosion vfx sprite sheet_9
+  - first:
+      213: 4069847375803351667
+    second: sea mine explosion vfx sprite sheet_10
+  - first:
+      213: -220102715114152561
+    second: sea mine explosion vfx sprite sheet_11
+  - first:
+      213: -3384115532040148515
+    second: sea mine explosion vfx sprite sheet_12
+  - first:
+      213: 3409531593129352830
+    second: sea mine explosion vfx sprite sheet_13
+  - first:
+      213: 6468228997930493108
+    second: sea mine explosion vfx sprite sheet_14
+  - first:
+      213: 1919307352328358522
+    second: sea mine explosion vfx sprite sheet_15
+  - first:
+      213: 3408266759733868996
+    second: sea mine explosion vfx sprite sheet_16
+  - first:
+      213: -3538407465788268467
+    second: sea mine explosion vfx sprite sheet_17
+  - first:
+      213: -3040445497901954136
+    second: sea mine explosion vfx sprite sheet_18
+  - first:
+      213: -46054119519986535
+    second: sea mine explosion vfx sprite sheet_19
+  - first:
+      213: 6259894434419113804
+    second: sea mine explosion vfx sprite sheet_20
+  - first:
+      213: -2472421879074846412
+    second: sea mine explosion vfx sprite sheet_21
+  - first:
+      213: -7532358011675836776
+    second: sea mine explosion vfx sprite sheet_22
+  - first:
+      213: -7705931373676055281
+    second: sea mine explosion vfx sprite sheet_23
+  - first:
+      213: 7712994247215947104
+    second: sea mine explosion vfx sprite sheet_24
+  - first:
+      213: 1722595409120002820
+    second: sea mine explosion vfx sprite sheet_25
+  - first:
+      213: -5826574519184107117
+    second: sea mine explosion vfx sprite sheet_26
+  - first:
+      213: 3787542620564138923
+    second: sea mine explosion vfx sprite sheet_27
+  - first:
+      213: 3291973076320327623
+    second: sea mine explosion vfx sprite sheet_28
+  - first:
+      213: 308887669284674248
+    second: sea mine explosion vfx sprite sheet_29
+  - first:
+      213: -3730984049591482038
+    second: sea mine explosion vfx sprite sheet_30
+  - first:
+      213: -1706884968642354090
+    second: sea mine explosion vfx sprite sheet_31
+  - first:
+      213: -5913465411331957779
+    second: sea mine explosion vfx sprite sheet_32
+  - first:
+      213: 2779690844765979655
+    second: sea mine explosion vfx sprite sheet_33
+  - first:
+      213: -8619898752917719158
+    second: sea mine explosion vfx sprite sheet_34
+  - first:
+      213: 1901184039927776279
+    second: sea mine explosion vfx sprite sheet_35
+  - first:
+      213: -3033570249368966988
+    second: sea mine explosion vfx sprite sheet_36
+  - first:
+      213: -8913206010812193542
+    second: sea mine explosion vfx sprite sheet_37
+  - first:
+      213: 5805210108017498526
+    second: sea mine explosion vfx sprite sheet_38
+  - first:
+      213: -2942682626097379620
+    second: sea mine explosion vfx sprite sheet_39
+  - first:
+      213: 3066176312860610828
+    second: sea mine explosion vfx sprite sheet_40
+  - first:
+      213: 6672945488483583380
+    second: sea mine explosion vfx sprite sheet_41
+  - first:
+      213: 6799545020363122530
+    second: sea mine explosion vfx sprite sheet_42
+  - first:
+      213: -7175583769695505326
+    second: sea mine explosion vfx sprite sheet_43
+  - first:
+      213: 6745529677514956206
+    second: sea mine explosion vfx sprite sheet_44
+  - first:
+      213: 5549750045172192996
+    second: sea mine explosion vfx sprite sheet_45
+  - first:
+      213: -2875581183916666870
+    second: sea mine explosion vfx sprite sheet_46
+  - first:
+      213: 6607485648488264107
+    second: sea mine explosion vfx sprite sheet_47
+  - first:
+      213: 1855853228756781599
+    second: sea mine explosion vfx sprite sheet_48
+  - first:
+      213: -1911293012650508902
+    second: sea mine explosion vfx sprite sheet_49
+  - first:
+      213: 3290481133040205300
+    second: sea mine explosion vfx sprite sheet_50
+  - first:
+      213: -9044085663241417220
+    second: sea mine explosion vfx sprite sheet_51
+  - first:
+      213: 8409661100032320153
+    second: sea mine explosion vfx sprite sheet_52
+  - first:
+      213: -2625044399327202184
+    second: sea mine explosion vfx sprite sheet_53
+  - first:
+      213: 4091465702642545020
+    second: sea mine explosion vfx sprite sheet_54
+  - first:
+      213: -3029910182032300016
+    second: sea mine explosion vfx sprite sheet_55
+  - first:
+      213: -5756207150779659739
+    second: sea mine explosion vfx sprite sheet_56
+  - first:
+      213: -3906203924983811451
+    second: sea mine explosion vfx sprite sheet_57
+  - first:
+      213: 2142491310366617134
+    second: sea mine explosion vfx sprite sheet_58
+  - first:
+      213: -8985821382843003545
+    second: sea mine explosion vfx sprite sheet_59
+  - first:
+      213: 1141129454842471705
+    second: sea mine explosion vfx sprite sheet_60
+  - first:
+      213: -5622406173619202066
+    second: sea mine explosion vfx sprite sheet_61
+  - first:
+      213: -7265016754265314941
+    second: sea mine explosion vfx sprite sheet_62
+  - first:
+      213: 1554068035217440934
+    second: sea mine explosion vfx sprite sheet_63
+  - first:
+      213: 6586077304626331473
+    second: sea mine explosion vfx sprite sheet_64
+  - first:
+      213: 7768748803102915877
+    second: sea mine explosion vfx sprite sheet_65
+  - first:
+      213: 8828426045753947232
+    second: sea mine explosion vfx sprite sheet_66
+  - first:
+      213: 2845188768552188811
+    second: sea mine explosion vfx sprite sheet_67
+  - first:
+      213: -7818746505357780091
+    second: sea mine explosion vfx sprite sheet_68
+  - first:
+      213: -6663941852595721085
+    second: sea mine explosion vfx sprite sheet_69
+  - first:
+      213: 5745432276143193614
+    second: sea mine explosion vfx sprite sheet_70
+  - first:
+      213: 4442711122237992747
+    second: sea mine explosion vfx sprite sheet_71
+  - first:
+      213: -6250467358097685479
+    second: sea mine explosion vfx sprite sheet_72
+  - first:
+      213: -34400028017778084
+    second: sea mine explosion vfx sprite sheet_73
+  - first:
+      213: -6333136077908237632
+    second: sea mine explosion vfx sprite sheet_74
+  - first:
+      213: -3349996383698313985
+    second: sea mine explosion vfx sprite sheet_75
+  - first:
+      213: 8218950610809678058
+    second: sea mine explosion vfx sprite sheet_76
+  - first:
+      213: 2250684662505972599
+    second: sea mine explosion vfx sprite sheet_77
+  - first:
+      213: -4851003669400811787
+    second: sea mine explosion vfx sprite sheet_78
+  - first:
+      213: -6621748014392470607
+    second: sea mine explosion vfx sprite sheet_79
+  - first:
+      213: -6334906751249435082
+    second: sea mine explosion vfx sprite sheet_80
+  - first:
+      213: -2712673183943769246
+    second: sea mine explosion vfx sprite sheet_81
+  - first:
+      213: 2818003053254875975
+    second: sea mine explosion vfx sprite sheet_82
+  - first:
+      213: 9031809007409708458
+    second: sea mine explosion vfx sprite sheet_83
+  - first:
+      213: 6165597554959028084
+    second: sea mine explosion vfx sprite sheet_84
+  - first:
+      213: -362079222852518842
+    second: sea mine explosion vfx sprite sheet_85
+  - first:
+      213: 3458696462423290891
+    second: sea mine explosion vfx sprite sheet_86
+  - first:
+      213: 2739444960036683122
+    second: sea mine explosion vfx sprite sheet_87
+  - first:
+      213: 6102580863777851372
+    second: sea mine explosion vfx sprite sheet_88
+  - first:
+      213: -4185998306856677348
+    second: sea mine explosion vfx sprite sheet_89
+  - first:
+      213: 5194705126825080254
+    second: sea mine explosion vfx sprite sheet_90
+  - first:
+      213: -8122073944504602820
+    second: sea mine explosion vfx sprite sheet_91
+  - first:
+      213: 2776079988426995589
+    second: sea mine explosion vfx sprite sheet_92
+  - first:
+      213: 433964737129852135
+    second: sea mine explosion vfx sprite sheet_93
+  - first:
+      213: -6743839529724830701
+    second: sea mine explosion vfx sprite sheet_94
+  - first:
+      213: -6856741407659063453
+    second: sea mine explosion vfx sprite sheet_95
+  - first:
+      213: 3412510994499706917
+    second: sea mine explosion vfx sprite sheet_96
+  - first:
+      213: 2535507206437890621
+    second: sea mine explosion vfx sprite sheet_97
+  - first:
+      213: -1115885457490528894
+    second: sea mine explosion vfx sprite sheet_98
+  - first:
+      213: 6719633604150578093
+    second: sea mine explosion vfx sprite sheet_99
+  - first:
+      213: -8530319834879404686
+    second: sea mine explosion vfx sprite sheet_100
+  - first:
+      213: 5349921962233652456
+    second: sea mine explosion vfx sprite sheet_101
+  - first:
+      213: 3295502797652750206
+    second: sea mine explosion vfx sprite sheet_102
+  - first:
+      213: -6170442496440264045
+    second: sea mine explosion vfx sprite sheet_103
+  - first:
+      213: 4190144406261767768
+    second: sea mine explosion vfx sprite sheet_104
+  - first:
+      213: 8759575721737528261
+    second: sea mine explosion vfx sprite sheet_105
+  - first:
+      213: -7654771203582591509
+    second: sea mine explosion vfx sprite sheet_106
+  - first:
+      213: 8878848515106125140
+    second: sea mine explosion vfx sprite sheet_107
+  - first:
+      213: 4730107905142644043
+    second: sea mine explosion vfx sprite sheet_108
+  - first:
+      213: 6036918950228703500
+    second: sea mine explosion vfx sprite sheet_109
+  - first:
+      213: -3625913820949570535
+    second: sea mine explosion vfx sprite sheet_110
+  - first:
+      213: -2405497636649210959
+    second: sea mine explosion vfx sprite sheet_111
+  - first:
+      213: -6550199076443898683
+    second: sea mine explosion vfx sprite sheet_112
+  - first:
+      213: 8274133447546854973
+    second: sea mine explosion vfx sprite sheet_113
+  - first:
+      213: 543455659957093301
+    second: sea mine explosion vfx sprite sheet_114
+  - first:
+      213: 8109577740591585481
+    second: sea mine explosion vfx sprite sheet_115
+  - first:
+      213: -2675193626671167760
+    second: sea mine explosion vfx sprite sheet_116
+  - first:
+      213: -5048739029393392845
+    second: sea mine explosion vfx sprite sheet_117
+  - first:
+      213: -8970009645272255621
+    second: sea mine explosion vfx sprite sheet_118
+  - first:
+      213: -5054405887799656816
+    second: sea mine explosion vfx sprite sheet_119
+  - first:
+      213: 4232586043681019581
+    second: sea mine explosion vfx sprite sheet_120
+  - first:
+      213: -8466673702079436256
+    second: sea mine explosion vfx sprite sheet_121
+  - first:
+      213: -168102233969622
+    second: sea mine explosion vfx sprite sheet_122
+  - first:
+      213: -5334270260430464966
+    second: sea mine explosion vfx sprite sheet_123
+  - first:
+      213: 692379614915595182
+    second: sea mine explosion vfx sprite sheet_124
+  - first:
+      213: 2515758548919168541
+    second: sea mine explosion vfx sprite sheet_125
+  - first:
+      213: 8940739036914858014
+    second: sea mine explosion vfx sprite sheet_126
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sea mine explosion vfx sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1366
+        width: 588
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 974ed52971095b810800000000000000
+      internalID: 1780487658609173625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea mine explosion vfx sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1366
+        width: 588
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5910752613f3410800000000000000
+      internalID: 1458939102727607758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea mine explosion vfx sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1366
+        width: 588
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa854af3416543f10800000000000000
+      internalID: 2248516758931789999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea mine explosion vfx sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 687
+        width: 588
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b8f647c539d5940800000000000000
+      internalID: 5286543562902571913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea mine explosion vfx sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 684
+        width: 588
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f19a3350e0983980800000000000000
+      internalID: -8558931798674206217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea mine explosion vfx sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 684
+        width: 588
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956c25ce2b22a38d0800000000000000
+      internalID: -2865940061003528615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea mine explosion vfx sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 588
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0a4ffd14796ddd0800000000000000
+      internalID: -2461613837125377839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea mine explosion vfx sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 2
+        width: 588
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc4abceeb2c565680800000000000000
+      internalID: -8766718280870419249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea mine explosion vfx sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 2
+        width: 588
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5eae72a92ad2c1d0800000000000000
+      internalID: -3331860901946020258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2f7d532e96d7a9641bdcbc518f2846c1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":3.0},"gridSpriteSize":{"x":588.0,"y":682.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      sea mine explosion vfx sprite sheet_0: 1780487658609173625
+      sea mine explosion vfx sprite sheet_1: 1458939102727607758
+      sea mine explosion vfx sprite sheet_2: 2248516758931789999
+      sea mine explosion vfx sprite sheet_3: 5286543562902571913
+      sea mine explosion vfx sprite sheet_4: -8558931798674206217
+      sea mine explosion vfx sprite sheet_5: -2865940061003528615
+      sea mine explosion vfx sprite sheet_6: -2461613837125377839
+      sea mine explosion vfx sprite sheet_7: -8766718280870419249
+      sea mine explosion vfx sprite sheet_8: -3331860901946020258
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
