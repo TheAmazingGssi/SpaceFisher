@@ -1173,6 +1173,10 @@ MonoBehaviour:
     Image: {fileID: 5414019283372989685}
     ColorSprite: {fileID: -4620970628052131987, guid: a7a84e6a92523d749b152d570b6e15cd, type: 3}
     BlackSprite: {fileID: 3206366950189096818, guid: e2126e8fbc9502649a80e51aa6a58f54, type: 3}
+  - FishType: {fileID: 11400000, guid: 5b5f2661fda4b5f458666dc699a988b7, type: 2}
+    Image: {fileID: 3117624964220543316}
+    ColorSprite: {fileID: -1523555065690526525, guid: 24274fdd9a881ea40bed075078c8c2e5, type: 3}
+    BlackSprite: {fileID: 8778251605010084461, guid: a4da72fe91ce5ac4ab27c9c59ec51e70, type: 3}
   insideMinigameParent: {fileID: 2429768158396539841}
   depthText: {fileID: 707193635210927567}
 --- !u!1 &6782457003305661065
