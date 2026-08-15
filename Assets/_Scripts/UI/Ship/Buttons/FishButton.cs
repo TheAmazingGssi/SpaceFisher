@@ -38,8 +38,8 @@ public class FishButton : ItemButton<KeyValuePair<FishStats, int>>
 
         for (int i = 0; i < stars.Length; i++)
             stars[i].gameObject.SetActive(false);
-        //for (int i = 0; i < fishStats.Value; i++)
-        //    stars[i].gameObject.SetActive(true);
+        for (int i = 0; i < fishStats.Value; i++)
+            stars[i].gameObject.SetActive(true);
     }
 
     public override void OnButtonClick()

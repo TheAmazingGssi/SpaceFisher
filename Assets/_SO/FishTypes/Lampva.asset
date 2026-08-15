@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 5b5f2661fda4b5f458666dc699a988b7
   fishSprite: {fileID: -7711835218200328001, guid: 9f8f6148990dd4e469e1c9d784a3663a, type: 3}
   planet: 0
-  value: 5
+  value: 3
   price: 12
   animator: {fileID: 0}
   customSpeed: 0
