@@ -132,7 +132,7 @@ public class HookController : MonoBehaviour
     {
         bool flagPlanet = transform.position.y <= -MinigameManager.Instance.PlanetData.MaxDepth;
         int upgradeLevel = UpgradeManager.Instance.GetUpgrade(Upgrade.Length);
-        bool flagUpgrade = false;//transform.position.y <= -MinigameManager.Instance.UpgradeData.MaxDepth[upgradeLevel];
+        bool flagUpgrade = transform.position.y <= -MinigameManager.Instance.UpgradeData.MaxDepth[upgradeLevel];
         return flagPlanet || flagUpgrade;
     }
 }

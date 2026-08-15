@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
         {
             MinigameManager.Instance.Phase = MinigamePhase.Up;
             anim.SetTrigger(BOOM_TRIGGER);
-            Bus<FishFell>.Raise(new FishFell());
+            Bus<HitBomb>.Raise(new HitBomb());
         }
     }   
     public void DeleteSelf()
