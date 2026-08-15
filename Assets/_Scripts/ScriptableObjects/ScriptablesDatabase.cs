@@ -25,7 +25,7 @@ public class ScriptablesDatabase : SingletonScriptableObject<ScriptablesDatabase
             if (!fishList.ContainsKey(guid.ToString()))
             {
                 FishStats fishStat = AssetDatabase.LoadAssetByGUID<FishStats>(guid);
-                fishList.Add(fishStat.ID, fishStat);
+                fishList.Add(guid.ToString(), fishStat);
             }
         
         if(storeList == null)

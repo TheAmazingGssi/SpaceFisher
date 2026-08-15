@@ -16,7 +16,9 @@ public class Inventory : MonoBehaviour
                 if (ScriptablesDatabase.Instance.fishList.ContainsKey(id))
                     copy.Add(ScriptablesDatabase.Instance.fishList[id], dict[id]);
                 else
+                {
                     Debug.Log("fish that doesnt exist has this UID: " + id);
+                }
             }
             return copy;
         } }

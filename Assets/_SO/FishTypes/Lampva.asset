@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f5bea3b934f6344be43c4ec7e85d6f, type: 3}
   m_Name: Lampva
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
-  id: 29a61ac0-8aae-46fa-9604-b244d1db2eba
+  id: 5b5f2661fda4b5f458666dc699a988b7
   fishSprite: {fileID: -7711835218200328001, guid: 9f8f6148990dd4e469e1c9d784a3663a, type: 3}
   planet: 0
   value: 5
