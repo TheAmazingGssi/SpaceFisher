@@ -1,6 +1,8 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+
 
 public class FishAI : MonoBehaviour
 {
@@ -11,7 +13,10 @@ public class FishAI : MonoBehaviour
 
     float wiggleDirection = 0;
 
+    Transform magnetTarget;
 
+    private enum State { Swim, Hooked, Magnetized }
+    private State state;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnEnable()
@@ -24,7 +29,18 @@ public class FishAI : MonoBehaviour
     }
     private void Update()
     {
-        HookedMovement();
+        switch(state)
+        {
+            case State.Hooked:
+                HookedMovement();
+                break;
+            case State.Magnetized:
+                MagnetizedMovement();
+                break;
+            case State.Swim:
+            default:
+                break;
+        }
     }
     public void Setup(FishStats stats, FishPool pool)
     {
@@ -33,12 +49,13 @@ public class FishAI : MonoBehaviour
         spriteRenderer.sprite = Stats.FishSprite;
         //spriteRenderer.transform.localPosition = new Vector3(-spriteRenderer.bounds.size.x / 2, 0, 0);
         wiggleDirection = 0;
+        state = State.Swim;
         parentPool = pool;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == Constants.Tags.Player)
+        if (collision.tag == Constants.Tags.Player && state != State.Hooked)
         {
             transform.SetParent(collision.transform);
             transform.localPosition = Vector3.zero;
@@ -46,6 +63,12 @@ public class FishAI : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             wiggleDirection = Random.Range(0, 2) == 0 ? 1 : -1;
             Bus<FishCaught>.Raise(new FishCaught { Fish = this });
+            state = State.Hooked;
+        }
+        if(collision.tag == Constants.Tags.Magnet && state != State.Hooked && state != State.Magnetized)
+        {
+            state = State.Magnetized;
+            magnetTarget = collision.transform;
         }
     }
     private void HookedMovement()
@@ -60,6 +83,12 @@ public class FishAI : MonoBehaviour
         }
 
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, newZ);
+    }
+    private void MagnetizedMovement()
+    {
+        Vector2 dir = magnetTarget.position - transform.position;
+        dir.Normalize();
+        rb.linearVelocity = dir * (MinigameManager.Instance.Hook.UpSpeed * 1.1f);
     }
     public void ReturnToPool()
     {

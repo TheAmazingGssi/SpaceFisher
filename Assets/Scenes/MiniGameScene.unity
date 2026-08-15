@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 191912456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400249395}
   - component: {fileID: 400249396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: walak ship od paam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484982415}
   - component: {fileID: 484982416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftRight Attribute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,6 +418,7 @@ Transform:
   m_Children:
   - {fileID: 571237194}
   - {fileID: 678004269}
+  - {fileID: 1491002606}
   m_Father: {fileID: 1381342930}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &484982416
@@ -457,7 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492052363}
   - component: {fileID: 492052364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shield 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +551,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -741,7 +742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 568950609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571237194}
   - component: {fileID: 571237195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 645712335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 678004269}
   - component: {fileID: 678004270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1147,7 +1148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 799087410}
   - component: {fileID: 799087411}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: galgal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1672,7 +1673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1187253119}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1705,7 +1706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1250811445}
   - component: {fileID: 1250811444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Line Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1847,7 +1848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1332686179}
   - component: {fileID: 1332686180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: galgal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1938,7 +1939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341388398}
   - component: {fileID: 1341388399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shield 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2089,7 +2090,7 @@ GameObject:
   - component: {fileID: 1381342933}
   - component: {fileID: 1381342934}
   - component: {fileID: 1381342931}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2257,6 +2258,88 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundController
   cam: {fileID: 519420031}
+--- !u!1 &1491002605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491002606}
+  - component: {fileID: 1491002608}
+  - component: {fileID: 1491002607}
+  m_Layer: 7
+  m_Name: Magnet Collider
+  m_TagString: Magnet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1491002606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491002605}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: -0.217, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 484982415}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1491002607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491002605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde431eea4380d647a59e6b6a76d267c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagnetManager
+  col: {fileID: 1491002608}
+--- !u!58 &1491002608
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491002605}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2
 --- !u!1001 &1508524346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2324,7 +2407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1629222917}
   - component: {fileID: 1629222918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: galgal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2415,7 +2498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1716383230}
   - component: {fileID: 1716383229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2471,7 +2554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1906451533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ship Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
