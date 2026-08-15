@@ -1,5 +1,6 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public enum Location
 {
@@ -17,6 +18,9 @@ public class Visitor : MonoBehaviour
     [SerializeField] private ParticleSystem coinEffect;
     [SerializeField] private Vector2 speedRange;
 
+    [SerializeField] private GameObject bubble;
+    [SerializeField] private Image currentEmoji;
+    [SerializeField] private Sprite[] emojis;
     public Location CurrentLocation { get; private set; } = Location.Inbetween;
     public VisitorData Data { get; private set; }
 
@@ -83,7 +87,16 @@ public class Visitor : MonoBehaviour
         Bus<ChangeLocation>.Raise(new ChangeLocation { Visitor = this, Building = currentBuilding });
         if (currentBuilding is VisitorEater)
             gameObject.SetActive(false);
+        else
+            StartCoroutine(BubbleCoroutine());
+    }
 
+    private IEnumerator BubbleCoroutine()
+    {
+        bubble.SetActive(true);
+        currentEmoji.sprite = emojis[Random.Range(0, emojis.Length)];
+        yield return new WaitForSeconds(2);
+        bubble.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
