@@ -4640,6 +4640,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5093086407453474493, guid: 4460847805659274e873a76012c5ab96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791581056276376036, guid: 4460847805659274e873a76012c5ab96, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1651689287}
+    - target: {fileID: 5791581056276376036, guid: 4460847805659274e873a76012c5ab96, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleFishStore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028820616114929660, guid: 4460847805659274e873a76012c5ab96, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1651689287}
+    - target: {fileID: 6028820616114929660, guid: 4460847805659274e873a76012c5ab96, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToMiniGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379377360993181447, guid: 4460847805659274e873a76012c5ab96, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1651689287}
+    - target: {fileID: 6379377360993181447, guid: 4460847805659274e873a76012c5ab96, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetFirstAquarium
+      objectReference: {fileID: 0}
     - target: {fileID: 6627218189654618655, guid: 4460847805659274e873a76012c5ab96, type: 3}
       propertyPath: m_Name
       value: ShipCanvas
@@ -4648,6 +4676,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1651689287}
+    - target: {fileID: 7033734563951285116, guid: 4460847805659274e873a76012c5ab96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8892293205305468903, guid: 4460847805659274e873a76012c5ab96, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4728,6 +4760,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9044656576289882950, guid: 4460847805659274e873a76012c5ab96, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
