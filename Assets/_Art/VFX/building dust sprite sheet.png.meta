@@ -313,7 +313,7 @@ TextureImporter:
         width: 1101
         height: 847
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -330,10 +330,10 @@ TextureImporter:
       name: building dust sprite sheet_7
       rect:
         serializedVersion: 2
-        x: 3138
-        y: 5669
-        width: 1106
-        height: 908
+        x: 3173
+        y: 5721
+        width: 1102
+        height: 808
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: building dust sprite sheet_8
       rect:
         serializedVersion: 2
-        x: 5921
-        y: 5686
-        width: 1213
-        height: 749
+        x: 6072
+        y: 5716
+        width: 1007
+        height: 813
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,10 +374,10 @@ TextureImporter:
       name: building dust sprite sheet_9
       rect:
         serializedVersion: 2
-        x: 4592
-        y: 5639
-        width: 981
-        height: 852
+        x: 4460
+        y: 5734
+        width: 1079
+        height: 808
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,10 +396,10 @@ TextureImporter:
       name: building dust sprite sheet_10
       rect:
         serializedVersion: 2
-        x: 3254
-        y: 4267
-        width: 856
-        height: 821
+        x: 3277
+        y: 4289
+        width: 777
+        height: 732
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -277,6 +277,7 @@ MonoBehaviour:
   - {fileID: 3537645273168922136}
   - {fileID: 6833112484497690069}
   - {fileID: 4277822799008272321}
+  starterLevel: 0
 --- !u!61 &1437031210059514805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -545,7 +546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 107540711077034587, guid: d3015b7eea383f64d8b81f965cc466e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.9019012
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: 107540711077034587, guid: d3015b7eea383f64d8b81f965cc466e7, type: 3}
       propertyPath: m_LocalPosition.z
