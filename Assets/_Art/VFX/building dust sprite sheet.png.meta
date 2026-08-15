@@ -1,0 +1,522 @@
+fileFormatVersion: 2
+guid: 9c4ee607403cc984ab61e1c2a5d71626
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3652902910926104695
+    second: building dust sprite sheet_0
+  - first:
+      213: -2583217573371142770
+    second: building dust sprite sheet_1
+  - first:
+      213: 3214661601064523307
+    second: building dust sprite sheet_2
+  - first:
+      213: 3059728057993973765
+    second: building dust sprite sheet_3
+  - first:
+      213: 6218062476636601354
+    second: building dust sprite sheet_4
+  - first:
+      213: -6763342880435747573
+    second: building dust sprite sheet_5
+  - first:
+      213: -170114963717339171
+    second: building dust sprite sheet_6
+  - first:
+      213: 3215481567628625685
+    second: building dust sprite sheet_7
+  - first:
+      213: -5755972487186051329
+    second: building dust sprite sheet_8
+  - first:
+      213: 1773292423815073178
+    second: building dust sprite sheet_9
+  - first:
+      213: -6970260693220594347
+    second: building dust sprite sheet_10
+  - first:
+      213: 9009948696390569652
+    second: building dust sprite sheet_11
+  - first:
+      213: 8313830549600834949
+    second: building dust sprite sheet_12
+  - first:
+      213: 1417639023070625859
+    second: building dust sprite sheet_13
+  - first:
+      213: 5422045785701402161
+    second: building dust sprite sheet_14
+  - first:
+      213: -535069051279119386
+    second: building dust sprite sheet_15
+  - first:
+      213: -3857717971588265831
+    second: building dust sprite sheet_16
+  - first:
+      213: -1938514190474939284
+    second: building dust sprite sheet_17
+  - first:
+      213: 8156756235863177029
+    second: building dust sprite sheet_18
+  - first:
+      213: -367718641301627942
+    second: building dust sprite sheet_19
+  - first:
+      213: 7857892413419356716
+    second: building dust sprite sheet_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: building dust sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 7435
+        width: 87
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778adb4f7d7b1b230800000000000000
+      internalID: 3652902910926104695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 7398
+        width: 176
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d9aa1bd41962cd0800000000000000
+      internalID: -2583217573371142770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3498
+        y: 7320
+        width: 365
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b261a84b1b5cc9c20800000000000000
+      internalID: 3214661601064523307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4842
+        y: 7215
+        width: 662
+        height: 551
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500d6062576567a20800000000000000
+      internalID: 3059728057993973765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 6293
+        y: 7196
+        width: 682
+        height: 572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c3c17b0eefa4650800000000000000
+      internalID: 6218062476636601354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 5756
+        width: 813
+        height: 647
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05c575eb77c322a0800000000000000
+      internalID: -6763342880435747573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 5669
+        width: 1101
+        height: 847
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd746a08751a3adf0800000000000000
+      internalID: -170114963717339171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 5669
+        width: 1106
+        height: 908
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517025c037faf9c20800000000000000
+      internalID: 3215481567628625685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 5921
+        y: 5686
+        width: 1213
+        height: 749
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe8a54f48dae10b0800000000000000
+      internalID: -5755972487186051329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4592
+        y: 5639
+        width: 981
+        height: 852
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d836c60100c9810800000000000000
+      internalID: 1773292423815073178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 3254
+        y: 4267
+        width: 856
+        height: 821
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55de7bc54d8a44f90800000000000000
+      internalID: -6970260693220594347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 4316
+        width: 804
+        height: 657
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99847d3a1f1a67ac0800000000000000
+      internalID: -3857717971588265831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 4316
+        width: 662
+        height: 669
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64ffac4d930915e0800000000000000
+      internalID: -1938514190474939284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: building dust sprite sheet_20
+      rect:
+        serializedVersion: 2
+        x: 4821
+        y: 4316
+        width: 661
+        height: 551
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2209116487dc0d60800000000000000
+      internalID: 7857892413419356716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e9399b7bd4b797c458bcfee20ebe563e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      building dust sprite sheet_0: 3652902910926104695
+      building dust sprite sheet_1: -2583217573371142770
+      building dust sprite sheet_10: -6970260693220594347
+      building dust sprite sheet_11: 9009948696390569652
+      building dust sprite sheet_12: 8313830549600834949
+      building dust sprite sheet_13: 1417639023070625859
+      building dust sprite sheet_14: 5422045785701402161
+      building dust sprite sheet_15: -535069051279119386
+      building dust sprite sheet_16: -3857717971588265831
+      building dust sprite sheet_17: -1938514190474939284
+      building dust sprite sheet_18: 8156756235863177029
+      building dust sprite sheet_19: -367718641301627942
+      building dust sprite sheet_2: 3214661601064523307
+      building dust sprite sheet_20: 7857892413419356716
+      building dust sprite sheet_3: 3059728057993973765
+      building dust sprite sheet_4: 6218062476636601354
+      building dust sprite sheet_5: -6763342880435747573
+      building dust sprite sheet_6: -170114963717339171
+      building dust sprite sheet_7: 3215481567628625685
+      building dust sprite sheet_8: -5755972487186051329
+      building dust sprite sheet_9: 1773292423815073178
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
