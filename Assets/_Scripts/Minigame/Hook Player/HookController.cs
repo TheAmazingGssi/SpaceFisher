@@ -11,6 +11,7 @@ public class HookController : MonoBehaviour
     [SerializeField] float horizontalSpeed;
     [SerializeField] float downSpeed;
     [SerializeField] float upSpeed;
+    public float UpSpeed { get => upSpeed; }
     Vector3 currentTouch;
     //MinigamePhase currentPhase = MinigamePhase.Down;
 

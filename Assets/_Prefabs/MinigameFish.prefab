@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4939678987777879186}
   - component: {fileID: 1192882669870678815}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 2367022000964730367}
   - component: {fileID: 4429270319672191910}
   - component: {fileID: 6623436665305683950}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -812031587
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 8678489618346859420}
   - component: {fileID: 6010428565529724358}
   - component: {fileID: 1791472600556897933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MinigameFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}

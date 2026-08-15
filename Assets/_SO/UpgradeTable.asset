@@ -15,4 +15,6 @@ MonoBehaviour:
   <MaxDepth>k__BackingField: 3c00000078000000c8000000
   <MagnetRadius>k__BackingField:
   - 0
+  - 1
+  - 2
   <sprite>k__BackingField: {fileID: 0}

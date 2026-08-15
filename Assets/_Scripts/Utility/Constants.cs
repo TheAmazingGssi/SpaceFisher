@@ -10,6 +10,7 @@ public static class Constants
         public const string Sidewalk = "Sidewalk";
         public const string Elevator = "Elevator";
         public const string Exit = "Exit";
+        public const string Magnet = "Magnet";
     }
     public static class Layers
     {
