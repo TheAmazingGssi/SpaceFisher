@@ -8,6 +8,7 @@ public class FishAI : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] ParticleSystem particles;
     [field: SerializeField] public FishStats Stats { get; private set; }
     private FishPool parentPool;
 
@@ -64,6 +65,7 @@ public class FishAI : MonoBehaviour
             wiggleDirection = Random.Range(0, 2) == 0 ? 1 : -1;
             Bus<FishCaught>.Raise(new FishCaught { Fish = this });
             state = State.Hooked;
+            particles.Play();
         }
         if(collision.tag == Constants.Tags.Magnet && state != State.Hooked && state != State.Magnetized)
         {
