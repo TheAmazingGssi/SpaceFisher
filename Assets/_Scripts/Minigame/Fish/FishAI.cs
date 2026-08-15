@@ -1,8 +1,4 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
-
 
 public class FishAI : MonoBehaviour
 {
