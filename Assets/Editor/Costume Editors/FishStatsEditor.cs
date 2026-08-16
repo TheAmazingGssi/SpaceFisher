@@ -6,6 +6,7 @@ public class FishStatsEditor : Editor
 {
     private SerializedProperty id;
     private SerializedProperty fishSprite;
+    private SerializedProperty splashArt;
     private SerializedProperty minigameSpeed;
     private SerializedProperty wiggleAngleMax;
     private SerializedProperty wiggleAngleMin;
@@ -26,6 +27,7 @@ public class FishStatsEditor : Editor
     {
         id = serializedObject.FindProperty("id");
         fishSprite = serializedObject.FindProperty("fishSprite");
+        splashArt = serializedObject.FindProperty("splashArt");
         animatorController = serializedObject.FindProperty("animator");
         minigameSpeed = serializedObject.FindProperty("mgSpeed");
         wiggleAngleMax = serializedObject.FindProperty("wiggleAngleMax");
@@ -51,6 +53,7 @@ public class FishStatsEditor : Editor
         //==========Generic Stats==========
         EditorGUILayout.LabelField("ID: " + id.stringValue);
         EditorGUILayout.PropertyField(fishSprite);
+        EditorGUILayout.PropertyField(splashArt);
         EditorGUILayout.PropertyField(animatorController);
         EditorGUILayout.PropertyField(planet);
         if (!fishSprite.objectReferenceValue)

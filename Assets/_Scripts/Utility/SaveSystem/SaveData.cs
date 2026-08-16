@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameSaveData
 {
     public int Coins;
+    public List<Vector3> VisitorPositions = new List<Vector3>();
     public UpgradeSaveData Upgrades = new UpgradeSaveData(); 
     public List<AquariumSaveData> Aquariums = new List<AquariumSaveData>();
     public List<StoreSaveData> Stores = new List<StoreSaveData>();

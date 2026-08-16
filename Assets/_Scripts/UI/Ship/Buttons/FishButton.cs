@@ -32,7 +32,7 @@ public class FishButton : ItemButton<KeyValuePair<FishStats, int>>
         amount = data.Value;
         text.text = amount.ToString();
         slider.maxValue = amount;
-        image.sprite = data.Key.FishSprite;
+        image.sprite = data.Key.SplashArt;
         slider.value = slider.minValue;
         selectedAmountText.text = slider.value.ToString();
 

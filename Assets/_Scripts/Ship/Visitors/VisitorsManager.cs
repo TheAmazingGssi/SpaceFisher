@@ -53,7 +53,7 @@ public class VisitorsManager : MonoBehaviour
         float total = 0f;
         foreach (var d in visitorData) total += d.EnterBuildingChance;
         return total / visitorData.Length;
-    }
+    }    
 
 
     private void OnDestroy()

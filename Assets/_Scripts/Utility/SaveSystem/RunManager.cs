@@ -6,6 +6,7 @@ public class RunManager : MonoBehaviour
 {
     public static RunManager Instance { get; private set; }
     public int Coins { get; private set; }
+    private List<Vector3> visitorPos = new List<Vector3>();
     private List<AquariumSaveData> aquariumStates = new List<AquariumSaveData>();
     private List<StoreSaveData> storeStates = new List<StoreSaveData>();
 
@@ -82,9 +83,11 @@ public class RunManager : MonoBehaviour
 
     public void CacheCurrentScene()
     {
-        GameSaveData snapshot = Snapshot();
-        storeStates = snapshot.Stores;
-        aquariumStates = snapshot.Aquariums;
+        GameSaveData data = Snapshot();
+        storeStates = data.Stores;
+        aquariumStates = data.Aquariums;
+        visitorPos = data.VisitorPositions;
+        print("CacheCurrentScene: " + visitorPos.Count);
     }
 
     public GameSaveData Snapshot()
@@ -130,6 +133,12 @@ public class RunManager : MonoBehaviour
                 }
             }
         }
+        foreach (Visitor v in VisitorsManager.Visitors)
+        {
+            if (v == null) continue;
+            data.VisitorPositions.Add(v.transform.position);
+        }
+       // print("Run manager VisitorsManager.Visitors: " + VisitorsManager.Visitors.Count);
         return data;
     }
 
@@ -138,8 +147,10 @@ public class RunManager : MonoBehaviour
         Coins = data.Coins;
         storeStates = data.Stores;
         aquariumStates = data.Aquariums;
+        visitorPos = data.VisitorPositions;
     }
 
     public List<AquariumSaveData> GetAquariumStates() => aquariumStates;
     public List<StoreSaveData> GetStoreStates() => storeStates;
+    public List<Vector3> GetVisitorPos() => visitorPos;
 }

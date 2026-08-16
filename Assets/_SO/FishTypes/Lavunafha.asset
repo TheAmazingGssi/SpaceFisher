@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
   id: b6561006b96c42b45854c8b966f138af
   fishSprite: {fileID: 8209764733655462103, guid: c66339dddbf5dd74780f4eed9bcc0b7e, type: 3}
+  splashArt: {fileID: 4272066653147302193, guid: f315655b66e7d2841a69dfa75fd92258, type: 3}
   planet: 0
   value: 2
   price: 5

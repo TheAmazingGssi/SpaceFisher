@@ -20,6 +20,9 @@ public class FishStats : ScriptableObject
     public Sprite FishSprite { get => fishSprite; }
     [SerializeField] private Sprite fishSprite;
 
+    public Sprite SplashArt { get => splashArt; }
+    [SerializeField] private Sprite splashArt;
+
     public Planet Planet {  get => planet; }
     [SerializeField] private Planet planet;
 

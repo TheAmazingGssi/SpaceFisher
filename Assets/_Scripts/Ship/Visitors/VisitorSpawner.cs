@@ -19,6 +19,20 @@ public class VisitorSpawner : MonoBehaviour
     {
         Bus<AquariumValueChange>.OnEvent += OnAquariumValueChanged;
         Bus<VisitorLeaving>.OnEvent += OnVisitorLeaving;
+
+        #if UNITY_EDITOR
+        if (!PlayerPrefs.HasKey(Constants.FirstOpen))
+        {
+            PlayerPrefs.SetInt(Constants.FirstOpen, 1);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            RestoreVisitors();
+        }
+#else
+        RestoreVisitors()
+#endif
     }
 
     public void Init(int ticketPrice)
@@ -42,18 +56,27 @@ public class VisitorSpawner : MonoBehaviour
             float interval = currentInterval + Random.Range(-randomRange, randomRange);
             interval = Mathf.Max(0.1f, interval);
             yield return new WaitForSeconds(interval);
-            SpawnVisitor();
+            SpawnVisitor(spawnPoint.position);
         }
     }
 
-    private void SpawnVisitor()
+    private void SpawnVisitor(Vector3 pos)
     {
         Visitor visitor = pool.Get();
-        visitor.transform.position = spawnPoint.position;
+        visitor.transform.position = pos;
         VisitorData selectedData = data[Random.Range(0, data.Length)];
         Vector2 direction = spawnPoint.right;
         visitor.Initialize(selectedData, direction);
         Bus<VisitorSpawned>.Raise(new VisitorSpawned { Visitor = visitor, TicketPrice = ticketPrice });
+    }
+
+    private void RestoreVisitors()
+    {
+        foreach (Vector3 pos in RunManager.Instance.GetVisitorPos())
+        {
+            SpawnVisitor(pos);
+        }
+       // print("spawner GetVisitorPos(): " + RunManager.Instance.GetVisitorPos().Count);
     }
 
     private void OnVisitorLeaving(VisitorLeaving e)
