@@ -1177,6 +1177,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3537645273168922136, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5587e34e40d222445987a60998c19f1b, type: 3}
     - target: {fileID: 7033529012953575057, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: m_Name
       value: Store (1)
@@ -2144,7 +2148,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 728893286824199149, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: starterLevel
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 728893286824199149, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: <Data>k__BackingField
@@ -4017,7 +4021,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 728893286824199149, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: starterLevel
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 728893286824199149, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: <Data>k__BackingField
@@ -4407,7 +4411,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 728893286824199149, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: starterLevel
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 728893286824199149, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: <Data>k__BackingField
