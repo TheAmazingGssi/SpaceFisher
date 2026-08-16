@@ -51,13 +51,17 @@ MonoBehaviour:
     maxHeight: 200
   - fishType: {fileID: 11400000, guid: b6561006b96c42b45854c8b966f138af, type: 2}
     minHeight: 50
-    populationPeak: 79.18149
+    populationPeak: 80
     maxHeight: 110
   - fishType: {fileID: 11400000, guid: b2ed0c3ac310d464589272e630908e35, type: 2}
-    minHeight: 90
-    populationPeak: 120
-    maxHeight: 200
+    minHeight: 80
+    populationPeak: 110
+    maxHeight: 150
   - fishType: {fileID: 11400000, guid: 5b5f2661fda4b5f458666dc699a988b7, type: 2}
     minHeight: 90
+    populationPeak: 190
+    maxHeight: 200
+  - fishType: {fileID: 11400000, guid: 8f2a0c3519b8449498940bfe18990e1e, type: 2}
+    minHeight: 120
     populationPeak: 190
     maxHeight: 200

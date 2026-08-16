@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 3e1287bfcaf34b04fb7b2ab07753f038
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3608490564627875115
+    second: angler swim sprite sheet_0
+  - first:
+      213: 6664818420474385605
+    second: angler swim sprite sheet_1
+  - first:
+      213: 8749366571859470592
+    second: angler swim sprite sheet_2
+  - first:
+      213: 3138147646517391800
+    second: angler swim sprite sheet_3
+  - first:
+      213: 885404300581349992
+    second: angler swim sprite sheet_4
+  - first:
+      213: -1656953615377501198
+    second: angler swim sprite sheet_5
+  - first:
+      213: -6724541538218642615
+    second: angler swim sprite sheet_6
+  - first:
+      213: 301449398350448099
+    second: angler swim sprite sheet_7
+  - first:
+      213: 5323122925515998528
+    second: angler swim sprite sheet_8
+  - first:
+      213: -1000023120599526817
+    second: angler swim sprite sheet_9
+  - first:
+      213: 6920992481053234774
+    second: angler swim sprite sheet_10
+  - first:
+      213: 2252669477245496270
+    second: angler swim sprite sheet_11
+  - first:
+      213: -5260019890154702271
+    second: angler swim sprite sheet_12
+  - first:
+      213: -2344328163073558706
+    second: angler swim sprite sheet_13
+  - first:
+      213: -4433767875554400206
+    second: angler swim sprite sheet_14
+  - first:
+      213: 5543487393305361772
+    second: angler swim sprite sheet_15
+  - first:
+      213: -39703993983405789
+    second: angler swim sprite sheet_16
+  - first:
+      213: 2635455182840706242
+    second: angler swim sprite sheet_17
+  - first:
+      213: 2378919650949211727
+    second: angler swim sprite sheet_18
+  - first:
+      213: -5760728285826569567
+    second: angler swim sprite sheet_19
+  - first:
+      213: -7428241219172068368
+    second: angler swim sprite sheet_20
+  - first:
+      213: -3710412603507939717
+    second: angler swim sprite sheet_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 700
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: angler swim sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3196
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dab10833f01cedc0800000000000000
+      internalID: -3608490564627875115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3196
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c41bdcaa013e7c50800000000000000
+      internalID: 6664818420474385605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 3196
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0096c5d7a8efb6970800000000000000
+      internalID: 8749366571859470592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 3196
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b1b56b68a0fc8b20800000000000000
+      internalID: 3138147646517391800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 3196
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a21c23586994c00800000000000000
+      internalID: 885404300581349992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2296
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f3ff1a37715109e0800000000000000
+      internalID: -1656953615377501198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2296
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9437e116911ada2a0800000000000000
+      internalID: -6724541538218642615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 2296
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e50f6271a6fe2400800000000000000
+      internalID: 301449398350448099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 2296
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd26187239660bb42b8b861a8808c33b
+      internalID: 5323122925515998528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 2296
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c62508e3b688e0429330c66b645e1b1
+      internalID: -1000023120599526817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1396
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de726607ecc582d4ab31103c23f1c0c3
+      internalID: 6920992481053234774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1396
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d635f5a8e2234843baf2272297d3932
+      internalID: 2252669477245496270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1396
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab24d6249928b042a57a5b179602e37
+      internalID: -5260019890154702271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angler swim sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 1396
+        width: 1400
+        height: 900
+      alignment: 9
+      pivot: {x: 0.3317424, y: 0.3913555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75cd382e965c78448891e83672381ba4
+      internalID: -2344328163073558706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 268779eab14cdaf45937b1e85f7e7cfa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1400.0,"y":900.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.33174240589141848,"y":0.3913555145263672},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      angler swim sprite sheet_0: -3608490564627875115
+      angler swim sprite sheet_1: 6664818420474385605
+      angler swim sprite sheet_10: 6920992481053234774
+      angler swim sprite sheet_11: 2252669477245496270
+      angler swim sprite sheet_12: -5260019890154702271
+      angler swim sprite sheet_13: -2344328163073558706
+      angler swim sprite sheet_2: 8749366571859470592
+      angler swim sprite sheet_3: 3138147646517391800
+      angler swim sprite sheet_4: 885404300581349992
+      angler swim sprite sheet_5: -1656953615377501198
+      angler swim sprite sheet_6: -6724541538218642615
+      angler swim sprite sheet_7: 301449398350448099
+      angler swim sprite sheet_8: 5323122925515998528
+      angler swim sprite sheet_9: -1000023120599526817
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

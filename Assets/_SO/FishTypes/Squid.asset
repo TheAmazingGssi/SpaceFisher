@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f5bea3b934f6344be43c4ec7e85d6f, type: 3}
-  m_Name: TestFish
+  m_Name: Squid
   m_EditorClassIdentifier: Assembly-CSharp::FishStats
-  id: c7b2452d59d00e241ae0f6abae5c88ff
-  fishSprite: {fileID: 21300000, guid: 4d6d1d594cf4a00469b0320752a3eaa7, type: 3}
+  id: 8f2a0c3519b8449498940bfe18990e1e
+  fishSprite: {fileID: 697129342442798634, guid: da2481b8d726c2b44b229a10356b430b, type: 3}
   splashArt: {fileID: 0}
-  planet: 2
-  value: 0
+  planet: 0
+  value: 3
   price: 15
-  animator: {fileID: 0}
+  animator: {fileID: 22100000, guid: 9520a9345845322419697e971af23401, type: 2}
   customSpeed: 0
-  speed: 5
-  mgSpeed: 5
-  wiggleAngleMax: 101.40619
-  wiggleAngleMin: 11.406203
-  wiggleSpeed: 360
+  speed: 2.5
+  mgSpeed: 0
+  wiggleAngleMax: 103.86485
+  wiggleAngleMin: 71.513504
+  wiggleSpeed: 400
   defaultWiggleSpeed: 0
-  maxSpawnRate: 0.497
-  swimTime: {x: 0, y: 0}
-  pauseTime: 0
+  maxSpawnRate: 0.1
+  swimTime: {x: 4, y: 5}
+  pauseTime: 0.1
   aquariumSpeed: 0
-  verticalSwimming: 30
+  verticalSwimming: 10
