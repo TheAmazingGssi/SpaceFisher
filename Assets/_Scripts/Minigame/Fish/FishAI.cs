@@ -3,7 +3,8 @@ using UnityEngine;
 public class FishAI : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] SpriteRenderer spriteRenderer;
+    //[SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Animator anim;
     [SerializeField] ParticleSystem particles;
     [field: SerializeField] public FishStats Stats { get; private set; }
     private FishPool parentPool;
@@ -14,6 +15,8 @@ public class FishAI : MonoBehaviour
 
     private enum State { Swim, Hooked, Magnetized }
     private State state;
+
+    const string CatchAnimTrigger = "Caught";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnEnable()
@@ -43,7 +46,7 @@ public class FishAI : MonoBehaviour
     {
         Stats = stats;
         rb.linearVelocity = transform.right * Stats.MGSpeed;
-        spriteRenderer.sprite = Stats.FishSprite;
+        anim.runtimeAnimatorController = Stats.Animator;
         //spriteRenderer.transform.localPosition = new Vector3(-spriteRenderer.bounds.size.x / 2, 0, 0);
         wiggleDirection = 0;
         state = State.Swim;
@@ -62,6 +65,7 @@ public class FishAI : MonoBehaviour
             Bus<FishCaught>.Raise(new FishCaught { Fish = this });
             state = State.Hooked;
             particles.Play();
+            anim.SetTrigger(CatchAnimTrigger);
         }
         if(collision.tag == Constants.Tags.Magnet && state != State.Hooked && state != State.Magnetized)
         {

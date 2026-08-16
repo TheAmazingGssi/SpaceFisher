@@ -73,6 +73,14 @@ public class HookInventory : MonoBehaviour
     }
     void SaveFish()
     {
+//#if UNITY_EDITOR
+//        string inventory = "This is the current inventory on hook:\n";
+//        foreach (FishStats fish in currentlyHookedFish.Keys)
+//        {
+//            inventory += "name: " + fish.name + ": " + currentlyHookedFish[fish] + "\n";
+//        }
+//        Debug.Log(inventory);
+//#endif
         Inventory.Instance.AddManyFish(currentlyHookedFish);
         currentlyHookedFish.Clear();
         foreach(Stack<FishAI> stack in currentlyHookedObjects.Values)

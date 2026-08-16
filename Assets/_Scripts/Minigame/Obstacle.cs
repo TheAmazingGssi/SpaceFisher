@@ -8,7 +8,6 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.tag == Constants.Tags.Player)
         {
-            MinigameManager.Instance.Phase = MinigamePhase.Up;
             anim.SetTrigger(BOOM_TRIGGER);
             Bus<HitBomb>.Raise(new HitBomb());
         }

@@ -40,6 +40,7 @@ public class ShieldManager : MonoBehaviour
         }
         else
         {
+            MinigameManager.Instance.Phase = MinigamePhase.Up;
             Bus<FishFell>.Raise(new FishFell());
         }
     }
