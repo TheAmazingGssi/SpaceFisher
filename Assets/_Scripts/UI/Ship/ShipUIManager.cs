@@ -66,6 +66,12 @@ public class ShipUIManager : MonoBehaviour
         fishStoreUI.gameObject.SetActive(fishStoreOpen);
     }
 
+    public void CloseFishStore()
+    {
+        fishStoreOpen = false;
+        fishStoreUI.gameObject.SetActive(false);
+    }
+
     private void OpenFishPanel(AquariumPressed e)
     {
         fishPanel.SetActive(true);
