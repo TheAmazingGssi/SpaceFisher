@@ -624,8 +624,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 728893286824199149, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: starterLevel
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 728893286824199149, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
+      propertyPath: <Data>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 0bc6039b0935deb4fa923298a3b3544d, type: 2}
     - target: {fileID: 1366972712047197056, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.86141
@@ -2140,7 +2144,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 728893286824199149, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: starterLevel
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 728893286824199149, guid: a1a45690566062d4eb445a1a16d54066, type: 3}
       propertyPath: <Data>k__BackingField
