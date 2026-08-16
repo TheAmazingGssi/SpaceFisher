@@ -455,9 +455,21 @@ PrefabInstance:
       propertyPath: aquariumCollider
       value: 
       objectReference: {fileID: 123093002}
+    - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: ff05f45d7346dcf4588be2a364bd63d7, type: 2}
     - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Name
       value: AquariumFish (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_LocalPosition.x
@@ -754,6 +766,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7413664035687136129, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1747222197}
+    - targetCorrespondingSourceObject: {fileID: 7413664035687136129, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1621501631}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51947e9f7bb21884c82dd965b3761b7b, type: 3}
 --- !u!4 &83340866 stripped
@@ -1226,6 +1241,10 @@ PrefabInstance:
       propertyPath: <Stats>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
+    - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: c2ad25721ba6e9144aa8ec1d97b0696a, type: 2}
     - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Name
       value: AquariumFish (1)
@@ -1511,9 +1530,21 @@ PrefabInstance:
       propertyPath: aquariumCollider
       value: 
       objectReference: {fileID: 123093002}
+    - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: ff05f45d7346dcf4588be2a364bd63d7, type: 2}
     - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Name
       value: AquariumFish (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1787,6 +1818,10 @@ PrefabInstance:
       propertyPath: <Stats>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
+    - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: c2ad25721ba6e9144aa8ec1d97b0696a, type: 2}
     - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Name
       value: AquariumFish
@@ -2081,11 +2116,11 @@ PrefabInstance:
     - target: {fileID: 3173794925262988454, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: <Stats>k__BackingField
       value: 
-      objectReference: {fileID: 11400000, guid: b2ed0c3ac310d464589272e630908e35, type: 2}
+      objectReference: {fileID: 11400000, guid: 5b5f2661fda4b5f458666dc699a988b7, type: 2}
     - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 88499838445b9e048acc955f167cfb85, type: 2}
+      objectReference: {fileID: 22100000, guid: 58dadd88d8490c445ba9830b42a02d80, type: 2}
     - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Name
       value: AquariumFish (1)
@@ -2093,7 +2128,7 @@ PrefabInstance:
     - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6525344490752623909, guid: 0a376cc660da1ae4bb0cbba89ea525f0, type: 3}
+      objectReference: {fileID: -7711835218200328001, guid: 9f8f6148990dd4e469e1c9d784a3663a, type: 3}
     - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.76
@@ -3236,9 +3271,21 @@ PrefabInstance:
       propertyPath: aquariumCollider
       value: 
       objectReference: {fileID: 123093002}
+    - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: ff05f45d7346dcf4588be2a364bd63d7, type: 2}
     - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Name
       value: AquariumFish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3704,6 +3751,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1463476714483542072, guid: b24406f3f0644924fa845357d8ed08a0, type: 3}
   m_PrefabInstance: {fileID: 1239039628}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1256457179
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1219717480}
+    m_Modifications:
+    - target: {fileID: 3173794925262988454, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: aquarium
+      value: 
+      objectReference: {fileID: 1403807532}
+    - target: {fileID: 3173794925262988454, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: aquariumCollider
+      value: 
+      objectReference: {fileID: 1403807530}
+    - target: {fileID: 3173794925262988454, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: <Stats>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f2a0c3519b8449498940bfe18990e1e, type: 2}
+    - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 9520a9345845322419697e971af23401, type: 2}
+    - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Name
+      value: AquariumFish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 697129342442798634, guid: da2481b8d726c2b44b229a10356b430b, type: 3}
+    - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7881489
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.0141277
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b246692a48113045b7d3035dc547826, type: 3}
 --- !u!1001 &1262199075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3724,6 +3848,10 @@ PrefabInstance:
       propertyPath: <Stats>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
+    - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: c2ad25721ba6e9144aa8ec1d97b0696a, type: 2}
     - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Name
       value: AquariumFish (2)
@@ -3913,6 +4041,10 @@ PrefabInstance:
       propertyPath: <Stats>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
+    - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: c2ad25721ba6e9144aa8ec1d97b0696a, type: 2}
     - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Name
       value: AquariumFish (3)
@@ -4436,6 +4568,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
   m_PrefabInstance: {fileID: 1816802111}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1621501631 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+  m_PrefabInstance: {fileID: 1256457179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1651689286
 GameObject:
   m_ObjectHideFlags: 0
@@ -4621,9 +4758,21 @@ PrefabInstance:
       propertyPath: aquariumCollider
       value: 
       objectReference: {fileID: 123093002}
+    - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: ff05f45d7346dcf4588be2a364bd63d7, type: 2}
     - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Name
       value: AquariumFish (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4691,9 +4840,21 @@ PrefabInstance:
       propertyPath: aquariumCollider
       value: 
       objectReference: {fileID: 123093002}
+    - target: {fileID: 3571173871533151799, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: ff05f45d7346dcf4588be2a364bd63d7, type: 2}
     - target: {fileID: 4824509989669914264, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_Name
       value: AquariumFish (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540306869189630648, guid: 6b246692a48113045b7d3035dc547826, type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7723847771664677402, guid: 6b246692a48113045b7d3035dc547826, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4862,10 +5023,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e3a343d3e89a2744a5e516cd5367264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DebugHelperScript
-  randomFishy: {fileID: 11400000, guid: b2ed0c3ac310d464589272e630908e35, type: 2}
+  randomFishy: {fileID: 11400000, guid: 8f2a0c3519b8449498940bfe18990e1e, type: 2}
   randomFishy2: {fileID: 11400000, guid: b6561006b96c42b45854c8b966f138af, type: 2}
   randomFishy3: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
-  amount: 2
+  amount: 10
   pool: {fileID: 2143232094}
   data: {fileID: 0}
   aquarium: {fileID: 0}
