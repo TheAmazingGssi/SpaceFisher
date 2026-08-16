@@ -24,6 +24,8 @@ MonoBehaviour:
       _value: {fileID: 11400000, guid: b6561006b96c42b45854c8b966f138af, type: 2}
     - _key: 71d7fa0a9f5ddd947b4f115832921b87
       _value: {fileID: 11400000, guid: 71d7fa0a9f5ddd947b4f115832921b87, type: 2}
+    - _key: 8f2a0c3519b8449498940bfe18990e1e
+      _value: {fileID: 11400000, guid: 8f2a0c3519b8449498940bfe18990e1e, type: 2}
     - _key: c7b2452d59d00e241ae0f6abae5c88ff
       _value: {fileID: 11400000, guid: c7b2452d59d00e241ae0f6abae5c88ff, type: 2}
   storeList:
