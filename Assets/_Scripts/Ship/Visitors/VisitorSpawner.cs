@@ -31,7 +31,7 @@ public class VisitorSpawner : MonoBehaviour
             RestoreVisitors();
         }
 #else
-        RestoreVisitors()
+        RestoreVisitors();
 #endif
     }
 
