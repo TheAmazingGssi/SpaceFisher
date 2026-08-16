@@ -12,6 +12,7 @@ public class ShipUIManager : MonoBehaviour
     [SerializeField] private GameObject fishPanel;
     [SerializeField] private GameObject shopPanel;
     [SerializeField] private TextMeshProUGUI CurrentCoinsText;
+    [SerializeField] private TMP_InputField CurrentShipName;
     [SerializeField] private UIController uiController;
     [SerializeField] private GameObject firstAqButton;
 
@@ -39,6 +40,8 @@ public class ShipUIManager : MonoBehaviour
 #endif
         fishPanel.SetActive(false);
         CurrentCoinsText.text = CoinsManager.Instance.Coins.ToString();
+        if (RunManager.Instance.ShipName != null)
+            CurrentShipName.text = RunManager.Instance.ShipName.ToString();
 
     }
 
@@ -97,6 +100,10 @@ public class ShipUIManager : MonoBehaviour
         CoinsManager.Instance.AddCoins(9999);
     }
 
+    public void UpdateShipName(TextMeshProUGUI text)
+    {
+        RunManager.Instance.UpdateShipName(text.text);
+    }
     private void OnDestroy()
     {
         Bus<AquariumPressed>.OnEvent -= OpenFishPanel;

@@ -15,6 +15,7 @@ public class RunManager : MonoBehaviour
     private float storeIncome = 0;
     private int visitorsAway = 0;
 
+    public string ShipName { get; private set; } = "My Ship";
     public bool Present {  get; private set; } = false;
     public bool FirstRun {  get; private set; } = true;
 
@@ -43,6 +44,10 @@ public class RunManager : MonoBehaviour
         Bus<CoinChange>.OnEvent -= OnCoinChange;
     }
 
+    public void UpdateShipName(string name)
+    {
+        ShipName = name;
+    }
     private void FirstSceneChange(Scene a, Scene b)
     {
         if(FirstRun && b.name == Constants.Scenes.Minigame) FirstRun = false;
@@ -92,7 +97,7 @@ public class RunManager : MonoBehaviour
 
     public GameSaveData Snapshot()
     {
-        GameSaveData data = new GameSaveData { Coins = Coins };
+        GameSaveData data = new GameSaveData { Coins = Coins, ShipName = this.ShipName };
         foreach (Aquarium aq in AquariumManager.Aquariums)
         {
             AquariumSaveData aqData = new AquariumSaveData
