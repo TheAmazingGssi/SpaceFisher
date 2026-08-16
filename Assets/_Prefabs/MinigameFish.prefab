@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 2367022000964730367}
   - component: {fileID: 4429270319672191910}
   - component: {fileID: 6623436665305683950}
+  - component: {fileID: 6374705258220473519}
   m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
@@ -188,6 +189,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &6374705258220473519
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3612199892545858687}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0d256877626c394e925fc98ce8db872, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4661970418263872821
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishAI
   rb: {fileID: 1791472600556897933}
-  spriteRenderer: {fileID: 4429270319672191910}
+  anim: {fileID: 6374705258220473519}
   particles: {fileID: 2320218690877911891}
   <Stats>k__BackingField: {fileID: 11400000, guid: c7b2452d59d00e241ae0f6abae5c88ff, type: 2}
 --- !u!50 &1791472600556897933
