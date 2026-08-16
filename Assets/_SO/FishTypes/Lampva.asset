@@ -18,7 +18,7 @@ MonoBehaviour:
   planet: 0
   value: 3
   price: 12
-  animator: {fileID: 0}
+  animator: {fileID: 22100000, guid: 58dadd88d8490c445ba9830b42a02d80, type: 2}
   customSpeed: 0
   speed: 0.7
   mgSpeed: 0
