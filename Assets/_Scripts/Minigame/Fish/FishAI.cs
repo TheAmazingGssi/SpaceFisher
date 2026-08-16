@@ -90,7 +90,7 @@ public class FishAI : MonoBehaviour
     {
         Vector2 dir = magnetTarget.position - transform.position;
         dir.Normalize();
-        rb.linearVelocity = dir * (MinigameManager.Instance.Hook.UpSpeed * 1.1f);
+        rb.linearVelocity = dir * (MinigameManager.Instance.Hook.UpSpeed * 1.3f);
     }
     public void ReturnToPool()
     {

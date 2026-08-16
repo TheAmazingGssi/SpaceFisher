@@ -2545,6 +2545,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1696596331 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1504414122264381207, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
+  m_PrefabInstance: {fileID: 2592572110300894862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1716383228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2993,6 +3004,26 @@ PrefabInstance:
       propertyPath: playerHook
       value: 
       objectReference: {fileID: 1381342930}
+    - target: {fileID: 5796706914987233114, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
+      propertyPath: siluetteImages.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796706914987233114, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
+      propertyPath: siluetteImages.Array.data[4].Image
+      value: 
+      objectReference: {fileID: 1696596331}
+    - target: {fileID: 5796706914987233114, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
+      propertyPath: siluetteImages.Array.data[4].FishType
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f2a0c3519b8449498940bfe18990e1e, type: 2}
+    - target: {fileID: 5796706914987233114, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
+      propertyPath: siluetteImages.Array.data[4].BlackSprite
+      value: 
+      objectReference: {fileID: 7465390258741125058, guid: 15cc9ee4f343db14082be7cc32dc7c10, type: 3}
+    - target: {fileID: 5796706914987233114, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
+      propertyPath: siluetteImages.Array.data[4].ColorSprite
+      value: 
+      objectReference: {fileID: -3984833729058248302, guid: 7ab1cd0d1c3436349835811d0489a1b0, type: 3}
     - target: {fileID: 5994849394637005721, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0

@@ -55,7 +55,6 @@ public class Bubble : MonoBehaviour
     }
     public void Teleport()
     {
-        Debug.Log("Im teleporting");
         Vector2 checkVect;
         float addSign;
         if (MinigameManager.Instance.Phase == MinigamePhase.Down)

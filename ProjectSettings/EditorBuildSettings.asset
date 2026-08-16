@@ -6,14 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SpaceShipScene.unity
-    guid: 8e39030b5831c9441a484c2e55942b56
+    path: Assets/Scenes/PresentationSpaceShipScene.unity
+    guid: 261ab9b5ea0625b41b04d24c3d72c17a
   - enabled: 1
     path: Assets/Scenes/MiniGameScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
-    path: Assets/Scenes/PresentationSpaceShipScene.unity
-    guid: 261ab9b5ea0625b41b04d24c3d72c17a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
