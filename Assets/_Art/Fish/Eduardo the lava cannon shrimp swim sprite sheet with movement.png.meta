@@ -1,0 +1,534 @@
+fileFormatVersion: 2
+guid: ad6165c55ef5fe24ea017f583787b3d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 882923989512283045
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_0
+  - first:
+      213: 4654850213048313909
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_1
+  - first:
+      213: 5302911081723718069
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_2
+  - first:
+      213: -5806837833347137500
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_3
+  - first:
+      213: 6002950160156929365
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_4
+  - first:
+      213: 8283426239991265449
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_5
+  - first:
+      213: -8241766232921176806
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_6
+  - first:
+      213: 1091803241089910472
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_7
+  - first:
+      213: 3443280874374655565
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_8
+  - first:
+      213: 2264664168312926163
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_9
+  - first:
+      213: -2889279706202708071
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_10
+  - first:
+      213: 587004632114540025
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_11
+  - first:
+      213: 4498206928919866323
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_12
+  - first:
+      213: -2996681813984789542
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_13
+  - first:
+      213: -644559050380726517
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_14
+  - first:
+      213: 382593582339098416
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_15
+  - first:
+      213: 4507283512323266870
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_16
+  - first:
+      213: -6736107574134220304
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_17
+  - first:
+      213: -3397154295014084115
+    second: Eduardo the lava cannon shrimp swim sprite sheet with movement_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 700
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6742
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3ec86c0b6c04c00800000000000000
+      internalID: 882923989512283045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_1
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 6742
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53865673b99599040800000000000000
+      internalID: 4654850213048313909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_2
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 6742
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9ef956889b79940800000000000000
+      internalID: 5302911081723718069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_3
+      rect:
+        serializedVersion: 2
+        x: 5100
+        y: 6742
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4208b0ba1c7f96fa0800000000000000
+      internalID: -5806837833347137500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5292
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d278c9d53ce4350800000000000000
+      internalID: 6002950160156929365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_5
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 5292
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a834dd1744a4f270800000000000000
+      internalID: 8283426239991265449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_6
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 5292
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a158ce4274d5f9d80800000000000000
+      internalID: -8241766232921176806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_7
+      rect:
+        serializedVersion: 2
+        x: 5100
+        y: 5292
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c6c8cd534dd62f00800000000000000
+      internalID: 1091803241089910472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3842
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e6ff246bdf8cf20800000000000000
+      internalID: 3443280874374655565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_9
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 3842
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dfe8d7ff04bd6f10800000000000000
+      internalID: 2264664168312926163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_10
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 3842
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997ea0f4a6737e7d0800000000000000
+      internalID: -2889279706202708071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_11
+      rect:
+        serializedVersion: 2
+        x: 5100
+        y: 3842
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f721c22f2fbe4b4aa212aba3449e5ae
+      internalID: 587004632114540025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2392
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dcf83ca98a4fc4e82c6cc9db6342c7
+      internalID: 4498206928919866323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_13
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 2392
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864bc1c38b28bf94cab899dfdfe4740f
+      internalID: -2996681813984789542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eduardo the lava cannon shrimp swim sprite sheet with movement_14
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 2392
+        width: 1700
+        height: 1450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce1f18a63dcdb146b9df5593c2559a4
+      internalID: -644559050380726517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: db1476f88f8833647bc75cd1090c0ead
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":1700.0,"y":1450.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_0: 882923989512283045
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_1: 4654850213048313909
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_10: -2889279706202708071
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_11: 587004632114540025
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_12: 4498206928919866323
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_13: -2996681813984789542
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_14: -644559050380726517
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_2: 5302911081723718069
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_3: -5806837833347137500
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_4: 6002950160156929365
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_5: 8283426239991265449
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_6: -8241766232921176806
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_7: 1091803241089910472
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_8: 3443280874374655565
+      Eduardo the lava cannon shrimp swim sprite sheet with movement_9: 2264664168312926163
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

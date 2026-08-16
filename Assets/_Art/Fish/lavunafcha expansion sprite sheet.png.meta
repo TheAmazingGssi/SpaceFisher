@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: 16f6dd147b343eb4f827721b812101b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1229341954433735749
+    second: lavunafcha expansion sprite sheet_0
+  - first:
+      213: -6083417616650405215
+    second: lavunafcha expansion sprite sheet_1
+  - first:
+      213: -3928001605991737257
+    second: lavunafcha expansion sprite sheet_2
+  - first:
+      213: -6106930809137639429
+    second: lavunafcha expansion sprite sheet_3
+  - first:
+      213: 8452115320587205817
+    second: lavunafcha expansion sprite sheet_4
+  - first:
+      213: -1228557242739632465
+    second: lavunafcha expansion sprite sheet_5
+  - first:
+      213: -5998337045753234681
+    second: lavunafcha expansion sprite sheet_6
+  - first:
+      213: -4093167978838670270
+    second: lavunafcha expansion sprite sheet_7
+  - first:
+      213: -4140723429017437972
+    second: lavunafcha expansion sprite sheet_8
+  - first:
+      213: 1343425427458737604
+    second: lavunafcha expansion sprite sheet_9
+  - first:
+      213: -8495783765124451082
+    second: lavunafcha expansion sprite sheet_10
+  - first:
+      213: -8503690873231596738
+    second: lavunafcha expansion sprite sheet_11
+  - first:
+      213: 8865765787517203071
+    second: lavunafcha expansion sprite sheet_12
+  - first:
+      213: -7865266510195911283
+    second: lavunafcha expansion sprite sheet_13
+  - first:
+      213: 4803881706947307341
+    second: lavunafcha expansion sprite sheet_14
+  - first:
+      213: 5704634108823690192
+    second: lavunafcha expansion sprite sheet_15
+  - first:
+      213: -1306677270263594510
+    second: lavunafcha expansion sprite sheet_16
+  - first:
+      213: 2939483381365246426
+    second: lavunafcha expansion sprite sheet_17
+  - first:
+      213: -6635272791643422117
+    second: lavunafcha expansion sprite sheet_18
+  - first:
+      213: -4676159760205213612
+    second: lavunafcha expansion sprite sheet_19
+  - first:
+      213: 2747918443030845124
+    second: lavunafcha expansion sprite sheet_20
+  - first:
+      213: -144122077461084511
+    second: lavunafcha expansion sprite sheet_21
+  - first:
+      213: 4403820284265066759
+    second: lavunafcha expansion sprite sheet_22
+  - first:
+      213: 1764631582721849015
+    second: lavunafcha expansion sprite sheet_23
+  - first:
+      213: -7141574466277469486
+    second: lavunafcha expansion sprite sheet_24
+  - first:
+      213: 2333118854300013829
+    second: lavunafcha expansion sprite sheet_25
+  - first:
+      213: -2596080908856362569
+    second: lavunafcha expansion sprite sheet_26
+  - first:
+      213: 8408891069352679788
+    second: lavunafcha expansion sprite sheet_27
+  - first:
+      213: -5585249602087489011
+    second: lavunafcha expansion sprite sheet_28
+  - first:
+      213: 4801550497761228681
+    second: lavunafcha expansion sprite sheet_29
+  - first:
+      213: -9032061861307600251
+    second: lavunafcha expansion sprite sheet_30
+  - first:
+      213: -230669561719065796
+    second: lavunafcha expansion sprite sheet_31
+  - first:
+      213: -5260040417022776586
+    second: lavunafcha expansion sprite sheet_32
+  - first:
+      213: -4775799845797822096
+    second: lavunafcha expansion sprite sheet_33
+  - first:
+      213: 7045539629200534696
+    second: lavunafcha expansion sprite sheet_34
+  - first:
+      213: 2864378184129181803
+    second: lavunafcha expansion sprite sheet_35
+  - first:
+      213: -4033665084481001411
+    second: lavunafcha expansion sprite sheet_36
+  - first:
+      213: -6325778895934001089
+    second: lavunafcha expansion sprite sheet_37
+  - first:
+      213: 6687449315516691815
+    second: lavunafcha expansion sprite sheet_38
+  - first:
+      213: -2904937154130782150
+    second: lavunafcha expansion sprite sheet_39
+  - first:
+      213: 3731859267449398943
+    second: lavunafcha expansion sprite sheet_40
+  - first:
+      213: -3567048876516677084
+    second: lavunafcha expansion sprite sheet_41
+  - first:
+      213: 6821818768994056057
+    second: lavunafcha expansion sprite sheet_42
+  - first:
+      213: 437794120571750897
+    second: lavunafcha expansion sprite sheet_43
+  - first:
+      213: 7893147731032369333
+    second: lavunafcha expansion sprite sheet_44
+  - first:
+      213: -6468036249614126885
+    second: lavunafcha expansion sprite sheet_45
+  - first:
+      213: -5570097086772286967
+    second: lavunafcha expansion sprite sheet_46
+  - first:
+      213: -8454310896082062181
+    second: lavunafcha expansion sprite sheet_47
+  - first:
+      213: 7837928249779782270
+    second: lavunafcha expansion sprite sheet_48
+  - first:
+      213: -5910160459535792642
+    second: lavunafcha expansion sprite sheet_49
+  - first:
+      213: -6334887242711141332
+    second: lavunafcha expansion sprite sheet_50
+  - first:
+      213: 6278373438733931385
+    second: lavunafcha expansion sprite sheet_51
+  - first:
+      213: 4435045386141781119
+    second: lavunafcha expansion sprite sheet_52
+  - first:
+      213: 1487858194619011711
+    second: lavunafcha expansion sprite sheet_53
+  - first:
+      213: 1589395763434361325
+    second: lavunafcha expansion sprite sheet_54
+  - first:
+      213: -2000188755934165476
+    second: lavunafcha expansion sprite sheet_55
+  - first:
+      213: 7588039041345868147
+    second: lavunafcha expansion sprite sheet_56
+  - first:
+      213: -3371847794435457226
+    second: lavunafcha expansion sprite sheet_57
+  - first:
+      213: 4411369083014774310
+    second: lavunafcha expansion sprite sheet_58
+  - first:
+      213: 4139411702839696425
+    second: lavunafcha expansion sprite sheet_59
+  - first:
+      213: -534470563245646508
+    second: lavunafcha expansion sprite sheet_60
+  - first:
+      213: 7942680925750597018
+    second: lavunafcha expansion sprite sheet_61
+  - first:
+      213: 3452575844028187523
+    second: lavunafcha expansion sprite sheet_62
+  - first:
+      213: -5364673152077375046
+    second: lavunafcha expansion sprite sheet_63
+  - first:
+      213: -8145026697310169293
+    second: lavunafcha expansion sprite sheet_64
+  - first:
+      213: 7910848516750517160
+    second: lavunafcha expansion sprite sheet_65
+  - first:
+      213: -7925357998172655204
+    second: lavunafcha expansion sprite sheet_66
+  - first:
+      213: 3626105455223641922
+    second: lavunafcha expansion sprite sheet_67
+  - first:
+      213: -4298125411497018257
+    second: lavunafcha expansion sprite sheet_68
+  - first:
+      213: -1156677680643822304
+    second: lavunafcha expansion sprite sheet_69
+  - first:
+      213: 1221355292495584660
+    second: lavunafcha expansion sprite sheet_70
+  - first:
+      213: 5278499204332137310
+    second: lavunafcha expansion sprite sheet_71
+  - first:
+      213: 7820587313204763106
+    second: lavunafcha expansion sprite sheet_72
+  - first:
+      213: -8663738434831428840
+    second: lavunafcha expansion sprite sheet_73
+  - first:
+      213: 6652853114576094993
+    second: lavunafcha expansion sprite sheet_74
+  - first:
+      213: 4073598569985842007
+    second: lavunafcha expansion sprite sheet_75
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 700
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6841
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cd1858eff7f0110800000000000000
+      internalID: 1229341954433735749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 6841
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aaf233b8eb539ba0800000000000000
+      internalID: -6083417616650405215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 6841
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 758d2bdc95fec79c0800000000000000
+      internalID: -3928001605991737257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4710
+        y: 6841
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff4675f8c2df3ba0800000000000000
+      internalID: -6106930809137639429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 6280
+        y: 6841
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bcbc345a12fb4570800000000000000
+      internalID: 8452115320587205817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5490
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa6554862b943fee0800000000000000
+      internalID: -1228557242739632465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 5490
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70bffc8cc30a1cca0800000000000000
+      internalID: -5998337045753234681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 5490
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2444157e8652237c0800000000000000
+      internalID: -4093167978838670270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4710
+        y: 5490
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce83744daf13986c0800000000000000
+      internalID: -4140723429017437972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 6280
+        y: 5490
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5c7e9fe4ec4a210800000000000000
+      internalID: 1343425427458737604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4139
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4f93f9da9e81a80800000000000000
+      internalID: -8495783765124451082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 4139
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e33ac4d8432dcf980800000000000000
+      internalID: -8503690873231596738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 4139
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7236cac207890b70800000000000000
+      internalID: 8865765787517203071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 4710
+        y: 4139
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d851ffbe7c5f8d290800000000000000
+      internalID: -7865266510195911283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 6280
+        y: 4139
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d47679dd5f0daa240800000000000000
+      internalID: 4803881706947307341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2788
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db530e5f7eea2f40800000000000000
+      internalID: 5704634108823690192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 2788
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f18cdd12ffbddde0800000000000000
+      internalID: -1306677270263594510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 2788
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2816139, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad98071bf842bc820800000000000000
+      internalID: 2939483381365246426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_18
+      rect:
+        serializedVersion: 2
+        x: 4710
+        y: 2788
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.24096929, y: 0.36682573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52874a1d86cae3a0800000000000000
+      internalID: -6635272791643422117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_19
+      rect:
+        serializedVersion: 2
+        x: 6280
+        y: 2792
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2409693, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4501ef33971fa1fb0800000000000000
+      internalID: -4676159760205213612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1437
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2409693, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c6199cc341922620800000000000000
+      internalID: 2747918443030845124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 1441
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2409693, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a604a0fbb9fffdf0800000000000000
+      internalID: -144122077461084511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 1437
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.2409693, y: 0.3683744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701774257338d1d30800000000000000
+      internalID: 4403820284265066759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_23
+      rect:
+        serializedVersion: 2
+        x: 4706
+        y: 1442
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.34648716, y: 0.62353843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b63297331b3d7810800000000000000
+      internalID: 1764631582721849015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_24
+      rect:
+        serializedVersion: 2
+        x: 6280
+        y: 1452
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.3111151, y: 0.67585516}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d218805cd704ec90800000000000000
+      internalID: -7141574466277469486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_25
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 91
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.3143307, y: 0.6833284}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50591519c37e06020800000000000000
+      internalID: 2333118854300013829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 86
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.31433105, y: 0.69080263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b971730b2ed8fbd0800000000000000
+      internalID: -2596080908856362569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_27
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 91
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.32076174, y: 0.68332875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6998b710e162b470800000000000000
+      internalID: 8408891069352679788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_28
+      rect:
+        serializedVersion: 2
+        x: 4710
+        y: 86
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.31433058, y: 0.6833286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02fead24153d72b0800000000000000
+      internalID: -5585249602087489011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavunafcha expansion sprite sheet_29
+      rect:
+        serializedVersion: 2
+        x: 6280
+        y: 91
+        width: 1570
+        height: 1351
+      alignment: 9
+      pivot: {x: 0.31111446, y: 0.6833284}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987782eecb882a240800000000000000
+      internalID: 4801550497761228681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4ac71c374fe00424596ac140920c8ece
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":6.0},"gridSpriteSize":{"x":1570.0,"y":1351.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.28161388635635378,"y":0.36837440729141238},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      lavunafcha expansion sprite sheet_0: 1229341954433735749
+      lavunafcha expansion sprite sheet_1: -6083417616650405215
+      lavunafcha expansion sprite sheet_10: -8495783765124451082
+      lavunafcha expansion sprite sheet_11: -8503690873231596738
+      lavunafcha expansion sprite sheet_12: 8865765787517203071
+      lavunafcha expansion sprite sheet_13: -7865266510195911283
+      lavunafcha expansion sprite sheet_14: 4803881706947307341
+      lavunafcha expansion sprite sheet_15: 5704634108823690192
+      lavunafcha expansion sprite sheet_16: -1306677270263594510
+      lavunafcha expansion sprite sheet_17: 2939483381365246426
+      lavunafcha expansion sprite sheet_18: -6635272791643422117
+      lavunafcha expansion sprite sheet_19: -4676159760205213612
+      lavunafcha expansion sprite sheet_2: -3928001605991737257
+      lavunafcha expansion sprite sheet_20: 2747918443030845124
+      lavunafcha expansion sprite sheet_21: -144122077461084511
+      lavunafcha expansion sprite sheet_22: 4403820284265066759
+      lavunafcha expansion sprite sheet_23: 1764631582721849015
+      lavunafcha expansion sprite sheet_24: -7141574466277469486
+      lavunafcha expansion sprite sheet_25: 2333118854300013829
+      lavunafcha expansion sprite sheet_26: -2596080908856362569
+      lavunafcha expansion sprite sheet_27: 8408891069352679788
+      lavunafcha expansion sprite sheet_28: -5585249602087489011
+      lavunafcha expansion sprite sheet_29: 4801550497761228681
+      lavunafcha expansion sprite sheet_3: -6106930809137639429
+      lavunafcha expansion sprite sheet_4: 8452115320587205817
+      lavunafcha expansion sprite sheet_5: -1228557242739632465
+      lavunafcha expansion sprite sheet_6: -5998337045753234681
+      lavunafcha expansion sprite sheet_7: -4093167978838670270
+      lavunafcha expansion sprite sheet_8: -4140723429017437972
+      lavunafcha expansion sprite sheet_9: 1343425427458737604
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
