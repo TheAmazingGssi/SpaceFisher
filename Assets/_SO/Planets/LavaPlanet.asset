@@ -50,8 +50,8 @@ MonoBehaviour:
     populationPeak: 30
     maxHeight: 200
   - fishType: {fileID: 11400000, guid: b6561006b96c42b45854c8b966f138af, type: 2}
-    minHeight: 50
-    populationPeak: 80
+    minHeight: 40
+    populationPeak: 50
     maxHeight: 110
   - fishType: {fileID: 11400000, guid: b2ed0c3ac310d464589272e630908e35, type: 2}
     minHeight: 80

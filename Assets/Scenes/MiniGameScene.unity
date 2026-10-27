@@ -2976,6 +2976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MinigameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5150455605674324688, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5660923688172910895, guid: 29ac8bba8435ecf4db484c80e5b6a75b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -43,6 +43,14 @@ public class ShopPanelsManager : MonoBehaviour
         e.ShopButton.Panel.SetActive(true);
     }
 
+    public void OnDeleteMemoryButton()
+    {
+        Inventory.Instance.ClearInventory();
+        SaveManager.Instance.Delete();
+        Application.Quit();
+        
+    }
+
     private void OnDestroy()
     {
         Bus<ShopButtonPressed>.OnEvent -= OnShopButtonClicked;
